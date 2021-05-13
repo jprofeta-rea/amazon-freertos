@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3599949709">
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\main.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="836" column="5" info="Null pointer dereference"/>
+            <location file0="..\main.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="833" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\main.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="857" column="12" info="Null pointer dereference"/>
+            <location file0="..\main.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="854" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: data" verbose="Uninitialized variable: data" cwe="908">
+            <location file0="..\main.c" file="..\main.c" line="77" column="5"/>
+            <symbol>data</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;data&apos; is not assigned a value." verbose="Variable &apos;data&apos; is not assigned a value." cwe="665">
+            <location file0="..\main.c" file="..\main.c" line="44" column="12"/>
+            <symbol>data</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="BoardInit" lineNumber="91"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="BoardInit" lineNumber="91"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="BoardInit" lineNumber="91"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="BoardInit" lineNumber="91"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="BoardInit" lineNumber="91"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="BoardInit" lineNumber="91"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="LPM_MSTP_AGT0"/>
+    <functioncall functionName="LPM_MSTP_AGT1"/>
+    <functioncall functionName="LPM_MSTP_AGTW0"/>
+    <functioncall functionName="LPM_MSTP_AGTW1"/>
+    <functioncall functionName="LPM_MSTP_CAC"/>
+    <functioncall functionName="LPM_MSTP_CCC"/>
+    <functioncall functionName="LPM_MSTP_CRC"/>
+    <functioncall functionName="LPM_MSTP_DIL"/>
+    <functioncall functionName="LPM_MSTP_DIV"/>
+    <functioncall functionName="LPM_MSTP_DOC"/>
+    <functioncall functionName="LPM_MSTP_DTC_DMAC"/>
+    <functioncall functionName="LPM_MSTP_ELC"/>
+    <functioncall functionName="LPM_MSTP_GDT"/>
+    <functioncall functionName="LPM_MSTP_GPT162_165"/>
+    <functioncall functionName="LPM_MSTP_GPT320_321"/>
+    <functioncall functionName="LPM_MSTP_IRDA"/>
+    <functioncall functionName="LPM_MSTP_IWDT"/>
+    <functioncall functionName="LPM_MSTP_LST"/>
+    <functioncall functionName="LPM_MSTP_MLCD"/>
+    <functioncall functionName="LPM_MSTP_NUM"/>
+    <functioncall functionName="LPM_MSTP_POEG"/>
+    <functioncall functionName="LPM_MSTP_QSPI"/>
+    <functioncall functionName="LPM_MSTP_RIIC0"/>
+    <functioncall functionName="LPM_MSTP_RIIC1"/>
+    <functioncall functionName="LPM_MSTP_RTC"/>
+    <functioncall functionName="LPM_MSTP_S14AD"/>
+    <functioncall functionName="LPM_MSTP_SCI0"/>
+    <functioncall functionName="LPM_MSTP_SCI1"/>
+    <functioncall functionName="LPM_MSTP_SCI2"/>
+    <functioncall functionName="LPM_MSTP_SCI3"/>
+    <functioncall functionName="LPM_MSTP_SCI4"/>
+    <functioncall functionName="LPM_MSTP_SCI5"/>
+    <functioncall functionName="LPM_MSTP_SCI9"/>
+    <functioncall functionName="LPM_MSTP_SPI0"/>
+    <functioncall functionName="LPM_MSTP_SPI1"/>
+    <functioncall functionName="LPM_MSTP_TEMPS"/>
+    <functioncall functionName="LPM_MSTP_TMR"/>
+    <functioncall functionName="LPM_MSTP_TSIP_LITE"/>
+    <functioncall functionName="LPM_MSTP_VREF"/>
+    <functioncall functionName="LPM_MSTP_WDT"/>
+    <functioncall functionName="LPM_MSTP_WUPT"/>
+    <functioncall functionName="NVIC_USER_IRQ_OFFSET"/>
+    <functioncall functionName="R_LPM_IOPowerSupplyModeSet"/>
+    <functioncall functionName="R_LPM_Initialize"/>
+    <functioncall functionName="R_SYS_CodeCopy"/>
+    <functioncall functionName="R_SYS_Initialize"/>
+    <functioncall functionName="SCB_AIRCR_SYSRESETREQ_Msk"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="_BIT_SHIFT"/>
+    <functioncall functionName="_IP_IDX"/>
+    <functioncall functionName="_SHP_IDX"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_PRIO_BITS"/>
+    <functioncall functionName="__dsb"/>
+    <functioncall functionName="__isb"/>
+    <functioncall functionName="__nop"/>
+    <functioncall functionName="__regAPSR"/>
+    <functioncall functionName="__regControl"/>
+    <functioncall functionName="__regIPSR"/>
+    <functioncall functionName="__regMainStackPointer"/>
+    <functioncall functionName="__regPriMask"/>
+    <functioncall functionName="__regProcessStackPointer"/>
+    <functioncall functionName="__regXPSR"/>
+    <functioncall functionName="__schedule_barrier"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="priMask"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="topOfMainStack"/>
+    <functioncall functionName="topOfProcStack"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

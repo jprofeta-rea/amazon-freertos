@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2182028834">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Default_Handler" lineNumber="300"/>
+    <functiondecl functionName="Reset_Handler" lineNumber="359"/>
+    <functiondecl functionName="NMI_Handler" lineNumber="202"/>
+    <functiondecl functionName="HardFault_Handler" lineNumber="204"/>
+    <functiondecl functionName="MemManage_Handler" lineNumber="206"/>
+    <functiondecl functionName="BusFault_Handler" lineNumber="208"/>
+    <functiondecl functionName="UsageFault_Handler" lineNumber="210"/>
+    <functiondecl functionName="SVC_Handler" lineNumber="212"/>
+    <functiondecl functionName="DebugMon_Handler" lineNumber="214"/>
+    <functiondecl functionName="PendSV_Handler" lineNumber="216"/>
+    <functiondecl functionName="SysTick_Handler" lineNumber="218"/>
+    <functiondecl functionName="IEL0_IRQHandler" lineNumber="221"/>
+    <functiondecl functionName="IEL1_IRQHandler" lineNumber="223"/>
+    <functiondecl functionName="IEL2_IRQHandler" lineNumber="225"/>
+    <functiondecl functionName="IEL3_IRQHandler" lineNumber="227"/>
+    <functiondecl functionName="IEL4_IRQHandler" lineNumber="229"/>
+    <functiondecl functionName="IEL5_IRQHandler" lineNumber="231"/>
+    <functiondecl functionName="IEL6_IRQHandler" lineNumber="233"/>
+    <functiondecl functionName="IEL7_IRQHandler" lineNumber="235"/>
+    <functiondecl functionName="IEL8_IRQHandler" lineNumber="237"/>
+    <functiondecl functionName="IEL9_IRQHandler" lineNumber="239"/>
+    <functiondecl functionName="IEL10_IRQHandler" lineNumber="241"/>
+    <functiondecl functionName="IEL11_IRQHandler" lineNumber="243"/>
+    <functiondecl functionName="IEL12_IRQHandler" lineNumber="245"/>
+    <functiondecl functionName="IEL13_IRQHandler" lineNumber="247"/>
+    <functiondecl functionName="IEL14_IRQHandler" lineNumber="249"/>
+    <functiondecl functionName="IEL15_IRQHandler" lineNumber="251"/>
+    <functiondecl functionName="IEL16_IRQHandler" lineNumber="253"/>
+    <functiondecl functionName="IEL17_IRQHandler" lineNumber="255"/>
+    <functiondecl functionName="IEL18_IRQHandler" lineNumber="257"/>
+    <functiondecl functionName="IEL19_IRQHandler" lineNumber="259"/>
+    <functiondecl functionName="IEL20_IRQHandler" lineNumber="261"/>
+    <functiondecl functionName="IEL21_IRQHandler" lineNumber="263"/>
+    <functiondecl functionName="IEL22_IRQHandler" lineNumber="265"/>
+    <functiondecl functionName="IEL23_IRQHandler" lineNumber="267"/>
+    <functiondecl functionName="IEL24_IRQHandler" lineNumber="269"/>
+    <functiondecl functionName="IEL25_IRQHandler" lineNumber="271"/>
+    <functiondecl functionName="IEL26_IRQHandler" lineNumber="273"/>
+    <functiondecl functionName="IEL27_IRQHandler" lineNumber="275"/>
+    <functiondecl functionName="IEL28_IRQHandler" lineNumber="277"/>
+    <functiondecl functionName="IEL29_IRQHandler" lineNumber="279"/>
+    <functiondecl functionName="IEL30_IRQHandler" lineNumber="281"/>
+    <functiondecl functionName="IEL31_IRQHandler" lineNumber="283"/>
+    <functiondecl functionName="Reset_Handler" lineNumber="359"/>
+    <functioncall functionName="HardFault_Handler"/>
+    <functioncall functionName="IEL0_IRQHandler"/>
+    <functioncall functionName="IEL10_IRQHandler"/>
+    <functioncall functionName="IEL11_IRQHandler"/>
+    <functioncall functionName="IEL12_IRQHandler"/>
+    <functioncall functionName="IEL13_IRQHandler"/>
+    <functioncall functionName="IEL14_IRQHandler"/>
+    <functioncall functionName="IEL15_IRQHandler"/>
+    <functioncall functionName="IEL16_IRQHandler"/>
+    <functioncall functionName="IEL17_IRQHandler"/>
+    <functioncall functionName="IEL18_IRQHandler"/>
+    <functioncall functionName="IEL19_IRQHandler"/>
+    <functioncall functionName="IEL1_IRQHandler"/>
+    <functioncall functionName="IEL20_IRQHandler"/>
+    <functioncall functionName="IEL21_IRQHandler"/>
+    <functioncall functionName="IEL22_IRQHandler"/>
+    <functioncall functionName="IEL23_IRQHandler"/>
+    <functioncall functionName="IEL24_IRQHandler"/>
+    <functioncall functionName="IEL25_IRQHandler"/>
+    <functioncall functionName="IEL26_IRQHandler"/>
+    <functioncall functionName="IEL27_IRQHandler"/>
+    <functioncall functionName="IEL28_IRQHandler"/>
+    <functioncall functionName="IEL29_IRQHandler"/>
+    <functioncall functionName="IEL2_IRQHandler"/>
+    <functioncall functionName="IEL30_IRQHandler"/>
+    <functioncall functionName="IEL31_IRQHandler"/>
+    <functioncall functionName="IEL3_IRQHandler"/>
+    <functioncall functionName="IEL4_IRQHandler"/>
+    <functioncall functionName="IEL5_IRQHandler"/>
+    <functioncall functionName="IEL6_IRQHandler"/>
+    <functioncall functionName="IEL7_IRQHandler"/>
+    <functioncall functionName="IEL8_IRQHandler"/>
+    <functioncall functionName="IEL9_IRQHandler"/>
+    <functioncall functionName="NMI_Handler"/>
+    <functioncall functionName="PendSV_Handler"/>
+    <functioncall functionName="Reset_Handler"/>
+    <functioncall functionName="SVC_Handler"/>
+    <functioncall functionName="SysTick_Handler"/>
+    <functioncall functionName="SystemInit"/>
+    <functioncall functionName="__bss_start__"/>
+    <functioncall functionName="__data_start__"/>
+    <functioncall functionName="__etext"/>
+    <functioncall functionName="__iar_program_start"/>
+    <functioncall functionName="__sfe"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="main"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

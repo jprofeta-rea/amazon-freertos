@@ -1,0 +1,921 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1704283905">
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;gs_d_cks[8]&apos; accessed at index 9998, which is out of bounds." verbose="Array &apos;gs_d_cks[8]&apos; accessed at index 9998, which is out of bounds." cwe="788">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1776" column="37" info="Array index out of bounds"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1731" column="5" info="After for loop, cnt has value 9999"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR1_b.CLO&apos; is always true" verbose="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR1_b.CLO&apos; is always true" cwe="571">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1481" column="29" info="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR1_b.CLO&apos; is always true"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1480" column="45" info="p_i2c-&gt;reg-&gt;ICCR1_b.CLO is assigned value 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.ST&apos; is always true" verbose="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.ST&apos; is always true" cwe="571">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1508" column="25" info="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.ST&apos; is always true"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1505" column="42" info="p_i2c-&gt;reg-&gt;ICCR2_b.ST is assigned value 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR1_b.CLO&apos; is always true" verbose="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR1_b.CLO&apos; is always true" cwe="571">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1526" column="29" info="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR1_b.CLO&apos; is always true"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1524" column="45" info="p_i2c-&gt;reg-&gt;ICCR1_b.CLO is assigned value 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.SP&apos; is always true" verbose="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.SP&apos; is always true" cwe="571">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1541" column="25" info="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.SP&apos; is always true"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1539" column="43" info="p_i2c-&gt;reg-&gt;ICCR2_b.SP is assigned value 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.SP&apos; is always true" verbose="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.SP&apos; is always true" cwe="571">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1594" column="25" info="Condition &apos;1==p_i2c-&gt;reg-&gt;ICCR2_b.SP&apos; is always true"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1593" column="40" info="p_i2c-&gt;reg-&gt;ICCR2_b.SP is assigned value 1"/>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="836" column="5" info="Null pointer dereference"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="833" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="857" column="12" info="Null pointer dereference"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="854" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;p_i2c-&gt;reg-&gt;ICCR1_b.IICRST&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;p_i2c-&gt;reg-&gt;ICCR1_b.IICRST&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="957" column="40" info="p_i2c-&gt;reg-&gt;ICCR1_b.IICRST is overwritten"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="945" column="50" info="p_i2c-&gt;reg-&gt;ICCR1_b.IICRST is assigned"/>
+            <symbol>p_i2c-&gt;reg-&gt;ICCR1_b.IICRST</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;p_i2c-&gt;reg-&gt;ICCR1_b.IICRST&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;p_i2c-&gt;reg-&gt;ICCR1_b.IICRST&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1932" column="36" info="p_i2c-&gt;reg-&gt;ICCR1_b.IICRST is overwritten"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1845" column="36" info="p_i2c-&gt;reg-&gt;ICCR1_b.IICRST is assigned"/>
+            <symbol>p_i2c-&gt;reg-&gt;ICCR1_b.IICRST</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;p_i2c-&gt;reg-&gt;ICCR1_b.IICRST&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;p_i2c-&gt;reg-&gt;ICCR1_b.IICRST&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2077" column="32" info="p_i2c-&gt;reg-&gt;ICCR1_b.IICRST is overwritten"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1960" column="32" info="p_i2c-&gt;reg-&gt;ICCR1_b.IICRST is assigned"/>
+            <symbol>p_i2c-&gt;reg-&gt;ICCR1_b.IICRST</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;dummy&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;dummy&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2590" column="15" info="dummy is overwritten"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2553" column="23" info="dummy is assigned"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;dummy&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;dummy&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2590" column="15" info="dummy is overwritten"/>
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2581" column="19" info="dummy is assigned"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1403" column="13"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;icmr3_tmp&apos; can be reduced." verbose="The scope of the variable &apos;icmr3_tmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1405" column="13"/>
+            <symbol>icmr3_tmp</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;uctmp&apos; can be reduced." verbose="The scope of the variable &apos;uctmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="1835" column="13"/>
+            <symbol>uctmp</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;timeout&apos; can be reduced." verbose="The scope of the variable &apos;timeout&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2095" column="13"/>
+            <symbol>timeout</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;event&apos; can be reduced." verbose="The scope of the variable &apos;event&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2251" column="14"/>
+            <symbol>event</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: uctmp" verbose="Unused variable: uctmp" cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="922" column="22"/>
+            <symbol>uctmp</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2258" column="15"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2296" column="15"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2445" column="19"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2476" column="19"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2485" column="19"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2525" column="15"/>
+            <symbol>dummy</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dummy&apos; is assigned a value that is never used." verbose="Variable &apos;dummy&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" file="..\Device\CMSIS_Driver\Src\r_i2c_cmsis_api.c" line="2590" column="15"/>
+            <symbol>dummy</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:264:16" call-funcname="ARM_I2C_PowerControl" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="895" col="29" call-argexpr="ARM_POWER_OFF" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" call-funcname="riic_reset" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1605" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="&pclkb_freq" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="pclkb_freq" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="&reg_set" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="reg_set" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="351" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:292:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="394" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:295:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="412" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:297:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="428" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:299:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="444" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:300:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="587" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:528:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="630" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:531:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="648" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:533:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="664" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:535:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="680" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:536:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" my-argnr="2" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="794" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:263:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="886" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1026" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1144" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1331" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:276:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1407" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1952" col="24" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:280:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2097" col="28" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:281:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2254" col="29" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:282:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2322" col="14" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:283:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2519" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:264:16" call-funcname="ARM_I2C_PowerControl" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="895" col="29" call-argexpr="ARM_POWER_OFF" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" call-funcname="riic_reset" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1605" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="&pclkb_freq" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="pclkb_freq" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="&reg_set" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="reg_set" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="351" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:292:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="394" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:295:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="412" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:297:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="428" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:299:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="444" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:300:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="587" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:528:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="630" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:531:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="648" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:533:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="664" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:535:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="680" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:536:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" my-argnr="2" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="794" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:263:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="886" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1026" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1144" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1331" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:276:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1407" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1952" col="24" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:280:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2097" col="28" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:281:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2254" col="29" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:282:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2322" col="14" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:283:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2519" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:264:16" call-funcname="ARM_I2C_PowerControl" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="895" col="29" call-argexpr="ARM_POWER_OFF" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" call-funcname="riic_reset" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1605" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="&pclkb_freq" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="pclkb_freq" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="&reg_set" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="reg_set" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="351" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:292:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="394" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:295:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="412" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:297:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="428" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:299:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="444" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:300:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="587" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:528:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="630" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:531:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="648" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:533:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="664" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:535:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="680" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:536:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" my-argnr="2" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="794" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:263:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="886" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1026" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1144" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1331" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:276:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1407" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1952" col="24" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:280:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2097" col="28" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:281:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2254" col="29" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:282:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2322" col="14" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:283:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2519" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:264:16" call-funcname="ARM_I2C_PowerControl" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="895" col="29" call-argexpr="ARM_POWER_OFF" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" call-funcname="riic_reset" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1605" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="&pclkb_freq" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="pclkb_freq" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="&reg_set" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="reg_set" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="351" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:292:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="394" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:295:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="412" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:297:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="428" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:299:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="444" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:300:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="587" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:528:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="630" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:531:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="648" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:533:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="664" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:535:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="680" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:536:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" my-argnr="2" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="794" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:263:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="886" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1026" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1144" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1331" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:276:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1407" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1952" col="24" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:280:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2097" col="28" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:281:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2254" col="29" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:282:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2322" col="14" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:283:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2519" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:264:16" call-funcname="ARM_I2C_PowerControl" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="895" col="29" call-argexpr="ARM_POWER_OFF" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" call-funcname="riic_reset" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1605" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="&pclkb_freq" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="pclkb_freq" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="&reg_set" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="reg_set" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="351" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:292:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="394" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:295:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="412" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:297:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="428" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:299:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="444" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:300:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="587" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:528:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="630" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:531:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="648" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:533:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="664" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:535:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="680" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:536:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" my-argnr="2" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="794" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:263:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="886" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1026" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1144" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1331" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:276:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1407" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1952" col="24" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:280:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2097" col="28" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:281:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2254" col="29" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:282:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2322" col="14" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:283:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2519" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:264:16" call-funcname="ARM_I2C_PowerControl" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="895" col="29" call-argexpr="ARM_POWER_OFF" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" call-funcname="riic_reset" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1605" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="&pclkb_freq" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:586:9" call-funcname="R_SYS_PeripheralClockFreqGet" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1656" col="39" call-argexpr="pclkb_freq" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="&reg_set" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:284:16" call-funcname="riic_bps_calc" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1837" col="27" call-argexpr="reg_set" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="351" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:292:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="394" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:295:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="412" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:297:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="428" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:299:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="444" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:300:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" call-funcname="ARM_I2C_Initialize" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="587" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:528:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" call-funcname="ARM_I2C_MasterTransmit" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="630" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:531:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" call-funcname="ARM_I2C_MasterReceive" call-argnr="2" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="648" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:533:16" my-argnr="2"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" call-funcname="ARM_I2C_SlaveTransmit" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="664" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:535:16" my-argnr="1"/>
+<function-call call-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" call-funcname="ARM_I2C_SlaveReceive" call-argnr="1" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="680" col="13" my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:536:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:261:16" my-argnr="2" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="794" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:263:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="886" col="18" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:266:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1026" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:269:16" my-argnr="5" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1144" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:271:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:273:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1331" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:276:16" my-argnr="3" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1407" col="16" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:286:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1952" col="24" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:280:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2097" col="28" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:281:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2254" col="29" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:282:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2322" col="14" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:283:13" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="2519" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h:214:27" my-argnr="1" my-argname="p_i2c" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/CMSIS_Driver/Include/r_i2c_cmsis_api.h" line="218" col="23" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:275:16" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1387" col="11" value="0"/>
+    <unsafe-usage my-id="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c:278:23" my-argnr="1" my-argname="p_i2c" file="../Device/CMSIS_Driver/Src/r_i2c_cmsis_api.c" line="1626" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="RIIC0_Initialize" lineNumber="349"/>
+    <functiondecl functionName="RIIC0_Uninitialize" lineNumber="362"/>
+    <functiondecl functionName="RIIC0_PowerControl" lineNumber="375"/>
+    <functiondecl functionName="RIIC0_MasterTransmit" lineNumber="392"/>
+    <functiondecl functionName="RIIC0_MasterReceive" lineNumber="410"/>
+    <functiondecl functionName="RIIC0_SlaveTransmit" lineNumber="426"/>
+    <functiondecl functionName="RIIC0_SlaveReceive" lineNumber="442"/>
+    <functiondecl functionName="RIIC0_GetDataCount" lineNumber="455"/>
+    <functiondecl functionName="RIIC0_Control" lineNumber="469"/>
+    <functiondecl functionName="RIIC0_GetStatus" lineNumber="481"/>
+    <functiondecl functionName="iic0_txi_interrupt" lineNumber="491"/>
+    <functiondecl functionName="iic0_tei_interrupt" lineNumber="500"/>
+    <functiondecl functionName="iic0_rxi_interrupt" lineNumber="509"/>
+    <functiondecl functionName="iic0_eei_interrupt" lineNumber="518"/>
+    <functiondecl functionName="RIIC1_Initialize" lineNumber="585"/>
+    <functiondecl functionName="RIIC1_Uninitialize" lineNumber="598"/>
+    <functiondecl functionName="RIIC1_PowerControl" lineNumber="611"/>
+    <functiondecl functionName="RIIC1_MasterTransmit" lineNumber="628"/>
+    <functiondecl functionName="RIIC1_MasterReceive" lineNumber="646"/>
+    <functiondecl functionName="RIIC1_SlaveTransmit" lineNumber="662"/>
+    <functiondecl functionName="RIIC1_SlaveReceive" lineNumber="678"/>
+    <functiondecl functionName="RIIC1_GetDataCount" lineNumber="691"/>
+    <functiondecl functionName="RIIC1_Control" lineNumber="705"/>
+    <functiondecl functionName="RIIC1_GetStatus" lineNumber="717"/>
+    <functiondecl functionName="iic1_txi_interrupt" lineNumber="727"/>
+    <functiondecl functionName="iic1_tei_interrupt" lineNumber="736"/>
+    <functiondecl functionName="iic1_rxi_interrupt" lineNumber="745"/>
+    <functiondecl functionName="iic1_eei_interrupt" lineNumber="754"/>
+    <functiondecl functionName="ARM_I2C_GetVersion" lineNumber="768"/>
+    <functiondecl functionName="ARM_I2C_GetCapabilities" lineNumber="779"/>
+    <functiondecl functionName="ARM_I2C_Initialize" lineNumber="792"/>
+    <functiondecl functionName="ARM_I2C_Uninitialize" lineNumber="884"/>
+    <functiondecl functionName="ARM_I2C_PowerControl" lineNumber="918"/>
+    <functiondecl functionName="ARM_I2C_MasterTransmit" lineNumber="1021"/>
+    <functiondecl functionName="ARM_I2C_MasterReceive" lineNumber="1139"/>
+    <functiondecl functionName="ARM_I2C_SlaveTransmit" lineNumber="1266"/>
+    <functiondecl functionName="ARM_I2C_SlaveReceive" lineNumber="1329"/>
+    <functiondecl functionName="ARM_I2C_GetDataCount" lineNumber="1385"/>
+    <functiondecl functionName="ARM_I2C_Control" lineNumber="1400"/>
+    <functiondecl functionName="ARM_I2C_GetStatus" lineNumber="1624"/>
+    <functiondecl functionName="riic_bps_calc" lineNumber="1637"/>
+    <functiondecl functionName="riic_setting" lineNumber="1831"/>
+    <functiondecl functionName="riic_reset" lineNumber="1947"/>
+    <functiondecl functionName="iic_txi_interrupt" lineNumber="2092"/>
+    <functiondecl functionName="iic_tei_interrupt" lineNumber="2249"/>
+    <functiondecl functionName="iic_rxi_interrupt" lineNumber="2314"/>
+    <functiondecl functionName="iic_eei_interrupt" lineNumber="2513"/>
+    <functiondecl functionName="RIIC0_Initialize" lineNumber="349"/>
+    <functiondecl functionName="RIIC0_Uninitialize" lineNumber="362"/>
+    <functiondecl functionName="RIIC0_PowerControl" lineNumber="375"/>
+    <functiondecl functionName="RIIC0_MasterTransmit" lineNumber="392"/>
+    <functiondecl functionName="RIIC0_MasterReceive" lineNumber="410"/>
+    <functiondecl functionName="RIIC0_SlaveTransmit" lineNumber="426"/>
+    <functiondecl functionName="RIIC0_SlaveReceive" lineNumber="442"/>
+    <functiondecl functionName="RIIC0_GetDataCount" lineNumber="455"/>
+    <functiondecl functionName="RIIC0_Control" lineNumber="469"/>
+    <functiondecl functionName="RIIC0_GetStatus" lineNumber="481"/>
+    <functiondecl functionName="iic0_txi_interrupt" lineNumber="491"/>
+    <functiondecl functionName="iic0_tei_interrupt" lineNumber="500"/>
+    <functiondecl functionName="iic0_rxi_interrupt" lineNumber="509"/>
+    <functiondecl functionName="iic0_eei_interrupt" lineNumber="518"/>
+    <functiondecl functionName="RIIC1_Initialize" lineNumber="585"/>
+    <functiondecl functionName="RIIC1_Uninitialize" lineNumber="598"/>
+    <functiondecl functionName="RIIC1_PowerControl" lineNumber="611"/>
+    <functiondecl functionName="RIIC1_MasterTransmit" lineNumber="628"/>
+    <functiondecl functionName="RIIC1_MasterReceive" lineNumber="646"/>
+    <functiondecl functionName="RIIC1_SlaveTransmit" lineNumber="662"/>
+    <functiondecl functionName="RIIC1_SlaveReceive" lineNumber="678"/>
+    <functiondecl functionName="RIIC1_GetDataCount" lineNumber="691"/>
+    <functiondecl functionName="RIIC1_Control" lineNumber="705"/>
+    <functiondecl functionName="RIIC1_GetStatus" lineNumber="717"/>
+    <functiondecl functionName="iic1_txi_interrupt" lineNumber="727"/>
+    <functiondecl functionName="iic1_tei_interrupt" lineNumber="736"/>
+    <functiondecl functionName="iic1_rxi_interrupt" lineNumber="745"/>
+    <functiondecl functionName="iic1_eei_interrupt" lineNumber="754"/>
+    <functiondecl functionName="ARM_I2C_GetVersion" lineNumber="768"/>
+    <functiondecl functionName="ARM_I2C_GetCapabilities" lineNumber="779"/>
+    <functiondecl functionName="ARM_I2C_Initialize" lineNumber="792"/>
+    <functiondecl functionName="ARM_I2C_Uninitialize" lineNumber="884"/>
+    <functiondecl functionName="ARM_I2C_PowerControl" lineNumber="918"/>
+    <functiondecl functionName="ARM_I2C_MasterTransmit" lineNumber="1021"/>
+    <functiondecl functionName="ARM_I2C_MasterReceive" lineNumber="1139"/>
+    <functiondecl functionName="ARM_I2C_SlaveTransmit" lineNumber="1266"/>
+    <functiondecl functionName="ARM_I2C_SlaveReceive" lineNumber="1329"/>
+    <functiondecl functionName="ARM_I2C_GetDataCount" lineNumber="1385"/>
+    <functiondecl functionName="ARM_I2C_Control" lineNumber="1400"/>
+    <functiondecl functionName="ARM_I2C_GetStatus" lineNumber="1624"/>
+    <functiondecl functionName="riic_bps_calc" lineNumber="1637"/>
+    <functiondecl functionName="riic_setting" lineNumber="1831"/>
+    <functiondecl functionName="riic_reset" lineNumber="1947"/>
+    <functiondecl functionName="iic_txi_interrupt" lineNumber="2092"/>
+    <functiondecl functionName="iic_tei_interrupt" lineNumber="2249"/>
+    <functiondecl functionName="iic_rxi_interrupt" lineNumber="2314"/>
+    <functiondecl functionName="iic_eei_interrupt" lineNumber="2513"/>
+    <functiondecl functionName="RIIC0_Initialize" lineNumber="349"/>
+    <functiondecl functionName="RIIC0_Uninitialize" lineNumber="362"/>
+    <functiondecl functionName="RIIC0_PowerControl" lineNumber="375"/>
+    <functiondecl functionName="RIIC0_MasterTransmit" lineNumber="392"/>
+    <functiondecl functionName="RIIC0_MasterReceive" lineNumber="410"/>
+    <functiondecl functionName="RIIC0_SlaveTransmit" lineNumber="426"/>
+    <functiondecl functionName="RIIC0_SlaveReceive" lineNumber="442"/>
+    <functiondecl functionName="RIIC0_GetDataCount" lineNumber="455"/>
+    <functiondecl functionName="RIIC0_Control" lineNumber="469"/>
+    <functiondecl functionName="RIIC0_GetStatus" lineNumber="481"/>
+    <functiondecl functionName="iic0_txi_interrupt" lineNumber="491"/>
+    <functiondecl functionName="iic0_tei_interrupt" lineNumber="500"/>
+    <functiondecl functionName="iic0_rxi_interrupt" lineNumber="509"/>
+    <functiondecl functionName="iic0_eei_interrupt" lineNumber="518"/>
+    <functiondecl functionName="RIIC1_Initialize" lineNumber="585"/>
+    <functiondecl functionName="RIIC1_Uninitialize" lineNumber="598"/>
+    <functiondecl functionName="RIIC1_PowerControl" lineNumber="611"/>
+    <functiondecl functionName="RIIC1_MasterTransmit" lineNumber="628"/>
+    <functiondecl functionName="RIIC1_MasterReceive" lineNumber="646"/>
+    <functiondecl functionName="RIIC1_SlaveTransmit" lineNumber="662"/>
+    <functiondecl functionName="RIIC1_SlaveReceive" lineNumber="678"/>
+    <functiondecl functionName="RIIC1_GetDataCount" lineNumber="691"/>
+    <functiondecl functionName="RIIC1_Control" lineNumber="705"/>
+    <functiondecl functionName="RIIC1_GetStatus" lineNumber="717"/>
+    <functiondecl functionName="iic1_txi_interrupt" lineNumber="727"/>
+    <functiondecl functionName="iic1_tei_interrupt" lineNumber="736"/>
+    <functiondecl functionName="iic1_rxi_interrupt" lineNumber="745"/>
+    <functiondecl functionName="iic1_eei_interrupt" lineNumber="754"/>
+    <functiondecl functionName="ARM_I2C_GetVersion" lineNumber="768"/>
+    <functiondecl functionName="ARM_I2C_GetCapabilities" lineNumber="779"/>
+    <functiondecl functionName="ARM_I2C_Initialize" lineNumber="792"/>
+    <functiondecl functionName="ARM_I2C_Uninitialize" lineNumber="884"/>
+    <functiondecl functionName="ARM_I2C_PowerControl" lineNumber="918"/>
+    <functiondecl functionName="ARM_I2C_MasterTransmit" lineNumber="1021"/>
+    <functiondecl functionName="ARM_I2C_MasterReceive" lineNumber="1139"/>
+    <functiondecl functionName="ARM_I2C_SlaveTransmit" lineNumber="1266"/>
+    <functiondecl functionName="ARM_I2C_SlaveReceive" lineNumber="1329"/>
+    <functiondecl functionName="ARM_I2C_GetDataCount" lineNumber="1385"/>
+    <functiondecl functionName="ARM_I2C_Control" lineNumber="1400"/>
+    <functiondecl functionName="ARM_I2C_GetStatus" lineNumber="1624"/>
+    <functiondecl functionName="riic_bps_calc" lineNumber="1637"/>
+    <functiondecl functionName="riic_setting" lineNumber="1831"/>
+    <functiondecl functionName="riic_reset" lineNumber="1947"/>
+    <functiondecl functionName="iic_txi_interrupt" lineNumber="2092"/>
+    <functiondecl functionName="iic_tei_interrupt" lineNumber="2249"/>
+    <functiondecl functionName="iic_rxi_interrupt" lineNumber="2314"/>
+    <functiondecl functionName="iic_eei_interrupt" lineNumber="2513"/>
+    <functiondecl functionName="RIIC0_Initialize" lineNumber="349"/>
+    <functiondecl functionName="RIIC0_Uninitialize" lineNumber="362"/>
+    <functiondecl functionName="RIIC0_PowerControl" lineNumber="375"/>
+    <functiondecl functionName="RIIC0_MasterTransmit" lineNumber="392"/>
+    <functiondecl functionName="RIIC0_MasterReceive" lineNumber="410"/>
+    <functiondecl functionName="RIIC0_SlaveTransmit" lineNumber="426"/>
+    <functiondecl functionName="RIIC0_SlaveReceive" lineNumber="442"/>
+    <functiondecl functionName="RIIC0_GetDataCount" lineNumber="455"/>
+    <functiondecl functionName="RIIC0_Control" lineNumber="469"/>
+    <functiondecl functionName="RIIC0_GetStatus" lineNumber="481"/>
+    <functiondecl functionName="iic0_txi_interrupt" lineNumber="491"/>
+    <functiondecl functionName="iic0_tei_interrupt" lineNumber="500"/>
+    <functiondecl functionName="iic0_rxi_interrupt" lineNumber="509"/>
+    <functiondecl functionName="iic0_eei_interrupt" lineNumber="518"/>
+    <functiondecl functionName="RIIC1_Initialize" lineNumber="585"/>
+    <functiondecl functionName="RIIC1_Uninitialize" lineNumber="598"/>
+    <functiondecl functionName="RIIC1_PowerControl" lineNumber="611"/>
+    <functiondecl functionName="RIIC1_MasterTransmit" lineNumber="628"/>
+    <functiondecl functionName="RIIC1_MasterReceive" lineNumber="646"/>
+    <functiondecl functionName="RIIC1_SlaveTransmit" lineNumber="662"/>
+    <functiondecl functionName="RIIC1_SlaveReceive" lineNumber="678"/>
+    <functiondecl functionName="RIIC1_GetDataCount" lineNumber="691"/>
+    <functiondecl functionName="RIIC1_Control" lineNumber="705"/>
+    <functiondecl functionName="RIIC1_GetStatus" lineNumber="717"/>
+    <functiondecl functionName="iic1_txi_interrupt" lineNumber="727"/>
+    <functiondecl functionName="iic1_tei_interrupt" lineNumber="736"/>
+    <functiondecl functionName="iic1_rxi_interrupt" lineNumber="745"/>
+    <functiondecl functionName="iic1_eei_interrupt" lineNumber="754"/>
+    <functiondecl functionName="ARM_I2C_GetVersion" lineNumber="768"/>
+    <functiondecl functionName="ARM_I2C_GetCapabilities" lineNumber="779"/>
+    <functiondecl functionName="ARM_I2C_Initialize" lineNumber="792"/>
+    <functiondecl functionName="ARM_I2C_Uninitialize" lineNumber="884"/>
+    <functiondecl functionName="ARM_I2C_PowerControl" lineNumber="918"/>
+    <functiondecl functionName="ARM_I2C_MasterTransmit" lineNumber="1021"/>
+    <functiondecl functionName="ARM_I2C_MasterReceive" lineNumber="1139"/>
+    <functiondecl functionName="ARM_I2C_SlaveTransmit" lineNumber="1266"/>
+    <functiondecl functionName="ARM_I2C_SlaveReceive" lineNumber="1329"/>
+    <functiondecl functionName="ARM_I2C_GetDataCount" lineNumber="1385"/>
+    <functiondecl functionName="ARM_I2C_Control" lineNumber="1400"/>
+    <functiondecl functionName="ARM_I2C_GetStatus" lineNumber="1624"/>
+    <functiondecl functionName="riic_bps_calc" lineNumber="1637"/>
+    <functiondecl functionName="riic_setting" lineNumber="1831"/>
+    <functiondecl functionName="riic_reset" lineNumber="1947"/>
+    <functiondecl functionName="iic_txi_interrupt" lineNumber="2092"/>
+    <functiondecl functionName="iic_tei_interrupt" lineNumber="2249"/>
+    <functiondecl functionName="iic_rxi_interrupt" lineNumber="2314"/>
+    <functiondecl functionName="iic_eei_interrupt" lineNumber="2513"/>
+    <functiondecl functionName="RIIC0_Initialize" lineNumber="349"/>
+    <functiondecl functionName="RIIC0_Uninitialize" lineNumber="362"/>
+    <functiondecl functionName="RIIC0_PowerControl" lineNumber="375"/>
+    <functiondecl functionName="RIIC0_MasterTransmit" lineNumber="392"/>
+    <functiondecl functionName="RIIC0_MasterReceive" lineNumber="410"/>
+    <functiondecl functionName="RIIC0_SlaveTransmit" lineNumber="426"/>
+    <functiondecl functionName="RIIC0_SlaveReceive" lineNumber="442"/>
+    <functiondecl functionName="RIIC0_GetDataCount" lineNumber="455"/>
+    <functiondecl functionName="RIIC0_Control" lineNumber="469"/>
+    <functiondecl functionName="RIIC0_GetStatus" lineNumber="481"/>
+    <functiondecl functionName="iic0_txi_interrupt" lineNumber="491"/>
+    <functiondecl functionName="iic0_tei_interrupt" lineNumber="500"/>
+    <functiondecl functionName="iic0_rxi_interrupt" lineNumber="509"/>
+    <functiondecl functionName="iic0_eei_interrupt" lineNumber="518"/>
+    <functiondecl functionName="RIIC1_Initialize" lineNumber="585"/>
+    <functiondecl functionName="RIIC1_Uninitialize" lineNumber="598"/>
+    <functiondecl functionName="RIIC1_PowerControl" lineNumber="611"/>
+    <functiondecl functionName="RIIC1_MasterTransmit" lineNumber="628"/>
+    <functiondecl functionName="RIIC1_MasterReceive" lineNumber="646"/>
+    <functiondecl functionName="RIIC1_SlaveTransmit" lineNumber="662"/>
+    <functiondecl functionName="RIIC1_SlaveReceive" lineNumber="678"/>
+    <functiondecl functionName="RIIC1_GetDataCount" lineNumber="691"/>
+    <functiondecl functionName="RIIC1_Control" lineNumber="705"/>
+    <functiondecl functionName="RIIC1_GetStatus" lineNumber="717"/>
+    <functiondecl functionName="iic1_txi_interrupt" lineNumber="727"/>
+    <functiondecl functionName="iic1_tei_interrupt" lineNumber="736"/>
+    <functiondecl functionName="iic1_rxi_interrupt" lineNumber="745"/>
+    <functiondecl functionName="iic1_eei_interrupt" lineNumber="754"/>
+    <functiondecl functionName="ARM_I2C_GetVersion" lineNumber="768"/>
+    <functiondecl functionName="ARM_I2C_GetCapabilities" lineNumber="779"/>
+    <functiondecl functionName="ARM_I2C_Initialize" lineNumber="792"/>
+    <functiondecl functionName="ARM_I2C_Uninitialize" lineNumber="884"/>
+    <functiondecl functionName="ARM_I2C_PowerControl" lineNumber="918"/>
+    <functiondecl functionName="ARM_I2C_MasterTransmit" lineNumber="1021"/>
+    <functiondecl functionName="ARM_I2C_MasterReceive" lineNumber="1139"/>
+    <functiondecl functionName="ARM_I2C_SlaveTransmit" lineNumber="1266"/>
+    <functiondecl functionName="ARM_I2C_SlaveReceive" lineNumber="1329"/>
+    <functiondecl functionName="ARM_I2C_GetDataCount" lineNumber="1385"/>
+    <functiondecl functionName="ARM_I2C_Control" lineNumber="1400"/>
+    <functiondecl functionName="ARM_I2C_GetStatus" lineNumber="1624"/>
+    <functiondecl functionName="riic_bps_calc" lineNumber="1637"/>
+    <functiondecl functionName="riic_setting" lineNumber="1831"/>
+    <functiondecl functionName="riic_reset" lineNumber="1947"/>
+    <functiondecl functionName="iic_txi_interrupt" lineNumber="2092"/>
+    <functiondecl functionName="iic_tei_interrupt" lineNumber="2249"/>
+    <functiondecl functionName="iic_rxi_interrupt" lineNumber="2314"/>
+    <functiondecl functionName="iic_eei_interrupt" lineNumber="2513"/>
+    <functiondecl functionName="RIIC0_Initialize" lineNumber="349"/>
+    <functiondecl functionName="RIIC0_Uninitialize" lineNumber="362"/>
+    <functiondecl functionName="RIIC0_PowerControl" lineNumber="375"/>
+    <functiondecl functionName="RIIC0_MasterTransmit" lineNumber="392"/>
+    <functiondecl functionName="RIIC0_MasterReceive" lineNumber="410"/>
+    <functiondecl functionName="RIIC0_SlaveTransmit" lineNumber="426"/>
+    <functiondecl functionName="RIIC0_SlaveReceive" lineNumber="442"/>
+    <functiondecl functionName="RIIC0_GetDataCount" lineNumber="455"/>
+    <functiondecl functionName="RIIC0_Control" lineNumber="469"/>
+    <functiondecl functionName="RIIC0_GetStatus" lineNumber="481"/>
+    <functiondecl functionName="iic0_txi_interrupt" lineNumber="491"/>
+    <functiondecl functionName="iic0_tei_interrupt" lineNumber="500"/>
+    <functiondecl functionName="iic0_rxi_interrupt" lineNumber="509"/>
+    <functiondecl functionName="iic0_eei_interrupt" lineNumber="518"/>
+    <functiondecl functionName="RIIC1_Initialize" lineNumber="585"/>
+    <functiondecl functionName="RIIC1_Uninitialize" lineNumber="598"/>
+    <functiondecl functionName="RIIC1_PowerControl" lineNumber="611"/>
+    <functiondecl functionName="RIIC1_MasterTransmit" lineNumber="628"/>
+    <functiondecl functionName="RIIC1_MasterReceive" lineNumber="646"/>
+    <functiondecl functionName="RIIC1_SlaveTransmit" lineNumber="662"/>
+    <functiondecl functionName="RIIC1_SlaveReceive" lineNumber="678"/>
+    <functiondecl functionName="RIIC1_GetDataCount" lineNumber="691"/>
+    <functiondecl functionName="RIIC1_Control" lineNumber="705"/>
+    <functiondecl functionName="RIIC1_GetStatus" lineNumber="717"/>
+    <functiondecl functionName="iic1_txi_interrupt" lineNumber="727"/>
+    <functiondecl functionName="iic1_tei_interrupt" lineNumber="736"/>
+    <functiondecl functionName="iic1_rxi_interrupt" lineNumber="745"/>
+    <functiondecl functionName="iic1_eei_interrupt" lineNumber="754"/>
+    <functiondecl functionName="ARM_I2C_GetVersion" lineNumber="768"/>
+    <functiondecl functionName="ARM_I2C_GetCapabilities" lineNumber="779"/>
+    <functiondecl functionName="ARM_I2C_Initialize" lineNumber="792"/>
+    <functiondecl functionName="ARM_I2C_Uninitialize" lineNumber="884"/>
+    <functiondecl functionName="ARM_I2C_PowerControl" lineNumber="918"/>
+    <functiondecl functionName="ARM_I2C_MasterTransmit" lineNumber="1021"/>
+    <functiondecl functionName="ARM_I2C_MasterReceive" lineNumber="1139"/>
+    <functiondecl functionName="ARM_I2C_SlaveTransmit" lineNumber="1266"/>
+    <functiondecl functionName="ARM_I2C_SlaveReceive" lineNumber="1329"/>
+    <functiondecl functionName="ARM_I2C_GetDataCount" lineNumber="1385"/>
+    <functiondecl functionName="ARM_I2C_Control" lineNumber="1400"/>
+    <functiondecl functionName="ARM_I2C_GetStatus" lineNumber="1624"/>
+    <functiondecl functionName="riic_bps_calc" lineNumber="1637"/>
+    <functiondecl functionName="riic_setting" lineNumber="1831"/>
+    <functiondecl functionName="riic_reset" lineNumber="1947"/>
+    <functiondecl functionName="iic_txi_interrupt" lineNumber="2092"/>
+    <functiondecl functionName="iic_tei_interrupt" lineNumber="2249"/>
+    <functiondecl functionName="iic_rxi_interrupt" lineNumber="2314"/>
+    <functiondecl functionName="iic_eei_interrupt" lineNumber="2513"/>
+    <functioncall functionName="ACKWP"/>
+    <functioncall functionName="AL"/>
+    <functioncall functionName="ARM_I2C_Control"/>
+    <functioncall functionName="ARM_I2C_GetCapabilities"/>
+    <functioncall functionName="ARM_I2C_GetDataCount"/>
+    <functioncall functionName="ARM_I2C_GetStatus"/>
+    <functioncall functionName="ARM_I2C_GetVersion"/>
+    <functioncall functionName="ARM_I2C_Initialize"/>
+    <functioncall functionName="ARM_I2C_MasterReceive"/>
+    <functioncall functionName="ARM_I2C_MasterTransmit"/>
+    <functioncall functionName="ARM_I2C_PowerControl"/>
+    <functioncall functionName="ARM_I2C_SlaveReceive"/>
+    <functioncall functionName="ARM_I2C_SlaveTransmit"/>
+    <functioncall functionName="ARM_I2C_Uninitialize"/>
+    <functioncall functionName="ARM_POWER_FULL"/>
+    <functioncall functionName="ARM_POWER_LOW"/>
+    <functioncall functionName="ARM_POWER_OFF"/>
+    <functioncall functionName="BBSY"/>
+    <functioncall functionName="CLO"/>
+    <functioncall functionName="GCA"/>
+    <functioncall functionName="ICBRH"/>
+    <functioncall functionName="ICBRL"/>
+    <functioncall functionName="ICDRR"/>
+    <functioncall functionName="ICIER"/>
+    <functioncall functionName="ICMR1"/>
+    <functioncall functionName="ICMR3"/>
+    <functioncall functionName="ICSER"/>
+    <functioncall functionName="ICSR2"/>
+    <functioncall functionName="IIC0"/>
+    <functioncall functionName="IIC1"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="IRQn_Type"/>
+    <functioncall functionName="LPM_MSTP_AGT0"/>
+    <functioncall functionName="LPM_MSTP_AGT1"/>
+    <functioncall functionName="LPM_MSTP_AGTW0"/>
+    <functioncall functionName="LPM_MSTP_AGTW1"/>
+    <functioncall functionName="LPM_MSTP_CAC"/>
+    <functioncall functionName="LPM_MSTP_CCC"/>
+    <functioncall functionName="LPM_MSTP_CRC"/>
+    <functioncall functionName="LPM_MSTP_DIL"/>
+    <functioncall functionName="LPM_MSTP_DIV"/>
+    <functioncall functionName="LPM_MSTP_DOC"/>
+    <functioncall functionName="LPM_MSTP_DTC_DMAC"/>
+    <functioncall functionName="LPM_MSTP_ELC"/>
+    <functioncall functionName="LPM_MSTP_GDT"/>
+    <functioncall functionName="LPM_MSTP_GPT162_165"/>
+    <functioncall functionName="LPM_MSTP_GPT320_321"/>
+    <functioncall functionName="LPM_MSTP_IRDA"/>
+    <functioncall functionName="LPM_MSTP_IWDT"/>
+    <functioncall functionName="LPM_MSTP_LST"/>
+    <functioncall functionName="LPM_MSTP_MLCD"/>
+    <functioncall functionName="LPM_MSTP_NUM"/>
+    <functioncall functionName="LPM_MSTP_POEG"/>
+    <functioncall functionName="LPM_MSTP_QSPI"/>
+    <functioncall functionName="LPM_MSTP_RIIC0"/>
+    <functioncall functionName="LPM_MSTP_RIIC1"/>
+    <functioncall functionName="LPM_MSTP_RTC"/>
+    <functioncall functionName="LPM_MSTP_S14AD"/>
+    <functioncall functionName="LPM_MSTP_SCI0"/>
+    <functioncall functionName="LPM_MSTP_SCI1"/>
+    <functioncall functionName="LPM_MSTP_SCI2"/>
+    <functioncall functionName="LPM_MSTP_SCI3"/>
+    <functioncall functionName="LPM_MSTP_SCI4"/>
+    <functioncall functionName="LPM_MSTP_SCI5"/>
+    <functioncall functionName="LPM_MSTP_SCI9"/>
+    <functioncall functionName="LPM_MSTP_SPI0"/>
+    <functioncall functionName="LPM_MSTP_SPI1"/>
+    <functioncall functionName="LPM_MSTP_TEMPS"/>
+    <functioncall functionName="LPM_MSTP_TMR"/>
+    <functioncall functionName="LPM_MSTP_TSIP_LITE"/>
+    <functioncall functionName="LPM_MSTP_VREF"/>
+    <functioncall functionName="LPM_MSTP_WDT"/>
+    <functioncall functionName="LPM_MSTP_WUPT"/>
+    <functioncall functionName="MST"/>
+    <functioncall functionName="NACKF"/>
+    <functioncall functionName="NAKIE"/>
+    <functioncall functionName="NVIC_USER_IRQ_OFFSET"/>
+    <functioncall functionName="RIIC0_Control"/>
+    <functioncall functionName="RIIC0_GetDataCount"/>
+    <functioncall functionName="RIIC0_GetStatus"/>
+    <functioncall functionName="RIIC0_Initialize"/>
+    <functioncall functionName="RIIC0_MasterReceive"/>
+    <functioncall functionName="RIIC0_MasterTransmit"/>
+    <functioncall functionName="RIIC0_PowerControl"/>
+    <functioncall functionName="RIIC0_SlaveReceive"/>
+    <functioncall functionName="RIIC0_SlaveTransmit"/>
+    <functioncall functionName="RIIC0_Uninitialize"/>
+    <functioncall functionName="RIIC1_Control"/>
+    <functioncall functionName="RIIC1_GetDataCount"/>
+    <functioncall functionName="RIIC1_GetStatus"/>
+    <functioncall functionName="RIIC1_Initialize"/>
+    <functioncall functionName="RIIC1_MasterReceive"/>
+    <functioncall functionName="RIIC1_MasterTransmit"/>
+    <functioncall functionName="RIIC1_PowerControl"/>
+    <functioncall functionName="RIIC1_SlaveReceive"/>
+    <functioncall functionName="RIIC1_SlaveTransmit"/>
+    <functioncall functionName="RIIC1_Uninitialize"/>
+    <functioncall functionName="RIIC_NACK_ADDR"/>
+    <functioncall functionName="RIIC_NACK_DATA"/>
+    <functioncall functionName="RIIC_NACK_NONE"/>
+    <functioncall functionName="RIIC_STATE_ADDR"/>
+    <functioncall functionName="RIIC_STATE_RECV"/>
+    <functioncall functionName="RIIC_STATE_SEND"/>
+    <functioncall functionName="RIIC_STATE_START"/>
+    <functioncall functionName="RIIC_STATE_STOP"/>
+    <functioncall functionName="R_LPM_ModuleStart"/>
+    <functioncall functionName="R_LPM_ModuleStop"/>
+    <functioncall functionName="R_NVIC_ClearPendingIRQ"/>
+    <functioncall functionName="R_NVIC_DisableIRQ"/>
+    <functioncall functionName="R_NVIC_EnableIRQ"/>
+    <functioncall functionName="R_NVIC_GetPriority"/>
+    <functioncall functionName="R_NVIC_SetPriority"/>
+    <functioncall functionName="R_RIIC_Pinclr_CH0"/>
+    <functioncall functionName="R_RIIC_Pinclr_CH1"/>
+    <functioncall functionName="R_RIIC_Pinset_CH0"/>
+    <functioncall functionName="R_RIIC_Pinset_CH1"/>
+    <functioncall functionName="R_SYS_IrqEventLinkSet"/>
+    <functioncall functionName="R_SYS_IrqStatusClear"/>
+    <functioncall functionName="R_SYS_PeripheralClockFreqGet"/>
+    <functioncall functionName="R_SYS_ResourceLock"/>
+    <functioncall functionName="R_SYS_ResourceUnlock"/>
+    <functioncall functionName="R_SYS_SoftwareDelay"/>
+    <functioncall functionName="SCB_AIRCR_SYSRESETREQ_Msk"/>
+    <functioncall functionName="SCLI"/>
+    <functioncall functionName="SP"/>
+    <functioncall functionName="ST"/>
+    <functioncall functionName="STOP"/>
+    <functioncall functionName="SYSTEM_DELAY_UNITS_MICROSECONDS"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="TRS"/>
+    <functioncall functionName="_BIT_SHIFT"/>
+    <functioncall functionName="_IP_IDX"/>
+    <functioncall functionName="_SHP_IDX"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_PRIO_BITS"/>
+    <functioncall functionName="__dsb"/>
+    <functioncall functionName="__isb"/>
+    <functioncall functionName="__nop"/>
+    <functioncall functionName="__regAPSR"/>
+    <functioncall functionName="__regControl"/>
+    <functioncall functionName="__regIPSR"/>
+    <functioncall functionName="__regMainStackPointer"/>
+    <functioncall functionName="__regPriMask"/>
+    <functioncall functionName="__regProcessStackPointer"/>
+    <functioncall functionName="__regXPSR"/>
+    <functioncall functionName="__schedule_barrier"/>
+    <functioncall functionName="addr"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="bps"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="busy"/>
+    <functioncall functionName="calc_val"/>
+    <functioncall functionName="case"/>
+    <functioncall functionName="cb_event"/>
+    <functioncall functionName="cks"/>
+    <functioncall functionName="cnt"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="direction"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="eei_callback"/>
+    <functioncall functionName="eei_iesr_val"/>
+    <functioncall functionName="eei_irq"/>
+    <functioncall functionName="eei_priority"/>
+    <functioncall functionName="event"/>
+    <functioncall functionName="f_tx_end"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="general_call"/>
+    <functioncall functionName="gs_driver_capabilities"/>
+    <functioncall functionName="gs_driver_version"/>
+    <functioncall functionName="gs_riic0_info"/>
+    <functioncall functionName="gs_riic0_resources"/>
+    <functioncall functionName="gs_riic0_xfer_info"/>
+    <functioncall functionName="gs_riic1_info"/>
+    <functioncall functionName="gs_riic1_resources"/>
+    <functioncall functionName="gs_riic1_xfer_info"/>
+    <functioncall functionName="gs_scl100k_down_time"/>
+    <functioncall functionName="gs_scl100k_up_time"/>
+    <functioncall functionName="gs_scl1m_down_time"/>
+    <functioncall functionName="gs_scl1m_up_time"/>
+    <functioncall functionName="gs_scl400k_down_time"/>
+    <functioncall functionName="gs_scl400k_up_time"/>
+    <functioncall functionName="h_time"/>
+    <functioncall functionName="icbrh"/>
+    <functioncall functionName="icbrl"/>
+    <functioncall functionName="icmr3_tmp"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="iic0_eei_interrupt"/>
+    <functioncall functionName="iic0_rxi_interrupt"/>
+    <functioncall functionName="iic0_tei_interrupt"/>
+    <functioncall functionName="iic0_txi_interrupt"/>
+    <functioncall functionName="iic1_eei_interrupt"/>
+    <functioncall functionName="iic1_rxi_interrupt"/>
+    <functioncall functionName="iic1_tei_interrupt"/>
+    <functioncall functionName="iic1_txi_interrupt"/>
+    <functioncall functionName="iic_eei_interrupt"/>
+    <functioncall functionName="iic_interrupt_clear"/>
+    <functioncall functionName="iic_rxi_interrupt"/>
+    <functioncall functionName="iic_tei_interrupt"/>
+    <functioncall functionName="iic_txi_interrupt"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="kbps"/>
+    <functioncall functionName="l_time"/>
+    <functioncall functionName="lock_id"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="mstp_id"/>
+    <functioncall functionName="nack"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="p_i2c"/>
+    <functioncall functionName="pclk_val"/>
+    <functioncall functionName="pclkb_freq"/>
+    <functioncall functionName="pending"/>
+    <functioncall functionName="pin_clr"/>
+    <functioncall functionName="pin_set"/>
+    <functioncall functionName="priMask"/>
+    <functioncall functionName="reg_set"/>
+    <functioncall functionName="reg_set_buff"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="riic_bps_calc"/>
+    <functioncall functionName="riic_reset"/>
+    <functioncall functionName="riic_setting"/>
+    <functioncall functionName="rx_num"/>
+    <functioncall functionName="rxi_callback"/>
+    <functioncall functionName="rxi_iesr_val"/>
+    <functioncall functionName="rxi_irq"/>
+    <functioncall functionName="rxi_priority"/>
+    <functioncall functionName="scl_down_time"/>
+    <functioncall functionName="scl_up_time"/>
+    <functioncall functionName="sla"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="status"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tei_callback"/>
+    <functioncall functionName="tei_iesr_val"/>
+    <functioncall functionName="tei_irq"/>
+    <functioncall functionName="tei_priority"/>
+    <functioncall functionName="topOfMainStack"/>
+    <functioncall functionName="topOfProcStack"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tx_num"/>
+    <functioncall functionName="txi_callback"/>
+    <functioncall functionName="txi_iesr_val"/>
+    <functioncall functionName="txi_irq"/>
+    <functioncall functionName="txi_priority"/>
+    <functioncall functionName="uctmp"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xfer_pending"/>
+  </FileInfo>
+</analyzerinfo>

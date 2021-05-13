@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="com.renesas.cdt.managedbuild.assp.configuration.debug.56110620">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.renesas.cdt.managedbuild.assp.configuration.debug.56110620" moduleId="org.eclipse.cdt.core.settings" name="HardwareDebug">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="com.renesas.cdt.managedbuild.core.toolchainInfo">
+                				
+                <option id="toolchain.id" value="gcc-arm-embedded"/>
+                				
+                <option id="toolchain.version" value="6.3.1.20170620"/>
+                				
+                <option id="toolchain.enable" value="false"/>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf *.lst *.lis *.lpp *.map" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="com.renesas.cdt.managedbuild.assp.configuration.debug.56110620" name="HardwareDebug" parent="com.renesas.cdt.managedbuild.assp.configuration.debug">
+                    					
+                    <folderInfo id="com.renesas.cdt.managedbuild.assp.configuration.debug.56110620." name="/" resourcePath="">
+                        						
+                        <toolChain id="com.renesas.cdt.managedbuild.assp.toolchain.gcc.elf.debug.1936543646" name="GCC for Renesas RE" superClass="com.renesas.cdt.managedbuild.assp.toolchain.gcc.elf.debug">
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1549398490" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.2106993451" name="Create extended listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting" useByScannerDiscovery="false"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.822468875" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.optimizationLevel.1116406902" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.assp.option.optimizationLevel" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.more" valueType="enumerated"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.messagelenght.31973437" name="Message length (-fmessage-length=0)" superClass="com.renesas.cdt.managedbuild.assp.option.messagelenght" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.signedchar.2043117028" name="'char' is signed (-fsigned-char)" superClass="com.renesas.cdt.managedbuild.assp.option.signedchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.functionsection.159177367" name="Function sections (-ffunction-sections)" superClass="com.renesas.cdt.managedbuild.assp.option.functionsection" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.datasections.1607776413" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.assp.option.datasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.661149786" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" useByScannerDiscovery="true"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.462774401" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.613416213" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" useByScannerDiscovery="false" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.401382566" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.family.27085716" name="ARM family" superClass="com.renesas.cdt.managedbuild.assp.option.family" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m0plus" valueType="enumerated"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.instructionset.2146608749" name="Instruction set" superClass="com.renesas.cdt.managedbuild.assp.option.instructionset" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.250272159" name="Prefix" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" useByScannerDiscovery="false" value="arm-none-eabi-" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.246673507" name="C compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" useByScannerDiscovery="false" value="gcc" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.783736897" name="C++ compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" useByScannerDiscovery="false" value="g++" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.721090055" name="Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" useByScannerDiscovery="false" value="ar" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.293263163" name="Hex/Bin converter" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" useByScannerDiscovery="false" value="objcopy" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1767380064" name="Listing generator" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" useByScannerDiscovery="false" value="objdump" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1789587369" name="Size command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" useByScannerDiscovery="false" value="size" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.683910823" name="Build command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" useByScannerDiscovery="false" value="make" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1084933032" name="Remove command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" useByScannerDiscovery="false" value="rm" valueType="string"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.createlibgen.1410500717" name="Create libgen" superClass="com.renesas.cdt.managedbuild.assp.createlibgen" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.architecture.895987630" name="Architecture" superClass="com.renesas.cdt.managedbuild.assp.option.architecture" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.arch.armv6-m" valueType="enumerated"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.floatabi.149805502" name="Float ABI" superClass="com.renesas.cdt.managedbuild.assp.option.floatabi" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.soft" valueType="enumerated"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.floatunit.1577148931" name="FPU Type" superClass="com.renesas.cdt.managedbuild.assp.option.floatunit" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.vfpv3d16" valueType="enumerated"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.deviceName.119158108" name="Device name" superClass="com.renesas.cdt.managedbuild.assp.deviceName" useByScannerDiscovery="false" value="R7F0E015D2CFB" valueType="string"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.endian.510050813" name="Endianness" superClass="com.renesas.cdt.managedbuild.assp.option.endian" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.little" valueType="enumerated"/>
+                            							
+                            <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.1720470988" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+                            							
+                            <builder buildPath="${workspace_loc:/aws_tests}/HardwareDebug" id="com.renesas.cdt.managedbuild.assp.builder.228459400" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GCC for Renesas Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.renesas.cdt.managedbuild.assp.builder"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.assembler.829291752" name="Cross ARM GNU Assembler" superClass="com.renesas.cdt.managedbuild.assp.tool.assembler">
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1730691644" name="Use preprocessor" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1432278248" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.compiler.c.265233912" name="Cross ARM C Compiler" superClass="com.renesas.cdt.managedbuild.assp.tool.compiler.c">
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.assp.option.compiler.include.675741841" name="Include paths (-I)" superClass="com.renesas.cdt.managedbuild.assp.option.compiler.include" useByScannerDiscovery="true" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../freertos_kernel/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/amazon_freertos_common&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/amazon_freertos_common/network_support/re01-1500kb-ek-uart-bg96-gcc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/boards/re01-1500kb-ek-gcc/aws_tests/application_code/renesas_code/re01-1500kb-ek-uart-bg96-gcc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../freertos_kernel/portable/GCC/ARM_CM0&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/boards/re01-1500kb-ek-gcc/aws_tests/config_files&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/boards/re01-1500kb-ek-gcc/aws_tests/application_code/renesas_code&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../tests/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/common/include/private"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/common/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/platform/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/platform/freertos/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/platform/include/platform"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/secure_sockets/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../libraries/abstractions/wifi/include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../tests/integration_test"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/tls/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/crypto/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/pkcs11/corePKCS11/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/ota/test"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/utils/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/logging/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/dev_mode_key_provisioning/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/defender/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/defender/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/test/access"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/test/mock"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreMQTT/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreMQTT/source/interface"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/backoff_algorithm/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/pkcs11_helpers"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/transport/secure_sockets"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/serializer/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/shadow/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/shadow/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/test/access"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/interface"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/dependency/3rdparty/http_parser"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/http_demo_helpers"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/test"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/freertos_plus_cli/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreJSON/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/device_shadow_for_aws/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/mqtt_demo_helpers"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/device_defender_for_aws/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/jobs_for_aws/source/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/pkcs11"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls_config"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls/include/mbedtls"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls_utils"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/unity/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/unity/extras/fixture/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/tinycbor/src"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/jsmn"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/Device/CMSIS_Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/Device/Config&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/Device/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/Device&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/r_byteq_v1.81/r_config&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/r_byteq_v1.81/r_byteq&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/r_byteq_v1.81/r_byteq/src&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.assp.option.compiler.userDefined.1022861249" name="Other compiler flags" superClass="com.renesas.cdt.managedbuild.assp.option.compiler.userDefined" useByScannerDiscovery="true" valueType="stringList">
+                                    									
+                                    <listOptionValue builtIn="false" value="-fno-jump-tables"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1006792195" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_COMPLEX"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__RX=1"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__RENESAS__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__LITTLE_ENDIAN__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="CONFIG_MEDTLS_USE_AFR_MEMORY"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="MBEDTLS_CONFIG_FILE=&quot;&lt;aws_mbedtls_config.h&gt;&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="UNITY_INCLUDE_CONFIG_H"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="FREERTOS_ENABLE_UNIT_TESTS"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__FUNCTION__=__func__"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1833127517" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.compiler.cpp.915757957" name="Cross ARM C++ Compiler" superClass="com.renesas.cdt.managedbuild.assp.tool.compiler.cpp"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.linker.c.472131709" name="Cross ARM C Linker" superClass="com.renesas.cdt.managedbuild.assp.tool.linker.c">
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.734446720" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <option id="com.renesas.cdt.managedbuild.assp.option.linker.entrypoint.1648561982" name="Entry Point:" superClass="com.renesas.cdt.managedbuild.assp.option.linker.entrypoint" useByScannerDiscovery="false" value="-Wl,-eReset_Handler" valueType="string"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.assp.option.linkageOrder.157853621" name="Linkage Order List" superClass="com.renesas.cdt.managedbuild.assp.option.linkageOrder" useByScannerDiscovery="false" valueType="stringList">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;.\src\aws_tests.o&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;.\generate/Device\startup_RE01_1500KB.o&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;.\generate/Device\system_RE01_1500KB.o&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.assp.option.linkerscript.864881633" name="Script files (-T)" superClass="com.renesas.cdt.managedbuild.assp.option.linkerscript" useByScannerDiscovery="false" valueType="stringList">
+                                    									
+                                    <listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/re_mcu_boards/RE01_1500KB_DFP/script/RE01_1500KB.ld"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.assp.archives.includePath.1188238156" name="Standard archive search directories (-L)" superClass="com.renesas.cdt.managedbuild.assp.archives.includePath" useByScannerDiscovery="false" valueType="libPaths"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.assp.archives.includeFiles.1203554776" name="Standard archive (library) files (-l)" superClass="com.renesas.cdt.managedbuild.assp.archives.includeFiles" useByScannerDiscovery="false" valueType="stringList"/>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano.974748462" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                                								
+                                <inputType id="com.renesas.cdt.managedbuild.assp.inputType.linker.c.46493269" superClass="com.renesas.cdt.managedbuild.assp.inputType.linker.c">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)"/>
+                                    									
+                                    <additionalInput kind="additionaldependency" paths="$(LINKER_SCRIPT)"/>
+                                    								
+                                </inputType>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.linker.cpp.658589857" name="Cross ARM C++ Linker" superClass="com.renesas.cdt.managedbuild.assp.tool.linker.cpp">
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.330631529" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.archiver.1438471551" name="Cross ARM GNU Archiver" superClass="com.renesas.cdt.managedbuild.assp.tool.archiver"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.flash.1823549596" name="Cross ARM GNU Create Flash Image" superClass="com.renesas.cdt.managedbuild.assp.tool.flash"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.listing.433800813" name="Cross ARM GNU Create Listing" superClass="com.renesas.cdt.managedbuild.assp.tool.listing">
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.171703703" name="Display source (--source|-S)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.415083936" name="Display all headers (--all-headers|-x)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.612663681" name="Demangle names (--demangle|-C)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.242585480" name="Display line numbers (--line-numbers|-l)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.1811864103" name="Wide lines (--wide|-w)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.size.675899811" name="Cross ARM GNU Print Size" superClass="com.renesas.cdt.managedbuild.assp.tool.size">
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1471944495" name="Size format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format" useByScannerDiscovery="false"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.libgen.1354247998" name="Library Generator" superClass="com.renesas.cdt.managedbuild.assp.tool.libgen">
+                                								
+                                <option id="com.renesas.cdt.managedbuild.gcc.core.option.librarygenerator.settings.libraryType.494191572" name="Library type" superClass="com.renesas.cdt.managedbuild.gcc.core.option.librarygenerator.settings.libraryType" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.core.option.librarygenerator.settings.libraryType.preBuilt" valueType="enumerated"/>
+                                								
+                                <option id="com.renesas.cdt.managedbuild.assp.option.selectlibrary.764574374" name="Select Library" superClass="com.renesas.cdt.managedbuild.assp.option.selectlibrary" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.core.option.librarygenerator.settings.selectLibrary.newLib" valueType="enumerated"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.gcc.configuration.debug.toolchain.tool.946626049" name="DSP Assembler" superClass="com.renesas.cdt.managedbuild.assp.gcc.configuration.debug.toolchain.tool">
+                                								
+                                <option id="com.renesas.cdt.managedbuild.renesas.assp.dsp.option.dsp.1030335597" name="DSP type" superClass="com.renesas.cdt.managedbuild.renesas.assp.dsp.option.dsp" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.assp.dsp.option.dsp.armDsp" valueType="enumerated"/>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <folderInfo id="com.renesas.cdt.managedbuild.assp.configuration.debug.56110620.1057246783" name="/" resourcePath="libraries/abstractions/wifi/test">
+                        						
+                        <toolChain id="com.renesas.cdt.managedbuild.assp.toolchain.gcc.elf.debug.1916352152" name="GCC for Renesas RE" superClass="com.renesas.cdt.managedbuild.assp.toolchain.gcc.elf.debug" unusedChildren="">
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1549398490.311921876" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1549398490"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.2106993451.1591180227" name="Create extended listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.2106993451"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.822468875.1785796993" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.822468875"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.optimizationLevel.1116406902.1893738582" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.assp.option.optimizationLevel.1116406902"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.messagelenght.31973437.2110793932" name="Message length (-fmessage-length=0)" superClass="com.renesas.cdt.managedbuild.assp.option.messagelenght.31973437"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.signedchar.2043117028.1091283488" name="'char' is signed (-fsigned-char)" superClass="com.renesas.cdt.managedbuild.assp.option.signedchar.2043117028"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.functionsection.159177367.2011155371" name="Function sections (-ffunction-sections)" superClass="com.renesas.cdt.managedbuild.assp.option.functionsection.159177367"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.datasections.1607776413.362479287" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.assp.option.datasections.1607776413"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.661149786.489632056" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.661149786"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.462774401.1896282135" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.462774401"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.613416213.1166684590" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.613416213"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.401382566.765134585" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.401382566"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.family.27085716.194034226" name="ARM family" superClass="com.renesas.cdt.managedbuild.assp.option.family.27085716"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.instructionset.2146608749.1183509756" name="Instruction set" superClass="com.renesas.cdt.managedbuild.assp.option.instructionset.2146608749"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.250272159.224816104" name="Prefix" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.250272159"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.246673507.266830936" name="C compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.246673507"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.783736897.1446258843" name="C++ compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.783736897"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.721090055.707948416" name="Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.721090055"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.293263163.1452601324" name="Hex/Bin converter" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.293263163"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1767380064.1490028261" name="Listing generator" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1767380064"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1789587369.1823259379" name="Size command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1789587369"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.683910823.750764404" name="Build command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.683910823"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1084933032.998848852" name="Remove command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1084933032"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.createlibgen.1410500717.1749101608" name="Create libgen" superClass="com.renesas.cdt.managedbuild.assp.createlibgen.1410500717"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.architecture.895987630.2100353627" name="Architecture" superClass="com.renesas.cdt.managedbuild.assp.option.architecture.895987630"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.floatabi.149805502.356139878" name="Float ABI" superClass="com.renesas.cdt.managedbuild.assp.option.floatabi.149805502"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.floatunit.1577148931.428628286" name="FPU Type" superClass="com.renesas.cdt.managedbuild.assp.option.floatunit.1577148931"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.deviceName.119158108.331234564" name="Device name" superClass="com.renesas.cdt.managedbuild.assp.deviceName.119158108"/>
+                            							
+                            <option id="com.renesas.cdt.managedbuild.assp.option.endian.510050813.1347695884" name="Endianness" superClass="com.renesas.cdt.managedbuild.assp.option.endian.510050813"/>
+                            							
+                            <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.assembler.1164904618" name="Cross ARM GNU Assembler" superClass="com.renesas.cdt.managedbuild.assp.tool.assembler.829291752">
+                                								
+                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.2038102788" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.compiler.c.1208198454" name="Cross ARM C Compiler" superClass="com.renesas.cdt.managedbuild.assp.tool.compiler.c.265233912">
+                                								
+                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.46967735" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.compiler.cpp.1934356554" name="Cross ARM C++ Compiler" superClass="com.renesas.cdt.managedbuild.assp.tool.compiler.cpp.915757957"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.linker.c.1238596107" name="Cross ARM C Linker" superClass="com.renesas.cdt.managedbuild.assp.tool.linker.c.472131709"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.linker.cpp.93102283" name="Cross ARM C++ Linker" superClass="com.renesas.cdt.managedbuild.assp.tool.linker.cpp.658589857"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.archiver.200550840" name="Cross ARM GNU Archiver" superClass="com.renesas.cdt.managedbuild.assp.tool.archiver.1438471551"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.flash.1748454603" name="Cross ARM GNU Create Flash Image" superClass="com.renesas.cdt.managedbuild.assp.tool.flash.1823549596"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.listing.134388110" name="Cross ARM GNU Create Listing" superClass="com.renesas.cdt.managedbuild.assp.tool.listing.433800813"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.size.1382757336" name="Cross ARM GNU Print Size" superClass="com.renesas.cdt.managedbuild.assp.tool.size.675899811"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.tool.libgen.1779678989" name="Library Generator" superClass="com.renesas.cdt.managedbuild.assp.tool.libgen.1354247998"/>
+                            							
+                            <tool id="com.renesas.cdt.managedbuild.assp.gcc.configuration.debug.toolchain.tool.52669928" name="DSP Assembler" superClass="com.renesas.cdt.managedbuild.assp.gcc.configuration.debug.toolchain.tool.946626049"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding="libraries/abstractions/wifi/test|freertos_kernel/portable/GCC/ARM_CM4F" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            			
+            <storageModule moduleId="com.renesas.cdt.managedbuild.core.boardInfo"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="aws_tests.com.renesas.cdt.managedbuild.assp.target.elf.1070983346" name="実行可能" projectType="com.renesas.cdt.managedbuild.assp.target.elf"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        		
+        <scannerConfigBuildInfo instanceId="com.renesas.cdt.managedbuild.assp.configuration.debug.56110620;com.renesas.cdt.managedbuild.assp.configuration.debug.56110620.;com.renesas.cdt.managedbuild.assp.tool.compiler.c.265233912;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1833127517">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    	
+    <storageModule moduleId="refreshScope"/>
+    
+</cproject>

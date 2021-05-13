@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3872745336">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="r_ehc_Startup" lineNumber="125"/>
+    <functiondecl functionName="ehc_Startup_ramfunc" lineNumber="545"/>
+    <functiondecl functionName="NMI_Handler_EHC" lineNumber="879"/>
+    <functiondecl functionName="IEL1_IRQHandler_EHC" lineNumber="952"/>
+    <functiondecl functionName="ehc_software_delay_loop" lineNumber="972"/>
+    <functiondecl functionName="r_ehc_Startup" lineNumber="125"/>
+    <functiondecl functionName="ehc_Startup_ramfunc" lineNumber="545"/>
+    <functiondecl functionName="NMI_Handler_EHC" lineNumber="879"/>
+    <functiondecl functionName="IEL1_IRQHandler_EHC" lineNumber="952"/>
+    <functiondecl functionName="ehc_software_delay_loop" lineNumber="972"/>
+    <functioncall functionName="ALLPWONM"/>
+    <functioncall functionName="BOOSTM"/>
+    <functioncall functionName="DET"/>
+    <functioncall functionName="IEL1_IRQHandler_EHC"/>
+    <functioncall functionName="IEL1_IRQn"/>
+    <functioncall functionName="LOCOCR"/>
+    <functioncall functionName="MINPWONM"/>
+    <functioncall functionName="MOCOCR"/>
+    <functioncall functionName="MON"/>
+    <functioncall functionName="NMI_Handler_EHC"/>
+    <functioncall functionName="PWSTCR"/>
+    <functioncall functionName="SCKSCR"/>
+    <functioncall functionName="VBBM"/>
+    <functioncall functionName="VBBSTUP"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__Vectors_Size"/>
+    <functioncall functionName="__Vectors_Start"/>
+    <functioncall functionName="__WFE"/>
+    <functioncall functionName="__WFI"/>
+    <functioncall functionName="__ehc_ramfunc_init_start"/>
+    <functioncall functionName="__ehc_ramfunc_start"/>
+    <functioncall functionName="__ramvect_start"/>
+    <functioncall functionName="__section_begin"/>
+    <functioncall functionName="__section_size"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="ehc_Startup_ramfunc"/>
+    <functioncall functionName="ehc_software_delay_loop"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1844951285">
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="836" column="5" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="833" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="857" column="12" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="854" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:101:13" call-funcname="flash_api_write" call-argnr="4" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="128" col="26" call-argexpr="FLASH_8_BYTES_PGM" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:106:13" call-funcname="flash_api_control" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="233" col="11" my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_api.h:278:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:101:13" call-funcname="flash_api_write" call-argnr="4" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="128" col="26" call-argexpr="FLASH_8_BYTES_PGM" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:106:13" call-funcname="flash_api_control" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="233" col="11" my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_api.h:278:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:101:13" call-funcname="flash_api_write" call-argnr="4" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="128" col="26" call-argexpr="FLASH_8_BYTES_PGM" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:106:13" call-funcname="flash_api_control" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="233" col="11" my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_api.h:278:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:101:13" call-funcname="flash_api_write" call-argnr="4" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="128" col="26" call-argexpr="FLASH_8_BYTES_PGM" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:106:13" call-funcname="flash_api_control" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="233" col="11" my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_api.h:278:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:101:13" call-funcname="flash_api_write" call-argnr="4" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="128" col="26" call-argexpr="FLASH_8_BYTES_PGM" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:106:13" call-funcname="flash_api_control" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="233" col="11" my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_api.h:278:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:101:13" call-funcname="flash_api_write" call-argnr="4" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="128" col="26" call-argexpr="FLASH_8_BYTES_PGM" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_lowlevel.h:106:13" call-funcname="flash_api_control" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_api.c" line="233" col="11" my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_flash_api.h:278:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="R_FLASH_Open" lineNumber="76"/>
+    <functiondecl functionName="R_FLASH_Close" lineNumber="91"/>
+    <functiondecl functionName="R_FLASH_Write_8Bytes" lineNumber="123"/>
+    <functiondecl functionName="R_FLASH_Write_256Bytes" lineNumber="155"/>
+    <functiondecl functionName="R_FLASH_Erase" lineNumber="176"/>
+    <functiondecl functionName="R_FLASH_BlankCheck" lineNumber="196"/>
+    <functiondecl functionName="R_FLASH_Control" lineNumber="228"/>
+    <functiondecl functionName="R_FLASH_GetVersion" lineNumber="244"/>
+    <functiondecl functionName="R_FLASH_Open" lineNumber="76"/>
+    <functiondecl functionName="R_FLASH_Close" lineNumber="91"/>
+    <functiondecl functionName="R_FLASH_Write_8Bytes" lineNumber="123"/>
+    <functiondecl functionName="R_FLASH_Write_256Bytes" lineNumber="155"/>
+    <functiondecl functionName="R_FLASH_Erase" lineNumber="176"/>
+    <functiondecl functionName="R_FLASH_BlankCheck" lineNumber="196"/>
+    <functiondecl functionName="R_FLASH_Control" lineNumber="228"/>
+    <functiondecl functionName="R_FLASH_GetVersion" lineNumber="244"/>
+    <functiondecl functionName="R_FLASH_Open" lineNumber="76"/>
+    <functiondecl functionName="R_FLASH_Close" lineNumber="91"/>
+    <functiondecl functionName="R_FLASH_Write_8Bytes" lineNumber="123"/>
+    <functiondecl functionName="R_FLASH_Write_256Bytes" lineNumber="155"/>
+    <functiondecl functionName="R_FLASH_Erase" lineNumber="176"/>
+    <functiondecl functionName="R_FLASH_BlankCheck" lineNumber="196"/>
+    <functiondecl functionName="R_FLASH_Control" lineNumber="228"/>
+    <functiondecl functionName="R_FLASH_GetVersion" lineNumber="244"/>
+    <functiondecl functionName="R_FLASH_Open" lineNumber="76"/>
+    <functiondecl functionName="R_FLASH_Close" lineNumber="91"/>
+    <functiondecl functionName="R_FLASH_Write_8Bytes" lineNumber="123"/>
+    <functiondecl functionName="R_FLASH_Write_256Bytes" lineNumber="155"/>
+    <functiondecl functionName="R_FLASH_Erase" lineNumber="176"/>
+    <functiondecl functionName="R_FLASH_BlankCheck" lineNumber="196"/>
+    <functiondecl functionName="R_FLASH_Control" lineNumber="228"/>
+    <functiondecl functionName="R_FLASH_GetVersion" lineNumber="244"/>
+    <functiondecl functionName="R_FLASH_Open" lineNumber="76"/>
+    <functiondecl functionName="R_FLASH_Close" lineNumber="91"/>
+    <functiondecl functionName="R_FLASH_Write_8Bytes" lineNumber="123"/>
+    <functiondecl functionName="R_FLASH_Write_256Bytes" lineNumber="155"/>
+    <functiondecl functionName="R_FLASH_Erase" lineNumber="176"/>
+    <functiondecl functionName="R_FLASH_BlankCheck" lineNumber="196"/>
+    <functiondecl functionName="R_FLASH_Control" lineNumber="228"/>
+    <functiondecl functionName="R_FLASH_GetVersion" lineNumber="244"/>
+    <functiondecl functionName="R_FLASH_Open" lineNumber="76"/>
+    <functiondecl functionName="R_FLASH_Close" lineNumber="91"/>
+    <functiondecl functionName="R_FLASH_Write_8Bytes" lineNumber="123"/>
+    <functiondecl functionName="R_FLASH_Write_256Bytes" lineNumber="155"/>
+    <functiondecl functionName="R_FLASH_Erase" lineNumber="176"/>
+    <functiondecl functionName="R_FLASH_BlankCheck" lineNumber="196"/>
+    <functiondecl functionName="R_FLASH_Control" lineNumber="228"/>
+    <functiondecl functionName="R_FLASH_GetVersion" lineNumber="244"/>
+    <functioncall functionName="FLASH_256_BYTES_PGM"/>
+    <functioncall functionName="FLASH_8_BYTES_PGM"/>
+    <functioncall functionName="FLASH_CMD_ACCESSWINDOW_GET"/>
+    <functioncall functionName="FLASH_CMD_ACCESSWINDOW_SET"/>
+    <functioncall functionName="FLASH_CMD_CONFIG_CLOCK"/>
+    <functioncall functionName="FLASH_CMD_END_ENUM"/>
+    <functioncall functionName="FLASH_CMD_RESET"/>
+    <functioncall functionName="FLASH_CMD_SET_BGO_CALLBACK"/>
+    <functioncall functionName="FLASH_CMD_STATUS_GET"/>
+    <functioncall functionName="FLASH_CMD_SWAPFLAG_GET"/>
+    <functioncall functionName="FLASH_CMD_SWAPFLAG_TOGGLE"/>
+    <functioncall functionName="FLASH_CMD_SWAPSTATE_GET"/>
+    <functioncall functionName="FLASH_CMD_SWAPSTATE_SET"/>
+    <functioncall functionName="FLASH_ERR_ACCESSW"/>
+    <functioncall functionName="FLASH_ERR_ADDRESS"/>
+    <functioncall functionName="FLASH_ERR_ALIGNED"/>
+    <functioncall functionName="FLASH_ERR_ALREADY_OPEN"/>
+    <functioncall functionName="FLASH_ERR_BLOCKS"/>
+    <functioncall functionName="FLASH_ERR_BOUNDARY"/>
+    <functioncall functionName="FLASH_ERR_BUSY"/>
+    <functioncall functionName="FLASH_ERR_BYTES"/>
+    <functioncall functionName="FLASH_ERR_CMD_LOCKED"/>
+    <functioncall functionName="FLASH_ERR_FAILURE"/>
+    <functioncall functionName="FLASH_ERR_FREQUENCY"/>
+    <functioncall functionName="FLASH_ERR_LOCKBIT_SET"/>
+    <functioncall functionName="FLASH_ERR_NULL_PTR"/>
+    <functioncall functionName="FLASH_ERR_OVERFLOW"/>
+    <functioncall functionName="FLASH_ERR_PARAM"/>
+    <functioncall functionName="FLASH_ERR_SECURITY"/>
+    <functioncall functionName="FLASH_ERR_TIMEOUT"/>
+    <functioncall functionName="FLASH_ERR_UNSUPPORTED"/>
+    <functioncall functionName="FLASH_INT_EVENT_BLANK"/>
+    <functioncall functionName="FLASH_INT_EVENT_END_ENUM"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERASE_COMPLETE"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_CF_ACCESS"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_CMD_LOCKED"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_DF_ACCESS"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_FAILURE"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_SECURITY"/>
+    <functioncall functionName="FLASH_INT_EVENT_INITIALIZED"/>
+    <functioncall functionName="FLASH_INT_EVENT_NOT_BLANK"/>
+    <functioncall functionName="FLASH_INT_EVENT_SET_ACCESSWINDOW"/>
+    <functioncall functionName="FLASH_INT_EVENT_TOGGLE_STARTUPAREA"/>
+    <functioncall functionName="FLASH_INT_EVENT_WRITE_COMPLETE"/>
+    <functioncall functionName="FLASH_RES_BLANK"/>
+    <functioncall functionName="FLASH_RES_INVALID"/>
+    <functioncall functionName="FLASH_RES_LOCKBIT_STATE_NON_PROTECTED"/>
+    <functioncall functionName="FLASH_RES_LOCKBIT_STATE_PROTECTED"/>
+    <functioncall functionName="FLASH_RES_NOT_BLANK"/>
+    <functioncall functionName="FLASH_SUCCESS"/>
+    <functioncall functionName="FLASH_TYPE_DATA_FLASH"/>
+    <functioncall functionName="FLASH_TYPE_INVALID"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="NVIC_USER_IRQ_OFFSET"/>
+    <functioncall functionName="SCB_AIRCR_SYSRESETREQ_Msk"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="_BIT_SHIFT"/>
+    <functioncall functionName="_IP_IDX"/>
+    <functioncall functionName="_SHP_IDX"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_PRIO_BITS"/>
+    <functioncall functionName="__dsb"/>
+    <functioncall functionName="__isb"/>
+    <functioncall functionName="__nop"/>
+    <functioncall functionName="__regAPSR"/>
+    <functioncall functionName="__regControl"/>
+    <functioncall functionName="__regIPSR"/>
+    <functioncall functionName="__regMainStackPointer"/>
+    <functioncall functionName="__regPriMask"/>
+    <functioncall functionName="__regProcessStackPointer"/>
+    <functioncall functionName="__regXPSR"/>
+    <functioncall functionName="__schedule_barrier"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="block_start_address"/>
+    <functioncall functionName="cmd"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="dest_address"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="flash_api_close"/>
+    <functioncall functionName="flash_api_control"/>
+    <functioncall functionName="flash_api_erase"/>
+    <functioncall functionName="flash_api_open"/>
+    <functioncall functionName="flash_api_write"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="num_blocks"/>
+    <functioncall functionName="num_bytes"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="pcfg"/>
+    <functioncall functionName="priMask"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="src_address"/>
+    <functioncall functionName="topOfMainStack"/>
+    <functioncall functionName="topOfProcStack"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,621 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1314514047">
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="836" column="5" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="833" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="857" column="12" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="854" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: int_cfg" verbose="Possible null pointer dereference: int_cfg" cwe="476">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1053" column="14" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1047" column="41" info="Assignment &apos;int_cfg=pcfg&apos;, assigned value is 0"/>
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="541" column="35" info="Calling function &apos;flash_interrupt_config&apos;, 2nd argument &apos;0&apos; value is 0"/>
+            <symbol>int_cfg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tmp&apos; can be reduced." verbose="The scope of the variable &apos;tmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1851" column="14"/>
+            <symbol>tmp</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;num_blocks&apos; is less than zero." verbose="The unsigned expression &apos;num_blocks&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="755" column="63" info="Unsigned less than zero"/>
+            <symbol>num_blocks</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;wait_cnt--&apos; is less than zero." verbose="The unsigned expression &apos;wait_cnt--&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1225" column="24" info="Unsigned less than zero"/>
+            <symbol>wait_cnt--</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;wait_cnt--&apos; is less than zero." verbose="The unsigned expression &apos;wait_cnt--&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1288" column="15" info="Unsigned less than zero"/>
+            <symbol>wait_cnt--</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;g_current_parameters.wait_cnt--&apos; is less than zero." verbose="The unsigned expression &apos;g_current_parameters.wait_cnt--&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1348" column="49" info="Unsigned less than zero"/>
+            <symbol>g_current_parameters.wait_cnt--</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;g_current_parameters.wait_cnt--&apos; is less than zero." verbose="The unsigned expression &apos;g_current_parameters.wait_cnt--&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1487" column="49" info="Unsigned less than zero"/>
+            <symbol>g_current_parameters.wait_cnt--</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;g_current_parameters.wait_cnt--&apos; is less than zero." verbose="The unsigned expression &apos;g_current_parameters.wait_cnt--&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1832" column="45" info="Unsigned less than zero"/>
+            <symbol>g_current_parameters.wait_cnt--</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tmp&apos; is assigned a value that is never used." verbose="Variable &apos;tmp&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1444" column="18"/>
+            <symbol>tmp</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;faw.BIT.FSPR&apos; is assigned a value that is never used." verbose="Variable &apos;faw.BIT.FSPR&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="1805" column="18"/>
+            <symbol>faw.BIT.FSPR</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="541" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:478:20" call-funcname="flash_lock_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="558" col="42" call-argexpr="FLASH_UNINITIALIZED" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="564" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="570" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="647" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&src_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&dest_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="3" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&num_bytes" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="762" col="38" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:487:13" call-funcname="flash_set_current_swap_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="939" col="41" call-argexpr="*pSwapInfo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="932" col="28" info="Assuming that condition '*pSwapInfo!=0' is not redundant"/>
+</function-call><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1028" col="29" call-argexpr="&g_iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1535" col="28" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" call-funcname="flash_software_lock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1574" col="28" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1598" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="12" call-argexpr="&is_locked" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1799" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="5" my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" my-argnr="1" my-argname="plock" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1651" col="6" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:492:20" my-argnr="1" my-argname="pAccessInfo" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1755" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="541" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:478:20" call-funcname="flash_lock_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="558" col="42" call-argexpr="FLASH_UNINITIALIZED" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="564" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="570" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="647" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&src_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&dest_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="3" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&num_bytes" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="762" col="38" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:487:13" call-funcname="flash_set_current_swap_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="939" col="41" call-argexpr="*pSwapInfo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="932" col="28" info="Assuming that condition '*pSwapInfo!=0' is not redundant"/>
+</function-call><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1028" col="29" call-argexpr="&g_iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1535" col="28" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" call-funcname="flash_software_lock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1574" col="28" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1598" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="12" call-argexpr="&is_locked" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1799" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="5" my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" my-argnr="1" my-argname="plock" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1651" col="6" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:492:20" my-argnr="1" my-argname="pAccessInfo" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1755" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="541" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:478:20" call-funcname="flash_lock_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="558" col="42" call-argexpr="FLASH_UNINITIALIZED" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="564" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="570" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="647" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&src_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&dest_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="3" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&num_bytes" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="762" col="38" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:487:13" call-funcname="flash_set_current_swap_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="939" col="41" call-argexpr="*pSwapInfo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="932" col="28" info="Assuming that condition '*pSwapInfo!=0' is not redundant"/>
+</function-call><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1028" col="29" call-argexpr="&g_iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1535" col="28" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" call-funcname="flash_software_lock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1574" col="28" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1598" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="12" call-argexpr="&is_locked" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1799" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="5" my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" my-argnr="1" my-argname="plock" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1651" col="6" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:492:20" my-argnr="1" my-argname="pAccessInfo" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1755" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="541" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:478:20" call-funcname="flash_lock_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="558" col="42" call-argexpr="FLASH_UNINITIALIZED" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="564" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="570" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="647" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&src_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&dest_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="3" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&num_bytes" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="762" col="38" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:487:13" call-funcname="flash_set_current_swap_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="939" col="41" call-argexpr="*pSwapInfo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="932" col="28" info="Assuming that condition '*pSwapInfo!=0' is not redundant"/>
+</function-call><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1028" col="29" call-argexpr="&g_iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1535" col="28" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" call-funcname="flash_software_lock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1574" col="28" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1598" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="12" call-argexpr="&is_locked" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1799" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="5" my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" my-argnr="1" my-argname="plock" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1651" col="6" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:492:20" my-argnr="1" my-argname="pAccessInfo" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1755" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="541" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:478:20" call-funcname="flash_lock_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="558" col="42" call-argexpr="FLASH_UNINITIALIZED" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="564" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="570" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="647" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&src_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&dest_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="3" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&num_bytes" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="762" col="38" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:487:13" call-funcname="flash_set_current_swap_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="939" col="41" call-argexpr="*pSwapInfo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="932" col="28" info="Assuming that condition '*pSwapInfo!=0' is not redundant"/>
+</function-call><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1028" col="29" call-argexpr="&g_iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1535" col="28" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" call-funcname="flash_software_lock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1574" col="28" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1598" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="12" call-argexpr="&is_locked" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1799" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="5" my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" my-argnr="1" my-argname="plock" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1651" col="6" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:492:20" my-argnr="1" my-argname="pAccessInfo" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1755" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="541" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:478:20" call-funcname="flash_lock_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="558" col="42" call-argexpr="FLASH_UNINITIALIZED" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:470:20" call-funcname="flash_interrupt_config" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="564" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="570" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="647" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&src_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&dest_address" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" call-funcname="flash_write" call-argnr="3" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="667" col="22" call-argexpr="&num_bytes" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="762" col="38" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:487:13" call-funcname="flash_set_current_swap_state" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="939" col="41" call-argexpr="*pSwapInfo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="..\Device\Driver\Src\r_flash\r_flash_lowlevel.c" line="932" col="28" info="Assuming that condition '*pSwapInfo!=0' is not redundant"/>
+</function-call><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1028" col="29" call-argexpr="&g_iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1535" col="28" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" call-funcname="flash_software_lock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1574" col="28" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" call-funcname="flash_software_unlock" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1598" col="26" call-argexpr="&g_flash_lock" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="12" call-argexpr="&is_locked" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:473:20" call-funcname="flash_pe_mode_enter" call-argnr="1" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1799" col="30" call-argexpr="FLASH_TYPE_CODE_FLASH" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" call-funcname="swapfun" call-argnr="2" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1626" col="5" my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:482:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:483:13" my-argnr="1" my-argname="plock" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1651" col="6" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:492:20" my-argnr="1" my-argname="pAccessInfo" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1755" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="1" my-argname="src_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1432" col="38" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="2" my-argname="dest_start_address" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1431" col="39" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:476:20" my-argnr="3" my-argname="num_bytes" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1430" col="42" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="1" my-argname="fp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1608" col="22" value="0"/>
+    <unsafe-usage my-id="../Device/Driver/Src/r_flash/r_flash_lowlevel.c:481:13" my-argnr="2" my-argname="sp" file="../Device/Driver/Src/r_flash/r_flash_lowlevel.c" line="1609" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="flash_api_open" lineNumber="504"/>
+    <functiondecl functionName="flash_api_close" lineNumber="555"/>
+    <functiondecl functionName="flash_api_write" lineNumber="597"/>
+    <functiondecl functionName="flash_api_erase" lineNumber="710"/>
+    <functiondecl functionName="flash_api_control" lineNumber="845"/>
+    <functiondecl functionName="flash_init" lineNumber="1018"/>
+    <functiondecl functionName="flash_interrupt_config" lineNumber="1045"/>
+    <functiondecl functionName="flash_clock_config" lineNumber="1139"/>
+    <functiondecl functionName="flash_pe_mode_enter" lineNumber="1162"/>
+    <functiondecl functionName="flash_pe_mode_exit" lineNumber="1212"/>
+    <functiondecl functionName="flash_stop" lineNumber="1273"/>
+    <functiondecl functionName="flash_erase" lineNumber="1314"/>
+    <functiondecl functionName="flash_write" lineNumber="1425"/>
+    <functiondecl functionName="flash_reset" lineNumber="1513"/>
+    <functiondecl functionName="flash_get_status" lineNumber="1552"/>
+    <functiondecl functionName="flash_lock_state" lineNumber="1571"/>
+    <functiondecl functionName="flash_release_state" lineNumber="1592"/>
+    <functiondecl functionName="swapfun" lineNumber="1606"/>
+    <functiondecl functionName="flash_software_lock" lineNumber="1619"/>
+    <functiondecl functionName="flash_software_unlock" lineNumber="1648"/>
+    <functiondecl functionName="flash_toggle_startup_area" lineNumber="1663"/>
+    <functiondecl functionName="flash_get_current_startup_area" lineNumber="1681"/>
+    <functiondecl functionName="flash_get_current_swap_state" lineNumber="1696"/>
+    <functiondecl functionName="flash_set_current_swap_state" lineNumber="1705"/>
+    <functiondecl functionName="flash_get_access_window" lineNumber="1753"/>
+    <functiondecl functionName="flash_set_access_window" lineNumber="1770"/>
+    <functiondecl functionName="flash_write_faw_reg" lineNumber="1795"/>
+    <functiondecl functionName="flash_ready_isr" lineNumber="1849"/>
+    <functiondecl functionName="flash_error_isr" lineNumber="1979"/>
+    <functiondecl functionName="flash_api_open" lineNumber="504"/>
+    <functiondecl functionName="flash_api_close" lineNumber="555"/>
+    <functiondecl functionName="flash_api_write" lineNumber="597"/>
+    <functiondecl functionName="flash_api_erase" lineNumber="710"/>
+    <functiondecl functionName="flash_api_control" lineNumber="845"/>
+    <functiondecl functionName="flash_init" lineNumber="1018"/>
+    <functiondecl functionName="flash_interrupt_config" lineNumber="1045"/>
+    <functiondecl functionName="flash_clock_config" lineNumber="1139"/>
+    <functiondecl functionName="flash_pe_mode_enter" lineNumber="1162"/>
+    <functiondecl functionName="flash_pe_mode_exit" lineNumber="1212"/>
+    <functiondecl functionName="flash_stop" lineNumber="1273"/>
+    <functiondecl functionName="flash_erase" lineNumber="1314"/>
+    <functiondecl functionName="flash_write" lineNumber="1425"/>
+    <functiondecl functionName="flash_reset" lineNumber="1513"/>
+    <functiondecl functionName="flash_get_status" lineNumber="1552"/>
+    <functiondecl functionName="flash_lock_state" lineNumber="1571"/>
+    <functiondecl functionName="flash_release_state" lineNumber="1592"/>
+    <functiondecl functionName="swapfun" lineNumber="1606"/>
+    <functiondecl functionName="flash_software_lock" lineNumber="1619"/>
+    <functiondecl functionName="flash_software_unlock" lineNumber="1648"/>
+    <functiondecl functionName="flash_toggle_startup_area" lineNumber="1663"/>
+    <functiondecl functionName="flash_get_current_startup_area" lineNumber="1681"/>
+    <functiondecl functionName="flash_get_current_swap_state" lineNumber="1696"/>
+    <functiondecl functionName="flash_set_current_swap_state" lineNumber="1705"/>
+    <functiondecl functionName="flash_get_access_window" lineNumber="1753"/>
+    <functiondecl functionName="flash_set_access_window" lineNumber="1770"/>
+    <functiondecl functionName="flash_write_faw_reg" lineNumber="1795"/>
+    <functiondecl functionName="flash_ready_isr" lineNumber="1849"/>
+    <functiondecl functionName="flash_error_isr" lineNumber="1979"/>
+    <functiondecl functionName="flash_api_open" lineNumber="504"/>
+    <functiondecl functionName="flash_api_close" lineNumber="555"/>
+    <functiondecl functionName="flash_api_write" lineNumber="597"/>
+    <functiondecl functionName="flash_api_erase" lineNumber="710"/>
+    <functiondecl functionName="flash_api_control" lineNumber="845"/>
+    <functiondecl functionName="flash_init" lineNumber="1018"/>
+    <functiondecl functionName="flash_interrupt_config" lineNumber="1045"/>
+    <functiondecl functionName="flash_clock_config" lineNumber="1139"/>
+    <functiondecl functionName="flash_pe_mode_enter" lineNumber="1162"/>
+    <functiondecl functionName="flash_pe_mode_exit" lineNumber="1212"/>
+    <functiondecl functionName="flash_stop" lineNumber="1273"/>
+    <functiondecl functionName="flash_erase" lineNumber="1314"/>
+    <functiondecl functionName="flash_write" lineNumber="1425"/>
+    <functiondecl functionName="flash_reset" lineNumber="1513"/>
+    <functiondecl functionName="flash_get_status" lineNumber="1552"/>
+    <functiondecl functionName="flash_lock_state" lineNumber="1571"/>
+    <functiondecl functionName="flash_release_state" lineNumber="1592"/>
+    <functiondecl functionName="swapfun" lineNumber="1606"/>
+    <functiondecl functionName="flash_software_lock" lineNumber="1619"/>
+    <functiondecl functionName="flash_software_unlock" lineNumber="1648"/>
+    <functiondecl functionName="flash_toggle_startup_area" lineNumber="1663"/>
+    <functiondecl functionName="flash_get_current_startup_area" lineNumber="1681"/>
+    <functiondecl functionName="flash_get_current_swap_state" lineNumber="1696"/>
+    <functiondecl functionName="flash_set_current_swap_state" lineNumber="1705"/>
+    <functiondecl functionName="flash_get_access_window" lineNumber="1753"/>
+    <functiondecl functionName="flash_set_access_window" lineNumber="1770"/>
+    <functiondecl functionName="flash_write_faw_reg" lineNumber="1795"/>
+    <functiondecl functionName="flash_ready_isr" lineNumber="1849"/>
+    <functiondecl functionName="flash_error_isr" lineNumber="1979"/>
+    <functiondecl functionName="flash_api_open" lineNumber="504"/>
+    <functiondecl functionName="flash_api_close" lineNumber="555"/>
+    <functiondecl functionName="flash_api_write" lineNumber="597"/>
+    <functiondecl functionName="flash_api_erase" lineNumber="710"/>
+    <functiondecl functionName="flash_api_control" lineNumber="845"/>
+    <functiondecl functionName="flash_init" lineNumber="1018"/>
+    <functiondecl functionName="flash_interrupt_config" lineNumber="1045"/>
+    <functiondecl functionName="flash_clock_config" lineNumber="1139"/>
+    <functiondecl functionName="flash_pe_mode_enter" lineNumber="1162"/>
+    <functiondecl functionName="flash_pe_mode_exit" lineNumber="1212"/>
+    <functiondecl functionName="flash_stop" lineNumber="1273"/>
+    <functiondecl functionName="flash_erase" lineNumber="1314"/>
+    <functiondecl functionName="flash_write" lineNumber="1425"/>
+    <functiondecl functionName="flash_reset" lineNumber="1513"/>
+    <functiondecl functionName="flash_get_status" lineNumber="1552"/>
+    <functiondecl functionName="flash_lock_state" lineNumber="1571"/>
+    <functiondecl functionName="flash_release_state" lineNumber="1592"/>
+    <functiondecl functionName="swapfun" lineNumber="1606"/>
+    <functiondecl functionName="flash_software_lock" lineNumber="1619"/>
+    <functiondecl functionName="flash_software_unlock" lineNumber="1648"/>
+    <functiondecl functionName="flash_toggle_startup_area" lineNumber="1663"/>
+    <functiondecl functionName="flash_get_current_startup_area" lineNumber="1681"/>
+    <functiondecl functionName="flash_get_current_swap_state" lineNumber="1696"/>
+    <functiondecl functionName="flash_set_current_swap_state" lineNumber="1705"/>
+    <functiondecl functionName="flash_get_access_window" lineNumber="1753"/>
+    <functiondecl functionName="flash_set_access_window" lineNumber="1770"/>
+    <functiondecl functionName="flash_write_faw_reg" lineNumber="1795"/>
+    <functiondecl functionName="flash_ready_isr" lineNumber="1849"/>
+    <functiondecl functionName="flash_error_isr" lineNumber="1979"/>
+    <functiondecl functionName="flash_api_open" lineNumber="504"/>
+    <functiondecl functionName="flash_api_close" lineNumber="555"/>
+    <functiondecl functionName="flash_api_write" lineNumber="597"/>
+    <functiondecl functionName="flash_api_erase" lineNumber="710"/>
+    <functiondecl functionName="flash_api_control" lineNumber="845"/>
+    <functiondecl functionName="flash_init" lineNumber="1018"/>
+    <functiondecl functionName="flash_interrupt_config" lineNumber="1045"/>
+    <functiondecl functionName="flash_clock_config" lineNumber="1139"/>
+    <functiondecl functionName="flash_pe_mode_enter" lineNumber="1162"/>
+    <functiondecl functionName="flash_pe_mode_exit" lineNumber="1212"/>
+    <functiondecl functionName="flash_stop" lineNumber="1273"/>
+    <functiondecl functionName="flash_erase" lineNumber="1314"/>
+    <functiondecl functionName="flash_write" lineNumber="1425"/>
+    <functiondecl functionName="flash_reset" lineNumber="1513"/>
+    <functiondecl functionName="flash_get_status" lineNumber="1552"/>
+    <functiondecl functionName="flash_lock_state" lineNumber="1571"/>
+    <functiondecl functionName="flash_release_state" lineNumber="1592"/>
+    <functiondecl functionName="swapfun" lineNumber="1606"/>
+    <functiondecl functionName="flash_software_lock" lineNumber="1619"/>
+    <functiondecl functionName="flash_software_unlock" lineNumber="1648"/>
+    <functiondecl functionName="flash_toggle_startup_area" lineNumber="1663"/>
+    <functiondecl functionName="flash_get_current_startup_area" lineNumber="1681"/>
+    <functiondecl functionName="flash_get_current_swap_state" lineNumber="1696"/>
+    <functiondecl functionName="flash_set_current_swap_state" lineNumber="1705"/>
+    <functiondecl functionName="flash_get_access_window" lineNumber="1753"/>
+    <functiondecl functionName="flash_set_access_window" lineNumber="1770"/>
+    <functiondecl functionName="flash_write_faw_reg" lineNumber="1795"/>
+    <functiondecl functionName="flash_ready_isr" lineNumber="1849"/>
+    <functiondecl functionName="flash_error_isr" lineNumber="1979"/>
+    <functiondecl functionName="flash_api_open" lineNumber="504"/>
+    <functiondecl functionName="flash_api_close" lineNumber="555"/>
+    <functiondecl functionName="flash_api_write" lineNumber="597"/>
+    <functiondecl functionName="flash_api_erase" lineNumber="710"/>
+    <functiondecl functionName="flash_api_control" lineNumber="845"/>
+    <functiondecl functionName="flash_init" lineNumber="1018"/>
+    <functiondecl functionName="flash_interrupt_config" lineNumber="1045"/>
+    <functiondecl functionName="flash_clock_config" lineNumber="1139"/>
+    <functiondecl functionName="flash_pe_mode_enter" lineNumber="1162"/>
+    <functiondecl functionName="flash_pe_mode_exit" lineNumber="1212"/>
+    <functiondecl functionName="flash_stop" lineNumber="1273"/>
+    <functiondecl functionName="flash_erase" lineNumber="1314"/>
+    <functiondecl functionName="flash_write" lineNumber="1425"/>
+    <functiondecl functionName="flash_reset" lineNumber="1513"/>
+    <functiondecl functionName="flash_get_status" lineNumber="1552"/>
+    <functiondecl functionName="flash_lock_state" lineNumber="1571"/>
+    <functiondecl functionName="flash_release_state" lineNumber="1592"/>
+    <functiondecl functionName="swapfun" lineNumber="1606"/>
+    <functiondecl functionName="flash_software_lock" lineNumber="1619"/>
+    <functiondecl functionName="flash_software_unlock" lineNumber="1648"/>
+    <functiondecl functionName="flash_toggle_startup_area" lineNumber="1663"/>
+    <functiondecl functionName="flash_get_current_startup_area" lineNumber="1681"/>
+    <functiondecl functionName="flash_get_current_swap_state" lineNumber="1696"/>
+    <functiondecl functionName="flash_set_current_swap_state" lineNumber="1705"/>
+    <functiondecl functionName="flash_get_access_window" lineNumber="1753"/>
+    <functiondecl functionName="flash_set_access_window" lineNumber="1770"/>
+    <functiondecl functionName="flash_write_faw_reg" lineNumber="1795"/>
+    <functiondecl functionName="flash_ready_isr" lineNumber="1849"/>
+    <functiondecl functionName="flash_error_isr" lineNumber="1979"/>
+    <functioncall functionName="BTFLG"/>
+    <functioncall functionName="CMDLK"/>
+    <functioncall functionName="DBFULL"/>
+    <functioncall functionName="ERSERR"/>
+    <functioncall functionName="FAWMON"/>
+    <functioncall functionName="FENTRYR"/>
+    <functioncall functionName="FLASH_256_BYTES_PGM"/>
+    <functioncall functionName="FLASH_BLANKCHECK"/>
+    <functioncall functionName="FLASH_CMD_ACCESSWINDOW_GET"/>
+    <functioncall functionName="FLASH_CMD_ACCESSWINDOW_SET"/>
+    <functioncall functionName="FLASH_CMD_CONFIG_CLOCK"/>
+    <functioncall functionName="FLASH_CMD_END_ENUM"/>
+    <functioncall functionName="FLASH_CMD_RESET"/>
+    <functioncall functionName="FLASH_CMD_SET_BGO_CALLBACK"/>
+    <functioncall functionName="FLASH_CMD_STATUS_GET"/>
+    <functioncall functionName="FLASH_CMD_SWAPFLAG_GET"/>
+    <functioncall functionName="FLASH_CMD_SWAPFLAG_TOGGLE"/>
+    <functioncall functionName="FLASH_CMD_SWAPSTATE_GET"/>
+    <functioncall functionName="FLASH_CMD_SWAPSTATE_SET"/>
+    <functioncall functionName="FLASH_CUR_CF_ACCESSWINDOW"/>
+    <functioncall functionName="FLASH_CUR_CF_BGO_ERASE"/>
+    <functioncall functionName="FLASH_CUR_CF_BGO_READ_LOCKBIT"/>
+    <functioncall functionName="FLASH_CUR_CF_BGO_WRITE"/>
+    <functioncall functionName="FLASH_CUR_CF_BGO_WRITE_LOCKBIT"/>
+    <functioncall functionName="FLASH_CUR_CF_BLANKCHECK"/>
+    <functioncall functionName="FLASH_CUR_CF_ERASE"/>
+    <functioncall functionName="FLASH_CUR_CF_TOGGLE_STARTUPAREA"/>
+    <functioncall functionName="FLASH_CUR_CF_WRITE"/>
+    <functioncall functionName="FLASH_CUR_DF_BGO_BLANKCHECK"/>
+    <functioncall functionName="FLASH_CUR_DF_BGO_ERASE"/>
+    <functioncall functionName="FLASH_CUR_DF_BGO_WRITE"/>
+    <functioncall functionName="FLASH_CUR_DF_BLANKCHECK"/>
+    <functioncall functionName="FLASH_CUR_DF_ERASE"/>
+    <functioncall functionName="FLASH_CUR_DF_WRITE"/>
+    <functioncall functionName="FLASH_CUR_FCU_INIT"/>
+    <functioncall functionName="FLASH_CUR_IDLE"/>
+    <functioncall functionName="FLASH_CUR_INVALID"/>
+    <functioncall functionName="FLASH_CUR_LOCKBIT_SET"/>
+    <functioncall functionName="FLASH_CUR_STOP"/>
+    <functioncall functionName="FLASH_ERASING"/>
+    <functioncall functionName="FLASH_ERR_ACCESSW"/>
+    <functioncall functionName="FLASH_ERR_ADDRESS"/>
+    <functioncall functionName="FLASH_ERR_ALIGNED"/>
+    <functioncall functionName="FLASH_ERR_ALREADY_OPEN"/>
+    <functioncall functionName="FLASH_ERR_BLOCKS"/>
+    <functioncall functionName="FLASH_ERR_BOUNDARY"/>
+    <functioncall functionName="FLASH_ERR_BUSY"/>
+    <functioncall functionName="FLASH_ERR_BYTES"/>
+    <functioncall functionName="FLASH_ERR_CMD_LOCKED"/>
+    <functioncall functionName="FLASH_ERR_FAILURE"/>
+    <functioncall functionName="FLASH_ERR_FREQUENCY"/>
+    <functioncall functionName="FLASH_ERR_LOCKBIT_SET"/>
+    <functioncall functionName="FLASH_ERR_NULL_PTR"/>
+    <functioncall functionName="FLASH_ERR_OVERFLOW"/>
+    <functioncall functionName="FLASH_ERR_PARAM"/>
+    <functioncall functionName="FLASH_ERR_SECURITY"/>
+    <functioncall functionName="FLASH_ERR_TIMEOUT"/>
+    <functioncall functionName="FLASH_ERR_UNSUPPORTED"/>
+    <functioncall functionName="FLASH_GETSTATUS"/>
+    <functioncall functionName="FLASH_INITIALIZATION"/>
+    <functioncall functionName="FLASH_INT_EVENT_BLANK"/>
+    <functioncall functionName="FLASH_INT_EVENT_END_ENUM"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERASE_COMPLETE"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_CF_ACCESS"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_CMD_LOCKED"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_DF_ACCESS"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_FAILURE"/>
+    <functioncall functionName="FLASH_INT_EVENT_ERR_SECURITY"/>
+    <functioncall functionName="FLASH_INT_EVENT_INITIALIZED"/>
+    <functioncall functionName="FLASH_INT_EVENT_NOT_BLANK"/>
+    <functioncall functionName="FLASH_INT_EVENT_SET_ACCESSWINDOW"/>
+    <functioncall functionName="FLASH_INT_EVENT_TOGGLE_STARTUPAREA"/>
+    <functioncall functionName="FLASH_INT_EVENT_WRITE_COMPLETE"/>
+    <functioncall functionName="FLASH_LOCK_BIT"/>
+    <functioncall functionName="FLASH_READY"/>
+    <functioncall functionName="FLASH_RES_BLANK"/>
+    <functioncall functionName="FLASH_RES_INVALID"/>
+    <functioncall functionName="FLASH_RES_LOCKBIT_STATE_NON_PROTECTED"/>
+    <functioncall functionName="FLASH_RES_LOCKBIT_STATE_PROTECTED"/>
+    <functioncall functionName="FLASH_RES_NOT_BLANK"/>
+    <functioncall functionName="FLASH_SUCCESS"/>
+    <functioncall functionName="FLASH_TYPE_CODE_FLASH"/>
+    <functioncall functionName="FLASH_TYPE_DATA_FLASH"/>
+    <functioncall functionName="FLASH_TYPE_INVALID"/>
+    <functioncall functionName="FLASH_UNINITIALIZED"/>
+    <functioncall functionName="FLASH_WRITING"/>
+    <functioncall functionName="FRDY"/>
+    <functioncall functionName="ILGLERR"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="IRQn_Type"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="NVIC_USER_IRQ_OFFSET"/>
+    <functioncall functionName="R_NVIC_ClearPendingIRQ"/>
+    <functioncall functionName="R_NVIC_EnableIRQ"/>
+    <functioncall functionName="R_NVIC_GetPriority"/>
+    <functioncall functionName="R_NVIC_SetPriority"/>
+    <functioncall functionName="R_SYS_IrqEventLinkSet"/>
+    <functioncall functionName="R_SYS_IrqStatusClear"/>
+    <functioncall functionName="R_SYS_SystemClockFreqGet"/>
+    <functioncall functionName="SAS"/>
+    <functioncall functionName="SCB_AIRCR_SYSRESETREQ_Msk"/>
+    <functioncall functionName="SECERR"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="_BIT_SHIFT"/>
+    <functioncall functionName="_IP_IDX"/>
+    <functioncall functionName="_SHP_IDX"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_PRIO_BITS"/>
+    <functioncall functionName="__dsb"/>
+    <functioncall functionName="__isb"/>
+    <functioncall functionName="__nop"/>
+    <functioncall functionName="__regAPSR"/>
+    <functioncall functionName="__regControl"/>
+    <functioncall functionName="__regIPSR"/>
+    <functioncall functionName="__regMainStackPointer"/>
+    <functioncall functionName="__regPriMask"/>
+    <functioncall functionName="__regProcessStackPointer"/>
+    <functioncall functionName="__regXPSR"/>
+    <functioncall functionName="__schedule_barrier"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="block_address"/>
+    <functioncall functionName="block_start_address"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cmd"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="current_operation"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dest_addr"/>
+    <functioncall functionName="dest_address"/>
+    <functioncall functionName="end_addr"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="faw"/>
+    <functioncall functionName="flash_clock_config"/>
+    <functioncall functionName="flash_erase"/>
+    <functioncall functionName="flash_error_isr"/>
+    <functioncall functionName="flash_error_isr_handler"/>
+    <functioncall functionName="flash_get_access_window"/>
+    <functioncall functionName="flash_get_current_startup_area"/>
+    <functioncall functionName="flash_get_current_swap_state"/>
+    <functioncall functionName="flash_get_status"/>
+    <functioncall functionName="flash_init"/>
+    <functioncall functionName="flash_interrupt_config"/>
+    <functioncall functionName="flash_lock_state"/>
+    <functioncall functionName="flash_pe_mode_enter"/>
+    <functioncall functionName="flash_pe_mode_exit"/>
+    <functioncall functionName="flash_ready_isr"/>
+    <functioncall functionName="flash_ready_isr_handler"/>
+    <functioncall functionName="flash_release_state"/>
+    <functioncall functionName="flash_reset"/>
+    <functioncall functionName="flash_set_access_window"/>
+    <functioncall functionName="flash_set_current_swap_state"/>
+    <functioncall functionName="flash_software_lock"/>
+    <functioncall functionName="flash_software_unlock"/>
+    <functioncall functionName="flash_stop"/>
+    <functioncall functionName="flash_toggle_startup_area"/>
+    <functioncall functionName="flash_write"/>
+    <functioncall functionName="flash_write_faw_reg"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="g_flash_int_error_cb_args"/>
+    <functioncall functionName="g_flash_int_ready_cb_args"/>
+    <functioncall functionName="g_flash_lock"/>
+    <functioncall functionName="g_iclk_hz"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="int_priority"/>
+    <functioncall functionName="is_locked"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="min_pgm_size"/>
+    <functioncall functionName="new_state"/>
+    <functioncall functionName="num_blocks"/>
+    <functioncall functionName="num_bytes"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="pAccessInfo"/>
+    <functioncall functionName="pSwapInfo"/>
+    <functioncall functionName="pcallback"/>
+    <functioncall functionName="pcfg"/>
+    <functioncall functionName="pgm_mode"/>
+    <functioncall functionName="plock"/>
+    <functioncall functionName="priMask"/>
+    <functioncall functionName="reg_value"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sas_flag"/>
+    <functioncall functionName="speed_mhz"/>
+    <functioncall functionName="src_addr"/>
+    <functioncall functionName="src_address"/>
+    <functioncall functionName="start_addr"/>
+    <functioncall functionName="swapfun"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="topOfMainStack"/>
+    <functioncall functionName="topOfProcStack"/>
+    <functioncall functionName="total_count"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

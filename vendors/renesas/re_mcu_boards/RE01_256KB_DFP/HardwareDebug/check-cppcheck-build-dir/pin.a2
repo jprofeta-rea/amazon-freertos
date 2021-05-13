@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3597132477">
+        <error id="uselessAssignmentArg" severity="style" msg="Assignment of function parameter has no effect outside the function." verbose="Assignment of function parameter has no effect outside the function." cwe="398">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="661" column="27"/>
+        </error>
+        <error id="uselessAssignmentArg" severity="style" msg="Assignment of function parameter has no effect outside the function." verbose="Assignment of function parameter has no effect outside the function." cwe="398">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="743" column="27"/>
+        </error>
+        <error id="uselessAssignmentArg" severity="style" msg="Assignment of function parameter has no effect outside the function." verbose="Assignment of function parameter has no effect outside the function." cwe="398">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="760" column="27"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;uint32_t&apos; is assigned a value that is never used." verbose="Variable &apos;uint32_t&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="661" column="24"/>
+            <symbol>uint32_t</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;uint32_t&apos; is assigned a value that is never used." verbose="Variable &apos;uint32_t&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="701" column="24"/>
+            <symbol>uint32_t</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;uint32_t&apos; is assigned a value that is never used." verbose="Variable &apos;uint32_t&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="743" column="24"/>
+            <symbol>uint32_t</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;uint32_t&apos; is assigned a value that is never used." verbose="Variable &apos;uint32_t&apos; is assigned a value that is never used." cwe="563">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="760" column="24"/>
+            <symbol>uint32_t</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="3" my-argname="pPreemptPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="933" col="4" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="4" my-argname="pSubPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="934" col="4" value="0"/>
+  </FileInfo>
+        <error id="uselessAssignmentArg" severity="style" msg="Assignment of function parameter has no effect outside the function." verbose="Assignment of function parameter has no effect outside the function." cwe="398">
+            <location file0="..\Device\pin.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="701" column="27"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="3" my-argname="pPreemptPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="933" col="4" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="4" my-argname="pSubPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="934" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="3" my-argname="pPreemptPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="933" col="4" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="4" my-argname="pSubPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="934" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="3" my-argname="pPreemptPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="933" col="4" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="4" my-argname="pSubPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="934" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="3" my-argname="pPreemptPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="933" col="4" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="4" my-argname="pSubPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="934" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="3" my-argname="pPreemptPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="933" col="4" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h:924:22" my-argnr="4" my-argname="pSubPriority" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/CMSIS/Core/Include/core_cm0plus.h" line="934" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="R_ICU_Pinset_NMI" lineNumber="80"/>
+    <functiondecl functionName="R_ICU_Pinclr_NMI" lineNumber="100"/>
+    <functiondecl functionName="R_ICU_Pinset_CH0" lineNumber="116"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH0" lineNumber="136"/>
+    <functiondecl functionName="R_ICU_Pinset_CH1" lineNumber="152"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH1" lineNumber="172"/>
+    <functiondecl functionName="R_ICU_Pinset_CH2" lineNumber="188"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH2" lineNumber="215"/>
+    <functiondecl functionName="R_ICU_Pinset_CH3" lineNumber="234"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH3" lineNumber="268"/>
+    <functiondecl functionName="R_ICU_Pinset_CH4" lineNumber="290"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH4" lineNumber="324"/>
+    <functiondecl functionName="R_ICU_Pinset_CH5" lineNumber="346"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH5" lineNumber="373"/>
+    <functiondecl functionName="R_ICU_Pinset_CH6" lineNumber="392"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH6" lineNumber="419"/>
+    <functiondecl functionName="R_ICU_Pinset_CH7" lineNumber="438"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH7" lineNumber="465"/>
+    <functiondecl functionName="R_ICU_Pinset_CH8" lineNumber="484"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH8" lineNumber="518"/>
+    <functiondecl functionName="R_ICU_Pinset_CH9" lineNumber="540"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH9" lineNumber="569"/>
+    <functiondecl functionName="R_GPT_COM_Pinset" lineNumber="588"/>
+    <functiondecl functionName="R_GPT_COM_Pinclr" lineNumber="629"/>
+    <functiondecl functionName="R_GPT_Pinset_CH0" lineNumber="654"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH0" lineNumber="709"/>
+    <functiondecl functionName="R_GPT_Pinset_CH1" lineNumber="740"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH1" lineNumber="781"/>
+    <functiondecl functionName="R_GPT_Pinset_CH2" lineNumber="806"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH2" lineNumber="847"/>
+    <functiondecl functionName="R_GPT_Pinset_CH3" lineNumber="872"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH3" lineNumber="913"/>
+    <functiondecl functionName="R_GPT_Pinset_CH4" lineNumber="938"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH4" lineNumber="979"/>
+    <functiondecl functionName="R_GPT_Pinset_CH5" lineNumber="1004"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH5" lineNumber="1045"/>
+    <functiondecl functionName="R_GPT_OPS_Pinset" lineNumber="1070"/>
+    <functiondecl functionName="R_GPT_OPS_Pinclr" lineNumber="1209"/>
+    <functiondecl functionName="R_AGT_Pinset_CH0" lineNumber="1277"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH0" lineNumber="1360"/>
+    <functiondecl functionName="R_AGT_Pinset_CH1" lineNumber="1404"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH1" lineNumber="1487"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH0" lineNumber="1531"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH0" lineNumber="1614"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH1" lineNumber="1658"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH1" lineNumber="1744"/>
+    <functiondecl functionName="R_SCI_Pinset_CH0" lineNumber="1788"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH0" lineNumber="1905"/>
+    <functiondecl functionName="R_SCI_Pinset_CH1" lineNumber="1955"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH1" lineNumber="2004"/>
+    <functiondecl functionName="R_SCI_Pinset_CH2" lineNumber="2029"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH2" lineNumber="2077"/>
+    <functiondecl functionName="R_SCI_Pinset_CH3" lineNumber="2102"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH3" lineNumber="2184"/>
+    <functiondecl functionName="R_SCI_Pinset_CH4" lineNumber="2221"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH4" lineNumber="2338"/>
+    <functiondecl functionName="R_SCI_Pinset_CH5" lineNumber="2387"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH5" lineNumber="2469"/>
+    <functiondecl functionName="R_SCI_Pinset_CH9" lineNumber="2507"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH9" lineNumber="2589"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH0" lineNumber="2632"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH0" lineNumber="2743"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH1" lineNumber="2806"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH1" lineNumber="2868"/>
+    <functiondecl functionName="R_QSPI_Pinset" lineNumber="2902"/>
+    <functiondecl functionName="R_QSPI_Pinclr" lineNumber="2999"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH0" lineNumber="3049"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH0" lineNumber="3079"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH1" lineNumber="3099"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH1" lineNumber="3129"/>
+    <functiondecl functionName="R_CAC_Pinset" lineNumber="3148"/>
+    <functiondecl functionName="R_CAC_Pinclr" lineNumber="3176"/>
+    <functiondecl functionName="R_S14AD_Pinset" lineNumber="3196"/>
+    <functiondecl functionName="R_S14AD_Pinclr" lineNumber="3310"/>
+    <functiondecl functionName="R_MLCD_Pinset" lineNumber="3366"/>
+    <functiondecl functionName="R_MLCD_Pinclr" lineNumber="3477"/>
+    <functiondecl functionName="R_KINT_Pinset" lineNumber="3533"/>
+    <functiondecl functionName="R_KINT_Pinclr" lineNumber="3624"/>
+    <functiondecl functionName="R_TMR_Pinset" lineNumber="3670"/>
+    <functiondecl functionName="R_TMR_Pinclr" lineNumber="3746"/>
+    <functiondecl functionName="R_CLKOUT_Pinset" lineNumber="3787"/>
+    <functiondecl functionName="R_CLKOUT_Pinclr" lineNumber="3822"/>
+    <functiondecl functionName="R_ICU_Pinset_NMI" lineNumber="80"/>
+    <functiondecl functionName="R_ICU_Pinclr_NMI" lineNumber="100"/>
+    <functiondecl functionName="R_ICU_Pinset_CH0" lineNumber="116"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH0" lineNumber="136"/>
+    <functiondecl functionName="R_ICU_Pinset_CH1" lineNumber="152"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH1" lineNumber="172"/>
+    <functiondecl functionName="R_ICU_Pinset_CH2" lineNumber="188"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH2" lineNumber="215"/>
+    <functiondecl functionName="R_ICU_Pinset_CH3" lineNumber="234"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH3" lineNumber="268"/>
+    <functiondecl functionName="R_ICU_Pinset_CH4" lineNumber="290"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH4" lineNumber="324"/>
+    <functiondecl functionName="R_ICU_Pinset_CH5" lineNumber="346"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH5" lineNumber="373"/>
+    <functiondecl functionName="R_ICU_Pinset_CH6" lineNumber="392"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH6" lineNumber="419"/>
+    <functiondecl functionName="R_ICU_Pinset_CH7" lineNumber="438"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH7" lineNumber="465"/>
+    <functiondecl functionName="R_ICU_Pinset_CH8" lineNumber="484"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH8" lineNumber="518"/>
+    <functiondecl functionName="R_ICU_Pinset_CH9" lineNumber="540"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH9" lineNumber="569"/>
+    <functiondecl functionName="R_GPT_COM_Pinset" lineNumber="588"/>
+    <functiondecl functionName="R_GPT_COM_Pinclr" lineNumber="629"/>
+    <functiondecl functionName="R_GPT_Pinset_CH0" lineNumber="654"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH0" lineNumber="709"/>
+    <functiondecl functionName="R_GPT_Pinset_CH1" lineNumber="740"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH1" lineNumber="781"/>
+    <functiondecl functionName="R_GPT_Pinset_CH2" lineNumber="806"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH2" lineNumber="847"/>
+    <functiondecl functionName="R_GPT_Pinset_CH3" lineNumber="872"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH3" lineNumber="913"/>
+    <functiondecl functionName="R_GPT_Pinset_CH4" lineNumber="938"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH4" lineNumber="979"/>
+    <functiondecl functionName="R_GPT_Pinset_CH5" lineNumber="1004"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH5" lineNumber="1045"/>
+    <functiondecl functionName="R_GPT_OPS_Pinset" lineNumber="1070"/>
+    <functiondecl functionName="R_GPT_OPS_Pinclr" lineNumber="1209"/>
+    <functiondecl functionName="R_AGT_Pinset_CH0" lineNumber="1277"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH0" lineNumber="1360"/>
+    <functiondecl functionName="R_AGT_Pinset_CH1" lineNumber="1404"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH1" lineNumber="1487"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH0" lineNumber="1531"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH0" lineNumber="1614"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH1" lineNumber="1658"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH1" lineNumber="1744"/>
+    <functiondecl functionName="R_SCI_Pinset_CH0" lineNumber="1788"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH0" lineNumber="1905"/>
+    <functiondecl functionName="R_SCI_Pinset_CH1" lineNumber="1955"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH1" lineNumber="2004"/>
+    <functiondecl functionName="R_SCI_Pinset_CH2" lineNumber="2029"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH2" lineNumber="2077"/>
+    <functiondecl functionName="R_SCI_Pinset_CH3" lineNumber="2102"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH3" lineNumber="2184"/>
+    <functiondecl functionName="R_SCI_Pinset_CH4" lineNumber="2221"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH4" lineNumber="2338"/>
+    <functiondecl functionName="R_SCI_Pinset_CH5" lineNumber="2387"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH5" lineNumber="2469"/>
+    <functiondecl functionName="R_SCI_Pinset_CH9" lineNumber="2507"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH9" lineNumber="2589"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH0" lineNumber="2632"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH0" lineNumber="2743"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH1" lineNumber="2806"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH1" lineNumber="2868"/>
+    <functiondecl functionName="R_QSPI_Pinset" lineNumber="2902"/>
+    <functiondecl functionName="R_QSPI_Pinclr" lineNumber="2999"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH0" lineNumber="3049"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH0" lineNumber="3079"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH1" lineNumber="3099"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH1" lineNumber="3129"/>
+    <functiondecl functionName="R_CAC_Pinset" lineNumber="3148"/>
+    <functiondecl functionName="R_CAC_Pinclr" lineNumber="3176"/>
+    <functiondecl functionName="R_S14AD_Pinset" lineNumber="3196"/>
+    <functiondecl functionName="R_S14AD_Pinclr" lineNumber="3310"/>
+    <functiondecl functionName="R_MLCD_Pinset" lineNumber="3366"/>
+    <functiondecl functionName="R_MLCD_Pinclr" lineNumber="3477"/>
+    <functiondecl functionName="R_KINT_Pinset" lineNumber="3533"/>
+    <functiondecl functionName="R_KINT_Pinclr" lineNumber="3624"/>
+    <functiondecl functionName="R_TMR_Pinset" lineNumber="3670"/>
+    <functiondecl functionName="R_TMR_Pinclr" lineNumber="3746"/>
+    <functiondecl functionName="R_CLKOUT_Pinset" lineNumber="3787"/>
+    <functiondecl functionName="R_CLKOUT_Pinclr" lineNumber="3822"/>
+    <functiondecl functionName="R_ICU_Pinset_NMI" lineNumber="80"/>
+    <functiondecl functionName="R_ICU_Pinclr_NMI" lineNumber="100"/>
+    <functiondecl functionName="R_ICU_Pinset_CH0" lineNumber="116"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH0" lineNumber="136"/>
+    <functiondecl functionName="R_ICU_Pinset_CH1" lineNumber="152"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH1" lineNumber="172"/>
+    <functiondecl functionName="R_ICU_Pinset_CH2" lineNumber="188"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH2" lineNumber="215"/>
+    <functiondecl functionName="R_ICU_Pinset_CH3" lineNumber="234"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH3" lineNumber="268"/>
+    <functiondecl functionName="R_ICU_Pinset_CH4" lineNumber="290"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH4" lineNumber="324"/>
+    <functiondecl functionName="R_ICU_Pinset_CH5" lineNumber="346"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH5" lineNumber="373"/>
+    <functiondecl functionName="R_ICU_Pinset_CH6" lineNumber="392"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH6" lineNumber="419"/>
+    <functiondecl functionName="R_ICU_Pinset_CH7" lineNumber="438"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH7" lineNumber="465"/>
+    <functiondecl functionName="R_ICU_Pinset_CH8" lineNumber="484"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH8" lineNumber="518"/>
+    <functiondecl functionName="R_ICU_Pinset_CH9" lineNumber="540"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH9" lineNumber="569"/>
+    <functiondecl functionName="R_GPT_COM_Pinset" lineNumber="588"/>
+    <functiondecl functionName="R_GPT_COM_Pinclr" lineNumber="629"/>
+    <functiondecl functionName="R_GPT_Pinset_CH0" lineNumber="654"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH0" lineNumber="709"/>
+    <functiondecl functionName="R_GPT_Pinset_CH1" lineNumber="740"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH1" lineNumber="781"/>
+    <functiondecl functionName="R_GPT_Pinset_CH2" lineNumber="806"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH2" lineNumber="847"/>
+    <functiondecl functionName="R_GPT_Pinset_CH3" lineNumber="872"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH3" lineNumber="913"/>
+    <functiondecl functionName="R_GPT_Pinset_CH4" lineNumber="938"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH4" lineNumber="979"/>
+    <functiondecl functionName="R_GPT_Pinset_CH5" lineNumber="1004"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH5" lineNumber="1045"/>
+    <functiondecl functionName="R_GPT_OPS_Pinset" lineNumber="1070"/>
+    <functiondecl functionName="R_GPT_OPS_Pinclr" lineNumber="1209"/>
+    <functiondecl functionName="R_AGT_Pinset_CH0" lineNumber="1277"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH0" lineNumber="1360"/>
+    <functiondecl functionName="R_AGT_Pinset_CH1" lineNumber="1404"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH1" lineNumber="1487"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH0" lineNumber="1531"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH0" lineNumber="1614"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH1" lineNumber="1658"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH1" lineNumber="1744"/>
+    <functiondecl functionName="R_SCI_Pinset_CH0" lineNumber="1788"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH0" lineNumber="1905"/>
+    <functiondecl functionName="R_SCI_Pinset_CH1" lineNumber="1955"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH1" lineNumber="2004"/>
+    <functiondecl functionName="R_SCI_Pinset_CH2" lineNumber="2029"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH2" lineNumber="2077"/>
+    <functiondecl functionName="R_SCI_Pinset_CH3" lineNumber="2102"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH3" lineNumber="2184"/>
+    <functiondecl functionName="R_SCI_Pinset_CH4" lineNumber="2221"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH4" lineNumber="2338"/>
+    <functiondecl functionName="R_SCI_Pinset_CH5" lineNumber="2387"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH5" lineNumber="2469"/>
+    <functiondecl functionName="R_SCI_Pinset_CH9" lineNumber="2507"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH9" lineNumber="2589"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH0" lineNumber="2632"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH0" lineNumber="2743"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH1" lineNumber="2806"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH1" lineNumber="2868"/>
+    <functiondecl functionName="R_QSPI_Pinset" lineNumber="2902"/>
+    <functiondecl functionName="R_QSPI_Pinclr" lineNumber="2999"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH0" lineNumber="3049"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH0" lineNumber="3079"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH1" lineNumber="3099"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH1" lineNumber="3129"/>
+    <functiondecl functionName="R_CAC_Pinset" lineNumber="3148"/>
+    <functiondecl functionName="R_CAC_Pinclr" lineNumber="3176"/>
+    <functiondecl functionName="R_S14AD_Pinset" lineNumber="3196"/>
+    <functiondecl functionName="R_S14AD_Pinclr" lineNumber="3310"/>
+    <functiondecl functionName="R_MLCD_Pinset" lineNumber="3366"/>
+    <functiondecl functionName="R_MLCD_Pinclr" lineNumber="3477"/>
+    <functiondecl functionName="R_KINT_Pinset" lineNumber="3533"/>
+    <functiondecl functionName="R_KINT_Pinclr" lineNumber="3624"/>
+    <functiondecl functionName="R_TMR_Pinset" lineNumber="3670"/>
+    <functiondecl functionName="R_TMR_Pinclr" lineNumber="3746"/>
+    <functiondecl functionName="R_CLKOUT_Pinset" lineNumber="3787"/>
+    <functiondecl functionName="R_CLKOUT_Pinclr" lineNumber="3822"/>
+    <functiondecl functionName="R_ICU_Pinset_NMI" lineNumber="80"/>
+    <functiondecl functionName="R_ICU_Pinclr_NMI" lineNumber="100"/>
+    <functiondecl functionName="R_ICU_Pinset_CH0" lineNumber="116"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH0" lineNumber="136"/>
+    <functiondecl functionName="R_ICU_Pinset_CH1" lineNumber="152"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH1" lineNumber="172"/>
+    <functiondecl functionName="R_ICU_Pinset_CH2" lineNumber="188"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH2" lineNumber="215"/>
+    <functiondecl functionName="R_ICU_Pinset_CH3" lineNumber="234"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH3" lineNumber="268"/>
+    <functiondecl functionName="R_ICU_Pinset_CH4" lineNumber="290"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH4" lineNumber="324"/>
+    <functiondecl functionName="R_ICU_Pinset_CH5" lineNumber="346"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH5" lineNumber="373"/>
+    <functiondecl functionName="R_ICU_Pinset_CH6" lineNumber="392"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH6" lineNumber="419"/>
+    <functiondecl functionName="R_ICU_Pinset_CH7" lineNumber="438"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH7" lineNumber="465"/>
+    <functiondecl functionName="R_ICU_Pinset_CH8" lineNumber="484"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH8" lineNumber="518"/>
+    <functiondecl functionName="R_ICU_Pinset_CH9" lineNumber="540"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH9" lineNumber="569"/>
+    <functiondecl functionName="R_GPT_COM_Pinset" lineNumber="588"/>
+    <functiondecl functionName="R_GPT_COM_Pinclr" lineNumber="629"/>
+    <functiondecl functionName="R_GPT_Pinset_CH0" lineNumber="654"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH0" lineNumber="709"/>
+    <functiondecl functionName="R_GPT_Pinset_CH1" lineNumber="740"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH1" lineNumber="781"/>
+    <functiondecl functionName="R_GPT_Pinset_CH2" lineNumber="806"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH2" lineNumber="847"/>
+    <functiondecl functionName="R_GPT_Pinset_CH3" lineNumber="872"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH3" lineNumber="913"/>
+    <functiondecl functionName="R_GPT_Pinset_CH4" lineNumber="938"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH4" lineNumber="979"/>
+    <functiondecl functionName="R_GPT_Pinset_CH5" lineNumber="1004"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH5" lineNumber="1045"/>
+    <functiondecl functionName="R_GPT_OPS_Pinset" lineNumber="1070"/>
+    <functiondecl functionName="R_GPT_OPS_Pinclr" lineNumber="1209"/>
+    <functiondecl functionName="R_AGT_Pinset_CH0" lineNumber="1277"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH0" lineNumber="1360"/>
+    <functiondecl functionName="R_AGT_Pinset_CH1" lineNumber="1404"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH1" lineNumber="1487"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH0" lineNumber="1531"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH0" lineNumber="1614"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH1" lineNumber="1658"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH1" lineNumber="1744"/>
+    <functiondecl functionName="R_SCI_Pinset_CH0" lineNumber="1788"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH0" lineNumber="1905"/>
+    <functiondecl functionName="R_SCI_Pinset_CH1" lineNumber="1955"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH1" lineNumber="2004"/>
+    <functiondecl functionName="R_SCI_Pinset_CH2" lineNumber="2029"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH2" lineNumber="2077"/>
+    <functiondecl functionName="R_SCI_Pinset_CH3" lineNumber="2102"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH3" lineNumber="2184"/>
+    <functiondecl functionName="R_SCI_Pinset_CH4" lineNumber="2221"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH4" lineNumber="2338"/>
+    <functiondecl functionName="R_SCI_Pinset_CH5" lineNumber="2387"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH5" lineNumber="2469"/>
+    <functiondecl functionName="R_SCI_Pinset_CH9" lineNumber="2507"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH9" lineNumber="2589"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH0" lineNumber="2632"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH0" lineNumber="2743"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH1" lineNumber="2806"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH1" lineNumber="2868"/>
+    <functiondecl functionName="R_QSPI_Pinset" lineNumber="2902"/>
+    <functiondecl functionName="R_QSPI_Pinclr" lineNumber="2999"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH0" lineNumber="3049"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH0" lineNumber="3079"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH1" lineNumber="3099"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH1" lineNumber="3129"/>
+    <functiondecl functionName="R_CAC_Pinset" lineNumber="3148"/>
+    <functiondecl functionName="R_CAC_Pinclr" lineNumber="3176"/>
+    <functiondecl functionName="R_S14AD_Pinset" lineNumber="3196"/>
+    <functiondecl functionName="R_S14AD_Pinclr" lineNumber="3310"/>
+    <functiondecl functionName="R_MLCD_Pinset" lineNumber="3366"/>
+    <functiondecl functionName="R_MLCD_Pinclr" lineNumber="3477"/>
+    <functiondecl functionName="R_KINT_Pinset" lineNumber="3533"/>
+    <functiondecl functionName="R_KINT_Pinclr" lineNumber="3624"/>
+    <functiondecl functionName="R_TMR_Pinset" lineNumber="3670"/>
+    <functiondecl functionName="R_TMR_Pinclr" lineNumber="3746"/>
+    <functiondecl functionName="R_CLKOUT_Pinset" lineNumber="3787"/>
+    <functiondecl functionName="R_CLKOUT_Pinclr" lineNumber="3822"/>
+    <functiondecl functionName="R_ICU_Pinset_NMI" lineNumber="80"/>
+    <functiondecl functionName="R_ICU_Pinclr_NMI" lineNumber="100"/>
+    <functiondecl functionName="R_ICU_Pinset_CH0" lineNumber="116"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH0" lineNumber="136"/>
+    <functiondecl functionName="R_ICU_Pinset_CH1" lineNumber="152"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH1" lineNumber="172"/>
+    <functiondecl functionName="R_ICU_Pinset_CH2" lineNumber="188"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH2" lineNumber="215"/>
+    <functiondecl functionName="R_ICU_Pinset_CH3" lineNumber="234"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH3" lineNumber="268"/>
+    <functiondecl functionName="R_ICU_Pinset_CH4" lineNumber="290"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH4" lineNumber="324"/>
+    <functiondecl functionName="R_ICU_Pinset_CH5" lineNumber="346"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH5" lineNumber="373"/>
+    <functiondecl functionName="R_ICU_Pinset_CH6" lineNumber="392"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH6" lineNumber="419"/>
+    <functiondecl functionName="R_ICU_Pinset_CH7" lineNumber="438"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH7" lineNumber="465"/>
+    <functiondecl functionName="R_ICU_Pinset_CH8" lineNumber="484"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH8" lineNumber="518"/>
+    <functiondecl functionName="R_ICU_Pinset_CH9" lineNumber="540"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH9" lineNumber="569"/>
+    <functiondecl functionName="R_GPT_COM_Pinset" lineNumber="588"/>
+    <functiondecl functionName="R_GPT_COM_Pinclr" lineNumber="629"/>
+    <functiondecl functionName="R_GPT_Pinset_CH0" lineNumber="654"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH0" lineNumber="709"/>
+    <functiondecl functionName="R_GPT_Pinset_CH1" lineNumber="740"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH1" lineNumber="781"/>
+    <functiondecl functionName="R_GPT_Pinset_CH2" lineNumber="806"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH2" lineNumber="847"/>
+    <functiondecl functionName="R_GPT_Pinset_CH3" lineNumber="872"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH3" lineNumber="913"/>
+    <functiondecl functionName="R_GPT_Pinset_CH4" lineNumber="938"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH4" lineNumber="979"/>
+    <functiondecl functionName="R_GPT_Pinset_CH5" lineNumber="1004"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH5" lineNumber="1045"/>
+    <functiondecl functionName="R_GPT_OPS_Pinset" lineNumber="1070"/>
+    <functiondecl functionName="R_GPT_OPS_Pinclr" lineNumber="1209"/>
+    <functiondecl functionName="R_AGT_Pinset_CH0" lineNumber="1277"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH0" lineNumber="1360"/>
+    <functiondecl functionName="R_AGT_Pinset_CH1" lineNumber="1404"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH1" lineNumber="1487"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH0" lineNumber="1531"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH0" lineNumber="1614"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH1" lineNumber="1658"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH1" lineNumber="1744"/>
+    <functiondecl functionName="R_SCI_Pinset_CH0" lineNumber="1788"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH0" lineNumber="1905"/>
+    <functiondecl functionName="R_SCI_Pinset_CH1" lineNumber="1955"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH1" lineNumber="2004"/>
+    <functiondecl functionName="R_SCI_Pinset_CH2" lineNumber="2029"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH2" lineNumber="2077"/>
+    <functiondecl functionName="R_SCI_Pinset_CH3" lineNumber="2102"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH3" lineNumber="2184"/>
+    <functiondecl functionName="R_SCI_Pinset_CH4" lineNumber="2221"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH4" lineNumber="2338"/>
+    <functiondecl functionName="R_SCI_Pinset_CH5" lineNumber="2387"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH5" lineNumber="2469"/>
+    <functiondecl functionName="R_SCI_Pinset_CH9" lineNumber="2507"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH9" lineNumber="2589"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH0" lineNumber="2632"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH0" lineNumber="2743"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH1" lineNumber="2806"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH1" lineNumber="2868"/>
+    <functiondecl functionName="R_QSPI_Pinset" lineNumber="2902"/>
+    <functiondecl functionName="R_QSPI_Pinclr" lineNumber="2999"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH0" lineNumber="3049"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH0" lineNumber="3079"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH1" lineNumber="3099"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH1" lineNumber="3129"/>
+    <functiondecl functionName="R_CAC_Pinset" lineNumber="3148"/>
+    <functiondecl functionName="R_CAC_Pinclr" lineNumber="3176"/>
+    <functiondecl functionName="R_S14AD_Pinset" lineNumber="3196"/>
+    <functiondecl functionName="R_S14AD_Pinclr" lineNumber="3310"/>
+    <functiondecl functionName="R_MLCD_Pinset" lineNumber="3366"/>
+    <functiondecl functionName="R_MLCD_Pinclr" lineNumber="3477"/>
+    <functiondecl functionName="R_KINT_Pinset" lineNumber="3533"/>
+    <functiondecl functionName="R_KINT_Pinclr" lineNumber="3624"/>
+    <functiondecl functionName="R_TMR_Pinset" lineNumber="3670"/>
+    <functiondecl functionName="R_TMR_Pinclr" lineNumber="3746"/>
+    <functiondecl functionName="R_CLKOUT_Pinset" lineNumber="3787"/>
+    <functiondecl functionName="R_CLKOUT_Pinclr" lineNumber="3822"/>
+    <functiondecl functionName="R_ICU_Pinset_NMI" lineNumber="80"/>
+    <functiondecl functionName="R_ICU_Pinclr_NMI" lineNumber="100"/>
+    <functiondecl functionName="R_ICU_Pinset_CH0" lineNumber="116"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH0" lineNumber="136"/>
+    <functiondecl functionName="R_ICU_Pinset_CH1" lineNumber="152"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH1" lineNumber="172"/>
+    <functiondecl functionName="R_ICU_Pinset_CH2" lineNumber="188"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH2" lineNumber="215"/>
+    <functiondecl functionName="R_ICU_Pinset_CH3" lineNumber="234"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH3" lineNumber="268"/>
+    <functiondecl functionName="R_ICU_Pinset_CH4" lineNumber="290"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH4" lineNumber="324"/>
+    <functiondecl functionName="R_ICU_Pinset_CH5" lineNumber="346"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH5" lineNumber="373"/>
+    <functiondecl functionName="R_ICU_Pinset_CH6" lineNumber="392"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH6" lineNumber="419"/>
+    <functiondecl functionName="R_ICU_Pinset_CH7" lineNumber="438"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH7" lineNumber="465"/>
+    <functiondecl functionName="R_ICU_Pinset_CH8" lineNumber="484"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH8" lineNumber="518"/>
+    <functiondecl functionName="R_ICU_Pinset_CH9" lineNumber="540"/>
+    <functiondecl functionName="R_ICU_Pinclr_CH9" lineNumber="569"/>
+    <functiondecl functionName="R_GPT_COM_Pinset" lineNumber="588"/>
+    <functiondecl functionName="R_GPT_COM_Pinclr" lineNumber="629"/>
+    <functiondecl functionName="R_GPT_Pinset_CH0" lineNumber="654"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH0" lineNumber="709"/>
+    <functiondecl functionName="R_GPT_Pinset_CH1" lineNumber="740"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH1" lineNumber="781"/>
+    <functiondecl functionName="R_GPT_Pinset_CH2" lineNumber="806"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH2" lineNumber="847"/>
+    <functiondecl functionName="R_GPT_Pinset_CH3" lineNumber="872"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH3" lineNumber="913"/>
+    <functiondecl functionName="R_GPT_Pinset_CH4" lineNumber="938"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH4" lineNumber="979"/>
+    <functiondecl functionName="R_GPT_Pinset_CH5" lineNumber="1004"/>
+    <functiondecl functionName="R_GPT_Pinclr_CH5" lineNumber="1045"/>
+    <functiondecl functionName="R_GPT_OPS_Pinset" lineNumber="1070"/>
+    <functiondecl functionName="R_GPT_OPS_Pinclr" lineNumber="1209"/>
+    <functiondecl functionName="R_AGT_Pinset_CH0" lineNumber="1277"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH0" lineNumber="1360"/>
+    <functiondecl functionName="R_AGT_Pinset_CH1" lineNumber="1404"/>
+    <functiondecl functionName="R_AGT_Pinclr_CH1" lineNumber="1487"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH0" lineNumber="1531"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH0" lineNumber="1614"/>
+    <functiondecl functionName="R_AGTW_Pinset_CH1" lineNumber="1658"/>
+    <functiondecl functionName="R_AGTW_Pinclr_CH1" lineNumber="1744"/>
+    <functiondecl functionName="R_SCI_Pinset_CH0" lineNumber="1788"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH0" lineNumber="1905"/>
+    <functiondecl functionName="R_SCI_Pinset_CH1" lineNumber="1955"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH1" lineNumber="2004"/>
+    <functiondecl functionName="R_SCI_Pinset_CH2" lineNumber="2029"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH2" lineNumber="2077"/>
+    <functiondecl functionName="R_SCI_Pinset_CH3" lineNumber="2102"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH3" lineNumber="2184"/>
+    <functiondecl functionName="R_SCI_Pinset_CH4" lineNumber="2221"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH4" lineNumber="2338"/>
+    <functiondecl functionName="R_SCI_Pinset_CH5" lineNumber="2387"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH5" lineNumber="2469"/>
+    <functiondecl functionName="R_SCI_Pinset_CH9" lineNumber="2507"/>
+    <functiondecl functionName="R_SCI_Pinclr_CH9" lineNumber="2589"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH0" lineNumber="2632"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH0" lineNumber="2743"/>
+    <functiondecl functionName="R_RSPI_Pinset_CH1" lineNumber="2806"/>
+    <functiondecl functionName="R_RSPI_Pinclr_CH1" lineNumber="2868"/>
+    <functiondecl functionName="R_QSPI_Pinset" lineNumber="2902"/>
+    <functiondecl functionName="R_QSPI_Pinclr" lineNumber="2999"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH0" lineNumber="3049"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH0" lineNumber="3079"/>
+    <functiondecl functionName="R_RIIC_Pinset_CH1" lineNumber="3099"/>
+    <functiondecl functionName="R_RIIC_Pinclr_CH1" lineNumber="3129"/>
+    <functiondecl functionName="R_CAC_Pinset" lineNumber="3148"/>
+    <functiondecl functionName="R_CAC_Pinclr" lineNumber="3176"/>
+    <functiondecl functionName="R_S14AD_Pinset" lineNumber="3196"/>
+    <functiondecl functionName="R_S14AD_Pinclr" lineNumber="3310"/>
+    <functiondecl functionName="R_MLCD_Pinset" lineNumber="3366"/>
+    <functiondecl functionName="R_MLCD_Pinclr" lineNumber="3477"/>
+    <functiondecl functionName="R_KINT_Pinset" lineNumber="3533"/>
+    <functiondecl functionName="R_KINT_Pinclr" lineNumber="3624"/>
+    <functiondecl functionName="R_TMR_Pinset" lineNumber="3670"/>
+    <functiondecl functionName="R_TMR_Pinclr" lineNumber="3746"/>
+    <functiondecl functionName="R_CLKOUT_Pinset" lineNumber="3787"/>
+    <functiondecl functionName="R_CLKOUT_Pinclr" lineNumber="3822"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="PreemptPriorityBits"/>
+    <functioncall functionName="Priority"/>
+    <functioncall functionName="PriorityGroupTmp"/>
+    <functioncall functionName="RBAR"/>
+    <functioncall functionName="R_SYS_RegisterProtectDisable"/>
+    <functioncall functionName="R_SYS_RegisterProtectEnable"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="SubPriorityBits"/>
+    <functioncall functionName="SysTick_IRQn"/>
+    <functioncall functionName="VTOR"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_SetPriority"/>
+    <functioncall functionName="__dsb"/>
+    <functioncall functionName="__isb"/>
+    <functioncall functionName="__nop"/>
+    <functioncall functionName="__regAPSR"/>
+    <functioncall functionName="__regControl"/>
+    <functioncall functionName="__regIPSR"/>
+    <functioncall functionName="__regMainStackPointer"/>
+    <functioncall functionName="__regPriMask"/>
+    <functioncall functionName="__regProcessStackPointer"/>
+    <functioncall functionName="__regXPSR"/>
+    <functioncall functionName="__schedule_barrier"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="cnt"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="orderedCpy"/>
+    <functioncall functionName="priMask"/>
+    <functioncall functionName="rasr"/>
+    <functioncall functionName="rbar"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rnr"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="topOfMainStack"/>
+    <functioncall functionName="topOfProcStack"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

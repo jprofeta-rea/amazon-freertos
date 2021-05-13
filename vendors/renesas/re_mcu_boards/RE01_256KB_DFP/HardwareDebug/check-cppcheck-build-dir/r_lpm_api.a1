@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1483213187">
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Src\r_lpm\r_lpm_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="836" column="5" info="Null pointer dereference"/>
+            <location file0="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Src\r_lpm\r_lpm_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="833" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Src\r_lpm\r_lpm_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="857" column="12" info="Null pointer dereference"/>
+            <location file0="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Src\r_lpm\r_lpm_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="854" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:604:9" call-funcname="R_SYS_ResourceLock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="452" col="39" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:605:6" call-funcname="R_SYS_ResourceUnlock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="458" col="33" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c:258:13" call-funcname="r_lpm_check_locking_sw" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="525" col="35" call-argexpr="LPM_MSTP_DTC_DMAC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="581" col="29" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="965" col="27" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1110" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1125" col="31" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:604:9" call-funcname="R_SYS_ResourceLock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="452" col="39" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:605:6" call-funcname="R_SYS_ResourceUnlock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="458" col="33" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c:258:13" call-funcname="r_lpm_check_locking_sw" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="525" col="35" call-argexpr="LPM_MSTP_DTC_DMAC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="581" col="29" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="965" col="27" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1110" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1125" col="31" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:604:9" call-funcname="R_SYS_ResourceLock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="452" col="39" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:605:6" call-funcname="R_SYS_ResourceUnlock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="458" col="33" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c:258:13" call-funcname="r_lpm_check_locking_sw" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="525" col="35" call-argexpr="LPM_MSTP_DTC_DMAC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="581" col="29" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="965" col="27" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1110" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1125" col="31" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:604:9" call-funcname="R_SYS_ResourceLock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="452" col="39" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:605:6" call-funcname="R_SYS_ResourceUnlock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="458" col="33" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c:258:13" call-funcname="r_lpm_check_locking_sw" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="525" col="35" call-argexpr="LPM_MSTP_DTC_DMAC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="581" col="29" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="965" col="27" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1110" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1125" col="31" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:604:9" call-funcname="R_SYS_ResourceLock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="452" col="39" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:605:6" call-funcname="R_SYS_ResourceUnlock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="458" col="33" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c:258:13" call-funcname="r_lpm_check_locking_sw" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="525" col="35" call-argexpr="LPM_MSTP_DTC_DMAC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="581" col="29" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="965" col="27" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1110" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1125" col="31" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:604:9" call-funcname="R_SYS_ResourceLock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="452" col="39" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:605:6" call-funcname="R_SYS_ResourceUnlock" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="458" col="33" call-argexpr="SYSTEM_LOCK_DTC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c:258:13" call-funcname="r_lpm_check_locking_sw" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="525" col="35" call-argexpr="LPM_MSTP_DTC_DMAC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="581" col="29" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="965" col="27" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1110" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" call-funcname="r_sys_BoostFlagGet" call-argnr="1" file="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Src/r_lpm/r_lpm_api.c" line="1125" col="31" call-argexpr="&boost_flag" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="R_LPM_GetVersion" lineNumber="277"/>
+    <functiondecl functionName="R_LPM_Initialize" lineNumber="287"/>
+    <functiondecl functionName="R_LPM_ModuleStart" lineNumber="311"/>
+    <functiondecl functionName="R_LPM_ModuleStop" lineNumber="356"/>
+    <functiondecl functionName="r_lpm_check_locking_sw" lineNumber="402"/>
+    <functiondecl functionName="R_LPM_FastModuleStart" lineNumber="486"/>
+    <functiondecl functionName="R_LPM_FastModuleStop" lineNumber="520"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeAllpwonSet" lineNumber="574"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeExfpwonSet" lineNumber="647"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeMinpwonSet" lineNumber="742"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeGet" lineNumber="800"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnable" lineNumber="846"/>
+    <functiondecl functionName="R_LPM_BackBiasModeDisable" lineNumber="889"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnableStatusGet" lineNumber="914"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEntry" lineNumber="933"/>
+    <functiondecl functionName="R_LPM_BackBiasModeExit" lineNumber="1022"/>
+    <functiondecl functionName="R_LPM_BackBiasModeGet" lineNumber="1059"/>
+    <functiondecl functionName="R_LPM_SSTBYModeEntry" lineNumber="1081"/>
+    <functiondecl functionName="R_LPM_SSTBYModeSetup" lineNumber="1185"/>
+    <functiondecl functionName="R_LPM_DSTBYModeEntry" lineNumber="1223"/>
+    <functiondecl functionName="R_LPM_DSTBYModeSetup" lineNumber="1265"/>
+    <functiondecl functionName="R_LPM_SleepModeEntry" lineNumber="1294"/>
+    <functiondecl functionName="R_LPM_RamRetentionSet" lineNumber="1317"/>
+    <functiondecl functionName="R_LPM_SnoozeSet" lineNumber="1354"/>
+    <functiondecl functionName="R_LPM_DSTBYResetStatusGet" lineNumber="1439"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeSet" lineNumber="1462"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeGet" lineNumber="1485"/>
+    <functiondecl functionName="R_LPM_GetVersion" lineNumber="277"/>
+    <functiondecl functionName="R_LPM_Initialize" lineNumber="287"/>
+    <functiondecl functionName="R_LPM_ModuleStart" lineNumber="311"/>
+    <functiondecl functionName="R_LPM_ModuleStop" lineNumber="356"/>
+    <functiondecl functionName="r_lpm_check_locking_sw" lineNumber="402"/>
+    <functiondecl functionName="R_LPM_FastModuleStart" lineNumber="486"/>
+    <functiondecl functionName="R_LPM_FastModuleStop" lineNumber="520"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeAllpwonSet" lineNumber="574"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeExfpwonSet" lineNumber="647"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeMinpwonSet" lineNumber="742"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeGet" lineNumber="800"/>
+    <functiondecl functionName="r_lpm_wait_release_reset_iso2" lineNumber="810"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnable" lineNumber="846"/>
+    <functiondecl functionName="R_LPM_BackBiasModeDisable" lineNumber="889"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnableStatusGet" lineNumber="914"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEntry" lineNumber="933"/>
+    <functiondecl functionName="R_LPM_BackBiasModeExit" lineNumber="1022"/>
+    <functiondecl functionName="R_LPM_BackBiasModeGet" lineNumber="1059"/>
+    <functiondecl functionName="R_LPM_SSTBYModeEntry" lineNumber="1081"/>
+    <functiondecl functionName="R_LPM_SSTBYModeSetup" lineNumber="1185"/>
+    <functiondecl functionName="R_LPM_DSTBYModeEntry" lineNumber="1223"/>
+    <functiondecl functionName="R_LPM_DSTBYModeSetup" lineNumber="1265"/>
+    <functiondecl functionName="R_LPM_SleepModeEntry" lineNumber="1294"/>
+    <functiondecl functionName="R_LPM_RamRetentionSet" lineNumber="1317"/>
+    <functiondecl functionName="R_LPM_SnoozeSet" lineNumber="1354"/>
+    <functiondecl functionName="R_LPM_DSTBYResetStatusGet" lineNumber="1439"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeSet" lineNumber="1462"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeGet" lineNumber="1485"/>
+    <functiondecl functionName="R_LPM_GetVersion" lineNumber="277"/>
+    <functiondecl functionName="R_LPM_Initialize" lineNumber="287"/>
+    <functiondecl functionName="R_LPM_ModuleStart" lineNumber="311"/>
+    <functiondecl functionName="R_LPM_ModuleStop" lineNumber="356"/>
+    <functiondecl functionName="r_lpm_check_locking_sw" lineNumber="402"/>
+    <functiondecl functionName="R_LPM_FastModuleStart" lineNumber="486"/>
+    <functiondecl functionName="R_LPM_FastModuleStop" lineNumber="520"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeAllpwonSet" lineNumber="574"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeExfpwonSet" lineNumber="647"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeMinpwonSet" lineNumber="742"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeGet" lineNumber="800"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnable" lineNumber="846"/>
+    <functiondecl functionName="R_LPM_BackBiasModeDisable" lineNumber="889"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnableStatusGet" lineNumber="914"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEntry" lineNumber="933"/>
+    <functiondecl functionName="R_LPM_BackBiasModeExit" lineNumber="1022"/>
+    <functiondecl functionName="R_LPM_BackBiasModeGet" lineNumber="1059"/>
+    <functiondecl functionName="R_LPM_SSTBYModeEntry" lineNumber="1081"/>
+    <functiondecl functionName="R_LPM_SSTBYModeSetup" lineNumber="1185"/>
+    <functiondecl functionName="R_LPM_DSTBYModeEntry" lineNumber="1223"/>
+    <functiondecl functionName="R_LPM_DSTBYModeSetup" lineNumber="1265"/>
+    <functiondecl functionName="R_LPM_SleepModeEntry" lineNumber="1294"/>
+    <functiondecl functionName="R_LPM_RamRetentionSet" lineNumber="1317"/>
+    <functiondecl functionName="R_LPM_SnoozeSet" lineNumber="1354"/>
+    <functiondecl functionName="R_LPM_DSTBYResetStatusGet" lineNumber="1439"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeSet" lineNumber="1462"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeGet" lineNumber="1485"/>
+    <functiondecl functionName="R_LPM_GetVersion" lineNumber="277"/>
+    <functiondecl functionName="R_LPM_Initialize" lineNumber="287"/>
+    <functiondecl functionName="R_LPM_ModuleStart" lineNumber="311"/>
+    <functiondecl functionName="R_LPM_ModuleStop" lineNumber="356"/>
+    <functiondecl functionName="r_lpm_check_locking_sw" lineNumber="402"/>
+    <functiondecl functionName="R_LPM_FastModuleStart" lineNumber="486"/>
+    <functiondecl functionName="R_LPM_FastModuleStop" lineNumber="520"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeAllpwonSet" lineNumber="574"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeExfpwonSet" lineNumber="647"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeMinpwonSet" lineNumber="742"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeGet" lineNumber="800"/>
+    <functiondecl functionName="r_lpm_wait_release_reset_iso2" lineNumber="812"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnable" lineNumber="846"/>
+    <functiondecl functionName="R_LPM_BackBiasModeDisable" lineNumber="889"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnableStatusGet" lineNumber="914"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEntry" lineNumber="933"/>
+    <functiondecl functionName="R_LPM_BackBiasModeExit" lineNumber="1022"/>
+    <functiondecl functionName="R_LPM_BackBiasModeGet" lineNumber="1059"/>
+    <functiondecl functionName="R_LPM_SSTBYModeEntry" lineNumber="1081"/>
+    <functiondecl functionName="R_LPM_SSTBYModeSetup" lineNumber="1185"/>
+    <functiondecl functionName="R_LPM_DSTBYModeEntry" lineNumber="1223"/>
+    <functiondecl functionName="R_LPM_DSTBYModeSetup" lineNumber="1265"/>
+    <functiondecl functionName="R_LPM_SleepModeEntry" lineNumber="1294"/>
+    <functiondecl functionName="R_LPM_RamRetentionSet" lineNumber="1317"/>
+    <functiondecl functionName="R_LPM_SnoozeSet" lineNumber="1354"/>
+    <functiondecl functionName="R_LPM_DSTBYResetStatusGet" lineNumber="1439"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeSet" lineNumber="1462"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeGet" lineNumber="1485"/>
+    <functiondecl functionName="R_LPM_GetVersion" lineNumber="277"/>
+    <functiondecl functionName="R_LPM_Initialize" lineNumber="287"/>
+    <functiondecl functionName="R_LPM_ModuleStart" lineNumber="311"/>
+    <functiondecl functionName="R_LPM_ModuleStop" lineNumber="356"/>
+    <functiondecl functionName="r_lpm_check_locking_sw" lineNumber="402"/>
+    <functiondecl functionName="R_LPM_FastModuleStart" lineNumber="486"/>
+    <functiondecl functionName="R_LPM_FastModuleStop" lineNumber="520"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeAllpwonSet" lineNumber="574"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeExfpwonSet" lineNumber="647"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeMinpwonSet" lineNumber="742"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeGet" lineNumber="800"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnable" lineNumber="846"/>
+    <functiondecl functionName="R_LPM_BackBiasModeDisable" lineNumber="889"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnableStatusGet" lineNumber="914"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEntry" lineNumber="933"/>
+    <functiondecl functionName="R_LPM_BackBiasModeExit" lineNumber="1022"/>
+    <functiondecl functionName="R_LPM_BackBiasModeGet" lineNumber="1059"/>
+    <functiondecl functionName="R_LPM_SSTBYModeEntry" lineNumber="1081"/>
+    <functiondecl functionName="R_LPM_SSTBYModeSetup" lineNumber="1185"/>
+    <functiondecl functionName="R_LPM_DSTBYModeEntry" lineNumber="1223"/>
+    <functiondecl functionName="R_LPM_DSTBYModeSetup" lineNumber="1265"/>
+    <functiondecl functionName="R_LPM_SleepModeEntry" lineNumber="1294"/>
+    <functiondecl functionName="R_LPM_RamRetentionSet" lineNumber="1317"/>
+    <functiondecl functionName="R_LPM_SnoozeSet" lineNumber="1354"/>
+    <functiondecl functionName="R_LPM_DSTBYResetStatusGet" lineNumber="1439"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeSet" lineNumber="1462"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeGet" lineNumber="1485"/>
+    <functiondecl functionName="R_LPM_GetVersion" lineNumber="277"/>
+    <functiondecl functionName="R_LPM_Initialize" lineNumber="287"/>
+    <functiondecl functionName="R_LPM_ModuleStart" lineNumber="311"/>
+    <functiondecl functionName="R_LPM_ModuleStop" lineNumber="356"/>
+    <functiondecl functionName="r_lpm_check_locking_sw" lineNumber="402"/>
+    <functiondecl functionName="R_LPM_FastModuleStart" lineNumber="486"/>
+    <functiondecl functionName="R_LPM_FastModuleStop" lineNumber="520"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeAllpwonSet" lineNumber="574"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeExfpwonSet" lineNumber="647"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeMinpwonSet" lineNumber="742"/>
+    <functiondecl functionName="R_LPM_PowerSupplyModeGet" lineNumber="800"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnable" lineNumber="846"/>
+    <functiondecl functionName="R_LPM_BackBiasModeDisable" lineNumber="889"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEnableStatusGet" lineNumber="914"/>
+    <functiondecl functionName="R_LPM_BackBiasModeEntry" lineNumber="933"/>
+    <functiondecl functionName="R_LPM_BackBiasModeExit" lineNumber="1022"/>
+    <functiondecl functionName="R_LPM_BackBiasModeGet" lineNumber="1059"/>
+    <functiondecl functionName="R_LPM_SSTBYModeEntry" lineNumber="1081"/>
+    <functiondecl functionName="R_LPM_SSTBYModeSetup" lineNumber="1185"/>
+    <functiondecl functionName="R_LPM_DSTBYModeEntry" lineNumber="1223"/>
+    <functiondecl functionName="R_LPM_DSTBYModeSetup" lineNumber="1265"/>
+    <functiondecl functionName="R_LPM_SleepModeEntry" lineNumber="1294"/>
+    <functiondecl functionName="R_LPM_RamRetentionSet" lineNumber="1317"/>
+    <functiondecl functionName="R_LPM_SnoozeSet" lineNumber="1354"/>
+    <functiondecl functionName="R_LPM_DSTBYResetStatusGet" lineNumber="1439"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeSet" lineNumber="1462"/>
+    <functiondecl functionName="R_LPM_IOPowerSupplyModeGet" lineNumber="1485"/>
+    <functioncall functionName="ADEDDMY0"/>
+    <functioncall functionName="DPSIFR0"/>
+    <functioncall functionName="DPSIFR1"/>
+    <functioncall functionName="HOCOMCR"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="LOCOCR"/>
+    <functioncall functionName="LPM_MSTP_AGT0"/>
+    <functioncall functionName="LPM_MSTP_AGT1"/>
+    <functioncall functionName="LPM_MSTP_AGTW0"/>
+    <functioncall functionName="LPM_MSTP_AGTW1"/>
+    <functioncall functionName="LPM_MSTP_CAC"/>
+    <functioncall functionName="LPM_MSTP_CCC"/>
+    <functioncall functionName="LPM_MSTP_CRC"/>
+    <functioncall functionName="LPM_MSTP_DIL"/>
+    <functioncall functionName="LPM_MSTP_DIV"/>
+    <functioncall functionName="LPM_MSTP_DOC"/>
+    <functioncall functionName="LPM_MSTP_DTC_DMAC"/>
+    <functioncall functionName="LPM_MSTP_ELC"/>
+    <functioncall functionName="LPM_MSTP_GDT"/>
+    <functioncall functionName="LPM_MSTP_GPT162_165"/>
+    <functioncall functionName="LPM_MSTP_GPT320_321"/>
+    <functioncall functionName="LPM_MSTP_IRDA"/>
+    <functioncall functionName="LPM_MSTP_IWDT"/>
+    <functioncall functionName="LPM_MSTP_LST"/>
+    <functioncall functionName="LPM_MSTP_MLCD"/>
+    <functioncall functionName="LPM_MSTP_NUM"/>
+    <functioncall functionName="LPM_MSTP_POEG"/>
+    <functioncall functionName="LPM_MSTP_QSPI"/>
+    <functioncall functionName="LPM_MSTP_RIIC0"/>
+    <functioncall functionName="LPM_MSTP_RIIC1"/>
+    <functioncall functionName="LPM_MSTP_RTC"/>
+    <functioncall functionName="LPM_MSTP_S14AD"/>
+    <functioncall functionName="LPM_MSTP_SCI0"/>
+    <functioncall functionName="LPM_MSTP_SCI1"/>
+    <functioncall functionName="LPM_MSTP_SCI2"/>
+    <functioncall functionName="LPM_MSTP_SCI3"/>
+    <functioncall functionName="LPM_MSTP_SCI4"/>
+    <functioncall functionName="LPM_MSTP_SCI5"/>
+    <functioncall functionName="LPM_MSTP_SCI9"/>
+    <functioncall functionName="LPM_MSTP_SPI0"/>
+    <functioncall functionName="LPM_MSTP_SPI1"/>
+    <functioncall functionName="LPM_MSTP_TEMPS"/>
+    <functioncall functionName="LPM_MSTP_TMR"/>
+    <functioncall functionName="LPM_MSTP_TSIP_LITE"/>
+    <functioncall functionName="LPM_MSTP_VREF"/>
+    <functioncall functionName="LPM_MSTP_WDT"/>
+    <functioncall functionName="LPM_MSTP_WUPT"/>
+    <functioncall functionName="MSTPCRA"/>
+    <functioncall functionName="MSTPCRB"/>
+    <functioncall functionName="MSTPCRC"/>
+    <functioncall functionName="MSTPCRD"/>
+    <functioncall functionName="NVIC_USER_IRQ_OFFSET"/>
+    <functioncall functionName="PWSTCR"/>
+    <functioncall functionName="R_SYS_EnterCriticalSection"/>
+    <functioncall functionName="R_SYS_ExitCriticalSection"/>
+    <functioncall functionName="R_SYS_RegisterProtectDisable"/>
+    <functioncall functionName="R_SYS_RegisterProtectEnable"/>
+    <functioncall functionName="R_SYS_ResourceLock"/>
+    <functioncall functionName="R_SYS_ResourceUnlock"/>
+    <functioncall functionName="R_SYS_SoftwareDelay"/>
+    <functioncall functionName="R_SYS_SystemClockFreqGet"/>
+    <functioncall functionName="SCB_AIRCR_SYSRESETREQ_Msk"/>
+    <functioncall functionName="SCKSCR"/>
+    <functioncall functionName="SOSCCR"/>
+    <functioncall functionName="SYSC_PWSTF_MINPWONM_Msk"/>
+    <functioncall functionName="SYSC_SBYCR_SSBY_Msk"/>
+    <functioncall functionName="SYSTEM_DELAY_UNITS_MILLISECONDS"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_DTC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="VBBM"/>
+    <functioncall functionName="VBBST"/>
+    <functioncall functionName="_BIT_SHIFT"/>
+    <functioncall functionName="_IP_IDX"/>
+    <functioncall functionName="_SHP_IDX"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_PRIO_BITS"/>
+    <functioncall functionName="__WFE"/>
+    <functioncall functionName="__WFI"/>
+    <functioncall functionName="__dsb"/>
+    <functioncall functionName="__isb"/>
+    <functioncall functionName="__nop"/>
+    <functioncall functionName="__regAPSR"/>
+    <functioncall functionName="__regControl"/>
+    <functioncall functionName="__regIPSR"/>
+    <functioncall functionName="__regMainStackPointer"/>
+    <functioncall functionName="__regPriMask"/>
+    <functioncall functionName="__regProcessStackPointer"/>
+    <functioncall functionName="__regXPSR"/>
+    <functioncall functionName="__schedule_barrier"/>
+    <functioncall functionName="__wfe"/>
+    <functioncall functionName="__wfi"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="bit"/>
+    <functioncall functionName="boost_flag"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="channel"/>
+    <functioncall functionName="clock"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dtc_enable"/>
+    <functioncall functionName="enable"/>
+    <functioncall functionName="exception"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="freq_hz"/>
+    <functioncall functionName="gs_lpm_pwstcr_acc_vbb_pwg"/>
+    <functioncall functionName="gs_lpm_snzcr_snzdtcen_rxdregen"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="module"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="power_supply"/>
+    <functioncall functionName="priMask"/>
+    <functioncall functionName="r_lpm_check_locking_sw"/>
+    <functioncall functionName="r_lpm_wait_release_reset_iso2"/>
+    <functioncall functionName="r_sys_BoostFlagClr"/>
+    <functioncall functionName="r_sys_BoostFlagGet"/>
+    <functioncall functionName="reg"/>
+    <functioncall functionName="reg1"/>
+    <functioncall functionName="req"/>
+    <functioncall functionName="req_rx0"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="snz_sstby"/>
+    <functioncall functionName="speed"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="topOfMainStack"/>
+    <functioncall functionName="topOfProcStack"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="vocr"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wup"/>
+    <functioncall functionName="wup_edge"/>
+  </FileInfo>
+</analyzerinfo>

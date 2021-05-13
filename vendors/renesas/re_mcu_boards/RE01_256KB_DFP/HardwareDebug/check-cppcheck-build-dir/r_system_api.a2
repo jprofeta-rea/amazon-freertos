@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3985607351">
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\Driver\Src\r_system\r_system_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="836" column="5" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_system\r_system_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="833" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: p_vectors" verbose="Null pointer dereference: p_vectors" cwe="476">
+            <location file0="..\Device\Driver\Src\r_system\r_system_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="857" column="12" info="Null pointer dereference"/>
+            <location file0="..\Device\Driver\Src\r_system\r_system_api.c" file="C:\workspaceForRE01_2020Q1\CMSIS_SoftwarePackage_DFP\RE01_256KB_DFP\Device\Driver\Include\r_system_api.h" line="854" column="27" info="Assignment &apos;p_vectors=(uint32_t*)0U&apos;, assigned value is 0"/>
+            <symbol>p_vectors</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cycles_requested&apos; can be reduced." verbose="The scope of the variable &apos;cycles_requested&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="..\Device\Driver\Src\r_system\r_system_api.c" file="..\Device\Driver\Src\r_system\r_system_api.c" line="2341" column="14"/>
+            <symbol>cycles_requested</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="895" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="908" col="21" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="913" col="21" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="927" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="932" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="940" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="945" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="949" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="954" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="999" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1004" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1034" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1039" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1070" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1075" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1105" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1110" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1338" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1352" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1376" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1389" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1438" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1443" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1490" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1523" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1562" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1573" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1583" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1594" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1623" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1634" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1678" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1689" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1715" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1726" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1766" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1777" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1801" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1826" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1873" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1884" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="2347" col="29" call-argexpr="&iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="2347" col="29" call-argexpr="iclk_hz" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_system/r_system_api.c:402:16" my-argnr="1" my-argname="p_lock" file="../Device/Driver/Src/r_system/r_system_api.c" line="2145" col="39" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" my-argnr="1" my-argname="boost_flg" file="../Device/Driver/Src/r_system/r_system_api.c" line="2535" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="895" col="33" call-argexpr="&freq_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="908" col="21" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="913" col="21" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="927" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="932" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="940" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="945" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="949" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="954" col="17" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="999" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1004" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1034" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1039" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1070" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1075" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1105" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1110" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1338" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1352" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1376" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1389" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1438" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1443" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1490" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1523" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1562" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1573" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1583" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1594" col="5" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1623" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1634" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1678" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1689" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1715" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1726" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1766" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1777" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1801" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1826" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:406:13" call-funcname="system_register_protect_disable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1873" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="../Device/Driver/Src/r_system/r_system_api.c:405:13" call-funcname="system_register_protect_enable" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="1884" col="9" call-argexpr="SYSTEM_REG_PROTECT_CGC" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="2347" col="29" call-argexpr="&iclk_hz" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:585:9" call-funcname="R_SYS_SystemClockFreqGet" call-argnr="1" file="../Device/Driver/Src/r_system/r_system_api.c" line="2347" col="29" call-argexpr="iclk_hz" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="../Device/Driver/Src/r_system/r_system_api.c:402:16" my-argnr="1" my-argname="p_lock" file="../Device/Driver/Src/r_system/r_system_api.c" line="2145" col="39" value="0"/>
+    <unsafe-usage my-id="C:/workspaceForRE01_2020Q1/CMSIS_SoftwarePackage_DFP/RE01_256KB_DFP/Device/Driver/Include/r_system_api.h:610:9" my-argnr="1" my-argname="boost_flg" file="../Device/Driver/Src/r_system/r_system_api.c" line="2535" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="R_SYS_Initialize" lineNumber="415"/>
+    <functiondecl functionName="R_SYS_BoostSpeedModeSet" lineNumber="439"/>
+    <functiondecl functionName="R_SYS_HighSpeedModeSet" lineNumber="557"/>
+    <functiondecl functionName="R_SYS_LowSpeedModeSet" lineNumber="705"/>
+    <functiondecl functionName="R_SYS_SpeedModeGet" lineNumber="823"/>
+    <functiondecl functionName="R_SYS_SystemClockHOCOSet" lineNumber="868"/>
+    <functiondecl functionName="R_SYS_SystemClockMOCOSet" lineNumber="980"/>
+    <functiondecl functionName="R_SYS_SystemClockLOCOSet" lineNumber="1022"/>
+    <functiondecl functionName="R_SYS_SystemClockMOSCSet" lineNumber="1057"/>
+    <functiondecl functionName="R_SYS_SystemClockSOSCSet" lineNumber="1093"/>
+    <functiondecl functionName="R_SYS_SystemClockFreqGet" lineNumber="1125"/>
+    <functiondecl functionName="R_SYS_PeripheralClockFreqGet" lineNumber="1185"/>
+    <functiondecl functionName="R_SYS_SystemClockDividerSet" lineNumber="1247"/>
+    <functiondecl functionName="R_SYS_MainOscSpeedClockStart" lineNumber="1369"/>
+    <functiondecl functionName="R_SYS_MainOscSpeedClockStop" lineNumber="1409"/>
+    <functiondecl functionName="R_SYS_HighSpeedClockStart" lineNumber="1462"/>
+    <functiondecl functionName="R_SYS_HighSpeedClockStop" lineNumber="1545"/>
+    <functiondecl functionName="R_SYS_MediumSpeedClockStart" lineNumber="1606"/>
+    <functiondecl functionName="R_SYS_MediumSpeedClockStop" lineNumber="1653"/>
+    <functiondecl functionName="R_SYS_LowSpeedClockStart" lineNumber="1708"/>
+    <functiondecl functionName="R_SYS_LowSpeedClockStop" lineNumber="1743"/>
+    <functiondecl functionName="R_SYS_SubOscSpeedClockStart" lineNumber="1794"/>
+    <functiondecl functionName="R_SYS_SubOscSpeedClockStop" lineNumber="1843"/>
+    <functiondecl functionName="R_SYS_OscStabilizationFlagGet" lineNumber="1909"/>
+    <functiondecl functionName="system_interrupt_open" lineNumber="1919"/>
+    <functiondecl functionName="R_SYS_IrqEventLinkSet" lineNumber="1942"/>
+    <functiondecl functionName="system_irq_handler_call" lineNumber="1982"/>
+    <functiondecl functionName="R_SYS_IrqStatusGet" lineNumber="2003"/>
+    <functiondecl functionName="R_SYS_IrqStatusClear" lineNumber="2035"/>
+    <functiondecl functionName="R_SYS_EnterCriticalSection" lineNumber="2060"/>
+    <functiondecl functionName="system_enter_critical_section" lineNumber="2069"/>
+    <functiondecl functionName="R_SYS_ExitCriticalSection" lineNumber="2080"/>
+    <functiondecl functionName="system_exit_critical_section" lineNumber="2089"/>
+    <functiondecl functionName="R_SYS_ResourceLock" lineNumber="2101"/>
+    <functiondecl functionName="R_SYS_ResourceUnlock" lineNumber="2111"/>
+    <functiondecl functionName="system_resource_lock_open" lineNumber="2120"/>
+    <functiondecl functionName="system_software_lock" lineNumber="2138"/>
+    <functiondecl functionName="system_register_protect_open" lineNumber="2161"/>
+    <functiondecl functionName="R_SYS_RegisterProtectEnable" lineNumber="2178"/>
+    <functiondecl functionName="system_register_protect_enable" lineNumber="2188"/>
+    <functiondecl functionName="R_SYS_RegisterProtectDisable" lineNumber="2236"/>
+    <functiondecl functionName="system_register_protect_disable" lineNumber="2246"/>
+    <functiondecl functionName="software_delay_loop" lineNumber="2287"/>
+    <functiondecl functionName="R_SYS_SoftwareDelay" lineNumber="2338"/>
+    <functiondecl functionName="system_memcpy" lineNumber="2407"/>
+    <functiondecl functionName="R_SYS_CodeCopy" lineNumber="2457"/>
+    <functiondecl functionName="r_sys_BoostFlagGet" lineNumber="2533"/>
+    <functiondecl functionName="r_sys_BoostFlagSet" lineNumber="2547"/>
+    <functiondecl functionName="r_sys_BoostFlagClr" lineNumber="2561"/>
+    <functiondecl functionName="IEL0_IRQHandler" lineNumber="2573"/>
+    <functiondecl functionName="IEL1_IRQHandler" lineNumber="2583"/>
+    <functiondecl functionName="IEL2_IRQHandler" lineNumber="2593"/>
+    <functiondecl functionName="IEL3_IRQHandler" lineNumber="2603"/>
+    <functiondecl functionName="IEL4_IRQHandler" lineNumber="2613"/>
+    <functiondecl functionName="IEL5_IRQHandler" lineNumber="2623"/>
+    <functiondecl functionName="IEL6_IRQHandler" lineNumber="2633"/>
+    <functiondecl functionName="IEL7_IRQHandler" lineNumber="2643"/>
+    <functiondecl functionName="IEL8_IRQHandler" lineNumber="2653"/>
+    <functiondecl functionName="IEL9_IRQHandler" lineNumber="2663"/>
+    <functiondecl functionName="IEL10_IRQHandler" lineNumber="2673"/>
+    <functiondecl functionName="IEL11_IRQHandler" lineNumber="2683"/>
+    <functiondecl functionName="IEL12_IRQHandler" lineNumber="2693"/>
+    <functiondecl functionName="IEL13_IRQHandler" lineNumber="2703"/>
+    <functiondecl functionName="IEL14_IRQHandler" lineNumber="2713"/>
+    <functiondecl functionName="IEL15_IRQHandler" lineNumber="2723"/>
+    <functiondecl functionName="IEL16_IRQHandler" lineNumber="2733"/>
+    <functiondecl functionName="IEL17_IRQHandler" lineNumber="2743"/>
+    <functiondecl functionName="IEL18_IRQHandler" lineNumber="2753"/>
+    <functiondecl functionName="IEL19_IRQHandler" lineNumber="2763"/>
+    <functiondecl functionName="IEL20_IRQHandler" lineNumber="2773"/>
+    <functiondecl functionName="IEL21_IRQHandler" lineNumber="2783"/>
+    <functiondecl functionName="IEL22_IRQHandler" lineNumber="2793"/>
+    <functiondecl functionName="IEL23_IRQHandler" lineNumber="2803"/>
+    <functiondecl functionName="IEL24_IRQHandler" lineNumber="2813"/>
+    <functiondecl functionName="IEL25_IRQHandler" lineNumber="2823"/>
+    <functiondecl functionName="IEL26_IRQHandler" lineNumber="2833"/>
+    <functiondecl functionName="IEL27_IRQHandler" lineNumber="2843"/>
+    <functiondecl functionName="IEL28_IRQHandler" lineNumber="2853"/>
+    <functiondecl functionName="IEL29_IRQHandler" lineNumber="2863"/>
+    <functiondecl functionName="IEL30_IRQHandler" lineNumber="2873"/>
+    <functiondecl functionName="IEL31_IRQHandler" lineNumber="2883"/>
+    <functiondecl functionName="R_SYS_GetVersion" lineNumber="2893"/>
+    <functiondecl functionName="r_system_wdt_refresh" lineNumber="2907"/>
+    <functiondecl functionName="R_SYS_Initialize" lineNumber="415"/>
+    <functiondecl functionName="R_SYS_BoostSpeedModeSet" lineNumber="439"/>
+    <functiondecl functionName="R_SYS_HighSpeedModeSet" lineNumber="557"/>
+    <functiondecl functionName="R_SYS_LowSpeedModeSet" lineNumber="705"/>
+    <functiondecl functionName="R_SYS_SpeedModeGet" lineNumber="823"/>
+    <functiondecl functionName="R_SYS_SystemClockHOCOSet" lineNumber="868"/>
+    <functiondecl functionName="R_SYS_SystemClockMOCOSet" lineNumber="980"/>
+    <functiondecl functionName="R_SYS_SystemClockLOCOSet" lineNumber="1022"/>
+    <functiondecl functionName="R_SYS_SystemClockMOSCSet" lineNumber="1057"/>
+    <functiondecl functionName="R_SYS_SystemClockSOSCSet" lineNumber="1093"/>
+    <functiondecl functionName="R_SYS_SystemClockFreqGet" lineNumber="1125"/>
+    <functiondecl functionName="R_SYS_PeripheralClockFreqGet" lineNumber="1185"/>
+    <functiondecl functionName="R_SYS_SystemClockDividerSet" lineNumber="1247"/>
+    <functiondecl functionName="R_SYS_MainOscSpeedClockStart" lineNumber="1369"/>
+    <functiondecl functionName="R_SYS_MainOscSpeedClockStop" lineNumber="1409"/>
+    <functiondecl functionName="R_SYS_HighSpeedClockStart" lineNumber="1462"/>
+    <functiondecl functionName="R_SYS_HighSpeedClockStop" lineNumber="1545"/>
+    <functiondecl functionName="R_SYS_MediumSpeedClockStart" lineNumber="1606"/>
+    <functiondecl functionName="R_SYS_MediumSpeedClockStop" lineNumber="1653"/>
+    <functiondecl functionName="R_SYS_LowSpeedClockStart" lineNumber="1708"/>
+    <functiondecl functionName="R_SYS_LowSpeedClockStop" lineNumber="1743"/>
+    <functiondecl functionName="R_SYS_SubOscSpeedClockStart" lineNumber="1794"/>
+    <functiondecl functionName="R_SYS_SubOscSpeedClockStop" lineNumber="1843"/>
+    <functiondecl functionName="R_SYS_OscStabilizationFlagGet" lineNumber="1909"/>
+    <functiondecl functionName="system_interrupt_open" lineNumber="1919"/>
+    <functiondecl functionName="R_SYS_IrqEventLinkSet" lineNumber="1942"/>
+    <functiondecl functionName="system_irq_handler_call" lineNumber="1982"/>
+    <functiondecl functionName="R_SYS_IrqStatusGet" lineNumber="2003"/>
+    <functiondecl functionName="R_SYS_IrqStatusClear" lineNumber="2035"/>
+    <functiondecl functionName="R_SYS_EnterCriticalSection" lineNumber="2060"/>
+    <functiondecl functionName="system_enter_critical_section" lineNumber="2069"/>
+    <functiondecl functionName="R_SYS_ExitCriticalSection" lineNumber="2080"/>
+    <functiondecl functionName="system_exit_critical_section" lineNumber="2089"/>
+    <functiondecl functionName="R_SYS_ResourceLock" lineNumber="2101"/>
+    <functiondecl functionName="R_SYS_ResourceUnlock" lineNumber="2111"/>
+    <functiondecl functionName="system_resource_lock_open" lineNumber="2120"/>
+    <functiondecl functionName="system_software_lock" lineNumber="2138"/>
+    <functiondecl functionName="system_register_protect_open" lineNumber="2161"/>
+    <functiondecl functionName="R_SYS_RegisterProtectEnable" lineNumber="2178"/>
+    <functiondecl functionName="system_register_protect_enable" lineNumber="2188"/>
+    <functiondecl functionName="R_SYS_RegisterProtectDisable" lineNumber="2236"/>
+    <functiondecl functionName="system_register_protect_disable" lineNumber="2246"/>
+    <functiondecl functionName="software_delay_loop" lineNumber="2287"/>
+    <functiondecl functionName="R_SYS_SoftwareDelay" lineNumber="2338"/>
+    <functiondecl functionName="system_memcpy" lineNumber="2407"/>
+    <functiondecl functionName="R_SYS_CodeCopy" lineNumber="2457"/>
+    <functiondecl functionName="r_sys_BoostFlagGet" lineNumber="2533"/>
+    <functiondecl functionName="r_sys_BoostFlagSet" lineNumber="2547"/>
+    <functiondecl functionName="r_sys_BoostFlagClr" lineNumber="2561"/>
+    <functiondecl functionName="IEL0_IRQHandler" lineNumber="2573"/>
+    <functiondecl functionName="IEL1_IRQHandler" lineNumber="2583"/>
+    <functiondecl functionName="IEL2_IRQHandler" lineNumber="2593"/>
+    <functiondecl functionName="IEL3_IRQHandler" lineNumber="2603"/>
+    <functiondecl functionName="IEL4_IRQHandler" lineNumber="2613"/>
+    <functiondecl functionName="IEL5_IRQHandler" lineNumber="2623"/>
+    <functiondecl functionName="IEL6_IRQHandler" lineNumber="2633"/>
+    <functiondecl functionName="IEL7_IRQHandler" lineNumber="2643"/>
+    <functiondecl functionName="IEL8_IRQHandler" lineNumber="2653"/>
+    <functiondecl functionName="IEL9_IRQHandler" lineNumber="2663"/>
+    <functiondecl functionName="IEL10_IRQHandler" lineNumber="2673"/>
+    <functiondecl functionName="IEL11_IRQHandler" lineNumber="2683"/>
+    <functiondecl functionName="IEL12_IRQHandler" lineNumber="2693"/>
+    <functiondecl functionName="IEL13_IRQHandler" lineNumber="2703"/>
+    <functiondecl functionName="IEL14_IRQHandler" lineNumber="2713"/>
+    <functiondecl functionName="IEL15_IRQHandler" lineNumber="2723"/>
+    <functiondecl functionName="IEL16_IRQHandler" lineNumber="2733"/>
+    <functiondecl functionName="IEL17_IRQHandler" lineNumber="2743"/>
+    <functiondecl functionName="IEL18_IRQHandler" lineNumber="2753"/>
+    <functiondecl functionName="IEL19_IRQHandler" lineNumber="2763"/>
+    <functiondecl functionName="IEL20_IRQHandler" lineNumber="2773"/>
+    <functiondecl functionName="IEL21_IRQHandler" lineNumber="2783"/>
+    <functiondecl functionName="IEL22_IRQHandler" lineNumber="2793"/>
+    <functiondecl functionName="IEL23_IRQHandler" lineNumber="2803"/>
+    <functiondecl functionName="IEL24_IRQHandler" lineNumber="2813"/>
+    <functiondecl functionName="IEL25_IRQHandler" lineNumber="2823"/>
+    <functiondecl functionName="IEL26_IRQHandler" lineNumber="2833"/>
+    <functiondecl functionName="IEL27_IRQHandler" lineNumber="2843"/>
+    <functiondecl functionName="IEL28_IRQHandler" lineNumber="2853"/>
+    <functiondecl functionName="IEL29_IRQHandler" lineNumber="2863"/>
+    <functiondecl functionName="IEL30_IRQHandler" lineNumber="2873"/>
+    <functiondecl functionName="IEL31_IRQHandler" lineNumber="2883"/>
+    <functiondecl functionName="R_SYS_GetVersion" lineNumber="2893"/>
+    <functiondecl functionName="r_system_wdt_refresh" lineNumber="2909"/>
+    <functioncall functionName="BOOSTM"/>
+    <functioncall functionName="CKSEL"/>
+    <functioncall functionName="CLKSEL"/>
+    <functioncall functionName="FLLEN"/>
+    <functioncall functionName="HCSTP"/>
+    <functioncall functionName="HOCOSF"/>
+    <functioncall functionName="ICK"/>
+    <functioncall functionName="IEL0_IRQn"/>
+    <functioncall functionName="IEL10_IRQn"/>
+    <functioncall functionName="IEL11_IRQn"/>
+    <functioncall functionName="IEL12_IRQn"/>
+    <functioncall functionName="IEL13_IRQn"/>
+    <functioncall functionName="IEL14_IRQn"/>
+    <functioncall functionName="IEL15_IRQn"/>
+    <functioncall functionName="IEL16_IRQn"/>
+    <functioncall functionName="IEL17_IRQn"/>
+    <functioncall functionName="IEL18_IRQn"/>
+    <functioncall functionName="IEL19_IRQn"/>
+    <functioncall functionName="IEL1_IRQn"/>
+    <functioncall functionName="IEL20_IRQn"/>
+    <functioncall functionName="IEL21_IRQn"/>
+    <functioncall functionName="IEL22_IRQn"/>
+    <functioncall functionName="IEL23_IRQn"/>
+    <functioncall functionName="IEL24_IRQn"/>
+    <functioncall functionName="IEL25_IRQn"/>
+    <functioncall functionName="IEL26_IRQn"/>
+    <functioncall functionName="IEL27_IRQn"/>
+    <functioncall functionName="IEL28_IRQn"/>
+    <functioncall functionName="IEL29_IRQn"/>
+    <functioncall functionName="IEL2_IRQn"/>
+    <functioncall functionName="IEL30_IRQn"/>
+    <functioncall functionName="IEL31_IRQn"/>
+    <functioncall functionName="IEL3_IRQn"/>
+    <functioncall functionName="IEL4_IRQn"/>
+    <functioncall functionName="IEL5_IRQn"/>
+    <functioncall functionName="IEL6_IRQn"/>
+    <functioncall functionName="IEL7_IRQn"/>
+    <functioncall functionName="IEL8_IRQn"/>
+    <functioncall functionName="IEL9_IRQn"/>
+    <functioncall functionName="IELSR0"/>
+    <functioncall functionName="IRQn"/>
+    <functioncall functionName="LCSTP"/>
+    <functioncall functionName="LPM_MSTP_AGT0"/>
+    <functioncall functionName="LPM_MSTP_AGT1"/>
+    <functioncall functionName="LPM_MSTP_AGTW0"/>
+    <functioncall functionName="LPM_MSTP_AGTW1"/>
+    <functioncall functionName="LPM_MSTP_CAC"/>
+    <functioncall functionName="LPM_MSTP_CCC"/>
+    <functioncall functionName="LPM_MSTP_CRC"/>
+    <functioncall functionName="LPM_MSTP_DIL"/>
+    <functioncall functionName="LPM_MSTP_DIV"/>
+    <functioncall functionName="LPM_MSTP_DOC"/>
+    <functioncall functionName="LPM_MSTP_DTC_DMAC"/>
+    <functioncall functionName="LPM_MSTP_ELC"/>
+    <functioncall functionName="LPM_MSTP_GDT"/>
+    <functioncall functionName="LPM_MSTP_GPT162_165"/>
+    <functioncall functionName="LPM_MSTP_GPT320_321"/>
+    <functioncall functionName="LPM_MSTP_IRDA"/>
+    <functioncall functionName="LPM_MSTP_IWDT"/>
+    <functioncall functionName="LPM_MSTP_LST"/>
+    <functioncall functionName="LPM_MSTP_MLCD"/>
+    <functioncall functionName="LPM_MSTP_NUM"/>
+    <functioncall functionName="LPM_MSTP_POEG"/>
+    <functioncall functionName="LPM_MSTP_QSPI"/>
+    <functioncall functionName="LPM_MSTP_RIIC0"/>
+    <functioncall functionName="LPM_MSTP_RIIC1"/>
+    <functioncall functionName="LPM_MSTP_RTC"/>
+    <functioncall functionName="LPM_MSTP_S14AD"/>
+    <functioncall functionName="LPM_MSTP_SCI0"/>
+    <functioncall functionName="LPM_MSTP_SCI1"/>
+    <functioncall functionName="LPM_MSTP_SCI2"/>
+    <functioncall functionName="LPM_MSTP_SCI3"/>
+    <functioncall functionName="LPM_MSTP_SCI4"/>
+    <functioncall functionName="LPM_MSTP_SCI5"/>
+    <functioncall functionName="LPM_MSTP_SCI9"/>
+    <functioncall functionName="LPM_MSTP_SPI0"/>
+    <functioncall functionName="LPM_MSTP_SPI1"/>
+    <functioncall functionName="LPM_MSTP_TEMPS"/>
+    <functioncall functionName="LPM_MSTP_TMR"/>
+    <functioncall functionName="LPM_MSTP_TSIP_LITE"/>
+    <functioncall functionName="LPM_MSTP_VREF"/>
+    <functioncall functionName="LPM_MSTP_WDT"/>
+    <functioncall functionName="LPM_MSTP_WUPT"/>
+    <functioncall functionName="MCSTP"/>
+    <functioncall functionName="MOSCSF"/>
+    <functioncall functionName="MOSTP"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="NVIC_USER_IRQ_OFFSET"/>
+    <functioncall functionName="OPCM"/>
+    <functioncall functionName="OPCMTSF"/>
+    <functioncall functionName="OSCSF"/>
+    <functioncall functionName="OSTDE"/>
+    <functioncall functionName="PCKB"/>
+    <functioncall functionName="PWSTCR"/>
+    <functioncall functionName="R_LPM_PowerSupplyModeGet"/>
+    <functioncall functionName="R_SYS_IrqStatusClear"/>
+    <functioncall functionName="R_SYS_SpeedModeGet"/>
+    <functioncall functionName="R_SYS_SystemClockFreqGet"/>
+    <functioncall functionName="SCB_AIRCR_SYSRESETREQ_Msk"/>
+    <functioncall functionName="SOSTP"/>
+    <functioncall functionName="SYSTEM_CLOCK_NONE_CHANGE"/>
+    <functioncall functionName="SYSTEM_LOCK_ACMP"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT0"/>
+    <functioncall functionName="SYSTEM_LOCK_AGT1"/>
+    <functioncall functionName="SYSTEM_LOCK_CAC"/>
+    <functioncall functionName="SYSTEM_LOCK_CCC"/>
+    <functioncall functionName="SYSTEM_LOCK_CRC"/>
+    <functioncall functionName="SYSTEM_LOCK_DIV"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC0"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC1"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC2"/>
+    <functioncall functionName="SYSTEM_LOCK_DMAC3"/>
+    <functioncall functionName="SYSTEM_LOCK_DOC"/>
+    <functioncall functionName="SYSTEM_LOCK_ELC"/>
+    <functioncall functionName="SYSTEM_LOCK_GDT"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT162"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT163"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT164"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT165"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT320"/>
+    <functioncall functionName="SYSTEM_LOCK_GPT321"/>
+    <functioncall functionName="SYSTEM_LOCK_IRDA"/>
+    <functioncall functionName="SYSTEM_LOCK_LED"/>
+    <functioncall functionName="SYSTEM_LOCK_LPG"/>
+    <functioncall functionName="SYSTEM_LOCK_LST"/>
+    <functioncall functionName="SYSTEM_LOCK_MLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_MTDV"/>
+    <functioncall functionName="SYSTEM_LOCK_NUM"/>
+    <functioncall functionName="SYSTEM_LOCK_POEG"/>
+    <functioncall functionName="SYSTEM_LOCK_QSPI"/>
+    <functioncall functionName="SYSTEM_LOCK_R12DA"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC0"/>
+    <functioncall functionName="SYSTEM_LOCK_RIIC1"/>
+    <functioncall functionName="SYSTEM_LOCK_S14AD"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI1"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI2"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI3"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI4"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI5"/>
+    <functioncall functionName="SYSTEM_LOCK_SCI9"/>
+    <functioncall functionName="SYSTEM_LOCK_SLCD"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI0"/>
+    <functioncall functionName="SYSTEM_LOCK_SPI1"/>
+    <functioncall functionName="SYSTEM_LOCK_TEMPS"/>
+    <functioncall functionName="SYSTEM_LOCK_TMR"/>
+    <functioncall functionName="SYSTEM_LOCK_TSIP_LITE"/>
+    <functioncall functionName="SYSTEM_LOCK_USB"/>
+    <functioncall functionName="SYSTEM_LOCK_VREF"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_CGC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LPC_LDO"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_LVD"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_MPC"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_OM_LPC_BATT"/>
+    <functioncall functionName="SYSTEM_REG_PROTECT_TOTAL_ITEMS"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_32KHZ"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_BOOST"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_HIGH"/>
+    <functioncall functionName="SYSTEM_SPEED_MODE_LOW"/>
+    <functioncall functionName="VBBEN"/>
+    <functioncall functionName="VBBM"/>
+    <functioncall functionName="_BIT_SHIFT"/>
+    <functioncall functionName="_IP_IDX"/>
+    <functioncall functionName="_SHP_IDX"/>
+    <functioncall functionName="__DSB"/>
+    <functioncall functionName="__ISB"/>
+    <functioncall functionName="__NOP"/>
+    <functioncall functionName="__NVIC_PRIO_BITS"/>
+    <functioncall functionName="__Vectors_Size"/>
+    <functioncall functionName="__Vectors_Start"/>
+    <functioncall functionName="__WFE"/>
+    <functioncall functionName="__get_PRIMASK"/>
+    <functioncall functionName="__ramdata_init_start"/>
+    <functioncall functionName="__ramdata_start"/>
+    <functioncall functionName="__ramfunc_init_start"/>
+    <functioncall functionName="__ramfunc_start"/>
+    <functioncall functionName="__ramobj_init_start"/>
+    <functioncall functionName="__ramobj_start"/>
+    <functioncall functionName="__ramvect_start"/>
+    <functioncall functionName="__section_begin"/>
+    <functioncall functionName="__section_size"/>
+    <functioncall functionName="__set_PRIMASK"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="case"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpscr"/>
+    <functioncall functionName="freq_hz"/>
+    <functioncall functionName="gs_old_mask_level"/>
+    <functioncall functionName="gs_system_boost_flg"/>
+    <functioncall functionName="hw_index"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iclk_div"/>
+    <functioncall functionName="iclk_hz"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="irq"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="loops_required"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="ns_64bits"/>
+    <functioncall functionName="ns_per_cycle"/>
+    <functioncall functionName="op2"/>
+    <functioncall functionName="p_destination"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_source"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="pclkb_div"/>
+    <functioncall functionName="r_sys_BoostFlagSet"/>
+    <functioncall functionName="regs_to_protect"/>
+    <functioncall functionName="regs_to_unprotect"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="software_delay_loop"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="system_enter_critical_section"/>
+    <functioncall functionName="system_exit_critical_section"/>
+    <functioncall functionName="system_interrupt_open"/>
+    <functioncall functionName="system_irq_handler_call"/>
+    <functioncall functionName="system_memcpy"/>
+    <functioncall functionName="system_register_protect_disable"/>
+    <functioncall functionName="system_register_protect_enable"/>
+    <functioncall functionName="system_register_protect_open"/>
+    <functioncall functionName="system_resource_lock_open"/>
+    <functioncall functionName="system_software_lock"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>
