@@ -1031,6 +1031,16 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/re_mcu_boards/boards/re01-1500kb-ek-gcc/ports/wifi/iot_wifi.c</locationURI>
 		</link>
 		<link>
+			<name>libraries/abstractions/wifi/test/iot_test_wifi.c</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/wifi/test/iot_test_wifi.c</locationURI>
+		</link>
+		<link>
+			<name>libraries/abstractions/wifi/test/iot_test_wifi.h</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/wifi/test/iot_test_wifi.h</locationURI>
+		</link>
+		<link>
 			<name>libraries/c_sdk/standard/common/iot_device_metrics.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/standard/common/iot_device_metrics.c</locationURI>
