@@ -88,28 +88,13 @@ extern "C"
  *       It takes effect when FLASH_CFG_CODE_FLASH_RUN_FROM_ROM is 0.@n
  *       When FLASH_CFG_CODE_FLASH_RUN_FROM_ROM is 1, all R_FLASH API locate in Flash memory
  **********************************************************************************************************************/
-/* @{ */
-// changed 2020/10 start (サイズ削減)
-/*
-#define FLASH_CFG_SECTION_R_FLASH_OPEN                        (SYSTEM_SECTION_RAM_FUNC)
-#define FLASH_CFG_SECTION_R_FLASH_CLOSE                       (SYSTEM_SECTION_RAM_FUNC)
-*/
 #define FLASH_CFG_SECTION_R_FLASH_OPEN                        (SYSTEM_SECTION_CODE)
 #define FLASH_CFG_SECTION_R_FLASH_CLOSE                       (SYSTEM_SECTION_CODE)
-// changed 2020/10 end (サイズ削減)
 #define FLASH_CFG_SECTION_R_FLASH_WRITE                       (SYSTEM_SECTION_RAM_FUNC)
 #define FLASH_CFG_SECTION_R_FLASH_ERASE                       (SYSTEM_SECTION_RAM_FUNC)
-// changed 2020/10 start (サイズ削減)
-/*
-#define FLASH_CFG_SECTION_R_FLASH_BLANKCHECK                  (SYSTEM_SECTION_RAM_FUNC)
-#define FLASH_CFG_SECTION_R_FLASH_CONTROL                     (SYSTEM_SECTION_RAM_FUNC) 
-#define FLASH_CFG_SECTION_R_FLASH_GETVERSION                  (SYSTEM_SECTION_RAM_FUNC)
-*/
 #define FLASH_CFG_SECTION_R_FLASH_BLANKCHECK                  (SYSTEM_SECTION_CODE)
 #define FLASH_CFG_SECTION_R_FLASH_CONTROL                     (SYSTEM_SECTION_CODE)
 #define FLASH_CFG_SECTION_R_FLASH_GETVERSION                  (SYSTEM_SECTION_CODE)
-// changed 2020/10 end (サイズ削減)
-/* @} */
 #else
 #define FLASH_CFG_SECTION_R_FLASH_OPEN                        (SYSTEM_SECTION_CODE)
 #define FLASH_CFG_SECTION_R_FLASH_CLOSE                       (SYSTEM_SECTION_CODE)

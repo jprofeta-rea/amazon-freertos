@@ -51,10 +51,7 @@
 #define IOT_LOG_LEVEL_HTTPS                     IOT_LOG_INFO
 
 /* Platform thread stack size and priority. */
-// changed 2020/10 start (メモリ削減)
-/////#define IOT_THREAD_DEFAULT_STACK_SIZE           4096
 #define IOT_THREAD_DEFAULT_STACK_SIZE           (configMINIMAL_STACK_SIZE * 8)
-// changed 2020/10 end (メモリ削減)
 
 #define IOT_THREAD_DEFAULT_PRIORITY             5
 

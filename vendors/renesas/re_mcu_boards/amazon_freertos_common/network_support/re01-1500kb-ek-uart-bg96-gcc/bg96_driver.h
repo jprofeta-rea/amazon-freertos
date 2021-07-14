@@ -24,12 +24,8 @@
 #define BG96_SOCKET_STATUS_TEXT_CONNECTED       "CONNECTED"
 
 #define BG96_UART_COMMAND_PORT 0
+#define CREATEABLE_SOCKETS (5)
 
-// changed 2020/10 start
-/////#define CREATEABLE_SOCKETS (4)
-//#define CREATEABLE_SOCKETS (2)
-#define CREATEABLE_SOCKETS (5)	//[RE01-test]
-// changed 2020/10 end
 
 #define BG96_RETRY_GATT          (500)
 
@@ -102,14 +98,9 @@ typedef struct bg96_socket_tag
 	uint32_t receive_num;
 	uint32_t receive_count;
 	uint32_t put_error_count;
-// changed 2020/10 start (メモリ削減)
-/////	uint8_t socket_recv_buff[8192];
-uint8_t socket_recv_buff[2048];
-// changed 2020/10 end (メモリ削減)
-
+	uint8_t socket_recv_buff[2048];
 	byteq_hdl_t socket_byteq_hdl;
 	uint8_t socket_create_flag;
-
 	uint8_t socket_status;
 	uint8_t ipversion;
 	uint8_t protocol;
@@ -132,22 +123,22 @@ uint8_t socket_recv_buff[2048];
 
 
 
-typedef enum 			// Wi-Fi APIエラーコード
+typedef enum
 {
-	WIFI_SUCCESS            = 0,	// 成功
-	WIFI_ERR_PARAMETER	    = -1,	// 引数が無効です。
-	WIFI_ERR_ALREADY_OPEN   = -2,	// すでに初期化済みです
-	WIFI_ERR_NOT_OPEN       = -3,	// 初期化していません
-	WIFI_ERR_SERIAL_OPEN    = -4,	// シリアルの初期化ができません。
-	WIFI_ERR_MODULE_COM     = -5,	// WiFiモジュールとの通信に失敗しました。
-	WIFI_ERR_NOT_CONNECT    = -6,	// アクセスポイントに接続していません。
-	WIFI_ERR_SOCKET_NUM     = -7,	// 利用可能なソケットがありません。
-	WIFI_ERR_SOCKET_CREATE  = -8,	// ソケットを作成できません。
-	WIFI_ERR_CHANGE_SOCKET  = -9,	// ソケットを切り替えられません。
-	WIFI_ERR_SOCKET_CONNECT = -10,	// ソケットに接続できません。
-	WIFI_ERR_BYTEQ_OPEN     = -11,	// BYTEQの割り当てに失敗しました。
-	WIFI_ERR_SOCKET_TIMEOUT = -12,	// ソケットの送信でタイムアウトしました。
-	WIFI_ERR_TAKE_MUTEX     = -13,	// Mutexの取得に失敗しました。
+	WIFI_SUCCESS            = 0,
+	WIFI_ERR_PARAMETER	    = -1,
+	WIFI_ERR_ALREADY_OPEN   = -2,
+	WIFI_ERR_NOT_OPEN       = -3,
+	WIFI_ERR_SERIAL_OPEN    = -4,
+	WIFI_ERR_MODULE_COM     = -5,
+	WIFI_ERR_NOT_CONNECT    = -6,
+	WIFI_ERR_SOCKET_NUM     = -7,
+	WIFI_ERR_SOCKET_CREATE  = -8,
+	WIFI_ERR_CHANGE_SOCKET  = -9,
+	WIFI_ERR_SOCKET_CONNECT = -10,
+	WIFI_ERR_BYTEQ_OPEN     = -11,
+	WIFI_ERR_SOCKET_TIMEOUT = -12,
+	WIFI_ERR_TAKE_MUTEX     = -13,
 } wifi_err_t;
 
 typedef struct
@@ -170,34 +161,19 @@ int32_t bg96_tcp_recv(uint8_t socket_no, uint8_t *pdata, int32_t length, uint32_
 int32_t bg96_tcp_disconnect(uint8_t socket_no);
 int32_t bg96_dns_query(uint8_t *ptextstring, uint32_t *ulipaddr);
 int32_t bg96_serial_tcp_recv_timeout_set(uint8_t socket_no, TickType_t timeout_ms);
-
 int32_t bg96_serial_close(void);
-
 uint8_t bg96_get_time (bg96_datetime_t *p_time, uint16_t str_size);
 void bg96_power_down (uint8_t mode);
 uint8_t bg96_is_netaccess (void);
-
 wifi_err_t R_CELLULAR_BG96_Disconnect (void);
 wifi_err_t R_CELLULAR_BG96_SocketClose(int32_t socket_no);
 int32_t    R_CELLULAR_BG96_IsConnected (void);
-
-
 int32_t bg96_serial_send_with_recvtask(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code,  uint8_t command, uint8_t socket_no, uint32_t *len, uint8_t delay_flag);
-
-// added 2020/10 start
 void vStart_bg96_recv_task( void );
 void bg96_response_set_queue( uint8_t command, uint8_t socket );
 int8_t bg96_response_get_queue( uint8_t command, uint8_t socket, uint8_t *result, uint32_t *value);
-// added 2020/10 end
-
 void bg96_delete_recv_task( void );
-
-// changed 2020/10 start
-/////#define WIFI_CFG_CREATABLE_SOCKETS   		4
-//#define WIFI_CFG_CREATABLE_SOCKETS   		2
-#define WIFI_CFG_CREATABLE_SOCKETS   		5	//[RE01-test]
-// changed 2020/10 end
-
+#define WIFI_CFG_CREATABLE_SOCKETS   		5
 
 extern bg96_socket_t g_bg96_socket[WIFI_CFG_CREATABLE_SOCKETS];
 

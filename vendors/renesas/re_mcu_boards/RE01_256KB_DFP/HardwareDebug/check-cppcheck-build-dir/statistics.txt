@@ -1,7 +1,0 @@
-[05.03.2020]
-1583395247648
-cppcheck-error:6
-cppcheck-warning:1
-cppcheck-style:322
-cppcheck-performance:0
-cppcheck-portability:0

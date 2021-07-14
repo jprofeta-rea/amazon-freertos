@@ -30,10 +30,6 @@
 * http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/TCP_IP_Configuration.html
 *
 *****************************************************************************/
-// changed 2020/10 start
-// RX ETHER FIT module include file
-/////#include "r_ether_rx_config.h"
-// changed 2020/10 end
 
 #ifndef FREERTOS_IP_CONFIG_H
 #define FREERTOS_IP_CONFIG_H
@@ -281,10 +277,10 @@ uint32_t ulRand(void);
 
 /* Each TCP socket has a circular buffers for Rx and Tx, which have a fixed
  * maximum size.  Define the size of Rx buffer for TCP sockets. */
-#define ipconfigTCP_RX_BUFFER_LENGTH                   ( 1460 * 6 )	//[RE01-test] Change 1460*3 to 1460*8 (Same change as RX651-cbt)
+#define ipconfigTCP_RX_BUFFER_LENGTH                   ( 1460 * 11 )
 
 /* Define the size of Tx buffer for TCP sockets. */
-#define ipconfigTCP_TX_BUFFER_LENGTH                   ( 1460 * 6 )	//[RE01-test] Change 1460*3 to 1460*8 (Same change as RX651-cbt)
+#define ipconfigTCP_TX_BUFFER_LENGTH                   ( 1460 * 11 )
 
 /* When using call-back handlers, the driver may check if the handler points to
  * real program memory (RAM or flash) or just has a random non-zero value. */

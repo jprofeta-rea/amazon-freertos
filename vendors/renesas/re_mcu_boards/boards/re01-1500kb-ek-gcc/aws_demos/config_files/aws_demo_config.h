@@ -45,32 +45,10 @@
  *
  *  These defines are used in iot_demo_runner.h for demo selection */
 
-// changed 2020/10 start
-/////#define CONFIG_OTA_UPDATE_DEMO_ENABLED
 #define CONFIG_CORE_MQTT_MUTUAL_AUTH_DEMO_ENABLED
-// changed 2020/10 end
-//change 20121215
-//#define CONFIG_SHADOW_DEMO_ENABLED
-///////
-///
-/* Default configuration for all demos. Individual demos can override these below */
-// changed 2020/10 start
-//#define democonfigDEMO_STACKSIZE                          ( configMINIMAL_STACK_SIZE * 8 )
-// changed 2020/10 start (メモリ削除)
-/////#define democonfigDEMO_STACKSIZE                          ( configMINIMAL_STACK_SIZE * 12 )
-#define democonfigDEMO_STACKSIZE                          ( configMINIMAL_STACK_SIZE * 9 ) // 【注】 mbedtls ログ出力時 スタックオーバーフローする
-// changed 2020/10 end (メモリ削除)
-// changed 2020/10 end
-
-// changed  2020/10 start
-/////#define democonfigDEMO_PRIORITY                           ( tskIDLE_PRIORITY + 5 )
+#define democonfigDEMO_STACKSIZE                          ( configMINIMAL_STACK_SIZE * 9 )
 #define democonfigDEMO_PRIORITY                           ( tskIDLE_PRIORITY + 4 )
-// changed 2020/10 end
-
-// changed 2020/10 start
-/////#define democonfigNETWORK_TYPES                           ( AWSIOT_NETWORK_TYPE_ETH )
 #define democonfigNETWORK_TYPES                           ( AWSIOT_NETWORK_TYPE_WIFI )
-// changed 2020/10 end
 
 #define democonfigSHADOW_DEMO_NUM_TASKS                   ( 1 )
 #define democonfigSHADOW_DEMO_TASK_STACK_SIZE             ( configMINIMAL_STACK_SIZE * 4 )

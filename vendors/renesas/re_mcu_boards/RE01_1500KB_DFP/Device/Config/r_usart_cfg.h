@@ -124,28 +124,14 @@ extern "C"
 #define SCI3_RXI_PRIORITY       (3)                 ///< RXI3 priority value(set to 0 to 3, 0 is highest priority.)
 #define SCI3_ERI_PRIORITY       (3)                 ///< ERI3 priority value(set to 0 to 3, 0 is highest priority.)
 
-// changed 2020/10 start
-/*
-#define SCI4_TXI_PRIORITY       (3)                 ///< TXI4 priority value(set to 0 to 3, 0 is highest priority.)
-#define SCI4_RXI_PRIORITY       (3)                 ///< RXI4 priority value(set to 0 to 3, 0 is highest priority.)
-#define SCI4_ERI_PRIORITY       (3)                 ///< ERI4 priority value(set to 0 to 3, 0 is highest priority.)
-*/
 
 #define SCI4_TXI_PRIORITY       (2)                 ///< TXI4 priority value(set to 0 to 3, 0 is highest priority.)
 #define SCI4_RXI_PRIORITY       (2)                 ///< RXI4 priority value(set to 0 to 3, 0 is highest priority.)
 #define SCI4_ERI_PRIORITY       (2)                 ///< ERI4 priority value(set to 0 to 3, 0 is highest priority.)
-// changed 2020/10 end
 
-// changed 2020/10 start
-/*
-#define SCI5_TXI_PRIORITY       (3)                 ///< TXI5 priority value(set to 0 to 3, 0 is highest priority.)
-#define SCI5_RXI_PRIORITY       (3)                 ///< RXI5 priority value(set to 0 to 3, 0 is highest priority.)
-#define SCI5_ERI_PRIORITY       (3)                 ///< ERI5 priority value(set to 0 to 3, 0 is highest priority.)
- */
 #define SCI5_TXI_PRIORITY       (1)                 ///< TXI5 priority value(set to 0 to 3, 0 is highest priority.)
 #define SCI5_RXI_PRIORITY       (1)                 ///< RXI5 priority value(set to 0 to 3, 0 is highest priority.)
 #define SCI5_ERI_PRIORITY       (1)                 ///< ERI5 priority value(set to 0 to 3, 0 is highest priority.)
-// changed 2020/10 end
 
 #define SCI9_TXI_PRIORITY       (3)                 ///< TXI9 priority value(set to 0 to 3, 0 is highest priority.)
 #define SCI9_RXI_PRIORITY       (3)                 ///< RXI9 priority value(set to 0 to 3, 0 is highest priority.)

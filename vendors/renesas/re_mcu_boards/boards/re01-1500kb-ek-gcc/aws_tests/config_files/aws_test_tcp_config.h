@@ -61,8 +61,8 @@
  */
 #define         integrationtestportableSEND_TIMEOUT                20000
 
-#define 		tcptestECHO_TEST_SYNC_TIMEOUT    					800000	//[RE01-test]Add (Same change as RX651-cbt)
-#define 		tcptestECHO_TEST_RXTX_TIMEOUT       				800000	//[RE01-test]Add (Same change as RX651-cbt)
+#define 		tcptestECHO_TEST_SYNC_TIMEOUT    					800000
+#define 		tcptestECHO_TEST_RXTX_TIMEOUT       				800000
 
 
 #endif /*AWS_INTEGRATION_TEST_TCP_CONFIG_H */

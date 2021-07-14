@@ -85,15 +85,6 @@ Configuration Options
 /* @{ */
 #define LPM_CFG_SECTION_R_LPM_GETVERSION                        (SYSTEM_SECTION_CODE)       /*!<  R_LPM_GetVersion() section */
 #define LPM_CFG_SECTION_R_LPM_INITIALIZE                        (SYSTEM_SECTION_CODE)       /*!<  R_LPM_Initialize() section */
-// changed 2020/10 start (サイズ削減)
-//#define LPM_CFG_SECTION_R_LPM_MODULESTART                       (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_ModuleStart() section */
-//#define LPM_CFG_SECTION_R_LPM_MODULESTOP                        (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_ModuleStop() section */
-//#define LPM_CFG_SECTION_R_LPM_FASTMODULESTART                   (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_FastModuleStart() section */
-//#define LPM_CFG_SECTION_R_LPM_FASTMODULESTOP                    (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_FastModuleStop() section */
-//#define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEALLPWONSET         (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_PowerSupplyModeAllpwonSet() section */
-//#define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEEXFPWONSET         (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_PowerSupplyModeExfpwonSet() section */
-//#define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEMINPWONSET         (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_PowerSupplyModeMinpwonSet() section */
-//#define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEGET                (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_PowerSupplyModeGet() section */
 #define LPM_CFG_SECTION_R_LPM_MODULESTART                       (SYSTEM_SECTION_CODE)   /*!<  R_LPM_ModuleStart() section */
 #define LPM_CFG_SECTION_R_LPM_MODULESTOP                        (SYSTEM_SECTION_CODE)   /*!<  R_LPM_ModuleStop() section */
 #define LPM_CFG_SECTION_R_LPM_FASTMODULESTART                   (SYSTEM_SECTION_CODE)   /*!<  R_LPM_FastModuleStart() section */
@@ -102,19 +93,9 @@ Configuration Options
 #define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEEXFPWONSET         (SYSTEM_SECTION_CODE)   /*!<  R_LPM_PowerSupplyModeExfpwonSet() section */
 #define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEMINPWONSET         (SYSTEM_SECTION_CODE)   /*!<  R_LPM_PowerSupplyModeMinpwonSet() section */
 #define LPM_CFG_SECTION_R_LPM_POWERSUPPLYMODEGET                (SYSTEM_SECTION_CODE)   /*!<  R_LPM_PowerSupplyModeGet() section */
-// changed 2020/10 end (サイズ削減)
 #define LPM_CFG_SECTION_R_LPM_BACKBIASMODEENABLE                (SYSTEM_SECTION_CODE)       /*!<  R_LPM_BackBiasModeEnable() section */
 #define LPM_CFG_SECTION_R_LPM_BACKBIASMODEDISABLE               (SYSTEM_SECTION_CODE)       /*!<  R_LPM_BackBiasModeDisable() section */
 #define LPM_CFG_SECTION_R_LPM_BACKBIASMODEENABLESTATUSGET       (SYSTEM_SECTION_CODE)       /*!<  R_LPM_BackBiasModeEnableStatusGet() section */
-// changed 2020/10 start (サイズ削減)
-//#define LPM_CFG_SECTION_R_LPM_BACKBIASMODEENTRY                 (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_BackBiasModeEntry() section */
-//#define LPM_CFG_SECTION_R_LPM_BACKBIASMODEEXIT                  (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_BackBiasModeExit() section */
-//#define LPM_CFG_SECTION_R_LPM_BACKBIASMODEGET                   (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_BackBiasModeGet() section */
-//#define LPM_CFG_SECTION_R_LPM_SLEEPMODEENTRY                    (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_SleepModeEntry() section */
-//#define LPM_CFG_SECTION_R_LPM_SSTBYMODEENTRY                    (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_SSTBYModeEntry() section */
-//#define LPM_CFG_SECTION_R_LPM_SSTBYMODESETUP                    (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_SSTBYModeSetup() section */
-//#define LPM_CFG_SECTION_R_LPM_DSTBYMODEENTRY                    (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_DSTBYModeEntry() section */
-//#define LPM_CFG_SECTION_R_LPM_DSTBYMODESETUP                    (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_DSTBYModeSetup() section */
 #define LPM_CFG_SECTION_R_LPM_BACKBIASMODEENTRY                 (SYSTEM_SECTION_CODE)   /*!<  R_LPM_BackBiasModeEntry() section */
 #define LPM_CFG_SECTION_R_LPM_BACKBIASMODEEXIT                  (SYSTEM_SECTION_CODE)   /*!<  R_LPM_BackBiasModeExit() section */
 #define LPM_CFG_SECTION_R_LPM_BACKBIASMODEGET                   (SYSTEM_SECTION_CODE)   /*!<  R_LPM_BackBiasModeGet() section */
@@ -123,20 +104,11 @@ Configuration Options
 #define LPM_CFG_SECTION_R_LPM_SSTBYMODESETUP                    (SYSTEM_SECTION_CODE)   /*!<  R_LPM_SSTBYModeSetup() section */
 #define LPM_CFG_SECTION_R_LPM_DSTBYMODEENTRY                    (SYSTEM_SECTION_CODE)   /*!<  R_LPM_DSTBYModeEntry() section */
 #define LPM_CFG_SECTION_R_LPM_DSTBYMODESETUP                    (SYSTEM_SECTION_CODE)   /*!<  R_LPM_DSTBYModeSetup() section */
-// changed 2020/10 end (サイズ削減)
 #define LPM_CFG_SECTION_R_LPM_DSTBYRESETSTATUSGET               (SYSTEM_SECTION_CODE)       /*!<  R_LPM_DSTBYResetStatusGet() section */
 #define LPM_CFG_SECTION_R_LPM_RAMRETENTIONSET                   (SYSTEM_SECTION_CODE)       /*!<  R_LPM_RamRetentionSet() section */
-// changed 2020/10 start (サイズ削減)
-//#define LPM_CFG_SECTION_R_LPM_SNOOZESET                         (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_SnoozeSet() section */
-//#define LPM_CFG_SECTION_R_LPM_IOPOWERSUPPLYMODESET              (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_IOPowerSupplyModeSet() section */
-//#define LPM_CFG_SECTION_R_LPM_IOPOWERSUPPLYMODEGET              (SYSTEM_SECTION_RAM_FUNC)   /*!<  R_LPM_IOPowerSupplyModeGet() section */
 #define LPM_CFG_SECTION_R_LPM_SNOOZESET                         (SYSTEM_SECTION_CODE)   /*!<  R_LPM_SnoozeSet() section */
 #define LPM_CFG_SECTION_R_LPM_IOPOWERSUPPLYMODESET              (SYSTEM_SECTION_CODE)   /*!<  R_LPM_IOPowerSupplyModeSet() section */
 #define LPM_CFG_SECTION_R_LPM_IOPOWERSUPPLYMODEGET              (SYSTEM_SECTION_CODE)   /*!<  R_LPM_IOPowerSupplyModeGet() section */
-// changed 2020/10 end (サイズ削減)
-
-/* @} */
-
 /******************************************************************************************************************//**
  * @} (end ingroup grp_device_hal_lpm)
  *********************************************************************************************************************/

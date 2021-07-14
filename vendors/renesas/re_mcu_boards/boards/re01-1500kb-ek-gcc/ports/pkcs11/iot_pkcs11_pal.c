@@ -60,15 +60,9 @@
 
 /* Renesas RX platform includes */
 #include "platform.h"
-// changed 2020/10 start
-// RX FLASH FIT module include file
-/////#include "r_flash_rx_if.h"
-// changed 2020/10 end
 
-// changed 2020/10 start
 #include "r_flash_re01_1500kb.h"
 #include "r_flash_api.h"
-// changed 2020/10 end
 
 typedef struct _pkcs_data
 {
@@ -89,41 +83,6 @@ typedef struct _pkcs_data
 
 #define MAX_CHECK_DATAFLASH_AREA_RETRY_COUNT 3
 
-// changed 2020/10 start
-/////#if defined (BSP_MCU_RX65N) || (BSP_MCU_RX651)
-/////#define PKCS_CONTROL_BLOCK_INITIAL_DATA \
-/////    {\
-/////        /* uint8_t local_storage[((FLASH_DF_BLOCK_SIZE * FLASH_NUM_BLOCKS_DF) / 4) - (sizeof(PKCS_DATA) * PKCS_OBJECT_HANDLES_NUM) - PKCS_SHA256_LENGTH]; */\
-/////        {0x00},\
-/////        /* PKCS_DATA pkcs_data[PKCS_OBJECT_HANDLES_NUM]; */\
-/////        {0x00},\
-/////    },\
-/////    /* uint8_t hash_sha256[PKCS_SHA256_LENGTH]; */\
-/////    {0xea, 0x57, 0x12, 0x9a, 0x18, 0x10, 0x83, 0x80, 0x88, 0x80, 0x40, 0x1f, 0xae, 0xb2, 0xd2, 0xff, 0x1c, 0x14, 0x5e, 0x81, 0x22, 0x6b, 0x9d, 0x93, 0x21, 0xf8, 0x0c, 0xc1, 0xda, 0x29, 0x61, 0x64},
-/////#elif defined (BSP_MCU_RX64M)
-/////#define PKCS_CONTROL_BLOCK_INITIAL_DATA \
-/////    {\
-/////        /* uint8_t local_storage[((FLASH_DF_BLOCK_SIZE * FLASH_NUM_BLOCKS_DF) / 4) - (sizeof(PKCS_DATA) * PKCS_OBJECT_HANDLES_NUM) - PKCS_SHA256_LENGTH]; */\
-/////        {0x00},\
-/////        /* PKCS_DATA pkcs_data[PKCS_OBJECT_HANDLES_NUM]; */\
-/////        {0x00},\
-/////    },\
-/////    /* uint8_t hash_sha256[PKCS_SHA256_LENGTH]; */\
-/////    {0x62, 0x90, 0xe6, 0x59, 0x20, 0x47, 0xec, 0x80, 0x14, 0x0a, 0x12, 0x52, 0xd3, 0x1a, 0x8b, 0xa8, 0xa3, 0x3a, 0x34, 0xcf, 0x57, 0x8b, 0x5c, 0x8c, 0x4a, 0x08, 0x17, 0x06, 0xb9, 0x41, 0x6f, 0xa6},
-/////#elif defined (BSP_MCU_RX63N) || (BSP_MCU_RX631) || (BSP_MCU_RX630)
-/////#define PKCS_CONTROL_BLOCK_INITIAL_DATA \
-/////    {\
-/////        /* uint8_t local_storage[((FLASH_DF_BLOCK_SIZE * FLASH_NUM_BLOCKS_DF) / 4) - (sizeof(PKCS_DATA) * PKCS_OBJECT_HANDLES_NUM) - PKCS_SHA256_LENGTH]; */\
-/////        {0x00},\
-/////        /* PKCS_DATA pkcs_data[PKCS_OBJECT_HANDLES_NUM]; */\
-/////        {0x00},\
-/////    },\
-/////    /* uint8_t hash_sha256[PKCS_SHA256_LENGTH]; */\
-/////    {0xea, 0x57, 0x12, 0x9a, 0x18, 0x10, 0x83, 0x80, 0x88, 0x80, 0x40, 0x1f, 0xae, 0xb2, 0xd2, 0xff, 0x1c, 0x14, 0x5e, 0x81, 0x22, 0x6b, 0x9d, 0x93, 0x21, 0xf8, 0x0c, 0xc1, 0xda, 0x29, 0x61, 0x64},
-/////#else
-/////#error "iot_pkcs11_pal.c does not support your MCU"
-/////#endif
-
 #define PKCS_CONTROL_BLOCK_INITIAL_DATA \
     {\
         /* uint8_t local_storage[((FLASH_DF_BLOCK_SIZE * FLASH_NUM_BLOCKS_DF) / 4) - (sizeof(PKCS_DATA) * PKCS_OBJECT_HANDLES_NUM) - PKCS_SHA256_LENGTH]; */\
@@ -131,13 +90,10 @@ typedef struct _pkcs_data
         /* PKCS_DATA pkcs_data[PKCS_OBJECT_HANDLES_NUM]; */\
         {0x00},\
     },\
-    /* uint8_t hash_sha256[PKCS_SHA256_LENGTH]; */\
-/* changed 2020/10 start */\
+    \
+\
 /*    {0xea, 0x57, 0x12, 0x9a, 0x18, 0x10, 0x83, 0x80, 0x88, 0x80, 0x40, 0x1f, 0xae, 0xb2, 0xd2, 0xff, 0x1c, 0x14, 0x5e, 0x81, 0x22, 0x6b, 0x9d, 0x93, 0x21, 0xf8, 0x0c, 0xc1, 0xda, 0x29, 0x61, 0x64}, */\
     {0x81, 0xac, 0x48, 0xa9, 0xd4, 0xa7, 0x8e, 0xbe, 0xd4, 0x62, 0x83, 0x74, 0x53, 0x9d, 0xbb, 0x2f, 0xc1, 0x63, 0x37, 0x9c, 0x39, 0x40, 0x99, 0x5e, 0x8b, 0x8f, 0x7b, 0x31, 0x61, 0x4b, 0x8c, 0xde},
-/* changed 2020/10 end */
-
-// changed 2020/10 end
 
 #define PKCS11_PAL_DEBUG_PRINT( X )      /* configPRINTF( X ) */
 
@@ -152,11 +108,7 @@ typedef struct _pkcs_data
 
 typedef struct _pkcs_storage_control_block_sub
 {
-// changed 2020/10 start
-/////    uint8_t local_storage[((FLASH_DF_BLOCK_SIZE * FLASH_NUM_BLOCKS_DF) / 4) - (sizeof(PKCS_DATA) * PKCS_OBJECT_HANDLES_NUM) - PKCS_SHA256_LENGTH]; /* RX65N case: 8KB */
-// RE01 :  DATA FLASH => CODE FLASH
     uint8_t local_storage[((FLASH_CF_BLOCK_SIZE * FLASH_NUM_BLOCKS_CF) / 384) - (sizeof(PKCS_DATA) * PKCS_OBJECT_HANDLES_NUM) - PKCS_SHA256_LENGTH]; /* RE01 case: 4KB */
-// changed 2020/10 end
     PKCS_DATA pkcs_data[PKCS_OBJECT_HANDLES_NUM];
 } PKCS_STORAGE_CONTROL_BLOCK_SUB;
 
@@ -173,7 +125,6 @@ enum eObjectHandles
     eAwsDevicePublicKey,
     eAwsDeviceCertificate,
     eAwsCodeSigningKey,
-    //eAwsRootCertificate
 };
 
 uint8_t object_handle_dictionary[PKCS_OBJECT_HANDLES_NUM][PKCS_HANDLES_LABEL_MAX_LENGTH] =
@@ -183,30 +134,16 @@ uint8_t object_handle_dictionary[PKCS_OBJECT_HANDLES_NUM][PKCS_HANDLES_LABEL_MAX
     pkcs11configLABEL_DEVICE_PUBLIC_KEY_FOR_TLS,
     pkcs11configLABEL_DEVICE_CERTIFICATE_FOR_TLS,
     pkcs11configLABEL_CODE_VERIFICATION_KEY,
-    //pkcs11configLABEL_ROOT_CERTIFICATE,
 };
 
 static PKCS_CONTROL_BLOCK pkcs_control_block_data_image;        /* RX65N case: 8KB, RX64M case: 16KB, RX63N case: 8KB */
 
-// changed 2020/10 start
-/*
-R_BSP_ATTRIB_SECTION_CHANGE(C, _PKCS11_STORAGE, 1)
-static const PKCS_CONTROL_BLOCK pkcs_control_block_data = {PKCS_CONTROL_BLOCK_INITIAL_DATA};
-R_BSP_ATTRIB_SECTION_CHANGE_END
-
-R_BSP_ATTRIB_SECTION_CHANGE(C, _PKCS11_STORAGE_MIRROR, 1)
-static const PKCS_CONTROL_BLOCK pkcs_control_block_data_mirror = {PKCS_CONTROL_BLOCK_INITIAL_DATA};
-R_BSP_ATTRIB_SECTION_CHANGE_END
-*/
 static const PKCS_CONTROL_BLOCK pkcs_control_block_data __attribute__ ((section(".pkcs_control_block_data"))) = {PKCS_CONTROL_BLOCK_INITIAL_DATA};
 static const PKCS_CONTROL_BLOCK pkcs_control_block_data_mirror __attribute__ ((section(".pkcs_control_block_data_mirror"))) = {PKCS_CONTROL_BLOCK_INITIAL_DATA};
-// changed 2020/10 end
 
 static void update_dataflash_data_from_image(void);
 static void update_dataflash_data_mirror_from_image(void);
 static void check_dataflash_area(uint32_t retry_counter);
-
-//extern CK_RV prvMbedTLS_Initialize( void );
 
 void data_flash_update_status_initialize(void);
 static void update_data_flash_callback_function(void *event);
@@ -224,11 +161,6 @@ CK_RV PKCS11_PAL_Initialize( CK_VOID_PTR pvInitArgs )
 {
     CK_RV xResult = CKR_OK;
     CRYPTO_Init();
-
-// changed 2020/10 start
-
-/////    R_FLASH_Open();
-
     if (FLASH_SUCCESS != R_FLASH_Open())
     {
     	while(1)
@@ -236,7 +168,6 @@ CK_RV PKCS11_PAL_Initialize( CK_VOID_PTR pvInitArgs )
     		;
     	}
     }
-// changed 2020/10 end
 
 #if defined (BSP_MCU_RX63N) || (BSP_MCU_RX631) || (BSP_MCU_RX630)
     flash_access_window_config_t flash_access_window_config;
@@ -252,8 +183,6 @@ CK_RV PKCS11_PAL_Initialize( CK_VOID_PTR pvInitArgs )
     memcpy(&pkcs_control_block_data_image, (void *)&pkcs_control_block_data, sizeof(pkcs_control_block_data_image));
 
     R_FLASH_Close();
-
-
 
     return xResult;
 }
@@ -530,22 +459,8 @@ static void update_dataflash_data_from_image(void)
     switch(update_data_flash_control_block.status)
     {
         case DATA_FLASH_UPDATE_STATE_INITIALIZE: /* initialize */
-// removed 2020/10 start
-/*
-        	cb_func_info.pcallback = update_data_flash_callback_function;
-        	cb_func_info.int_priority = 15;
-        	R_FLASH_Control(FLASH_CMD_SET_BGO_CALLBACK, (void *)&cb_func_info);
-*/
- // removed 2020/10 end
-// changed 2020/10 start
-// RE01 :  DATA FLASH => CODE FLASH
-/*
-            required_dataflash_block_num = sizeof(PKCS_CONTROL_BLOCK) / FLASH_DF_BLOCK_SIZE;
-            if(sizeof(PKCS_CONTROL_BLOCK) % FLASH_DF_BLOCK_SIZE)
-*/
             required_dataflash_block_num = sizeof(PKCS_CONTROL_BLOCK) / FLASH_CF_BLOCK_SIZE;
             if(sizeof(PKCS_CONTROL_BLOCK) % FLASH_CF_BLOCK_SIZE)
-// changed 2020/10 end
             {
                 required_dataflash_block_num++;
             }
@@ -553,17 +468,11 @@ static void update_dataflash_data_from_image(void)
             break;
         case DATA_FLASH_UPDATE_STATE_ERASE: /* erase bank0 (0xFFE00000-0xFFEF0000) */
             PKCS11_PAL_DEBUG_PRINT(("erase dataflash(main)...\r\n"));
-// changed 2020/10 start
-/////            R_BSP_InterruptsDisable();
             __disable_irq();
-// changed 2020/10 end
 
             flash_error_code = R_FLASH_Erase((flash_block_address_t)&pkcs_control_block_data, required_dataflash_block_num);
 
-// changed 2020/10 start
-/////            R_BSP_InterruptsEnable();
             __enable_irq();
-// changed 2020/10 end
 
             if(FLASH_SUCCESS == flash_error_code)
             {
@@ -574,31 +483,18 @@ static void update_dataflash_data_from_image(void)
                 PKCS11_PAL_DEBUG_PRINT(("NG\r\n"));
                 PKCS11_PAL_DEBUG_PRINT(("R_FLASH_Erase() returns error code = %d.\r\n", flash_error_code));
             }
-// changed 2020/10 start
-// BGO なしのため、ステートをスキップ
-/////            update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_ERASE_WAIT_COMPLETE;
             update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_WRITE;
-// changed 2020/10 end
             break;
         case DATA_FLASH_UPDATE_STATE_ERASE_WAIT_COMPLETE:
             /* this state will be changed by callback routine */
             break;
         case DATA_FLASH_UPDATE_STATE_WRITE:
             PKCS11_PAL_DEBUG_PRINT(("write dataflash(main)...\r\n"));
-// changed 2020/10 start
-/////            R_BSP_InterruptsDisable();
             __disable_irq();
-// changed 2020/10 end
 
-// changed 2020/10 start
-/////            flash_error_code = R_FLASH_Write((flash_block_address_t)&pkcs_control_block_data_image, (flash_block_address_t)&pkcs_control_block_data, FLASH_DF_BLOCK_SIZE * required_dataflash_block_num);
             flash_error_code = R_FLASH_Write_256Bytes((flash_block_address_t)&pkcs_control_block_data_image, (flash_block_address_t)&pkcs_control_block_data, FLASH_CF_BLOCK_SIZE * required_dataflash_block_num);
-// changed 2020/10 end
 
-// changed 2020/10 start
-/////            R_BSP_InterruptsEnable();
             __enable_irq();
-// changed 2020/10 end
 
             if(FLASH_SUCCESS == flash_error_code)
             {
@@ -610,11 +506,7 @@ static void update_dataflash_data_from_image(void)
             	PKCS11_PAL_DEBUG_PRINT(("R_FLASH_Write() returns error code = %d.\r\n", flash_error_code));
             	return;
             }
-// changed 2020/10 start
-// BGO なしのため、ステートをスキップ
-/////            update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_WRITE_WAIT_COMPLETE;
             update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_FINALIZE;
-// changed 2020/10 end
             break;
         case DATA_FLASH_UPDATE_STATE_WRITE_WAIT_COMPLETE:
             /* this state will be changed by callback routine */
@@ -637,22 +529,8 @@ static void update_dataflash_data_mirror_from_image(void)
     switch(update_data_flash_control_block.status)
     {
     	case DATA_FLASH_UPDATE_STATE_INITIALIZE: /* initialize */
-// removed 2020/10 start
-/*
-    		cb_func_info.pcallback = update_data_flash_callback_function;
-    		cb_func_info.int_priority = 15;
-    		R_FLASH_Control(FLASH_CMD_SET_BGO_CALLBACK, (void *)&cb_func_info);
-*/
-// removed 2020/10 end
-// changed 2020/10 start
-    		// RE01 :  DATA FLASH => CODE FLASH
-/*
-            required_dataflash_block_num = sizeof(PKCS_CONTROL_BLOCK) / FLASH_DF_BLOCK_SIZE;
-            if(sizeof(PKCS_CONTROL_BLOCK) % FLASH_DF_BLOCK_SIZE)
-*/
             required_dataflash_block_num = sizeof(PKCS_CONTROL_BLOCK) / FLASH_CF_BLOCK_SIZE;
             if(sizeof(PKCS_CONTROL_BLOCK) % FLASH_CF_BLOCK_SIZE)
-// changed 2020/10 end
             {
                 required_dataflash_block_num++;
             }
@@ -661,17 +539,11 @@ static void update_dataflash_data_mirror_from_image(void)
             break;
         case DATA_FLASH_UPDATE_STATE_ERASE: /* erase bank0 (0xFFE00000-0xFFEF0000) */
             PKCS11_PAL_DEBUG_PRINT(("erase dataflash(mirror)...\r\n"));
-// changed 2020/10 start
-/////            R_BSP_InterruptsDisable();
             __disable_irq();
-// changed 2020/10 end
 
             flash_error_code = R_FLASH_Erase((flash_block_address_t)&pkcs_control_block_data_mirror, required_dataflash_block_num);
 
-// changed 2020/10 start
-/////            R_BSP_InterruptsEnable();
             __enable_irq();
-// changed 2020/10 end
 
             if(FLASH_SUCCESS == flash_error_code)
             {
@@ -683,11 +555,7 @@ static void update_dataflash_data_mirror_from_image(void)
                 PKCS11_PAL_DEBUG_PRINT(("R_FLASH_Erase() returns error code = %d.\r\n", flash_error_code));
                 return;
             }
-// changed 2020/10 start
-// BGO なしのため、ステートをスキップ
-/////            update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_ERASE_WAIT_COMPLETE;
             update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_WRITE;
-// changed 2020/10 end
             break;
         case DATA_FLASH_UPDATE_STATE_ERASE_WAIT_COMPLETE:
             /* this state will be changed by callback routine */
@@ -695,20 +563,11 @@ static void update_dataflash_data_mirror_from_image(void)
         case DATA_FLASH_UPDATE_STATE_WRITE:
             PKCS11_PAL_DEBUG_PRINT(("write dataflash(mirror)...\r\n"));
 
-// changed 2020/10 start
-/////            R_BSP_InterruptsDisable();
             __disable_irq();
-// changed 2020/10 end
 
-// changed 2020/10 start
-/////            flash_error_code = R_FLASH_Write((flash_block_address_t)&pkcs_control_block_data_image, (flash_block_address_t)&pkcs_control_block_data_mirror, FLASH_DF_BLOCK_SIZE * required_dataflash_block_num);
             flash_error_code = R_FLASH_Write_256Bytes((flash_block_address_t)&pkcs_control_block_data_image, (flash_block_address_t)&pkcs_control_block_data_mirror, FLASH_CF_BLOCK_SIZE * required_dataflash_block_num);
-// changed 2020/10 end
 
-// changed 2020/10 start
-/////            R_BSP_InterruptsEnable();
             __enable_irq();
-// changed 2020/10 end
 
             if(FLASH_SUCCESS == flash_error_code)
             {
@@ -720,11 +579,7 @@ static void update_dataflash_data_mirror_from_image(void)
                 PKCS11_PAL_DEBUG_PRINT(("R_FLASH_Write() returns error code = %d.\r\n", flash_error_code));
                 return;
             }
-// changed 2020/10 start
-// BGO なしのため、ステートをスキップ
-/////            update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_WRITE_WAIT_COMPLETE;
             update_data_flash_control_block.status = DATA_FLASH_UPDATE_STATE_FINALIZE;
-// changed 2020/10 end
             break;
         case DATA_FLASH_UPDATE_STATE_WRITE_WAIT_COMPLETE:
             /* this state will be changed by callback routine */

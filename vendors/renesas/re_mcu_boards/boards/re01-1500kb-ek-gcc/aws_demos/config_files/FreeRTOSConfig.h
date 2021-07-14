@@ -27,10 +27,7 @@
 #define FREERTOS_CONFIG_H
 
 #include "serial_term_uart.h"
-
-// added 2020/10 start
 #include "r_core_cfg.h"
-// added 2020/10 end
 
 /* Unity includes. */
 #if defined(AMAZON_FREERTOS_ENABLE_UNIT_TESTS)
@@ -58,17 +55,8 @@
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION    0
 #define configMAX_PRIORITIES                       ( 7 )
 #define configTICK_RATE_HZ                         ( 1000 )
-// changed 2020/10 start
-/////#define configMINIMAL_STACK_SIZE                   ( ( unsigned short ) 512 )
 #define configMINIMAL_STACK_SIZE                   ( ( unsigned short ) 128 )
-// changed 2020/10 end
-// changed 2020/10 start
-/////#define configTOTAL_HEAP_SIZE                      ( ( size_t ) ( 256U * 1024U ) )
-// changed 2020/10 start (メモリ削減)
 #define configTOTAL_HEAP_SIZE                      ( ( size_t ) ( 77U * 1024U ) )
-// changed 2020/10 end (メモリ削減)
-// changed 2020/10 end
-
 #define configMAX_TASK_NAME_LEN                    ( 12 )
 #define configUSE_TRACE_FACILITY                   1
 #define configUSE_16_BIT_TICKS                     0
@@ -82,16 +70,9 @@
 #define configUSE_ALTERNATIVE_API                  0
 #define configNUM_THREAD_LOCAL_STORAGE_POINTERS    3      /* FreeRTOS+FAT requires 2 pointers if a CWD is supported. */
 #define configRECORD_STACK_HIGH_ADDRESS            1
-
 #define configUSE_DAEMON_TASK_STARTUP_HOOK 1
-
-// changed 2020/10 start
-/////#define configCPU_CLOCK_HZ				(BSP_ICLK_HZ)
-/////#define configPERIPHERAL_CLOCK_HZ		(BSP_PCLKB_HZ)
-#define configCPU_CLOCK_HZ				(32000000U)            // 32MHz
-#define configPERIPHERAL_CLOCK_HZ		(configCPU_CLOCK_HZ)   // 32MHz
-// changed 2020/10 end
-
+#define configCPU_CLOCK_HZ				(32768U)
+#define configPERIPHERAL_CLOCK_HZ		(configCPU_CLOCK_HZ)
 #define configUSE_QUEUE_SETS			1
 
 /* Hook function related definitions. */
@@ -295,10 +276,7 @@ uint32_t ulRand(void);
 #define configRAND32()    ulRand()
 
 /* The platform FreeRTOS is running on. */
-// changed 2020/10 start
-///#define configPLATFORM_NAME    "RenesasRX65N"
 #define configPLATFORM_NAME    "RenesasRE01"
-// changed 2020/10 end
 
 /* Header required for the tracealyzer recorder library. */
 //#include "trcRecorder.h"
@@ -306,11 +284,10 @@ uint32_t ulRand(void);
 /* When the FIT configurator or the Smart Configurator is used, platform.h has to be used. */
 #define configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H  1
 
-// added 2020/10 start
 #define vPortSVCHandler SVC_Handler
 #define xPortPendSVHandler PendSV_Handler
 #define xPortSysTickHandler SysTick_Handler
-// added 2020/10 end
+
 
 
 #endif /* FREERTOS_CONFIG_H */

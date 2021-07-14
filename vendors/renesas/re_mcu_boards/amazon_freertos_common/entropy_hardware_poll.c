@@ -7,30 +7,18 @@
 
 #include <string.h>
 #include "platform.h"   // __LIT for all compilers
-// changed 2020/10 start
-// RX ADC FIT module include file
-/////#include "r_s12ad_rx_if.h"
-// changed 2020/10 end
-
-// added 2020/10 start
-// marged 256/1500KB
 #ifdef RE01_256KB
     #include "RE01_256KB.h"
 #else
     #include "RE01_1500KB.h"
 #endif
-
 #include "r_adc_api.h"
-// added 2020/10 end
-
 #include "mbedtls/entropy_poll.h"
 
 void get_random_number(uint8_t *data, uint32_t len);
 
-// added 2020/10 start
 extern DRIVER_S14AD Driver_S14AD;
 DRIVER_S14AD *gsp_adc_dev = &Driver_S14AD;
-// added 2020/10 end
 
 /******************************************************************************
 Functions : hardware entropy collector(repeatedly called until enough gathered)
@@ -38,11 +26,6 @@ Functions : hardware entropy collector(repeatedly called until enough gathered)
 int mbedtls_hardware_poll( void *data,
                            unsigned char *output, size_t len, size_t *olen )
 {
-// removed 2020/10 start
-/////	INTERNAL_NOT_USED(data);
-/////	INTERNAL_NOT_USED(len);
-// removed 2020/10 end
-
     uint32_t random_number = 0;
 
     get_random_number((uint8_t *)&random_number, sizeof(uint32_t));
@@ -70,140 +53,11 @@ void get_random_number(uint8_t *data, uint32_t len)
     uint32_t res;
     uint32_t lp;
     uint8_t *bPtr;
-
-// changed 2020/10 start
-/////#if defined (BSP_MCU_RX65N) || (BSP_MCU_RX651) || (BSP_MCU_RX64M)
-/////    adc_cfg_t ad_cfg;
-/////    adc_ch_cfg_t ch_cfg;
-/////    adc_sst_t sst;
-/////    uint16_t temperature_data;
-
-/////    /* initialize temperature sensor */
-/////    memset(&ad_cfg, 0, sizeof(ad_cfg));
-/////    ad_cfg.resolution = ADC_RESOLUTION_12_BIT;
-/////    ad_cfg.trigger = ADC_TRIG_SOFTWARE;
-/////    ad_cfg.priority = 0;
-/////    ad_cfg.add_cnt   = ADC_ADD_OFF;
-/////    ad_cfg.alignment = ADC_ALIGN_RIGHT;
-/////    ad_cfg.clearing  = ADC_CLEAR_AFTER_READ_OFF;
-
-/////    R_ADC_Open(1, ADC_MODE_SS_ONE_CH, &ad_cfg, NULL);
-
-/////    memset(&sst, 0, sizeof(sst));
-/////    sst.reg_id = ADC_SST_TEMPERATURE;
-/////    sst.num_states = 240;
-/////    R_ADC_Control(1, ADC_CMD_SET_SAMPLE_STATE_CNT, &sst);
-
-/////    memset(&ch_cfg, 0, sizeof(ch_cfg));
-/////    ch_cfg.chan_mask = ADC_MASK_TEMP;
-/////    ch_cfg.diag_method = ADC_DIAG_OFF;
-/////    ch_cfg.anex_enable = false;
-/////    ch_cfg.sample_hold_mask = 0;
-/////    R_ADC_Control(1, ADC_CMD_ENABLE_CHANS, &ch_cfg);
-
-/////    vTaskDelay(10);
-
-/////    R_ADC_Control(1, ADC_CMD_SCAN_NOW, NULL);
-/////    while (R_ADC_Control(1, ADC_CMD_CHECK_SCAN_DONE, NULL) == ADC_ERR_SCAN_NOT_DONE);
-
-/////    R_ADC_Read(1, ADC_REG_TEMP, &temperature_data);
-
-/////    y += temperature_data;  /* randomness from internal temperature sensor */
-/////#elif defined (BSP_MCU_RX63N) || (BSP_MCU_RX631) || (BSP_MCU_RX630)
-/////    adc_cfg_t ad_cfg;
-/////    adc_ch_cfg_t ch_cfg;
-/////    uint16_t temperature_data;
-
-/////    /* initialize temperature sensor */
-/////    memset(&ad_cfg, 0, sizeof(ad_cfg));
-/////    ad_cfg.trigger = ADC_TRIG_SOFTWARE;
-/////    ad_cfg.priority = 0;
-/////    ad_cfg.add_cnt   = ADC_ADD_OFF;
-/////    ad_cfg.alignment = ADC_ALIGN_RIGHT;
-/////    ad_cfg.clearing  = ADC_CLEAR_AFTER_READ_OFF;
-
-/////    R_ADC_Open(1, ADC_MODE_SS_ONE_CH, &ad_cfg, NULL);
-
-/////    memset(&ch_cfg, 0, sizeof(ch_cfg));
-/////    R_ADC_Control(1, ADC_CMD_ENABLE_CHANS, &ch_cfg);
-
-/////    vTaskDelay(10);
-
-/////    R_ADC_Control(1, ADC_CMD_SCAN_NOW, NULL);
-/////    while (R_ADC_Control(1, ADC_CMD_CHECK_SCAN_DONE, NULL) == ADC_ERR_SCAN_NOT_DONE);
-
-/////    R_ADC_Read(1, ADC_REG_TEMP, &temperature_data);
-
-/////    y += temperature_data;  /* randomness from internal temperature sensor, RX63N ver has not been confirmed. Maybe always zero is output. Please fix this anybody. */
-/////#endif
-
-// removed 2020/10 start
-/*
-    adc_cfg_t ad_cfg;
-    adc_ch_cfg_t ch_cfg;
-    adc_sst_t sst;
-*/
-// removed 2020/10 end
-
     uint16_t temperature_data;
-
-// added 2020/10 start
     st_adc_pins_t scanset_pin;
-// added 2020/10 end
 
-    /* initialize temperature sensor */
-// removed 2020/10 start
-/*
-    memset(&ad_cfg, 0, sizeof(ad_cfg));
-    ad_cfg.resolution = ADC_RESOLUTION_12_BIT;
-    ad_cfg.trigger = ADC_TRIG_SOFTWARE;
-    ad_cfg.priority = 0;
-    ad_cfg.add_cnt   = ADC_ADD_OFF;
-    ad_cfg.alignment = ADC_ALIGN_RIGHT;
-    ad_cfg.clearing  = ADC_CLEAR_AFTER_READ_OFF;
-*/
-// removed 2020/10 end
-
-// changed 2020/10 start
-/////    R_ADC_Open(1, ADC_MODE_SS_ONE_CH, &ad_cfg, NULL);
-    /** Casting callback is null */
     gsp_adc_dev->Open(ADC_SINGLE_SCAN, 0x10, NULL);
-// changed 2020/10 end
-
-// removed 2020/10 start
-/*
-    memset(&sst, 0, sizeof(sst));
-    sst.reg_id = ADC_SST_TEMPERATURE;
-    sst.num_states = 240;
-*/
-// removed 2020/10 end
-
-// changed 2020/10 start
-/////    R_ADC_Control(1, ADC_CMD_SET_SAMPLE_STATE_CNT, &sst);
     gsp_adc_dev->Control(AD_CMD_SET_SAMPLING_TEMP, (uint8_t*) 240);
-// changed 2020/10 end
-
-// removed 2020/10 start
-/*
-    memset(&ch_cfg, 0, sizeof(ch_cfg));
-    ch_cfg.chan_mask = ADC_MASK_TEMP;
-    ch_cfg.diag_method = ADC_DIAG_OFF;
-    ch_cfg.anex_enable = false;
-    ch_cfg.sample_hold_mask = 0;
-    R_ADC_Control(1, ADC_CMD_ENABLE_CHANS, &ch_cfg);
-*/
-// removed 2020/10 end
-
-// removed 2020/10 start
-/////    vTaskDelay(10);
-// removed 2020/10 end
-
-// removed 2020/10 start
-/////    R_ADC_Control(1, ADC_CMD_SCAN_NOW, NULL);
-/////    while (R_ADC_Control(1, ADC_CMD_CHECK_SCAN_DONE, NULL) == ADC_ERR_SCAN_NOT_DONE);
-// removed 2020/10 end
-
-// added 2020/10 start
 
     /** Channel Select */
     scanset_pin.an_chans = 0;
@@ -213,8 +67,6 @@ void get_random_number(uint8_t *data, uint32_t len)
     /* Start module */
     R_LPM_ModuleStart(LPM_MSTP_TEMPS);
 
-
-// marged 256/1500KB
 #ifdef RE01_256KB
     /* enable temps */
     TSN->TSCR = 0x80;
@@ -228,17 +80,8 @@ void get_random_number(uint8_t *data, uint32_t len)
     /** A/D Start */
     gsp_adc_dev->Start();
     R_SYS_SoftwareDelay(100, SYSTEM_DELAY_UNITS_MILLISECONDS);
-// added 2020/10 end
-
-// changed 2020/10 start
-/////    R_ADC_Read(1, ADC_REG_TEMP, &temperature_data);
     gsp_adc_dev->Read(ADC_SSEL_TEMP, &temperature_data);
-// changed 2020/10 end
-
     y += temperature_data;  /* randomness from internal temperature sensor */
-
-// changed 2020/10 end
-
     y += xTaskGetTickCount();   /* randomness from system timer */
 
     res = len / 4;

@@ -330,16 +330,6 @@ Configuration Options
 /* @{ */
 #define SYSTEM_CFG_SECTION_R_SYS_INITIALIZE                 (SYSTEM_SECTION_CODE)       /*!< R_SYS_Initialize() section */
 #define SYSTEM_CFG_SECTION_R_SYS_BOOSTSPEEDMODESET          (SYSTEM_SECTION_CODE)       /*!< R_SYS_BoostSpeedModeSet() section */
-// changed 2020/10 start (サイズ削減)
-//#define SYSTEM_CFG_SECTION_R_SYS_HIGHSPEEDMODESET           (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_HighSpeedModeSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_LOWSPEEDMODESET            (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_LowSpeedModeSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_32KHZSPEEDMODESET          (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_32kHzSpeedModeSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SPEEDMODEGET               (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SpeedModeGet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKHOCOSET         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockHOCOSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKMOCOSET         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockMOCOSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKLOCOSET         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockLOCOSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKMOSCSET         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockMOSCSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKSOSCSET         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockSOSCSet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_HIGHSPEEDMODESET           (SYSTEM_SECTION_CODE)   /*!< R_SYS_HighSpeedModeSet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_LOWSPEEDMODESET            (SYSTEM_SECTION_CODE)   /*!< R_SYS_LowSpeedModeSet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_32KHZSPEEDMODESET          (SYSTEM_SECTION_CODE)   /*!< R_SYS_32kHzSpeedModeSet() section */
@@ -349,22 +339,7 @@ Configuration Options
 #define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKLOCOSET         (SYSTEM_SECTION_CODE)   /*!< R_SYS_SystemClockLOCOSet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKMOSCSET         (SYSTEM_SECTION_CODE)   /*!< R_SYS_SystemClockMOSCSet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKSOSCSET         (SYSTEM_SECTION_CODE)   /*!< R_SYS_SystemClockSOSCSet() section */
-// changed 2020/10 end (サイズ削減)
 #define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKPLLSET          (SYSTEM_SECTION_CODE)       /*!< R_SYS_SystemClockPLLSet() section */
-// changed 2020/10 start (サイズ削減)
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKFREQGET         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockFreqGet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_PERIPHERALCLOCKFREQGET     (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_PeripheralClockFreqGet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKDIVIDERSET      (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SystemClockDividerSet() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_MAINOSCSPEEDCLOCKSTART     (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_MainOscSpeedClockStart() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_MAINOSCSPEEDCLOCKSTOP      (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_MainOscSpeedClockStop() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_HIGHSPEEDCLOCKSTART        (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_HighSpeedClockStart() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_HIGHSPEEDCLOCKSTOP         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_HighSpeedClockStop() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_MEDIUMSPEEDCLOCKSTART      (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_MediumSpeedClockStart() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_MEDIUMSPEEDCLOCKSTOP       (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_MediumSpeedClockStop() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_LOWSPEEDCLOCKSTART         (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_LowSpeedClockStart() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_LOWSPEEDCLOCKSTOP          (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_LowSpeedClockStop() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SUBOSCSPEEDCLOCKSTART      (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SubOscSpeedClockStart() section */
-//#define SYSTEM_CFG_SECTION_R_SYS_SUBOSCSPEEDCLOCKSTOP       (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_SubOscSpeedClockStop() section */
 #define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKFREQGET         (SYSTEM_SECTION_CODE)   /*!< R_SYS_SystemClockFreqGet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_PERIPHERALCLOCKFREQGET     (SYSTEM_SECTION_CODE)   /*!< R_SYS_PeripheralClockFreqGet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_SYSTEMCLOCKDIVIDERSET      (SYSTEM_SECTION_CODE)   /*!< R_SYS_SystemClockDividerSet() section */
@@ -378,13 +353,9 @@ Configuration Options
 #define SYSTEM_CFG_SECTION_R_SYS_LOWSPEEDCLOCKSTOP          (SYSTEM_SECTION_CODE)   /*!< R_SYS_LowSpeedClockStop() section */
 #define SYSTEM_CFG_SECTION_R_SYS_SUBOSCSPEEDCLOCKSTART      (SYSTEM_SECTION_CODE)   /*!< R_SYS_SubOscSpeedClockStart() section */
 #define SYSTEM_CFG_SECTION_R_SYS_SUBOSCSPEEDCLOCKSTOP       (SYSTEM_SECTION_CODE)   /*!< R_SYS_SubOscSpeedClockStop() section */
-// changed 2020/10 end (サイズ削減)
 #define SYSTEM_CFG_SECTION_R_SYS_PLLSPEEDCLOCKSTART         (SYSTEM_SECTION_CODE)       /*!< R_SYS_PLLSpeedClockStart() section */
 #define SYSTEM_CFG_SECTION_R_SYS_PLLSPEEDCLOCKSTOP          (SYSTEM_SECTION_CODE)       /*!< R_SYS_PLLSpeedClockStop() section */
-// changed 2020/10 start (サイズ削減)
-//#define SYSTEM_CFG_SECTION_R_SYS_OSCSTABILIZATIONFLAGGET    (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_OscStabilizationFlagGet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_OSCSTABILIZATIONFLAGGET    (SYSTEM_SECTION_CODE)   /*!< R_SYS_OscStabilizationFlagGet() section */
-// changed 2020/10 end (サイズ削減)
 #define SYSTEM_CFG_SECTION_R_SYS_IRQEVENTLINKSET            (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_IrqEventLinkSet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_IRQSTATUSGET               (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_IrqStatusGet() section */
 #define SYSTEM_CFG_SECTION_R_SYS_IRQSTATUSCLEAR             (SYSTEM_SECTION_RAM_FUNC)   /*!< R_SYS_IrqStatusClear() section */

@@ -40,10 +40,7 @@
  * in "aws_iot_network.h"
  */
 
-// changed 2020/10 start
-/////#define configSUPPORTED_NETWORKS    ( AWSIOT_NETWORK_TYPE_ETH )
 #define configSUPPORTED_NETWORKS    ( AWSIOT_NETWORK_TYPE_WIFI )
-// changed 2020/10 end
 
 /**
  * @brief Configuration flag which is used to enable one or more network interfaces for a board.
@@ -55,9 +52,6 @@
  *
  */
 
-// changed 2020/10 start
-/////#define configENABLED_NETWORKS      ( AWSIOT_NETWORK_TYPE_ETH )
 #define configENABLED_NETWORKS      ( AWSIOT_NETWORK_TYPE_WIFI )
-// changed 2020/10 end
 
 #endif /* CONFIG_FILES_AWS_IOT_NETWORK_CONFIG_H_ */

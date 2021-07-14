@@ -5,11 +5,8 @@
 /* Linker script to configure memory regions. */
 MEMORY
 {
-/* changed  2020/10 start */	
-/* FLASH (rx)         : ORIGIN = 0x00000000, LENGTH = 0x0180000 */  /* 1.5M */
   FLASH (rx)         : ORIGIN = 0x00000000, LENGTH = 0x017E000  /* 1.5M - 8KB*/
   C_PKCS11_STORAGE (rx)         : ORIGIN = 0x017E000, LENGTH = 0x0002000  /* 8K */
-/* changed 2020/10 end */   
   OFS (rx)      : ORIGIN = 0x0100A150, LENGTH = 0x0000018  /* 24B */
   E2S_TRACE_BUF (rw) : ORIGIN = 0x20000000, LENGTH = 0x000400  /* 1K   */
 
@@ -137,7 +134,6 @@ SECTIONS
 		  __OptionSettingAWS_end = .;
 	 } > OFS
 	 
-/* added 2020/10 start */
 /*	 pkcs_control_block_data : */
 	 .pkcs_control_block_data :
 	 {
@@ -153,7 +149,6 @@ SECTIONS
 		  KEEP(*(.pkcs_control_block_data_mirror));
 		  __pkcs_control_block_data_mirror_end = .;
 	 } > C_PKCS11_STORAGE
-/* added 2020/10 end */	 
 
     /* secure vector area on RAM to be copied from ROM */
     .ramvect :

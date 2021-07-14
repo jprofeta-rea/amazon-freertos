@@ -37,9 +37,7 @@ Includes   <System Includes> , "Project Includes"
 /* Used functions of malloc() and the free() */
 #include <stdlib.h>
 
-// added 2020/10 start
 #include <stdbool.h>
-// added 2020/10 end
 
 /* Used the common type */
 #include "platform.h"

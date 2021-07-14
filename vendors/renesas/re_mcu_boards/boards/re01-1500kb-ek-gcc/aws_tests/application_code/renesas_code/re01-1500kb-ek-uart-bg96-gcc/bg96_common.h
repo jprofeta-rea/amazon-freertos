@@ -32,11 +32,11 @@
  Macro definitions
  ***********************************************************************************************************************/
 
-// changed 2020/10 start
-	#define CELLULAR_APN                "soracom.io"
-	#define CELLULAR_APN_USERID         "sora"
-	#define CELLULAR_APN_PASSWORD       "sora"
-// changed 2020/10 end
+
+#define CELLULAR_APN                ""
+#define CELLULAR_APN_USERID         ""
+#define CELLULAR_APN_PASSWORD       ""
+
 
 /***********************************************************************************************************************
  Typedef definitions

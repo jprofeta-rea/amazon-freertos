@@ -57,25 +57,11 @@ uint32_t length = 0;
 
 static void bg96_recv_task( void * pvParameters );
 TaskHandle_t g_bg96_recv_task_handle;
-
-// added 2020/10 start
 extern ARM_DRIVER_USART Driver_USART5;
 static ARM_DRIVER_USART *gsp_sci5_dev = &Driver_USART5;
-// added 2020/10 end
-
-// added 2020/10 start
-// changed 2020/10 start (メモリ削減)
-/////uint8_t data_deb[1600];
-// changed 2020/10 start (メモリ削減)
-/////uint8_t data_deb[5120]; // RSA OK (4096 では溢れる場合あり)
-uint8_t data_deb[6144]; // RSA OK (5120 では溢れる場合あり)
-// changed 2020/10 end (メモリ削減)
-// changed 2020/10 end (メモリ削減)
-// added 2020/10 end
-
-// added 2020/10 start
+uint8_t data_deb[6144];
 void bg96_usart_abort(uint32_t *new_cnt, uint32_t *pre_cnt);
-// added 2020/10 end
+
 
 void vStart_bg96_recv_task( void )
 {
@@ -84,16 +70,9 @@ void vStart_bg96_recv_task( void )
     /* Create the echo client tasks. */
     xTaskCreate( bg96_recv_task,                               /* The function that implements the task. */
                  "bg96_recv",                                     /* Just a text name for the task to aid debugging. */
-// changed 2020/10 start (メモリ削減)
-/////                 2048,
 				 (configMINIMAL_STACK_SIZE * 4),
-// changed 2020/10 end (メモリ削減)
                  ( void * ) 0,                                    /* The task parameter, not used in this case. */
-// changed 2020/10 start
-/////                 tskIDLE_PRIORITY + 6,
-//[RE01-test]                 tskIDLE_PRIORITY + 5,
-                 tskIDLE_PRIORITY + 6,	//[RE01-test]
-// changed 2020/10 end
+                 tskIDLE_PRIORITY + 6,
                  &g_bg96_recv_task_handle );                                          /* The task handle is not used. */
 }
 
@@ -110,11 +89,7 @@ void bg96_delete_recv_task( void )
 static void bg96_recv_task( void * pvParameters )
 {
 	uint8_t data;
-// changed 2020/10 start
-// RX FIT module
-/////	sci_err_t ercd;
 	uint8_t ercd;
-// changed 2020/10 end
 	char * string_ercd;
     char recv_tmp[50];
     char recv_tmp_qird[50];
@@ -124,13 +99,7 @@ static void bg96_recv_task( void * pvParameters )
 	uint32_t socket_no = 0;
 	uint32_t close_socket_no = 0;
 	uint32_t len;
-
-// changed 2020/10 start
-	// RX FIT module
 	byteq_err_t byteq_ercd;
-/////	uint8_t byteq_ercd;
-// changed 2020/10 end
-
     uint8_t of_flag = 0;
     uint8_t rcv_flag = 0;
     uint32_t recv_all_cnt_bk; 
@@ -141,31 +110,17 @@ static void bg96_recv_task( void * pvParameters )
 	recv_count = 0;
 	dns_cnt = 0;
 	dns_max = 0;
-
-// added 2020/10 start
 	ARM_USART_STATUS sci_status_rx;
 	uint32_t pre_rx_cnt = 0;
 	uint32_t new_rx_cnt = 0;
 	uint32_t check_new_rx_cnt = 0;
-// added 2020/10 end
 
     for( ; ; )
     {
-
-// changed 2020/10 start
-
     	sci_status_rx = gsp_sci5_dev->GetStatus();
-
     	if ( sci_status_rx.rx_busy == 0 )
     	{
-// changed 2020/10 start (メモリ削減)
-/////    		ercd = gsp_sci5_dev->Receive(&data_deb[0], 1600);
-// changed 2020/10 start (メモリ削減)
-/////    		ercd = gsp_sci5_dev->Receive(&data_deb[0], 5120); // RSA OK (4096 では溢れる場合あり)
-    		ercd = gsp_sci5_dev->Receive(&data_deb[0], 6144); // RSA OK (5120 では溢れる場合あり)
-// changed 2020/10 end (メモリ削減)
-// changed 2020/10 end (メモリ削減)
-
+    		ercd = gsp_sci5_dev->Receive(&data_deb[0], 6144);
     	    if(ARM_DRIVER_ERROR_BUSY == ercd)
     	    {
     	    	vTaskDelay( 1 );
@@ -184,7 +139,6 @@ static void bg96_recv_task( void * pvParameters )
     	new_rx_cnt = gsp_sci5_dev->GetRxCount();
 
     	 if (new_rx_cnt != pre_rx_cnt)
-// changed 2020/10 end
     	{
     		if (recv_count >= (sizeof(recvbuff) - 1))
             {
@@ -192,21 +146,17 @@ static void bg96_recv_task( void * pvParameters )
             }
             else
             {
-/////                recvbuff[recv_count] = data;
-/////                recv_count++;
+
             }
 #if DEBUGLOG == 2
     		putchar(data);
 #endif
-
-// added 2020/10 start
     	    for (int i = pre_rx_cnt; i < new_rx_cnt; i++)
     	    {
     	    	recvbuff[recv_count] = data_deb[i];
 
     	    	data = data_deb[i];
     	    	recv_count++;
-// added 2020/10 end
 
     		switch(receive_status)
     		{
@@ -236,20 +186,19 @@ static void bg96_recv_task( void * pvParameters )
 		    			break;
 		    		}
     			break;
-	    		case 1:	/* \rから始まる \r\n????\r\n */
+	    		case 1:
 	    			switch(receive_sub_status1)
 	    			{
-		    			case 0:	/*\n待ち*/
+		    			case 0:
 		    				if(data == '\n')
 		    				{
 		    					receive_sub_status1 = 1;
 		    				}
 		    				break;
-		    			case 1:	/*後半\r\n or > 待ち*/
+		    			case 1:
 		    				if(data == '+')
 		    				{
-                                // \r\n+... の場合   次のステートからは +... で処理をする
-		    					receive_status = 2;
+                                receive_status = 2;
 		    					receive_sub_status1 = 0;
 		    					tmp_recvcnt = recv_count-1;
 		    				}
@@ -258,18 +207,14 @@ static void bg96_recv_task( void * pvParameters )
 		    					receive_sub_status1 = 2;
 		    				}
 		    				break;
-		    			case 2:	/*後半\r\n or > 待ち*/
+		    			case 2:
 							{
 								string_ercd = strstr(&recvbuff[2],"\r\n");
 								if(string_ercd != NULL)
 								{
-                                    // AT+QIOPEN  =TCP接続コマンド時
-                                    // 一旦 \r\nOK\r\n を破棄して次のメッセージを受け取る
 									if (BG96_SET_CIPSTART == bg96_response_get_now_queue()) {
 										tmp_recvcnt = 0;
 									}
-                                    // AT+QIDNSGIP  =DNS取得コマンド時
-                                    // 一旦 \r\nOK\r\n を破棄して次のメッセージを受け取る
 									else if(BG96_SET_CIPDOMAIN == bg96_response_get_now_queue())
 									{
 										tmp_recvcnt = 0;
@@ -278,7 +223,6 @@ static void bg96_recv_task( void * pvParameters )
 									{
 										if(BG96_SET_CIPSEND == bg96_response_get_now_queue())
 										{
-                                            // AT+QISEND  =TCP送信コマンド時   "\r\nOK\r\n> " 待ち
 					    					receive_status = 8;
 		   					    			tmp_recvcnt = recv_count;
 											break;
@@ -291,7 +235,6 @@ static void bg96_recv_task( void * pvParameters )
 										}
 										else
 										{
-											/* 通常のOK　*/
 											bg96_response_set_result( BG96_RETURN_OK, 0 );
 										}
 									}
@@ -312,11 +255,8 @@ static void bg96_recv_task( void * pvParameters )
 			    					receive_status = 0;
 					    			receive_sub_status1 = 0;
 					    			receive_sub_status2 = 0;
-// added 2020/10 start
 					    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 								}
-                                //
 								else if (0 == strncmp(recvbuff, BG96_RETURN_TEXT_OK_GO_SEND, 4))
 								{
 									bg96_response_set_result( BG96_RETURN_OK_GO_SEND, 0 );
@@ -325,9 +265,7 @@ static void bg96_recv_task( void * pvParameters )
 			    					receive_status = 0;
 					    			receive_sub_status1 = 0;
 					    			receive_sub_status2 = 0;
-// added 2020/10 start
 					    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 								}
 							}
 		    				break;
@@ -338,31 +276,26 @@ static void bg96_recv_task( void * pvParameters )
 	    					receive_status = 0;
 			    			receive_sub_status1 = 0;
 			    			receive_sub_status2 = 0;
-// added 2020/10 start
 			    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 			    			break;
 	    			}
     				break;
-	    		case 2:	/* +からはじまる　 +?????:???? */
+	    		case 2:
 	    			switch(receive_sub_status1)
 	    			{
-		    			case 0:	/* ':'待ち */
+		    			case 0:
 			    			if(data == ':')
 		    				{
-                                // TCP接続 +QIOPEN: 確認
                                 if (0 == strcmp(&recvbuff[tmp_recvcnt], BG96_READ_TCP))
                                 {
                                     receive_sub_status1 = 2;
                                 }
-                                // +QLTS: 現在時刻
    					    		else if (0 == strcmp(&recvbuff[tmp_recvcnt], BG96_READ_SNTP))
    					    		{
    					    			receive_status = 6;
    					    			receive_sub_status1 = 0;
    					    			tmp_recvcnt = recv_count;
    					    		}
-								// +QIRD: 受信
 								else if (0 == strcmp(&recvbuff[tmp_recvcnt], BG96_DATA_RECEIVE_QIRD))
 								{
 									receive_sub_status1 = 4;
@@ -374,23 +307,20 @@ static void bg96_recv_task( void * pvParameters )
                                 }
 		    				}
 	    					break;
-		    			case 1:	/* ','待ち */
+		    			case 1:
 			    			if(data == ',')
 		    				{
-                                // TCP受信 +QIURC: "recv", 確認
 								if (0 == strcmp(&recvbuff[tmp_recvcnt], BG96_DATA_RECEIVE))
 								{
 									receive_sub_status1 = 3;
 
 								}
-                                // DNS取得 +QIURC: "dnsgip", 確認
 								else if (0 == strcmp(&recvbuff[tmp_recvcnt], BG96_READ_DNS))
 								{
 									receive_status = 7;
 									receive_sub_status1 = 0;
 									tmp_recvcnt = recv_count;
 								}
-                                // TCP クローズ受信  +QIURC: "close", 確認
 								else if (0 == strcmp(&recvbuff[tmp_recvcnt], BG96_CLOSE))
 								{
 									receive_sub_status1 = 5;
@@ -403,20 +333,17 @@ static void bg96_recv_task( void * pvParameters )
 			    					receive_status = 0;
 					    			receive_sub_status1 = 0;
 					    			receive_sub_status2 = 0;
-// added 2020/10 start
 					    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 								}
 		    				}
 
 		    				break;
-		    			case 2:	/* "\r\n" 待ち */
+		    			case 2:
 							string_ercd = strstr(&recvbuff[2],"\r\n");
 							if(string_ercd != NULL)
 							{
 								memset(recv_tmp, 0x00, sizeof(recv_tmp));
 								memset(recv_tmp_qird, 0x00, sizeof(recv_tmp_qird));
-                                // TCP接続返信 ソケット番号とエラー0を確認
                                 socket_no = bg96_response_get_now_queue_socket();
 								sprintf(recv_tmp, "%s %d,0\r\n", BG96_READ_TCP, bg96_response_get_now_queue_socket());
 								if (0 == strcmp(&recvbuff[tmp_recvcnt], recv_tmp))
@@ -429,16 +356,13 @@ static void bg96_recv_task( void * pvParameters )
 								receive_status = 0;
 								receive_sub_status1 = 0;
 								receive_sub_status2 = 0;
-// added 2020/10 start
 								bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
                             }
 		    				break;
-		    			case 3:	/* recv の "\r\n" 待ち */
+		    			case 3:
 							string_ercd = strstr(&recvbuff[2],"\r\n");
 							if(string_ercd != NULL)
 							{
-                                // TCPデータ受信 +QIURC: "recv" のソケット番号とデータサイズ取得
 	   					    	sscanf_ret = sscanf(&recvbuff[tmp_recvcnt], BG96_DATA_RECEIVE_COMMAND, &socket_no);
 	   					    	if(sscanf_ret == 1)
 	   					    	{
@@ -463,7 +387,7 @@ static void bg96_recv_task( void * pvParameters )
 	   					    	}
                             }
 		    				break;
-		    			case 4:/* Buffer Access Mode recv の "\r\n" 待ち */
+		    			case 4:
 							string_ercd = strstr(&recvbuff[2],"\r\n");
 							if(string_ercd != NULL)
 							{
@@ -490,13 +414,11 @@ static void bg96_recv_task( void * pvParameters )
 									receive_sub_status1 = 0;
 									receive_sub_status2 = 0;
 									bg96_response_set_result( BG96_RETURN_ERROR, 0 );
-// added 2020/10 start
 									bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 	   					    	}
                             }
 		    				break;
-		    			case 5:	/* "\r\n" 待ち */
+		    			case 5:
 							string_ercd = strstr(&recvbuff[2],"\r\n");
 							if(string_ercd != NULL)
 							{
@@ -507,9 +429,7 @@ static void bg96_recv_task( void * pvParameters )
 								receive_sub_status1 = 0;
 								receive_sub_status2 = 0;
 								bg96_response_set_result( BG96_RETURN_ERROR, 0 );
-// added 2020/10 start
 								bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
                             }
 		    				break;
 
@@ -520,14 +440,11 @@ static void bg96_recv_task( void * pvParameters )
 	    					receive_status = 0;
 			    			receive_sub_status1 = 0;
 			    			receive_sub_status2 = 0;
-// added 2020/10 start
 			    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 			    			break;
 	    			}
 	    			break;
-	    		case 3:	/* TCPデータ受信 */
-// changed 2020/10 start
+	    		case 3:
                     if (g_bg96_socket[socket_no].receive_count < g_bg96_socket[socket_no].receive_num)
                     {
                         byteq_ercd = R_BYTEQ_Put(g_bg96_socket[socket_no].socket_byteq_hdl, data);
@@ -557,13 +474,9 @@ static void bg96_recv_task( void * pvParameters )
                             receive_sub_status2 = 0;
                             g_bg96_socket[socket_no].receive_count = 0;
                             g_bg96_socket[socket_no].receive_num = 0;
-
-// changed 2020/10 start
                             bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// changed 2020/10 end
                         }
                     }
-// changed 2020/10 end
 	    			break;
 	    		case 6:	// QLTS
 					if(data == '\n')
@@ -589,16 +502,12 @@ static void bg96_recv_task( void * pvParameters )
 						receive_status = 0;
 						receive_sub_status1 = 0;
 						receive_sub_status2 = 0;
-// added 2020/10 start
 						bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 					}
 					break;
 	    		case 7:	/* DNS */
 	    			if(NULL != strstr(&recvbuff[tmp_recvcnt],"\r\n"))
 					{
-                        // +QIURC: "dnsgip" は、最初にDNSの個数が返信されるので、elseでDNS個数を取得
-                        // bg96_response_set_result() が複数回実行されると誤動作するので、max時に更新する
 	    				if (recvbuff[tmp_recvcnt] == '"') {
 	    					dns_cnt++;
 	    					sscanf(&recvbuff[tmp_recvcnt],"\"%d.%d.%d.%d\"\r\n",&dnsaddress[0],&dnsaddress[1],&dnsaddress[2],&dnsaddress[3]);
@@ -606,14 +515,12 @@ static void bg96_recv_task( void * pvParameters )
 	    						bg96_response_set_result( BG96_RETURN_OK, 0 );
 								dns_cnt = 0;
 								dns_max = 0;
-// added 2020/10 start
 								bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 	    					}
 	    				}
 	    				else {
 	    					uint32_t dummy;
-	    					sscanf(&recvbuff[tmp_recvcnt],"0,%d,%d\r\n",&dns_max,&dummy);   // dummyはDNS有効期限(不使用)
+	    					sscanf(&recvbuff[tmp_recvcnt],"0,%d,%d\r\n",&dns_max,&dummy);
 	    				}
 						memset(recvbuff,0,sizeof(recvbuff));
 						recv_count = 0;
@@ -631,9 +538,7 @@ static void bg96_recv_task( void * pvParameters )
 						receive_status = 0;
 						receive_sub_status1 = 0;
 						receive_sub_status2 = 0;
-// added 2020/10 start
 						bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 					}
 					break;
 	    		case 9:	/* CIPSEND -> OK\r\n>  */
@@ -645,15 +550,13 @@ static void bg96_recv_task( void * pvParameters )
 						receive_status = 0;
 						receive_sub_status1 = 0;
 						receive_sub_status2 = 0;
-// added 2020/10 start
 						bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 					}
 					break;
-	    		case 0xff:	/* その他  ????\r\n */
+	    		case 0xff:
 	    			switch(receive_sub_status1)
 	    			{
-		    			case 0:	/* \r\n待ち */
+		    			case 0:
 		    				string_ercd = strstr(&recvbuff[1],"\r\n");
 		    				if(string_ercd != NULL)
 		    				{
@@ -661,16 +564,12 @@ static void bg96_recv_task( void * pvParameters )
 								{
 									bg96_response_set_result( BG96_RETURN_SEND_FAIL, 0 );
 								}
-
-		    					/* 読み捨て */
 								memset(recvbuff,0,sizeof(recvbuff));
 								recv_count = 0;
 		    					receive_status = 0;
 				    			receive_sub_status1 = 0;
 				    			receive_sub_status2 = 0;
-// added 2020/10 start
 				    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
 		    				}
 		    				break;
 	    			}
@@ -681,21 +580,15 @@ static void bg96_recv_task( void * pvParameters )
 					receive_status = 0;
 	    			receive_sub_status1 = 0;
 	    			receive_sub_status2 = 0;
-// added 2020/10 start
 	    			bg96_usart_abort(&new_rx_cnt, &pre_rx_cnt);
-// added 2020/10 end
     				break;
     		    }
-// added 2020/10 start
             }
     	    pre_rx_cnt = new_rx_cnt;
-// added 2020/10 end
     	}
     	else
     	{
-// added 2020/10 start
     	    vTaskDelay( 1 );
-// added 2020/10 end
     	}
     }	
 }
@@ -760,7 +653,6 @@ void bg96_response_set_result( uint8_t result, uint32_t value)
 	}
 }
 
-// added 2020/10 start
 void bg96_usart_abort(uint32_t *new_cnt, uint32_t *pre_cnt)
 {
 	uint32_t check_new_rx_cnt;
@@ -774,4 +666,3 @@ void bg96_usart_abort(uint32_t *new_cnt, uint32_t *pre_cnt)
         check_new_rx_cnt = 0;
     }
 }
-// added 2020/10 end

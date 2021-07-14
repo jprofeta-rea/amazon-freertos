@@ -23,14 +23,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  http://www.FreeRTOS.org
 */
 
-#include <stdio.h>	//[RE01-test] Add from RX65N-RSK
-#include <string.h>	//[RE01-test] Add from RX65N-RSK
+#include <stdio.h>
+#include <string.h>
 
 /* Renesas. */
-#include "serial_term_uart.h"	//[RE01-test] Add from RX65N-RSK
+#include "serial_term_uart.h"
 
 /* Test application include. */
-#include "aws_test_runner.h"	//[RE01-test] Add from RX65N-RSK
+#include "aws_test_runner.h"
 
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
@@ -47,24 +47,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /* Key provisioning includes. */
 #include "aws_dev_mode_key_provisioning.h"
-
-/* FreeRTOS+TCP includes. */
-// changed 2020/10 start
-/////#include "FreeRTOS_IP.h"
-// changed 2020/10 end
-
-/* Demo includes */
-//#include "aws_demo.h"	//[RE01-test] Delete for test
 #include "aws_clientcredential.h"
 
-// changed 2020/10 start
 #include "RE01_1500KB.h"
 #include "r_core_cfg.h"
 #include "r_system_api.h"
 #include "r_lpm_api.h"
-// changed 2020/10 end
-
-#include "iot_wifi.h"	//[RE01-test] Add for test
+#include "iot_wifi.h"
 
 #define mainLOGGING_TASK_STACK_SIZE         ( configMINIMAL_STACK_SIZE * 6 )
 #define mainLOGGING_MESSAGE_QUEUE_LENGTH    ( 15 )
@@ -72,12 +61,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /* The task delay for allowing the lower priority logging task to print out Wi-Fi
  * failure status before blocking indefinitely. */
-#define mainLOGGING_WIFI_STATUS_DELAY       pdMS_TO_TICKS( 1000 )	//[RE01-test] Add for test
-
-// added 2020/10 start
-// LED SAMPLE
-#define LED_SAMPLE_CODE           (0)    // 0 : disable, 1 : enable
-// added 2020/10 end
+#define mainLOGGING_WIFI_STATUS_DELAY       pdMS_TO_TICKS( 1000 )
 
 /* The MAC address array is not declared const as the MAC address will
 normally be read from an EEPROM and not hard coded (in real deployed
@@ -136,24 +120,11 @@ void vApplicationDaemonTaskStartupHook( void );
  */
 static void prvMiscInitialization( void );
 
-// added 2020/10 start
-// moved RE01_1500KB_DFP\main.c
 /* Functions */
 void NMI_Handler( void )  __attribute__ ((section(".ramfunc"))) ;     /* This is NMI Handler for User template*/
 void LVD_for_EHC( void ) __attribute__ ((section(".ramfunc"))) ;   /* This is  User template code of EHC initialization in NMI Handler*/
-// added 2020/10 end
 
-static void prvWifiConnect( void );	//[RE01-test] Add for test
-
-// added 2020/10 start
-// LED SAMPLE
-#if (LED_SAMPLE_CODE == 1)
-void Make_Tasks(void);
-void main_led0( void );
-void main_led1( void );
-void main_led2( void );
-#endif
-// added 2020/10 end
+static void prvWifiConnect( void );
 
 /*-----------------------------------------------------------*/
 
@@ -191,47 +162,10 @@ void vApplicationDaemonTaskStartupHook( void )
 
     if( SYSTEM_Init() == pdPASS )
     {
-// changed 2020/10 start
-#if 0
-// changed 2020/10 end
-
-        /* Initialise the RTOS's TCP/IP stack.  The tasks that use the network
-        are created in the vApplicationIPNetworkEventHook() hook function
-        below.  The hook function is called when the network connects. */
-        FreeRTOS_IPInit( ucIPAddress,
-                         ucNetMask,
-                         ucGatewayAddress,
-                         ucDNSServerAddress,
-                         ucMACAddress );
-
-        /* We should wait for the network to be up before we run any demos. */
-        while( FreeRTOS_IsNetworkUp() == pdFALSE )
-        {
-            vTaskDelay(300);
-        }
-		FreeRTOS_printf( ( "The network is up and running\n" ) );
-
-// changed 2020/10 start
-#endif
-// changed 2020/10 end
-
-        /* Connect to the Wi-Fi before running the tests. */	//[RE01-test] Add from "amazon-freertos\vendors\vendor\boards\board\aws_tests\application_code\main.c"
-        prvWifiConnect();										//[RE01-test] Add from "amazon-freertos\vendors\vendor\boards\board\aws_tests\application_code\main.c"
-
-// added 2020/10 start
-// LED SAMPLE
-#if (LED_SAMPLE_CODE == 1)
-		Make_Tasks();
-#else
-// added 2020/10 end
-
+        /* Connect to the Wi-Fi before running the tests. */
+        prvWifiConnect();
         /* Provision the device with AWS certificate and private key. */
         vDevModeKeyProvisioning();
-
-        /* Run all demos. */
-//        DEMO_RUNNER_RunDemos(); //[RE01-test] Delete for test
-
-        //[RE01-test] Add from "amazon-freertos\vendors\vendor\boards\board\aws_tests\application_code\main.c" (start)
         vTaskDelay(10000);	// todo: this is renesas issue.
         /* Create the task to run tests. */
         xTaskCreate( TEST_RUNNER_RunTests_task,
@@ -240,16 +174,9 @@ void vApplicationDaemonTaskStartupHook( void )
                      NULL,
                      tskIDLE_PRIORITY,
                      NULL );
-        //[RE01-test] Add from "amazon-freertos\vendors\vendor\boards\board\aws_tests\application_code\main.c" (end)
-
-// added 2020/10 start
-#endif
-// added 2020/10 end
     }
 }
 
-// added 2020/10 start
-// moved RE01_1500KB_DFP\main.c
 /***********************************************************************************************************************
 * Function Name: BoardInit
 * Description  : Configure board initial setting.
@@ -313,7 +240,7 @@ void BoardInit(void)
 * Arguments    : none
 * Return Value : none
 **********************************************************************************************************************/
-  void NMI_Handler( void )
+void NMI_Handler( void )
 {
   volatile uint16_t f_status;
   /* Read status flag for NMI interrupts */
@@ -345,7 +272,7 @@ void LVD_for_EHC()
    /* Disable protect for LVD */
    R_SYS_RegisterProtectDisable(SYSTEM_REG_PROTECT_LVD);
    /* Clear LVD1 detection flag */
-   SYSC->LVD1SR_b.DET = 0;
+   SYSTEM->LVD1SR_b.DET = 0;
    /* Clear LVD1 NMI interrpt flag */
    ICU->NMICLR_b.LVD1CLR = 1;
    while(ICU->NMISR_b.LVD1ST != 0);
@@ -359,7 +286,7 @@ void LVD_for_EHC()
    /* Check if LVD detected due to noise */
    for(i = 0; i < 3 ; i++)
    {
-      if(0 != SYSC->LVD1SR_b.MON)
+      if(0 != SYSTEM->LVD1SR_b.MON)
       {
         /* This LVD detection is misdetection. */
         /* VCC level is higher than LVD1det level. */
@@ -371,20 +298,20 @@ void LVD_for_EHC()
     /*--------------------------------------------------------------------------
      * Set the protect function of the register
      *------------------------------------------------------------------------*/
-    SYSC->PRCR = 0xA503U;
+    SYSTEM->PRCR = 0xA503U;
 
      /*--------------------------------------------------------------------------
      * Start the LOCO operation
      *------------------------------------------------------------------------*/
-    SYSC->LOCOCR = 0x00U;     /* Start LOCO */
+    SYSTEM->LOCOCR = 0x00U;     /* Start LOCO */
 
     /*--------------------------------------------------------------------------
      * Wait the LOCO clock stabilization
      *------------------------------------------------------------------------*/
-    while(0x00 != SYSC->LOCOCR)
+    while(0x00 != SYSTEM->LOCOCR)
     {
         /* Retry the writing */
-        SYSC->LOCOCR = 0x00U;
+        SYSTEM->LOCOCR = 0x00U;
     }
 
     /*--------------------------------------------------------------------------
@@ -392,19 +319,19 @@ void LVD_for_EHC()
      * b2-b0 : [   CKSEL] System clock source select
      *                      - [010] LOCO selection
      *------------------------------------------------------------------------*/
-    SYSC->SCKSCR = 0x02U;     /* Clock source : LOCO */
-    while(0x02U != SYSC->SCKSCR)
+    SYSTEM->SCKSCR = 0x02U;     /* Clock source : LOCO */
+    while(0x02U != SYSTEM->SCKSCR)
     {
         /* Retry the writing */
-        SYSC->SCKSCR = 0x02U;
+        SYSTEM->SCKSCR = 0x02U;
     }
 
     /**** Enable Stop module clock for DTC/DMAC */
-    SYSC->MSTPCRA_b.MSTPA22 = 1U;     /* Stop module clock for DTC/DMAC */
+    SYSTEM->MSTPCRA_b.MSTPA22 = 1U;     /* Stop module clock for DTC/DMAC */
 
     /* Enable EHC Charging Capacitor Quick Wake-up function */
     /* This is must need for initializing EHC Circuit when using EHC mode. */
-    EHC->EHCCR1_b.QUICKMODE = 0U;
+    SYSTEM->EHCCR1_b.QUICKMODE = 0U;
 
     while(1)
     {
@@ -414,7 +341,6 @@ void LVD_for_EHC()
 
 } /*End of function of LVD_for_EHC() */
 
-//[RE01_test] Add from "amazon-freertos\vendors\vendor\boards\board\aws_tests\application_code\main.c" (start)
 void prvWifiConnect( void )
 {
     /* FIX ME: Delete surrounding compiler directives when the Wi-Fi library is ported. */
@@ -479,136 +405,3 @@ void prvWifiConnect( void )
 
 	#endif /* if 0 */
 }
-//[RE01_test] Add from "amazon-freertos\vendors\vendor\boards\board\aws_tests\application_code\main.c" (end)
-
-// added 2020/10 start
-// LED SAMPLE
-#if (LED_SAMPLE_CODE == 1)
-void Make_Tasks(void)
-{
-    BaseType_t ret;
-
-    /************** task creation ****************************/
-    /* LED0 task. */
-    ret = xTaskCreate(main_led0, "LED0_TASK", 512, NULL, 3, NULL);
-
-    if (pdPASS != ret)
-    {
-        while(1)
-        {
-            /* Failed! Task can not be created. */
-        }
-    }
-
-    /************** task creation ****************************/
-    /* LED1 task. */
-    ret = xTaskCreate(main_led1, "LED1_TASK", 512, NULL, 3, NULL);
-
-    if (pdPASS != ret)
-    {
-        while(1)
-        {
-            /* Failed! Task can not be created. */
-        }
-    }
-
-    /************** task creation ****************************/
-    /* LED2 task. */
-    ret = xTaskCreate(main_led2, "LED2_TASK", 512, NULL, 3, NULL);
-
-    if (pdPASS != ret)
-    {
-        while(1)
-        {
-            /* Failed! Task can not be created. */
-        }
-    }
-
-
-    /*set P210 and P410 output to high (LED off)*/
-    /*set P007, 008, and 009 output to high (LED off)*/
-    PORT0->PODR = 0x0380;
-
-    /*Set Port direction control (set as input/output)*/
-    /*1 means output, 0 means input*/
-    /*set P007, 008, and 009 as output (1)*/
-    PORT0->PDR = 0x0380;
-}
-
-void main_led0( void )
-{
-    for( ; ; )
-    {
-    	configPRINT_STRING("LED0 task.");
-    	configPRINT_STRING( "\r\n" );
-
-    	for (int i=0; i < 2; i++)
-    	{
-            /* Toggle the bit 9 of Port0 */
-            /*only target bit (P009) is changed*/
-            PORT0->PODR = (PORT0->PODR ^ 0x0200);
-
-            R_SYS_SoftwareDelay(500, SYSTEM_DELAY_UNITS_MILLISECONDS);
-    	}
-
-        /*set P009 output to high (LED off)*/
-        PORT0->PODR |= 0x0200;
-
-        vTaskDelay( 1 );
-    }
-}
-
-void main_led1( void )
-{
-    for( ; ; )
-    {
-    	configPRINT_STRING("LED1 task.");
-    	configPRINT_STRING( "\r\n" );
-
-    	for (int i=0; i < 2; i++)
-    	{
-            /* Toggle the bit 8 of Port0 */
-            /*only target bit (P008) is changed*/
-
-            R_SYS_SoftwareDelay(500, SYSTEM_DELAY_UNITS_MILLISECONDS);
-
-            PORT0->PODR = (PORT0->PODR ^ 0x0100);
-
-    	}
-
-        /*set P008 output to high (LED off)*/
-        PORT0->PODR |= 0x0100;
-
-        vTaskDelay( 5 );
-    }
-}
-
-void main_led2( void )
-{
-    for( ; ; )
-    {
-    	configPRINT_STRING("LED2 task.");
-    	configPRINT_STRING( "\r\n" );
-
-    	for (int i=0; i < 2; i++)
-    	{
-            /* Toggle the bit 7 of Port0 */
-            /*only target bit (P007) is changed*/
-
-            R_SYS_SoftwareDelay(750, SYSTEM_DELAY_UNITS_MILLISECONDS);
-
-            PORT0->PODR = (PORT0->PODR ^ 0x0080);
-    	}
-
-        /*set P007 output to high (LED off)*/
-    	PORT0->PODR |= 0x0080;
-
-        vTaskDelay( 10 );
-    }
-}
-#endif
-// added 2020/10 end
-
-// added 2020/10 end
-
-/*-----------------------------------------------------------*/

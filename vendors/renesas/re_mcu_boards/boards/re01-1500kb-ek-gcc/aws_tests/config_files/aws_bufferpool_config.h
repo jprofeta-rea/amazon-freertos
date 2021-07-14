@@ -39,6 +39,6 @@
 /**
  * @brief The size of each buffer in the static buffer pool.
  */
-#define bufferpoolconfigBUFFER_SIZE    ( 2048 )	[RE01-test] Change 512 to 2048 (Same change as RX651-rsk)
+#define bufferpoolconfigBUFFER_SIZE    ( 2048 )
 
 #endif /* _AWS_BUFFER_POOL_CONFIG_H_ */

@@ -43,10 +43,6 @@ Includes   <System Includes> , "Project Includes"
 #include "unity.h"
 #endif
 
-// changed 2020/10 start
-
-/////#if (BSP_CFG_RTOS_USED == 1)
-// changed 2020/10 end
 /******************************************************************************
 Macro definitions
 ******************************************************************************/
@@ -107,194 +103,11 @@ Private global variables and functions
 ******************************************************************************/
 void vApplicationSetupTimerInterrupt(void)
 {
-// removed 2020/10 start
-/////    /* CMT channel 0 is configured as RTOS's system timer. */
-/////#if (BSP_CFG_RTOS_SYSTEM_TIMER == 0)
-/////    /* Protect off. */
-/////    SYSTEM.PRCR.WORD = 0xA502;
 
-/////    /* Enable compare match timer 0. */
-/////    MSTP( CMT0 ) = 0;
-
-/////    /* Stop counter. */
-/////    CMT.CMSTR0.BIT.STR0 = 0;
-
-/////    /* Protect on. */
-/////    SYSTEM.PRCR.WORD = 0xA500;
-
-/////    /* Enable interrupt on compare match.
-/////     * Divide the PCLK by 8. */
-/////    CMT0.CMCR.WORD = 0x00C0; // CKS=00b,CMIE=1; PCLK/8,Compare match interrupt (CMIn) enabled @60MHz
-
-/////    /* Set the compare match value. */
-/////    CMT0.CMCOR = ( unsigned short ) ( ( ( configPERIPHERAL_CLOCK_HZ / configTICK_RATE_HZ )) / 8 - 1);
-
-/////    /* Clear counter. */
-/////    CMT0.CMCNT = 0;
-
-/////    /* Clear any previously pending interrupts. */
-/////    IR(CMT0, CMI0)  = 0;
-
-/////    /* Enable the interrupt. */
-/////    IEN(CMT0, CMI0) = 1;
-
-/////    /* Set its priority to the application defined kernel priority. */
-/////    IPR(CMT0, CMI0) = configKERNEL_INTERRUPT_PRIORITY;
-
-/////    /* Start the timer 0. */
-/////    CMT.CMSTR0.BIT.STR0 = 1;
-/////#endif /* (BSP_CFG_RTOS_SYSTEM_TIMER == 0) */
-
-/////    /* CMT channel 1 is configured as RTOS's system timer. */
-/////#if (BSP_CFG_RTOS_SYSTEM_TIMER == 1)
-/////    /* Protect off. */
-/////    SYSTEM.PRCR.WORD = 0xA502;
-
-/////    /* Enable compare match timer 1. */
-/////    MSTP( CMT1 ) = 0;
-
-/////    /* Stop counter. */
-/////    CMT.CMSTR0.BIT.STR1 = 0;
-
-/////    /* Protect on. */
-/////    SYSTEM.PRCR.WORD = 0xA500;
-
-/////    /* Enable interrupt on compare match.
-/////     * Divide the PCLK by 8. */
-/////    CMT1.CMCR.WORD = 0x00C0; // CKS=00b,CMIE=1; PCLK/8,Compare match interrupt (CMIn) enabled @60MHz
-
-/////    /* Set the compare match value. */
-/////    CMT1.CMCOR = ( unsigned short ) ( ( ( configPERIPHERAL_CLOCK_HZ / configTICK_RATE_HZ )) / 8 - 1);
-
-/////    /* Clear counter. */
-/////    CMT1.CMCNT = 0;
-
-/////    /* Clear any previously pending interrupts. */
-/////    IR(CMT1, CMI1)  = 0;
-
-/////    /* Enable the interrupt. */
-/////    IEN(CMT1, CMI1) = 1;
-
-/////    /* Set its priority to the application defined kernel priority. */
-/////    IPR(CMT1, CMI1) = configKERNEL_INTERRUPT_PRIORITY;
-
-/////    /* Start the timer 1. */
-/////    CMT.CMSTR0.BIT.STR1 = 1;
-/////#endif /* (BSP_CFG_RTOS_SYSTEM_TIMER == 1) */
-
-/////    /* CMT channel 2 is configured as RTOS's system timer. */
-/////#if (BSP_CFG_RTOS_SYSTEM_TIMER == 2)
-/////    /* Protect off. */
-/////    SYSTEM.PRCR.WORD = 0xA502;
-
-/////    /* Enable compare match timer 2. */
-/////    MSTP( CMT2 ) = 0;
-
-/////    /* Stop counter. */
-/////    CMT.CMSTR1.BIT.STR2 = 0;
-
-/////    /* Protect on. */
-/////    SYSTEM.PRCR.WORD = 0xA500;
-
-/////    /* Enable interrupt on compare match.
-/////     * Divide the PCLK by 8. */
-/////    CMT2.CMCR.WORD = 0x00C0; // CKS=00b,CMIE=1; PCLK/8,Compare match interrupt (CMIn) enabled @60MHz
-
-/////    /* Set the compare match value. */
-/////    CMT2.CMCOR = ( unsigned short ) ( ( ( configPERIPHERAL_CLOCK_HZ / configTICK_RATE_HZ )) / 8 - 1);
-
-/////    /* Clear counter. */
-/////    CMT2.CMCNT = 0;
-
-/////    /* Clear any previously pending interrupts. */
-/////    IR(CMT2, CMI2)  = 0;
-
-/////    /* Enable the interrupt. */
-/////    IEN(CMT2, CMI2) = 1;
-
-/////    /* Set its priority to the application defined kernel priority. */
-/////    IPR(CMT2, CMI2) = configKERNEL_INTERRUPT_PRIORITY;
-
-/////    /* Start the timer 2. */
-/////    CMT.CMSTR1.BIT.STR2 = 1;
-/////#endif /* (BSP_CFG_RTOS_SYSTEM_TIMER == 2) */
-
-/////    /* CMT channel 3 is configured as RTOS's system timer. */
-/////#if (BSP_CFG_RTOS_SYSTEM_TIMER == 3)
-/////    /* Protect off. */
-/////    SYSTEM.PRCR.WORD = 0xA502;
-
-/////    /* Enable compare match timer 3. */
-/////    MSTP( CMT3 ) = 0;
-
-/////    /* Stop counter. */
-/////    CMT.CMSTR1.BIT.STR3 = 0;
-
-/////    /* Protect on. */
-/////    SYSTEM.PRCR.WORD = 0xA500;
-
-/////    /* Enable interrupt on compare match.
-/////     * Divide the PCLK by 8. */
-/////    CMT3.CMCR.WORD = 0x00C0; // CKS=00b,CMIE=1; PCLK/8,Compare match interrupt (CMIn) enabled @60MHz
-
-/////    /* Set the compare match value. */
-/////    CMT3.CMCOR = ( unsigned short ) ( ( ( configPERIPHERAL_CLOCK_HZ / configTICK_RATE_HZ )) / 8 - 1);
-
-/////    /* Clear counter. */
-/////    CMT3.CMCNT = 0;
-
-/////    /* Clear any previously pending interrupts. */
-/////    IR(CMT3, CMI3)  = 0;
-
-/////    /* Enable the interrupt. */
-/////    IEN(CMT3, CMI3) = 1;
-
-/////    /* Set its priority to the application defined kernel priority. */
-/////    IPR(CMT3, CMI3) = configKERNEL_INTERRUPT_PRIORITY;
-
-/////    /* Start the timer 3. */
-/////    CMT.CMSTR1.BIT.STR3 = 1;
-/////#endif /* (BSP_CFG_RTOS_SYSTEM_TIMER == 3) */
-
-// removed 2020/10 end
 
 } /* End of function vApplicationSetupTimerInterrupt() */
 
-/******************************************************************************
-//* Function name: sbrk
-//* Description  : This implementation prevents using CC-RX's or GNURX+NEWLIB's
-//*                malloc() and calloc() which are not thread safe.
-//* Arguments    : size - not used
-//* Return value : -1 (failure) but vAssertCalled() may not return
-//******************************************************************************/
-//#if defined(__CCRX__) || defined(__GNUC__)
-//extern int8_t *sbrk(size_t size);
-//int8_t *sbrk(size_t size)
-//{
-//    R_INTERNAL_NOT_USED(size);
-//    vAssertCalled();
-//    return (int8_t *) - 1;
-//}
-//#endif
 
-///******************************************************************************
-//* Function name: _top_of_heap
-//* Description  : This implementation prevents using GNURX+OPTLIB's
-//*                malloc() and calloc() which are not thread safe.
-//* Arguments    : none
-//* Return value : end (failure) but vAssertCalled() may not return
-//******************************************************************************/
-//#if defined(__GNUC__)
-//extern int8_t end;
-//int8_t *_heap_of_memory = (int8_t *)&end;
-//int8_t *_last_heap_object = (int8_t *)&end;
-//extern int8_t *_top_of_heap(void);
-//int8_t *_top_of_heap(void)
-//{
-//    vAssertCalled();
-//    return &end;
-//}
-//#endif
 
 /******************************************************************************
 * Function Name: vAssertCalled
@@ -384,23 +197,4 @@ void vApplicationTickHook(void)
 void Processing_Before_Start_Kernel(void)
 {
 
-	BaseType_t ret;
-
-	    /************** task creation ****************************/
-	    /* Main task. */
-//	    ret = xTaskCreate(main, "MAIN_TASK", 512, NULL, 3, NULL);
-//
-//	    if (pdPASS != ret)
-//	    {
-//	        while(1)
-//	        {
-//	            /* Failed! Task can not be created. */
-//	        }
-//	    }
-
-
 } /* End of function Processing_Before_Start_Kernel() */
-
-// changed 2020/10 start
-/////#endif /* (BSP_CFG_RTOS_USED == 1) */
-// changed 2020/10 end
