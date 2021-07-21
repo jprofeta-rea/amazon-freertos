@@ -13,7 +13,8 @@
 #include "R_Driver_USART.h"
 
 #define SCI_TX_BUSIZ_DEFAULT                    (1460)
-#define UART_BUS_SPEED          (115200)              /* UART bus speed(bps) */
+#define UART_BUS_CHANGE_SPEED          (921600)              /* UART bus speed(bps) */
+
 const uint8_t bg96_return_text_ok[]          = BG96_RETURN_TEXT_OK;
 const uint8_t bg96_return_text_error[]       = BG96_RETURN_TEXT_ERROR;
 const uint8_t bg96_return_text_ready[]       = BG96_RETURN_TEXT_READY;
@@ -94,9 +95,9 @@ static int32_t bg96_change_socket_index(uint8_t socket_no);
 static TickType_t g_sl_bg96_tcp_recv_timeout = 3000;		/* ## slowly problem ## unit: 1ms */
 static int32_t bg96_take_mutex(uint8_t mutex_flag);
 static void bg96_give_mutex(uint8_t mutex_flag);
-static int32_t SetupCommunication(void);
-static int32_t bg96_serial_send_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code);
-static int32_t bg96_serial_recv_test(int32_t recvcnt, bg96_return_code_t expect_code);
+static int32_t SetupCommunication(int32_t Change_Baudrate);
+static int32_t bg96_serial_send_recv_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code);
+static int32_t bg96_serial_response_test(int32_t recvcnt, bg96_return_code_t expect_code);
 uint8_t g_wifi_cleateble_sockets = WIFI_CFG_CREATABLE_SOCKETS;
 #define MUTEX_TX (1 << 0)
 #define MUTEX_RX (1 << 1)
@@ -121,7 +122,6 @@ wifi_err_t R_CELLULAR_BG96_SocketShutdown (int32_t socket_no);
 uint32_t dummy_len = 0;
 void reset_button(void);
 
-
 int32_t bg96_wifi_init(void)
 {
 	int32_t ret;
@@ -130,89 +130,18 @@ int32_t bg96_wifi_init(void)
     uint32_t recvlen = 0;
 	uint8_t atcmd[128];
 
-	reset_button();
 	if( BG96_SYSTEM_CLOSE != g_bg96_system_state)
 	{
 		return WIFI_ERR_ALREADY_OPEN;
 	}
     g_bg96_cgatt_flg = 0;
 
-	ret = bg96_serial_open(9600);
-	if(ret != 0)
-	{
-		return ret;
-	}
-	else
-	{
-		configPRINTF(("bg96_serial_open is %d\r\n", ret));
-	}
+    ret = SetupCommunication(UART_BUS_CHANGE_SPEED);
 
-
-    while (1)
+    if (ret !=0)
     {
-        if (-1 == check_timeout(1, 0))
-        {
-            ret = 0;
-            break;
-        }
+    	return ret;
     }
-    if(ret != 0)
-    {
-        // BG96 3.8V OFF
-        bg96_power_down(0);
-        return ret;
-    }
-
-    ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
-
-    if (ret != 0)
-    {
-
-    	bg96_serial_close();
-    	reset_button();
-    	g_bg96_cgatt_flg = 0;
-    	ret = bg96_serial_open(921600);
-    	    while (1)
-    	    {
-    	        if (-1 == check_timeout(1, 0))
-    	        {
-    	            ret = 0;
-    	            break;
-    	        }
-    	    }
-
-    	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
-    	if(ret != 0)
-    		{
-    			return ret;
-    		}
-    	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "AT+IPR=9600;&W\r", 6, 400, BG96_RETURN_OK);
-    	if(ret != 0)
-    		{
-
-    			return ret;
-    		}
-    	configPRINTF(("Change baudrate = %d\r\n", ret));
-    	bg96_serial_close();
-		reset_button();
-		g_bg96_cgatt_flg = 0;
-		ret = bg96_serial_open(9600);
-			while (1)
-			{
-				if (-1 == check_timeout(1, 0))
-				{
-					ret = 0;
-					break;
-				}
-			}
-
-		ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
-		if(ret != 0)
-			{
-				return ret;
-			}
-    }
-
 
     // APN set
     memset(buff, 0x00, sizeof(buff));
@@ -223,23 +152,26 @@ int32_t bg96_wifi_init(void)
     {
 
     	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "AT+CGATT?\r", 19, 400, BG96_RETURN_OK);
-    	configPRINTF(("Send AT+CGATT = %d, count =%d\r\n", ret,cgatt_cnt));
-		recvlen = strlen((const char *)recvbuff);
-		if (recvlen > 13)
-		{
-			if (0 == memcmp((const char *)recvbuff, "\r\n+CGATT: 1\r\n", 13))
-			{
-				break;
-			}
-			else
-			{
-				cgatt_cnt++;
-			}
-		}
-		else
-		{
-			cgatt_cnt++;
-		}
+
+            recvlen = strlen((const char *)recvbuff);
+            if (recvlen > 13)
+            {
+                if (0 == memcmp((const char *)recvbuff, "\r\n+CGATT: 1\r\n", 13))
+                {
+                    break;
+                }
+                else
+                {
+                    cgatt_cnt++;
+                }
+            }
+            else
+            {
+                cgatt_cnt++;
+            }
+
+
+
         // timeout
         if (cgatt_cnt > BG96_RETRY_GATT)
         {
@@ -849,6 +781,7 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 					ret = -1;
 					flag_ = true;
 					break;
+//			    	return -1;break
 				}
 		    }
 			recvcnt = (uint32_t )response_type;
@@ -883,7 +816,105 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 
 	return ret;
 }
+/* Setup  */
+static int32_t SetupCommunication(int32_t Change_Baudrate)
+{
+	int32_t tries, ret;
 
+	uint32_t k,state;
+	uint32_t baudrate;
+	/* */
+	const uint32_t br[] = {921600,9600,115200,110,300,600,1200,2400,4800,9600,14400,19200,38400,57600,230400,460800};
+	k     =  0;
+	state =  0;
+	tries = 0;
+	baudrate = br[k];
+
+	while(k <= (sizeof(br)/sizeof(br[0])))
+	{
+	  switch (state)
+	  {
+	  case 0:
+	  case 1:
+	  case 2:
+	  {
+		  reset_button();
+		  ret = bg96_serial_open(baudrate);
+		  if(ret != 0)
+		  	{
+		  		return ret;
+		  	}
+		  while (1)
+		  {
+			  if (-1 == check_timeout(1, 0))
+			  {
+				  ret = 0;
+				  break;
+			  }
+		  }
+		  ret = bg96_serial_send_recv_test(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
+		 	break;
+	  }
+	  default:
+		  	  ret = -1;
+	          break;
+
+	  }
+	  if (ret == 0)
+		  {
+			  vTaskDelay(500);
+			  ret = bg96_serial_response_test(6, BG96_RETURN_OK);
+			  if (ret == 0)//response OK
+			  {
+
+				  if(Change_Baudrate != br[k])
+				  {
+					  memset(buff, 0x00, sizeof(buff));
+					  sprintf((char *)buff,"AT+IPR=%d;&W\r",Change_Baudrate);
+					  ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, buff, 6, 400, BG96_RETURN_OK);
+					  state = 2;
+					  k = 0;
+					  if (ret == 0)
+					  {
+
+						  baudrate = Change_Baudrate;
+					  }
+					  else
+					  {
+						  baudrate = br[k];
+
+					  }
+					  bg96_serial_close();
+
+
+				  }
+				  else
+				  {
+					  return ret;
+				  }
+
+			  }
+			  else
+			  {
+				  tries ++;
+				  if (tries > 3)
+				  {
+					  ret = -1;
+					  break;
+				  }
+			  }
+		  }
+		  else
+		  {
+			  /* Wait until response arrives */
+			  state = 2;
+			  k++;
+			  baudrate = br[k];
+			  bg96_serial_close();
+		  }
+	  }
+	return ret;
+}
 
 int32_t bg96_serial_send_with_recvtask(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code,  uint8_t command, uint8_t socket_no, uint32_t *length, uint8_t delay_flag)
 {
@@ -1519,7 +1550,7 @@ void reset_button(void)
 	bg96_SysCondition_pwrkey_H();
 	timeout_init(1, 15000);         // timeout 10ms
 }
-static int32_t bg96_serial_send_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code)
+static int32_t bg96_serial_send_recv_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code)
 {
 	volatile int32_t timeout;
 		volatile uint32_t ercd;
@@ -1587,7 +1618,6 @@ static int32_t bg96_serial_send_test(uint8_t serial_ch_id, uint8_t *ptextstring,
 							ret = -1;
 							flag_ = true;
 							break;
-		//			    	return -1;break
 						}
 					}
 					recvcnt = (uint32_t )response_type;
@@ -1606,18 +1636,12 @@ static int32_t bg96_serial_send_test(uint8_t serial_ch_id, uint8_t *ptextstring,
 			{
 				return -1;
 			}
-		if (recvcnt > ret){
-			return recvcnt;
-		}
+
 		return ret;
 }
 
-static int32_t bg96_serial_recv_test( int32_t recvcnt,bg96_return_code_t expect_code)
+static int32_t bg96_serial_response_test( int32_t recvcnt,bg96_return_code_t expect_code)
 {
-	if (recvcnt < 1)
-	{
-		return recvcnt;
-	}
 	/* Response data check */
 	int32_t ret = -1;
 	recvbuff[recvcnt] = '\0';
