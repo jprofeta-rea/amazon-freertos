@@ -14,7 +14,6 @@
 
 #define SCI_TX_BUSIZ_DEFAULT                    (1460)
 #define UART_BUS_SPEED          (115200)              /* UART bus speed(bps) */
-
 const uint8_t bg96_return_text_ok[]          = BG96_RETURN_TEXT_OK;
 const uint8_t bg96_return_text_error[]       = BG96_RETURN_TEXT_ERROR;
 const uint8_t bg96_return_text_ready[]       = BG96_RETURN_TEXT_READY;
@@ -69,6 +68,7 @@ static TickType_t startbytetime[CREATEABLE_SOCKETS], thisbytetime[CREATEABLE_SOC
 static uint8_t byte_timeout_overflow_flag[CREATEABLE_SOCKETS];
 
 uint8_t g_bg96_return_mode;
+static uint8_t flag_ = true;
 
 byteq_hdl_t socket_byteq_hdl[CREATEABLE_SOCKETS];
 
@@ -94,7 +94,9 @@ static int32_t bg96_change_socket_index(uint8_t socket_no);
 static TickType_t g_sl_bg96_tcp_recv_timeout = 3000;		/* ## slowly problem ## unit: 1ms */
 static int32_t bg96_take_mutex(uint8_t mutex_flag);
 static void bg96_give_mutex(uint8_t mutex_flag);
-
+static int32_t SetupCommunication(void);
+static int32_t bg96_serial_send_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code);
+static int32_t bg96_serial_recv_test(int32_t recvcnt, bg96_return_code_t expect_code);
 uint8_t g_wifi_cleateble_sockets = WIFI_CFG_CREATABLE_SOCKETS;
 #define MUTEX_TX (1 << 0)
 #define MUTEX_RX (1 << 1)
@@ -117,31 +119,32 @@ extern ARM_DRIVER_USART Driver_USART5;
 static ARM_DRIVER_USART *gsp_sci5_dev = &Driver_USART5;
 wifi_err_t R_CELLULAR_BG96_SocketShutdown (int32_t socket_no);
 uint32_t dummy_len = 0;
+void reset_button(void);
 
 
 int32_t bg96_wifi_init(void)
 {
 	int32_t ret;
-
+	int32_t tries_connect;
 	uint32_t cgatt_cnt = 0;
     uint32_t recvlen = 0;
 	uint8_t atcmd[128];
 
-	bg96_SysCondition_pwrkey_L();
-	timeout_only_wait(1, 8000);
-	bg96_SysCondition_pwrkey_H();
-	timeout_init(1, 15000);         // timeout 10ms
+	reset_button();
 	if( BG96_SYSTEM_CLOSE != g_bg96_system_state)
 	{
 		return WIFI_ERR_ALREADY_OPEN;
 	}
     g_bg96_cgatt_flg = 0;
-//    bg96_SysCondition_pwrkey_L();
-//    timeout_only_wait(1, 200);
-	ret = bg96_serial_open(115200);
+
+	ret = bg96_serial_open(9600);
 	if(ret != 0)
 	{
 		return ret;
+	}
+	else
+	{
+		configPRINTF(("bg96_serial_open is %d\r\n", ret));
 	}
 
 
@@ -162,6 +165,55 @@ int32_t bg96_wifi_init(void)
 
     ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
 
+    if (ret != 0)
+    {
+
+    	bg96_serial_close();
+    	reset_button();
+    	g_bg96_cgatt_flg = 0;
+    	ret = bg96_serial_open(921600);
+    	    while (1)
+    	    {
+    	        if (-1 == check_timeout(1, 0))
+    	        {
+    	            ret = 0;
+    	            break;
+    	        }
+    	    }
+
+    	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
+    	if(ret != 0)
+    		{
+    			return ret;
+    		}
+    	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "AT+IPR=9600;&W\r", 6, 400, BG96_RETURN_OK);
+    	if(ret != 0)
+    		{
+
+    			return ret;
+    		}
+    	configPRINTF(("Change baudrate = %d\r\n", ret));
+    	bg96_serial_close();
+		reset_button();
+		g_bg96_cgatt_flg = 0;
+		ret = bg96_serial_open(9600);
+			while (1)
+			{
+				if (-1 == check_timeout(1, 0))
+				{
+					ret = 0;
+					break;
+				}
+			}
+
+		ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
+		if(ret != 0)
+			{
+				return ret;
+			}
+    }
+
+
     // APN set
     memset(buff, 0x00, sizeof(buff));
 	sprintf(buff, "AT+QICSGP=1,1,\"%s\",\"%s\",\"%s\",1\r", CELLULAR_APN, CELLULAR_APN_USERID, CELLULAR_APN_PASSWORD);
@@ -169,32 +221,25 @@ int32_t bg96_wifi_init(void)
     cgatt_cnt = 0;
     while(1)
     {
-    	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "AT+CGATT?\r", 19, 400, BG96_RETURN_OK);
-        if (ret == 0)
-        {
-            recvlen = strlen((const char *)recvbuff);
-            if (recvlen > 13)
-            {
-                if (0 == memcmp((const char *)recvbuff, "\r\n+CGATT: 1\r\n", 13))
-                {
-                    break;
-                }
-                else
-                {
-                    cgatt_cnt++;
-                }
-            }
-            else
-            {
-                cgatt_cnt++;
-            }
-            
-        }
-        else
-        {
-            cgatt_cnt++;
-        }
 
+    	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "AT+CGATT?\r", 19, 400, BG96_RETURN_OK);
+    	configPRINTF(("Send AT+CGATT = %d, count =%d\r\n", ret,cgatt_cnt));
+		recvlen = strlen((const char *)recvbuff);
+		if (recvlen > 13)
+		{
+			if (0 == memcmp((const char *)recvbuff, "\r\n+CGATT: 1\r\n", 13))
+			{
+				break;
+			}
+			else
+			{
+				cgatt_cnt++;
+			}
+		}
+		else
+		{
+			cgatt_cnt++;
+		}
         // timeout
         if (cgatt_cnt > BG96_RETRY_GATT)
         {
@@ -206,7 +251,7 @@ int32_t bg96_wifi_init(void)
     }
     if(ret != 0)
     {
-        bg96_power_down(1);
+        bg96_power_down(0);
 
         return ret;
     }
@@ -793,13 +838,18 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 		{
 			bytetimeout_init(serial_ch_id, response_type);
 			sci_status_rx = gsp_sci5_dev->GetStatus();
-			while (sci_status_rx.rx_busy == 1 )
+			while (sci_status_rx.rx_busy == 1)
 			{
-			    sci_status_rx = gsp_sci5_dev->GetStatus();
-			    if(-1 == check_bytetimeout(serial_ch_id, recvcnt))
-			    {
-			    	return -1;
-			    }
+				if(-1 == check_timeout(serial_ch_id, 0))
+					{
+						flag_ = false;
+					}
+				if(-1 == check_bytetimeout(serial_ch_id, recvcnt))
+				{
+					ret = -1;
+					flag_ = true;
+					break;
+				}
 		    }
 			recvcnt = (uint32_t )response_type;
 		}
@@ -821,17 +871,19 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 	/* Response data check */
 	ret = -1;
 	recvbuff[recvcnt] = '\0';
-	if(recvcnt >= strlen((const char *)bg96_result_code[expect_code][g_bg96_return_mode]))
+	if(recvcnt >= strlen((const char *)bg96_result_code[expect_code][0]))
 	{
-		if(0 == strncmp((const char *)&recvbuff[recvcnt - strlen((const char *)bg96_result_code[expect_code][g_bg96_return_mode]) ],
-				(const char *)bg96_result_code[expect_code][g_bg96_return_mode],
-				strlen((const char *)bg96_result_code[expect_code][g_bg96_return_mode])))
+		if(0 == strncmp((const char *)&recvbuff[recvcnt - strlen((const char *)bg96_result_code[expect_code][0]) ],
+				(const char *)bg96_result_code[expect_code][0],
+				strlen((const char *)bg96_result_code[expect_code][0])))
 		{
 			ret = 0;
 		}
 	}
+
 	return ret;
 }
+
 
 int32_t bg96_serial_send_with_recvtask(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code,  uint8_t command, uint8_t socket_no, uint32_t *length, uint8_t delay_flag)
 {
@@ -1040,6 +1092,9 @@ static int32_t check_bytetimeout(uint8_t socket_no, int32_t rcvcount)
 			}
 		}
 	}
+	if (flag_ == false){
+		return -1;
+	}
 	/* Not timeout  */
 	return 0;
 }
@@ -1074,7 +1129,7 @@ static int32_t bg96_serial_open(uint32_t baudrate)
                                                 ARM_USART_PARITY_NONE       |    /* No Parity */
                                                 ARM_USART_STOP_BITS_1       |    /* 1 Stop bit */
                                                 ARM_USART_FLOW_CONTROL_NONE)     /* No Flow Control */
-                                               ,UART_BUS_SPEED))
+                                               ,baudrate))
     {
         return -1;
     }
@@ -1089,6 +1144,7 @@ static int32_t bg96_serial_open(uint32_t baudrate)
 
 int32_t bg96_serial_close(void)
 {
+
     if (ARM_DRIVER_OK != gsp_sci5_dev->PowerControl(ARM_POWER_OFF))
     {
         while(1)
@@ -1096,6 +1152,7 @@ int32_t bg96_serial_close(void)
             ;   /* Intentionally empty braces. */
         }
     }
+    gsp_sci5_dev->Uninitialize();
     return 0;
 }
 
@@ -1455,3 +1512,125 @@ wifi_err_t R_CELLULAR_BG96_SocketShutdown (int32_t socket_no)
 	return api_ret;
 }
 
+void reset_button(void)
+{
+	bg96_SysCondition_pwrkey_L();
+	timeout_only_wait(1, 8000);
+	bg96_SysCondition_pwrkey_H();
+	timeout_init(1, 15000);         // timeout 10ms
+}
+static int32_t bg96_serial_send_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code)
+{
+	volatile int32_t timeout;
+		volatile uint32_t ercd;
+		volatile ARM_USART_STATUS sci_status_tx;
+		volatile ARM_USART_STATUS sci_status_rx;
+		static volatile uint32_t recvcnt = 0;
+		volatile int32_t ret = 0;
+		memset(recvbuff,0,sizeof(recvbuff));
+		timeout_init(serial_ch_id, timeout_ms);
+		if(ptextstring != NULL)
+		{
+			timeout = 0;
+			recvcnt = 0;
+			g_bg96_uart_teiflag[serial_ch_id] = 0;
+			ercd = gsp_sci5_dev->Send(ptextstring, strlen((const char *)ptextstring));
+			if(ARM_DRIVER_OK != ercd)
+			{
+				return -1;
+			}
+
+	        sci_status_tx = gsp_sci5_dev->GetStatus();
+
+	        while (sci_status_tx.tx_busy == 1 )
+	        {
+	            sci_status_tx = gsp_sci5_dev->GetStatus();
+
+	            if(-1 == check_timeout(serial_ch_id, recvcnt))
+	            {
+	            	return -1;
+	            }
+	        }
+			while(1)
+			{
+				if(0 != g_bg96_uart_teiflag[serial_ch_id])
+				{
+					break;
+				}
+				if(-1 == check_timeout(serial_ch_id, recvcnt))
+				{
+					timeout = 1;
+					break;
+				}
+			}
+			if(timeout == 1)
+			{
+				return -1;
+			}
+		}
+		while(1)
+			{
+				ercd = gsp_sci5_dev->Receive(&recvbuff[recvcnt], response_type);
+				if(ARM_DRIVER_OK == ercd)
+				{
+					bytetimeout_init(serial_ch_id, response_type);
+					sci_status_rx = gsp_sci5_dev->GetStatus();
+					while (sci_status_rx.rx_busy == 1)
+					{
+						sci_status_rx = gsp_sci5_dev->GetStatus();
+						if(-1 == check_timeout(serial_ch_id, 0))
+							{
+								flag_ = false;
+							}
+						if(-1 == check_bytetimeout(serial_ch_id, recvcnt))
+						{
+							ret = -1;
+							flag_ = true;
+							break;
+		//			    	return -1;break
+						}
+					}
+					recvcnt = (uint32_t )response_type;
+				}
+				else
+				{
+					return -1;
+				}
+
+				if (recvcnt >= (uint32_t )response_type)
+				{
+					break;
+				}
+			}
+			if(timeout == 1)
+			{
+				return -1;
+			}
+		if (recvcnt > ret){
+			return recvcnt;
+		}
+		return ret;
+}
+
+static int32_t bg96_serial_recv_test( int32_t recvcnt,bg96_return_code_t expect_code)
+{
+	if (recvcnt < 1)
+	{
+		return recvcnt;
+	}
+	/* Response data check */
+	int32_t ret = -1;
+	recvbuff[recvcnt] = '\0';
+	if(recvcnt >= strlen((const char *)bg96_result_code[expect_code][0]))
+	{
+		if(0 == strncmp((const char *)&recvbuff[recvcnt - strlen((const char *)bg96_result_code[expect_code][0]) ],
+				(const char *)bg96_result_code[expect_code][0],
+				strlen((const char *)bg96_result_code[expect_code][0])))
+		{
+			ret = 0;
+		}
+	}
+
+	return ret;
+
+}

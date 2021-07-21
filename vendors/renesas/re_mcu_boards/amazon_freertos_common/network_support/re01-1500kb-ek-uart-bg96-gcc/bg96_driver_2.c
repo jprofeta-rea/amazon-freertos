@@ -59,7 +59,8 @@ static void bg96_recv_task( void * pvParameters );
 TaskHandle_t g_bg96_recv_task_handle;
 extern ARM_DRIVER_USART Driver_USART5;
 static ARM_DRIVER_USART *gsp_sci5_dev = &Driver_USART5;
-uint8_t data_deb[6144];
+#define buffer_length  1024*6
+uint8_t data_deb[buffer_length];
 void bg96_usart_abort(uint32_t *new_cnt, uint32_t *pre_cnt);
 
 
@@ -120,7 +121,7 @@ static void bg96_recv_task( void * pvParameters )
     	sci_status_rx = gsp_sci5_dev->GetStatus();
     	if ( sci_status_rx.rx_busy == 0 )
     	{
-    		ercd = gsp_sci5_dev->Receive(&data_deb[0], 6144);
+    		ercd = gsp_sci5_dev->Receive(&data_deb[0], buffer_length);
     	    if(ARM_DRIVER_ERROR_BUSY == ercd)
     	    {
     	    	vTaskDelay( 1 );
