@@ -13,7 +13,7 @@
 #include "R_Driver_USART.h"
 
 #define SCI_TX_BUSIZ_DEFAULT                    (1460)
-#define UART_BUS_CHANGE_SPEED          (921600)              /* UART bus speed(bps) */
+#define UART_BUS_CHANGE_SPEED          (460800)              /* UART bus speed(bps) */
 
 const uint8_t bg96_return_text_ok[]          = BG96_RETURN_TEXT_OK;
 const uint8_t bg96_return_text_error[]       = BG96_RETURN_TEXT_ERROR;
@@ -819,18 +819,19 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 /* Setup  */
 static int32_t SetupCommunication(int32_t Change_Baudrate)
 {
-	int32_t tries, ret;
+	int32_t tries, ret,index;
 
 	uint32_t k,state;
 	uint32_t baudrate;
 	/* */
-	const uint32_t br[] = {921600,9600,115200,110,300,600,1200,2400,4800,9600,14400,19200,38400,57600,230400,460800};
+	const uint32_t BR[] = {460800,921600,9600,115200,110,300,600,1200,2400,4800,9600,14400,19200,38400,57600,230400};
 	k     =  0;
 	state =  0;
 	tries = 0;
-	baudrate = br[k];
 
-	while(k <= (sizeof(br)/sizeof(br[0])))
+	baudrate = BR[k];
+
+	while(k <= (sizeof(BR)/sizeof(BR[0])))
 	{
 	  switch (state)
 	  {
@@ -838,7 +839,9 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 	  case 1:
 	  case 2:
 	  {
+		  /*Reset BG96 Dragino module */
 		  reset_button();
+		  /*Initialize uart RE01 1.5MB */
 		  ret = bg96_serial_open(baudrate);
 		  if(ret != 0)
 		  	{
@@ -852,6 +855,7 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 				  break;
 			  }
 		  }
+		  /*Test the sending and receving with BG96 Dragino */
 		  ret = bg96_serial_send_recv_test(BG96_UART_COMMAND_PORT, "ATE0\r", 6, 400, BG96_RETURN_OK);
 		 	break;
 	  }
@@ -860,28 +864,45 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 	          break;
 
 	  }
+	  /*Check result of the testing for the sending and receving with BG96 Dragino */
 	  if (ret == 0)
 		  {
 			  vTaskDelay(500);
+			  /*Check response from BG96 Dragino */
 			  ret = bg96_serial_response_test(6, BG96_RETURN_OK);
-			  if (ret == 0)//response OK
+			  /*Response from BG96 Dragino is OK. That means the connection between RE01 1.5MB and Draguino is successful */
+			  if (ret == 0)
 			  {
-
-				  if(Change_Baudrate != br[k])
+				  /*Check recent baudrate and changing baudrate */
+				  if(Change_Baudrate != BR[k])
 				  {
+					  /*The baudrate is not same -> send AT cmd to change baudrate */
 					  memset(buff, 0x00, sizeof(buff));
 					  sprintf((char *)buff,"AT+IPR=%d;&W\r",Change_Baudrate);
+					  /*Send AT cmd to change baudrate */
 					  ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, buff, 6, 400, BG96_RETURN_OK);
+					  /* Return state 2 */
 					  state = 2;
-					  k = 0;
+					  /*Check the sending AT cmd to change baudrate */
 					  if (ret == 0)
 					  {
-
+						  /*Verify changed baudrate to re-initialize uart RE01 1.5MB*/
 						  baudrate = Change_Baudrate;
+						  for(index = 0; index < (sizeof(BR)/sizeof(BR[0]));index++ )
+						  {
+							  if (BR[index]==Change_Baudrate)
+							  {
+								  k = index;
+								  break;
+							  }
+						  }
+
 					  }
 					  else
+					  /*Check the sending AT cmd to change baudrate is failed. Test next baudrate in array BR[]*/
 					  {
-						  baudrate = br[k];
+						  k++;
+						  baudrate = BR[k];
 
 					  }
 					  bg96_serial_close();
@@ -890,13 +911,16 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 				  }
 				  else
 				  {
+					  /*Recent baudrate and changing baudrate are same, exit loop*/
 					  return ret;
 				  }
 
 			  }
 			  else
 			  {
+				  /*Response from BG96 Dragino is failed. Try 3 times to get send and get respone*/
 				  tries ++;
+				  state = 2;
 				  if (tries > 3)
 				  {
 					  ret = -1;
@@ -906,10 +930,10 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 		  }
 		  else
 		  {
-			  /* Wait until response arrives */
+			  /* Initialize k-th baudrate in array BR  */
 			  state = 2;
 			  k++;
-			  baudrate = br[k];
+			  baudrate = BR[k];
 			  bg96_serial_close();
 		  }
 	  }
