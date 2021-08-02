@@ -353,11 +353,11 @@ void prvWifiConnect( void )
 
         if( xWifiStatus == eWiFiSuccess )
         {
-            configPRINTF( ( "Wi-Fi module initialized. Connecting to AP...\r\n" ) );
+            configPRINTF( ( "Cellular module initialized. Connecting to AP...\r\n" ) );
         }
         else
         {
-            configPRINTF( ( "Wi-Fi module failed to initialize.\r\n" ) );
+            configPRINTF( ( "Cellular module failed to initialize.\r\n" ) );
 
             /* Delay to allow the lower priority logging task to print the above status.
              * The while loop below will block the above printing. */
@@ -380,7 +380,7 @@ void prvWifiConnect( void )
 
         if( xWifiStatus == eWiFiSuccess )
         {
-            configPRINTF( ( "Wi-Fi Connected to AP. Creating tasks which use network...\r\n" ) );
+            configPRINTF( ( "Cellular Connected to AP. Creating tasks which use network...\r\n" ) );
 
             xWifiStatus = WIFI_GetIP( ucTempIp );
             if ( eWiFiSuccess == xWifiStatus )
