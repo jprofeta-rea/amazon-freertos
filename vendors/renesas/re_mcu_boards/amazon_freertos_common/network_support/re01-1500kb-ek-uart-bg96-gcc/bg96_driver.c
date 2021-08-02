@@ -13,7 +13,7 @@
 #include "R_Driver_USART.h"
 
 #define SCI_TX_BUSIZ_DEFAULT                    (1460)
-#define UART_BUS_CHANGE_SPEED          (460800)              /* UART bus speed(bps) */
+#define UART_BUS_CHANGE_SPEED          (115200)              /* UART bus speed(bps) */
 
 const uint8_t bg96_return_text_ok[]          = BG96_RETURN_TEXT_OK;
 const uint8_t bg96_return_text_error[]       = BG96_RETURN_TEXT_ERROR;
@@ -824,7 +824,7 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 	uint32_t k,state;
 	uint32_t baudrate;
 	/* */
-	const uint32_t BR[] = {460800,921600,9600,115200,110,300,600,1200,2400,4800,9600,14400,19200,38400,57600,230400};
+	const uint32_t BR[] = {115200,460800,921600,9600,110,300,600,1200,2400,4800,9600,14400,19200,38400,57600,230400};
 	k     =  0;
 	state =  0;
 	tries = 0;
