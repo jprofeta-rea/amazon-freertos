@@ -278,10 +278,10 @@ uint32_t ulRand(void);
 
 /* Each TCP socket has a circular buffers for Rx and Tx, which have a fixed
  * maximum size.  Define the size of Rx buffer for TCP sockets. */
-#define ipconfigTCP_RX_BUFFER_LENGTH                   (3000)
+#define ipconfigTCP_RX_BUFFER_LENGTH                   (1480*10)
 
 /* Define the size of Tx buffer for TCP sockets. */
-#define ipconfigTCP_TX_BUFFER_LENGTH                   (3000)
+#define ipconfigTCP_TX_BUFFER_LENGTH                   (1480*10)
 /* When using call-back handlers, the driver may check if the handler points to
  * real program memory (RAM or flash) or just has a random non-zero value. */
 #define ipconfigIS_VALID_PROG_ADDRESS( x )    ( ( x ) != NULL )
