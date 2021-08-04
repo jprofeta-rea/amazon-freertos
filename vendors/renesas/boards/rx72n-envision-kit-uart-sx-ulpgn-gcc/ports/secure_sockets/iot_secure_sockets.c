@@ -330,7 +330,6 @@ int32_t SOCKETS_Recv( Socket_t xSocket,
             lStatus = prvNetworkRecv( pxContext, pvBuffer, xBufferLength );
         }
     }
-    vTaskDelay( 1 );	 
     return lStatus;
 }
 /*-----------------------------------------------------------*/
@@ -374,7 +373,6 @@ int32_t SOCKETS_Send( Socket_t xSocket,
             lStatus = prvNetworkSend( pxContext, pvBuffer, xDataLength );
         }
     }
-	vTaskDelay( 1 );	 
     return lStatus;
 }
 /*-----------------------------------------------------------*/
