@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_serial.c
-* Version      : CodeGenerator for RL78/G14 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G14 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F104ML
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 2020/09/08
+* Creation Date: 2021/07/19
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -44,175 +44,179 @@ Pragma directive
 /***********************************************************************************************************************
 Global variables and functions
 ***********************************************************************************************************************/
-volatile uint8_t   g_iic20_master_status_flag; /* iic20 start flag for send address check by master mode */
-volatile uint8_t * gp_iic20_tx_address;        /* iic20 send data pointer by master mode */
-volatile uint16_t  g_iic20_tx_count;           /* iic20 send data size by master mode */
-volatile uint8_t * gp_iic20_rx_address;        /* iic20 receive data pointer by master mode */
-volatile uint16_t  g_iic20_rx_count;           /* iic20 receive data size by master mode */
-volatile uint16_t  g_iic20_rx_length;          /* iic20 receive data length by master mode */
+volatile uint8_t   g_iica0_master_status_flag; /* iica0 master flag */
+volatile uint8_t   g_iica0_slave_status_flag;  /* iica0 slave flag */
+volatile uint8_t * gp_iica0_rx_address;        /* iica0 receive buffer address */
+volatile uint16_t  g_iica0_rx_len;             /* iica0 receive data length */
+volatile uint16_t  g_iica0_rx_cnt;             /* iica0 receive data count */
+volatile uint8_t * gp_iica0_tx_address;        /* iica0 send buffer address */
+volatile uint16_t  g_iica0_tx_cnt;             /* iica0 send data count */
 /* Start user code for global. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 
 /***********************************************************************************************************************
-* Function Name: R_SAU1_Create_sensor
-* Description  : This function initializes the SAU1 module.
+* Function Name: R_IICA0_Create
+* Description  : This function initializes the IICA0 module.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_SAU1_Create_sensor(void)
+void R_IICA0_Create(void)
 {
-    SAU1EN = 1U;    /* supply SAU1 clock */
-    NOP();
-    NOP();
-    NOP();
-    NOP();
-//    SPS1 = _0001_SAU_CK00_FCLK_1 | _0000_SAU_CK01_FCLK_0;
-    SPS1 = _0001_SAU_CK00_FCLK_1 | _0010_SAU_CK01_FCLK_1;
-    R_IIC20_Create();
-}
-
-/***********************************************************************************************************************
-* Function Name: R_IIC20_Create
-* Description  : This function initializes the IIC20 module.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_IIC20_Create(void)
-{
-    ST1 |= _0001_SAU_CH0_STOP_TRG_ON;    /* disable IIC20 */
-    IICMK20 = 1U;    /* disable INTIIC20 interrupt */
-    IICIF20 = 0U;    /* clear INTIIC20 interrupt flag */
-    /* Set INTIIC20 low priority */
-    IICPR120 = 1U;
-    IICPR020 = 1U;
-    SIR10 = _0002_SAU_SIRMN_PECTMN | _0001_SAU_SIRMN_OVCTMN;    /* clear error flag */
-    SMR10 = _0020_SAU_SMRMN_INITIALVALUE | _0000_SAU_CLOCK_SELECT_CK00 | _0000_SAU_CLOCK_MODE_CKS |
-            _0000_SAU_TRIGGER_SOFTWARE | _0000_SAU_EDGE_FALL | _0004_SAU_MODE_IIC | _0000_SAU_TRANSFER_END;
-    SCR10 = _0000_SAU_TIMING_1 | _0000_SAU_INTSRE_MASK | _0000_SAU_PARITY_NONE | _0000_SAU_MSB | _0010_SAU_STOP_1 |
-            _0007_SAU_LENGTH_8;
-    SDR10 = _9E00_IIC20_DIVISOR;
-    SO1 |= _0100_SAU_CH0_CLOCK_OUTPUT_1 | _0001_SAU_CH0_DATA_OUTPUT_1;
-    /* Set SCL20, SDA20 pin */
-    P1 |= 0x30U;
+    IICA0EN = 1U; /* supply IICA0 clock */
+    IICE0 = 0U; /* disable IICA0 operation */
+    IICAMK0 = 1U; /* disable INTIICA0 interrupt */
+    IICAIF0 = 0U; /* clear INTIICA0 interrupt flag */
+    /* Set INTIICA0 low priority */
+    IICAPR10 = 1U;
+    IICAPR00 = 1U; 
+    /* Set SCLA0, SDAA0 pin */
+    POM1 |= 0x30U;
+    P1 &= 0xCFU;
+    PM1 |= 0x30U;
+    SMC0 = 0U;
+    IICWL0 = _4C_IICA0_IICWL_VALUE;
+    IICWH0 = _55_IICA0_IICWH_VALUE;
+    IICCTL01 |= _01_IICA_fCLK_HALF;
+    SVA0 = _10_IICA0_MASTERADDRESS;
+    STCEN0 = 1U;
+    IICRSV0 = 1U;
+    SPIE0 = 0U;
+    WTIM0 = 1U;
+    ACKE0 = 1U;
+    IICAMK0 = 0U;
+    IICE0 = 1U;
+    LREL0 = 1U;
+    /* Set SCLA0, SDAA0 pin */
     PM1 &= 0xCFU;
 }
 
 /***********************************************************************************************************************
-* Function Name: R_IIC20_Master_Send
-* Description  : This function starts transferring data for IIC20 in master mode.
+* Function Name: R_IICA0_Stop
+* Description  : This function stops IICA0 module operation.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void R_IICA0_Stop(void)
+{
+    IICE0 = 0U;    /* disable IICA0 operation */
+}
+
+/***********************************************************************************************************************
+* Function Name: R_IICA0_StopCondition
+* Description  : This function sets IICA0 stop condition flag.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void R_IICA0_StopCondition(void)
+{
+    SPT0 = 1U;     /* set stop condition flag */
+}
+
+/***********************************************************************************************************************
+* Function Name: R_IICA0_Master_Send
+* Description  : This function starts to send data as master mode.
 * Arguments    : adr -
-*                    set address for select slave
+*                    transfer address
 *                tx_buf -
 *                    transfer buffer pointer
 *                tx_num -
 *                    buffer size
-* Return Value : None
+*                wait -
+*                    wait for start condition
+* Return Value : status -
+*                    MD_OK or MD_ERROR1 or MD_ERROR2
 ***********************************************************************************************************************/
-void R_IIC20_Master_Send(uint8_t adr, uint8_t * const tx_buf, uint16_t tx_num)
+MD_STATUS R_IICA0_Master_Send(uint8_t adr, uint8_t * const tx_buf, uint16_t tx_num, uint8_t wait)
 {
-    g_iic20_master_status_flag = _00_SAU_IIC_MASTER_FLAG_CLEAR;    /* clear IIC20 master status flag */
-    adr &= 0xFEU;    /* send mode */
-    g_iic20_master_status_flag = _01_SAU_IIC_SEND_FLAG;            /* set master status flag */
-    SCR10 &= ~_C000_SAU_RECEPTION_TRANSMISSION;
-    SCR10 |= _8000_SAU_TRANSMISSION;
-    /* Set paramater */
-    g_iic20_tx_count = tx_num;
-    gp_iic20_tx_address = tx_buf;
-    /* Start condition */
-    R_IIC20_StartCondition();
-    IICIF20 = 0U;   /* clear INTIIC20 interrupt flag */
-    IICMK20 = 0U;   /* enable INTIIC20 */
-    SIO20 = adr;
+    MD_STATUS status = MD_OK;
+
+    IICAMK0 = 1U;  /* disable INTIICA0 interrupt */
+    
+    if ((1U == IICBSY0) && (0U == MSTS0))
+    {
+        /* Check bus busy */
+        IICAMK0 = 0U;  /* enable INTIICA0 interrupt */
+        status = MD_ERROR1;
+    }
+    else
+    {
+        STT0 = 1U; /* send IICA0 start condition */
+        IICAMK0 = 0U;  /* enable INTIICA0 interrupt */
+        
+        /* Wait */
+        while (wait--)
+        {
+            ;
+        }
+        
+        if (0U == STD0)
+        {
+            status = MD_ERROR2;
+        }
+		
+        /* Set parameter */
+        g_iica0_tx_cnt = tx_num;
+        gp_iica0_tx_address = tx_buf;
+        g_iica0_master_status_flag = _00_IICA_MASTER_FLAG_CLEAR;
+        adr &= (uint8_t)~0x01U; /* set send mode */
+        IICA0 = adr; /* send address */
+    }
+
+    return (status);
 }
 
 /***********************************************************************************************************************
-* Function Name: R_IIC20_Master_Receive
-* Description  : This function starts receiving data for IIC20 in master mode.
+* Function Name: R_IICA0_Master_Receive
+* Description  : This function starts to receive IICA0 data as master mode.
 * Arguments    : adr -
-*                    set address for select slave
+*                    receive address
 *                rx_buf -
 *                    receive buffer pointer
 *                rx_num -
 *                    buffer size
-* Return Value : None
+*                wait -
+*                    wait for start condition
+* Return Value : status -
+*                    MD_OK or MD_ERROR1 or MD_ERROR2
 ***********************************************************************************************************************/
-void R_IIC20_Master_Receive(uint8_t adr, uint8_t * const rx_buf, uint16_t rx_num)
+MD_STATUS R_IICA0_Master_Receive(uint8_t adr, uint8_t * const rx_buf, uint16_t rx_num, uint8_t wait)
 {
-    g_iic20_master_status_flag = _00_SAU_IIC_MASTER_FLAG_CLEAR;    /* clear master status flag */
-    adr |= 0x01U;    /* receive mode */
-    g_iic20_master_status_flag = _02_SAU_IIC_RECEIVE_FLAG;         /* set master status flag */
-    SCR10 &= ~_C000_SAU_RECEPTION_TRANSMISSION;
-    SCR10 |= _8000_SAU_TRANSMISSION;
-    /* Set parameter */
-    g_iic20_rx_length = rx_num;
-    g_iic20_rx_count = 0U;
-    gp_iic20_rx_address = rx_buf;
-    /* Start condition */
-    R_IIC20_StartCondition();
-    IICIF20 = 0U;   /* clear INTIIC20 interrupt flag */
-    IICMK20 = 0U;   /* enable INTIIC20 */
-    SIO20 = adr;
-}
+    MD_STATUS status = MD_OK;
 
-/***********************************************************************************************************************
-* Function Name: R_IIC20_Stop
-* Description  : This function stops the IIC20 operation.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_IIC20_Stop(void)
-{
-    /* Stop transfer */
-    IICMK20 = 1U;    /* disable INTIIC20 */
-    ST1 |= _0001_SAU_CH0_STOP_TRG_ON;    /* disable IIC20 */
-    IICIF20 = 0U;    /* clear INTIIC20 interrupt flag */
-}
-
-/***********************************************************************************************************************
-* Function Name: R_IIC20_StartCondition
-* Description  : This function starts IIC20 condition.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_IIC20_StartCondition(void)
-{
-    volatile uint8_t w_count;
+    IICAMK0 = 1U;  /* disable INTIIA0 interrupt */
     
-    SO1 &= ~_0001_SAU_CH0_DATA_OUTPUT_1;    /* clear IIC20 SDA */
-    
-    /* Change the waiting time according to the system */
-    for (w_count = 0U; w_count <= IIC20_WAITTIME; w_count++)
+    if ((1U == IICBSY0) && (0U == MSTS0))
     {
-        NOP();
+        /* Check bus busy */
+        IICAMK0 = 0U;  /* enable INTIIA0 interrupt */
+        status = MD_ERROR1;
     }
-    
-    SO1 &= ~_0100_SAU_CH0_CLOCK_OUTPUT_1;    /* clear IIC20 SCL */
-    SOE1 |= _0001_SAU_CH0_OUTPUT_ENABLE;            /* enable IIC20 output */
-    SS1 |= _0001_SAU_CH0_START_TRG_ON;              /* enable IIC20 */
-}
-
-/***********************************************************************************************************************
-* Function Name: R_IIC20_StopCondition
-* Description  : This function stops IIC20 condition.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_IIC20_StopCondition(void)
-{
-    volatile uint8_t w_count;
-    
-    ST1 |= _0001_SAU_CH0_STOP_TRG_ON;           /* disable IIC20 */
-    SOE1 &= ~_0001_SAU_CH0_OUTPUT_ENABLE;       /* disable IIC20 output */
-    SO1 &= ~_0001_SAU_CH0_DATA_OUTPUT_1;        /* clear IIC20 SDA */
-    SO1 |= _0100_SAU_CH0_CLOCK_OUTPUT_1; /* set IIC20 SCL */
-    
-    /* Change the waiting time according to the system */
-    for (w_count = 0U; w_count <= IIC20_WAITTIME; w_count++)
+    else
     {
-        NOP();
+        STT0 = 1U; /* set IICA0 start condition */
+        IICAMK0 = 0U;  /* enable INTIIA0 interrupt */
+        
+        /* Wait */
+        while (wait--)
+        {
+            ;
+        }
+        
+        if (0U == STD0)
+        {
+            status = MD_ERROR2;
+        }
+		
+        /* Set parameter */
+        g_iica0_rx_len = rx_num;
+        g_iica0_rx_cnt = 0U;
+        gp_iica0_rx_address = rx_buf;
+        g_iica0_master_status_flag  = _00_IICA_MASTER_FLAG_CLEAR;
+        adr |= 0x01U; /* set receive mode */
+        IICA0 = adr; /* receive address */
     }
-    
-    SO1 |= _0001_SAU_CH0_DATA_OUTPUT_1;         /* set IIC20 SDA */
+
+    return (status);
 }
 
 /* Start user code for adding. Do not edit comment generated here */

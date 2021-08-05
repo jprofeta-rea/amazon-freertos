@@ -14,20 +14,20 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_serial.h
-* Version      : CodeGenerator for RL78/G14 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G14 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F104ML
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 2020/09/08
+* Creation Date: 2021/07/19
 ***********************************************************************************************************************/
 
-#ifndef SERIAL_H
-#define SERIAL_H
+#ifndef SERIAL_SENSOR_H
+#define SERIAL_SENSOR_H
 
 /***********************************************************************************************************************
 Macro definitions (Register bit)
@@ -373,8 +373,9 @@ Macro definitions (Register bit)
 /***********************************************************************************************************************
 Macro definitions
 ***********************************************************************************************************************/
-#define _9E00_IIC20_DIVISOR              (0x9E00U)
-#define IIC20_WAITTIME                   (160U) /* change the waiting time according to the system */
+#define _10_IICA0_MASTERADDRESS          (0x10U)
+#define _55_IICA0_IICWH_VALUE            (0x55U)
+#define _4C_IICA0_IICWL_VALUE            (0x4CU)
 
 /***********************************************************************************************************************
 Typedef definitions
@@ -383,16 +384,16 @@ Typedef definitions
 /***********************************************************************************************************************
 Global functions
 ***********************************************************************************************************************/
-void R_SAU1_Create_sensor(void);
-void R_IIC20_Create(void);
-void R_IIC20_Master_Send(uint8_t adr, uint8_t * const tx_buf, uint16_t tx_num);
-void R_IIC20_Master_Receive(uint8_t adr, uint8_t * const rx_buf, uint16_t rx_num);
-void R_IIC20_Stop(void);
-void R_IIC20_StartCondition(void);
-void R_IIC20_StopCondition(void);
-static void r_iic20_callback_master_error(MD_STATUS flag);
-static void r_iic20_callback_master_receiveend(void);
-static void r_iic20_callback_master_sendend(void);
+void R_IICA0_Create(void);
+MD_STATUS R_IICA0_Master_Send(uint8_t adr, uint8_t * const tx_buf, uint16_t tx_num, uint8_t wait);
+MD_STATUS R_IICA0_Master_Receive(uint8_t adr, uint8_t * const rx_buf, uint16_t rx_num, uint8_t wait);
+void R_IICA0_Stop(void);
+void R_IICA0_StopCondition(void);
+static void r_iica0_callback_master_sendend(void);
+static void r_iica0_callback_master_receiveend(void);
+static void r_iica0_callback_master_error(MD_STATUS flag);
+static void iica0_master_handler(void);
+static void iica0_slave_handler(void);
 
 /* Start user code for function. Do not edit comment generated here */
 #define TRUE						(1)

@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_systeminit.c
-* Version      : CodeGenerator for RL78/G14 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G14 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F104ML
 * Tool-Chain   : CCRL
 * Description  : This file implements system initializing function.
-* Creation Date: 2020/05/18
+* Creation Date: 2021/07/19
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -34,6 +34,7 @@ Includes
 #include "r_cg_port.h"
 #include "r_cg_intc.h"
 #include "r_cg_serial.h"
+#include "r_cg_serial_sensor.h"
 /* Start user code for include. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
@@ -58,7 +59,7 @@ Global variables and functions
 ***********************************************************************************************************************/
 void R_Systeminit(void)
 {
-    PIOR0 = 0x00U;
+    PIOR0 = 0x04U;
     PIOR1 = 0x00U;
     R_CGC_Get_ResetSource();
     R_CGC_Create();
@@ -66,6 +67,7 @@ void R_Systeminit(void)
     R_SAU0_Create();
     R_SAU1_Create();
     R_INTC_Create();
+    R_IICA0_Create();
     IAWCTL = 0x00U;
 }
 

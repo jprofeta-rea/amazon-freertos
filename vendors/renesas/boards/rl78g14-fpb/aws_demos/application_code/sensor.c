@@ -34,7 +34,7 @@ Includes
 /***********************************************************************************************************************
 Global variables and functions
 ***********************************************************************************************************************/
-static MD_STATUS iic20_status;
+static MD_STATUS iica0_status;
 
 /* Sensor target variables */
 uint8_t adc_result[32] = { 0 };
@@ -67,10 +67,10 @@ void ZMOD4410_Reset(void)
 *******************************************************************************************************************/
 void sensors_init(sensors_t *sensors_data)
 {
-	iic20_status = MD_ERROR;
+	iica0_status = MD_ERROR;
 
-	iic20_status = sensors_temp_hum_init();
-	sensors_data->HS3001_status = iic20_status;
+	iica0_status = sensors_temp_hum_init();
+	sensors_data->HS3001_status = iica0_status;
 
 	R_SoftwareDelay(100, DELAY_UNITS_MILLISECONDS);
 
@@ -84,11 +84,11 @@ void sensors_init(sensors_t *sensors_data)
 *******************************************************************************************************************/
 static MD_STATUS sensors_temp_hum_init(void)
 {
-	iic20_status = MD_OK;
+	iica0_status = MD_OK;
 
-	iic20_status = write_device(HS3001_SLAVE_ADDRESS, NULL, 0, 5);  /* send address for data request */
+	iica0_status = write_device(HS3001_SLAVE_ADDRESS, NULL, 0, 5);  /* send address for data request */
 
-    return (iic20_status);
+    return (iica0_status);
 
 }
 
@@ -107,11 +107,11 @@ void sensors_temp_hum_read(sensors_t * sensor_data)
 
     if(MD_OK == sensor_data->HS3001_status)
   	{
-    	iic20_status = MD_OK;
-    	iic20_status = write_device(HS3001_SLAVE_ADDRESS, NULL, 0, 5);  /* send address for data request */
+    	iica0_status = MD_OK;
+    	iica0_status = write_device(HS3001_SLAVE_ADDRESS, NULL, 0, 5);  /* send address for data request */
 		//R_SoftwareDelay(50, DELAY_UNITS_MILLISECONDS);
 		R_SoftwareDelay(100, DELAY_UNITS_MILLISECONDS);//modified by xj 20200619 different between GCC and CC-RL
-		iic20_status = read_device(HS3001_SLAVE_ADDRESS,(uint8_t*)&data[0],sizeof(data),5);
+		iica0_status = read_device(HS3001_SLAVE_ADDRESS,(uint8_t*)&data[0],sizeof(data),5);
 
 		/* calculate temperature data(C) */
 		tem_data = (unsigned int)data[2];

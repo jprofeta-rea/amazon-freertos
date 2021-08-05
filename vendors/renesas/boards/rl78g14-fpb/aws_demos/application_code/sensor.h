@@ -88,7 +88,7 @@ typedef struct sensors
 Global functions
 ***********************************************************************************************************************/
 void sensors_init(sensors_t *sensors_data);
-void iic20_callback(MD_STATUS flag);
+void iica0_callback(MD_STATUS flag);
 void sensors_ZMOD4450_4410_read(sensors_t * sensor_data);
 void sensors_temp_hum_read(sensors_t * sensor_data);
 void ZMOD4410_Reset(void);

@@ -457,7 +457,7 @@ static int _initializeDemo( void )
     /* Initialize Sensor */
 //    init_sensors();
 
-    R_SAU1_Create_sensor();
+    R_IICA0_Create();
     EI();
     ZMOD4410_Reset();
 	R_SoftwareDelay(2500, DELAY_UNITS_MILLISECONDS);
@@ -752,15 +752,14 @@ static int _modifySubscriptions( IotMqttConnection_t mqttConnection,
 static uint32_t prvGenerateSensorJSON( char * Buffer )
 {
     char * Buff = Buffer;
-    sensors_t data;
 
-    sensors_temp_hum_read(&data);
+    sensors_temp_hum_read(&g_sensors_data);
 
     return ( uint32_t ) snprintf( Buff,
                                   PUBLISH_PAYLOAD_BUFFER_LENGTH,
                                   renesasDemoSENSOR_JSON,
-                                  data.HS3001_data.temperature_C,
-                                  data.HS3001_data.humidity
+								  g_sensors_data.HS3001_data.temperature_C,
+								  g_sensors_data.HS3001_data.humidity
 								  );
 }
 /*-----------------------------------------------------------*/
