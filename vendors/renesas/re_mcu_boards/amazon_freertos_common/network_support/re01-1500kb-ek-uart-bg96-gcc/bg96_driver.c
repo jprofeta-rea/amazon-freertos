@@ -828,6 +828,7 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 	k     =  0;
 	state =  0;
 	tries = 0;
+	ret = -1;
 
 	baudrate = BR[k];
 
