@@ -95,7 +95,7 @@ static int32_t bg96_change_socket_index(uint8_t socket_no);
 static TickType_t g_sl_bg96_tcp_recv_timeout = 3000;		/* ## slowly problem ## unit: 1ms */
 static int32_t bg96_take_mutex(uint8_t mutex_flag);
 static void bg96_give_mutex(uint8_t mutex_flag);
-static int32_t SetupCommunication(int32_t Change_Baudrate);
+static int32_t SetupBaudrate(int32_t Change_Baudrate);
 static int32_t bg96_serial_send_recv_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code);
 static int32_t bg96_serial_response_test(int32_t recvcnt, bg96_return_code_t expect_code);
 uint8_t g_wifi_cleateble_sockets = WIFI_CFG_CREATABLE_SOCKETS;
@@ -136,7 +136,7 @@ int32_t bg96_wifi_init(void)
 	}
     g_bg96_cgatt_flg = 0;
 
-    ret = SetupCommunication(UART_BUS_CHANGE_SPEED);
+    ret = SetupBaudrate(UART_BUS_CHANGE_SPEED);
 
     if (ret !=0)
     {
@@ -781,7 +781,6 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 					ret = -1;
 					flag_ = true;
 					break;
-//			    	return -1;break
 				}
 		    }
 			recvcnt = (uint32_t )response_type;
@@ -816,28 +815,34 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 
 	return ret;
 }
-/* Setup  */
-static int32_t SetupCommunication(int32_t Change_Baudrate)
-{
-	int32_t tries, ret,index;
 
+/* SetupBaudrate  */
+static int32_t SetupBaudrate(int32_t Change_Baudrate)
+{
+	int32_t tries, ret, index;
+	int8_t check_flag = true;
 	uint32_t k,state;
 	uint32_t baudrate;
 	/* */
-	const uint32_t BR[] = {115200,460800,921600,9600,110,300,600,1200,2400,4800,9600,14400,19200,38400,57600,230400};
+	const uint32_t BR[] = {115200,460800,921600,9600,14400,19200,38400,57600,230400};
 	k     =  0;
-	state =  0;
-	tries = 0;
-	ret = -1;
+	state =  2;
+	tries =  0;
+	ret   = -1;
 
 	baudrate = BR[k];
 
-	while(k <= (sizeof(BR)/sizeof(BR[0])))
+	while(k < (sizeof(BR)/sizeof(BR[0])))
 	{
 	  switch (state)
 	  {
 	  case 0:
+		  /*Error, exit loop*/
+		  ret = -1;
+		  break;
 	  case 1:
+		  /*Baudrate is changed, exit loop*/
+		  return ret;
 	  case 2:
 	  {
 		  /*Reset BG96 Dragino module */
@@ -894,26 +899,28 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 							  if (BR[index]==Change_Baudrate)
 							  {
 								  k = index;
+								  check_flag = true;
 								  break;
 							  }
+							  else
+							  {
+								  check_flag = false;
+							  }
 						  }
-
+						  /* Changing baudrate is not in Baudrate array */
+						  if(check_flag == false)
+						  {
+							  state = 0;
+						  }
 					  }
-					  else
-					  /*Check the sending AT cmd to change baudrate is failed. Test next baudrate in array BR[]*/
-					  {
-						  k++;
-						  baudrate = BR[k];
 
-					  }
 					  bg96_serial_close();
-
 
 				  }
 				  else
 				  {
-					  /*Recent baudrate and changing baudrate are same, exit loop*/
-					  return ret;
+					  /*Recent baudrate and changing baudrate are same, */
+					  state = 1;
 				  }
 
 			  }
@@ -924,18 +931,27 @@ static int32_t SetupCommunication(int32_t Change_Baudrate)
 				  state = 2;
 				  if (tries > 3)
 				  {
-					  ret = -1;
-					  break;
+					 /*Set state to 0 -> error*/
+					  state = 0;
 				  }
 			  }
 		  }
 		  else
 		  {
 			  /* Initialize k-th baudrate in array BR  */
-			  state = 2;
-			  k++;
-			  baudrate = BR[k];
-			  bg96_serial_close();
+			  if (check_flag == false)
+			  {
+				  return ret;
+			  }
+			  else
+			  {
+				  state = 2;
+				  k++;
+				  baudrate = BR[k];
+				  bg96_serial_close();
+			  }
+
+
 		  }
 	  }
 	return ret;
