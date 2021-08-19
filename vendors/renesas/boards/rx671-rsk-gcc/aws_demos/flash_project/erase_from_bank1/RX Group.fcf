@@ -15,7 +15,7 @@ Clock Mode=0
 Support Clock=
 OSC Frequency Range=16000000,16000000
 CPU Frequency Range=120000000,120000000
-SCI Frequency Range=0,60000000
+SCI Frequency Range=0,16000000
 CPU Ratio=
 SCI Ratio=
 [Memory Area 0]
@@ -61,4 +61,4 @@ Erase Unit Size=0x00000000
 Write Unit Size=0x00000010
 Attribute=0x00000000
 [Checksum]
-Checksum=0xE4C6031D
+Checksum=0xEFDDF413

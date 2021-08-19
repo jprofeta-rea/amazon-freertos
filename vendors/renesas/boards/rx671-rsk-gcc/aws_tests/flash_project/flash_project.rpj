@@ -65,7 +65,7 @@
     <ExtraOptionProtect>False</ExtraOptionProtect>
   </DeviceOptionTab>
   <ConnectOptionTab>
-    <Tool>COMMTYPE_E1</Tool>
+    <Tool>COMMTYPE_E2L</Tool>
     <ToolNum>Tool_AutoSelect</ToolNum>
     <ToolPower>0</ToolPower>
     <ToolConnectMode>RFPSet</ToolConnectMode>
@@ -73,8 +73,8 @@
     <ToolConnectPinLvl>0</ToolConnectPinLvl>
     <ToolDisconnectReset>High</ToolDisconnectReset>
     <ToolResetSignalFlag>09000000</ToolResetSignalFlag>
-    <ToolInterface>IFTYPE_FINE</ToolInterface>
-    <ToolSpeed>1000000</ToolSpeed>
+    <ToolInterface>IFTYPE_UART2</ToolInterface>
+    <ToolSpeed>500000</ToolSpeed>
     <ToolWideVoltage>False</ToolWideVoltage>
     <MainClock>16000000</MainClock>
     <AutoAuthen>False</AutoAuthen>
