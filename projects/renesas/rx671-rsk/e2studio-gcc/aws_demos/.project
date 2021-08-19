@@ -622,7 +622,7 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/serial_term_uart.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129</name>
+			<name>vendors/renesas/rx_driver_package/v131</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -1202,32 +1202,32 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/jobs_for_aws/source/include/jobs.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_byteq</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_byteq</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -1972,67 +1972,67 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/gnuc/implicitlyinclude.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/platform.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/platform.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/platform.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/platform.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_byteq/r_byteq_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_byteq/r_byteq_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_byteq/r_byteq_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_byteq/r_byteq_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_byteq/src</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_byteq/src</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/r_flash_rx_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/r_flash_rx_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/r_flash_rx_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/r_flash_rx_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/r_s12ad_rx_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/r_s12ad_rx_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_s12ad_rx/r_s12ad_rx_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_s12ad_rx/r_s12ad_rx_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/r_sci_rx_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/r_sci_rx_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/r_sci_rx_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/r_sci_rx_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/r_wifi_sx_ulpgn_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/r_wifi_sx_ulpgn_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/r_wifi_sx_ulpgn_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/r_wifi_sx_ulpgn_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -2157,159 +2157,159 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/ports/wifi/iot_wifi.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_byteq/src/r_byteq.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_byteq/src/r_byteq.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_byteq/src/r_byteq.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_byteq/src/r_byteq.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_byteq/src/r_byteq_private.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_byteq/src/r_byteq_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_byteq/src/r_byteq_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_byteq/src/r_byteq_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_3</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_3</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_4</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_4</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_fcu.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_fcu.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_fcu.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_fcu.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_fcu.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_fcu.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_fcu.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_fcu.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_group.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_group.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_group.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_group.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_group.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_group.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_group.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_group.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_rx.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_rx.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_rx.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_rx.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_rx.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_rx.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_rx.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_rx.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_targets.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_targets.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/r_flash_targets.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/r_flash_targets.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/targets</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/targets</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/r_s12ad_rx.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/r_s12ad_rx.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/r_s12ad_rx.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/r_s12ad_rx.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/r_s12ad_rx_private.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/r_s12ad_rx_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/r_s12ad_rx_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/r_s12ad_rx_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/targets</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/targets</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dmaca.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dmaca.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dmaca.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dmaca.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dmaca.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dmaca.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dmaca.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dmaca.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dtc.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dtc.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dtc.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dtc.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dtc.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dtc.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_dtc.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_dtc.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_platform.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_platform.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_platform.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_platform.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_private.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/r_sci_rx_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/r_sci_rx_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_api.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_api.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_api.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_api.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_private.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_queue.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_queue.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_queue.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_queue.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_recv_task.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_recv_task.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_recv_task.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_recv_task.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/abstractions/pkcs11/corePKCS11/source/portable/mbedtls/core_pkcs11_mbedtls.c</name>
@@ -2317,337 +2317,337 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/pkcs11/corePKCS11/source/portable/mbedtls/core_pkcs11_mbedtls.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/hwsetup.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/hwsetup.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/hwsetup.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/hwsetup.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/hwsetup.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/hwsetup.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/hwsetup.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/hwsetup.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp_config_reference.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp_config_reference.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp_config_reference.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp_config_reference.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp_interrupt_config_reference.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp_interrupt_config_reference.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp_interrupt_config_reference.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp_interrupt_config_reference.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp_rx_generic_rx671_extend.mdf</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp_rx_generic_rx671_extend.mdf</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/board/generic_rx671/r_bsp_rx_generic_rx671_extend.mdf</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/board/generic_rx671/r_bsp_rx_generic_rx671_extend.mdf</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/dbsct.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/dbsct.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/dbsct.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/dbsct.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/fsp_common_api.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/fsp_common_api.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/fsp_common_api.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/fsp_common_api.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/linker_script_rvectors.inc</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/linker_script_rvectors.inc</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/linker_script_rvectors.inc</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/linker_script_rvectors.inc</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowlvl.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowlvl.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowlvl.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowlvl.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowlvl.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowlvl.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowlvl.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowlvl.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowsrc.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowsrc.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowsrc.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowsrc.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowsrc.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowsrc.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/lowsrc.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/lowsrc.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/mcu_locks.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/mcu_locks.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/mcu_locks.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/mcu_locks.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_common.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_common.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_common.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_common.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_common.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_common.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_common.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_common.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_cpu.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_cpu.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_cpu.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_cpu.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_interrupts.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_interrupts.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_interrupts.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_interrupts.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_interrupts.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_interrupts.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_interrupts.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_interrupts.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_locking.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_locking.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_locking.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_locking.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_mcu_startup.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_mcu_startup.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_mcu_startup.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_mcu_startup.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_mcu_startup.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_mcu_startup.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_mcu_startup.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_mcu_startup.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_software_interrupt.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_software_interrupt.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_software_interrupt.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_software_interrupt.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_software_interrupt.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_software_interrupt.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_bsp_software_interrupt.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_bsp_software_interrupt.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_fsp_error.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_fsp_error.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_fsp_error.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_fsp_error.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rtos.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rtos.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rtos.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rtos.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rx_compiler.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rx_compiler.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rx_compiler.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rx_compiler.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rx_intrinsic_functions.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rx_intrinsic_functions.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rx_intrinsic_functions.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rx_intrinsic_functions.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rx_intrinsic_functions.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rx_intrinsic_functions.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_rx_intrinsic_functions.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_rx_intrinsic_functions.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_typedefs.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_typedefs.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/r_typedefs.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/r_typedefs.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/reset_program.S</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/reset_program.S</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/reset_program.S</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/reset_program.S</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/resetprg.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/resetprg.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/resetprg.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/resetprg.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/sbrk.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/sbrk.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/sbrk.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/sbrk.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/sbrk.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/sbrk.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/all/sbrk.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/all/sbrk.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_clocks.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_clocks.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_clocks.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_clocks.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_clocks.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_clocks.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_clocks.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_clocks.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_info.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_info.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_info.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_info.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_init.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_init.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_init.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_init.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_init.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_init.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_init.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_init.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_interrupts.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_interrupts.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_interrupts.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_interrupts.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_interrupts.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_interrupts.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_interrupts.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_interrupts.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_locks.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_locks.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_locks.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_locks.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_mapped_interrupts.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_mapped_interrupts.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_mapped_interrupts.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_mapped_interrupts.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_mapped_interrupts.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_mapped_interrupts.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_mapped_interrupts.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_mapped_interrupts.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_mapped_interrupts_private.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_mapped_interrupts_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/mcu_mapped_interrupts_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/mcu_mapped_interrupts_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/r_bsp_cpu.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/r_bsp_cpu.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/r_bsp_cpu.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/r_bsp_cpu.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/r_bsp_locking.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/r_bsp_locking.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/r_bsp_locking.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/r_bsp_locking.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/register_access</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/register_access</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/vecttbl.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/vecttbl.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/vecttbl.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/vecttbl.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/vecttbl.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/vecttbl.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/vecttbl.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/vecttbl.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash_extra.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash_extra.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash_extra.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash_extra.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash_extra.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash_extra.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_codeflash_extra.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_codeflash_extra.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_dataflash.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_dataflash.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_dataflash.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_dataflash.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_dataflash.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_dataflash.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_dataflash.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_dataflash.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_common.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_common.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_common.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_common.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_type1.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_type1.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_type1.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_type1.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_utils.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_utils.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_1/r_flash_utils.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_1/r_flash_utils.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_3/r_flash_type3.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_3/r_flash_type3.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_3/r_flash_type3.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_3/r_flash_type3.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_3/r_flash_type3_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_3/r_flash_type3_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_3/r_flash_type3_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_3/r_flash_type3_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_4/r_flash_type4.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_4/r_flash_type4.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_4/r_flash_type4.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_4/r_flash_type4.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_4/r_flash_type4_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_4/r_flash_type4_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/flash_type_4/r_flash_type4_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/flash_type_4/r_flash_type4_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/targets/rx671</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/targets/rx671</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/targets/rx671</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/targets/rx671</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -2782,39 +2782,39 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/register_access/gnuc</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/register_access/gnuc</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_flash_rx/src/targets/rx671/r_flash_rx671.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_flash_rx/src/targets/rx671/r_flash_rx671.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_flash_rx/src/targets/rx671/r_flash_rx671.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_flash_rx/src/targets/rx671/r_flash_rx671.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671_if.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_s12ad_rx/src/targets/rx671/r_s12ad_rx671_if.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671/r_sci_rx671.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671/r_sci_rx671.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671/r_sci_rx671.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671/r_sci_rx671.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671/r_sci_rx671_data.c</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671/r_sci_rx671_data.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671/r_sci_rx671_data.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671/r_sci_rx671_data.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671/r_sci_rx671_private.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671/r_sci_rx671_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_sci_rx/src/targets/rx671/r_sci_rx671_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_sci_rx/src/targets/rx671/r_sci_rx671_private.h</locationURI>
 		</link>
 		<link>
 			<name>libraries/freertos_plus/standard/freertos_plus_tcp/standard/freertos_plus_tcp/portable/Compiler/GCC/pack_struct_end.h</name>
@@ -2827,9 +2827,9 @@
 			<locationURI>AFR_HOME/libraries/freertos_plus/standard/freertos_plus_tcp/standard/freertos_plus_tcp/portable/Compiler/GCC/pack_struct_start.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/register_access/gnuc/iodefine.h</name>
+			<name>vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/register_access/gnuc/iodefine.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_bsp/mcu/rx671/register_access/gnuc/iodefine.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v131/r_bsp/mcu/rx671/register_access/gnuc/iodefine.h</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>

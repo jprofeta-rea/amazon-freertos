@@ -43,6 +43,7 @@
 *           25.08.2020 3.60    Added feature using DTC/DMAC in SCI transfer.
 *                              Merged IrDA functionality to SCI FIT.
 *           31.03.2021 3.80    Added support for RX671.
+*                              Added support circular buffer in mode asynchronous.
 ***********************************************************************************************************************/
 #ifndef SCI_CONFIG_H
 #define SCI_CONFIG_H
@@ -64,6 +65,11 @@ Configuration Options
 #define SCI_CFG_SYNC_INCLUDED   (0)
 #define SCI_CFG_SSPI_INCLUDED   (0)
 #define SCI_CFG_IRDA_INCLUDED   (0)
+
+/* Use circular buffer in mode asynchronous */
+/* 1=Use , 0=Unused */
+/* When SCI_CFG_USE_CIRCULAR is 1, please set BSP_CFG_RUN_IN_USER_MODE = 0  and BYTEQ_CFG_PROTECT_QUEUE = 1*/
+#define SCI_CFG_USE_CIRCULAR_BUFFER (0)
 
 /* SPECIFY BYTE VALUE TO TRANSMIT WHILE CLOCKING IN DATA IN SSPI MODES */
 #define SCI_CFG_DUMMY_TX_BYTE   (0xFF)
