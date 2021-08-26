@@ -69,7 +69,7 @@ static TickType_t startbytetime[CREATEABLE_SOCKETS], thisbytetime[CREATEABLE_SOC
 static uint8_t byte_timeout_overflow_flag[CREATEABLE_SOCKETS];
 
 uint8_t g_bg96_return_mode;
-static uint8_t flag_ = true;
+static uint8_t g_flag = true;
 
 byteq_hdl_t socket_byteq_hdl[CREATEABLE_SOCKETS];
 
@@ -122,6 +122,7 @@ wifi_err_t R_CELLULAR_BG96_SocketShutdown (int32_t socket_no);
 uint32_t dummy_len = 0;
 void reset_button(void);
 
+
 int32_t bg96_wifi_init(void)
 {
 	int32_t ret;
@@ -142,7 +143,6 @@ int32_t bg96_wifi_init(void)
     {
     	return ret;
     }
-
     // APN set
     memset(buff, 0x00, sizeof(buff));
 	sprintf(buff, "AT+QICSGP=1,1,\"%s\",\"%s\",\"%s\",1\r", CELLULAR_APN, CELLULAR_APN_USERID, CELLULAR_APN_PASSWORD);
@@ -150,9 +150,7 @@ int32_t bg96_wifi_init(void)
     cgatt_cnt = 0;
     while(1)
     {
-
     	ret = bg96_serial_send_basic(BG96_UART_COMMAND_PORT, "AT+CGATT?\r", 19, 400, BG96_RETURN_OK);
-
             recvlen = strlen((const char *)recvbuff);
             if (recvlen > 13)
             {
@@ -170,8 +168,6 @@ int32_t bg96_wifi_init(void)
                 cgatt_cnt++;
             }
 
-
-
         // timeout
         if (cgatt_cnt > BG96_RETRY_GATT)
         {
@@ -183,7 +179,7 @@ int32_t bg96_wifi_init(void)
     }
     if(ret != 0)
     {
-        bg96_power_down(0);
+        bg96_power_down(1);
 
         return ret;
     }
@@ -197,8 +193,6 @@ int32_t bg96_wifi_init(void)
     g_bg96_cgatt_flg = 1;
 
     g_bg96_system_state = BG96_SYSTEM_CONNECT;
-
-    // error handling T.B.D.
 
     return ret;
 }
@@ -772,14 +766,15 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 			sci_status_rx = gsp_sci5_dev->GetStatus();
 			while (sci_status_rx.rx_busy == 1)
 			{
+				sci_status_rx = gsp_sci5_dev->GetStatus();
 				if(-1 == check_timeout(serial_ch_id, 0))
 					{
-						flag_ = false;
+					g_flag = false;
 					}
 				if(-1 == check_bytetimeout(serial_ch_id, recvcnt))
 				{
 					ret = -1;
-					flag_ = true;
+					g_flag = true;
 					break;
 				}
 		    }
@@ -819,19 +814,30 @@ static int32_t bg96_serial_send_basic(uint8_t serial_ch_id, uint8_t *ptextstring
 /* SetupBaudrate  */
 static int32_t SetupBaudrate(int32_t Change_Baudrate)
 {
-	int32_t tries, ret, index;
-	int8_t check_flag = true;
+	int32_t tries, ret, index, check_index;
 	uint32_t k,state;
 	uint32_t baudrate;
-	/* */
-	const uint32_t BR[] = {115200,460800,921600,9600,14400,19200,38400,57600,230400};
+	/*Baudrate array */
+	uint32_t BR[] = {115200,9600,460800,921600,14400,19200,38400,57600,230400};
 	k     =  0;
 	state =  2;
 	tries =  0;
 	ret   = -1;
+	index = -1;
 
 	baudrate = BR[k];
-
+	for (check_index = 0; check_index < (sizeof(BR)/sizeof(BR[0]));check_index++)
+	{
+		if (Change_Baudrate == BR[check_index])
+		{
+			index = check_index;
+			break;
+		}
+	}
+	if (index == -1)
+	{
+		return ret;
+	}
 	while(k < (sizeof(BR)/sizeof(BR[0])))
 	{
 	  switch (state)
@@ -873,7 +879,7 @@ static int32_t SetupBaudrate(int32_t Change_Baudrate)
 	  /*Check result of the testing for the sending and receving with BG96 Dragino */
 	  if (ret == 0)
 		  {
-			  vTaskDelay(500);
+			  vTaskDelay(10);
 			  /*Check response from BG96 Dragino */
 			  ret = bg96_serial_response_test(6, BG96_RETURN_OK);
 			  /*Response from BG96 Dragino is OK. That means the connection between RE01 1.5MB and Draguino is successful */
@@ -894,26 +900,8 @@ static int32_t SetupBaudrate(int32_t Change_Baudrate)
 					  {
 						  /*Verify changed baudrate to re-initialize uart RE01 1.5MB*/
 						  baudrate = Change_Baudrate;
-						  for(index = 0; index < (sizeof(BR)/sizeof(BR[0]));index++ )
-						  {
-							  if (BR[index]==Change_Baudrate)
-							  {
-								  k = index;
-								  check_flag = true;
-								  break;
-							  }
-							  else
-							  {
-								  check_flag = false;
-							  }
-						  }
-						  /* Changing baudrate is not in Baudrate array */
-						  if(check_flag == false)
-						  {
-							  state = 0;
-						  }
+						  k = index;
 					  }
-
 					  bg96_serial_close();
 
 				  }
@@ -939,20 +927,11 @@ static int32_t SetupBaudrate(int32_t Change_Baudrate)
 		  else
 		  {
 			  /* Initialize k-th baudrate in array BR  */
-			  if (check_flag == false)
-			  {
-				  return ret;
-			  }
-			  else
-			  {
-				  state = 2;
-				  k++;
-				  baudrate = BR[k];
-				  bg96_serial_close();
-			  }
-
-
-		  }
+			  state = 2;
+			  k++;
+			  baudrate = BR[k];
+			  bg96_serial_close();
+	  }
 	  }
 	return ret;
 }
@@ -1164,7 +1143,7 @@ static int32_t check_bytetimeout(uint8_t socket_no, int32_t rcvcount)
 			}
 		}
 	}
-	if (flag_ == false){
+	if (g_flag == false){
 		return -1;
 	}
 	/* Not timeout  */
@@ -1589,7 +1568,7 @@ void reset_button(void)
 	bg96_SysCondition_pwrkey_L();
 	timeout_only_wait(1, 8000);
 	bg96_SysCondition_pwrkey_H();
-	timeout_init(1, 15000);         // timeout 10ms
+	timeout_init(1, 15000);
 }
 static int32_t bg96_serial_send_recv_test(uint8_t serial_ch_id, uint8_t *ptextstring, uint16_t response_type, uint16_t timeout_ms, bg96_return_code_t expect_code)
 {
@@ -1652,12 +1631,12 @@ static int32_t bg96_serial_send_recv_test(uint8_t serial_ch_id, uint8_t *ptextst
 						sci_status_rx = gsp_sci5_dev->GetStatus();
 						if(-1 == check_timeout(serial_ch_id, 0))
 							{
-								flag_ = false;
+							g_flag = false;
 							}
 						if(-1 == check_bytetimeout(serial_ch_id, recvcnt))
 						{
 							ret = -1;
-							flag_ = true;
+							g_flag = true;
 							break;
 						}
 					}
@@ -1697,5 +1676,5 @@ static int32_t bg96_serial_response_test( int32_t recvcnt,bg96_return_code_t exp
 	}
 
 	return ret;
-
 }
+
