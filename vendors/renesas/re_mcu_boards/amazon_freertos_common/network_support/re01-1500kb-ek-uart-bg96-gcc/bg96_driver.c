@@ -371,7 +371,7 @@ int32_t bg96_tcp_send(uint8_t socket_no, uint8_t *pdata, int32_t length, uint32_
             memset(buff, 0x00, sizeof(buff));
 			strcpy((char *)buff,"AT+QISEND=");
 			sprintf((char *)buff+strlen((char *)buff),"%d,%d\r",socket_no,lenghttmp1);
-			ret = bg96_serial_send_with_recvtask(BG96_UART_COMMAND_PORT, buff, 3, remaintime[socket_no], BG96_RETURN_OK_GO_SEND, BG96_SET_CIPSEND, socket_no, &dummy_len, 0);
+			ret = bg96_serial_send_with_recvtask(BG96_UART_COMMAND_PORT, buff, 3, 1000, BG96_RETURN_OK_GO_SEND, BG96_SET_CIPSEND, socket_no, &dummy_len, 0);
 			if(ret != 0)
 			{
 				/* Give back the socketInUse mutex. */
@@ -559,7 +559,7 @@ int32_t bg96_tcp_recv(uint8_t socket_no, uint8_t *pdata, int32_t length, uint32_
             memset(buff, 0x00, sizeof(buff));
             sprintf((char *)buff,"AT+QIRD=%d,%d\r",socket_no, recvlen);
             len = 0;
-            ret = bg96_serial_send_with_recvtask(BG96_UART_COMMAND_PORT, buff, 3, remaintime[socket_no], BG96_RETURN_OK, BG96_SET_QIRD, socket_no, &len, 0);
+            ret = bg96_serial_send_with_recvtask(BG96_UART_COMMAND_PORT, buff, 3, 1000, BG96_RETURN_OK, BG96_SET_QIRD, socket_no, &len, 0);
 
             if(ret != 0)
             {
