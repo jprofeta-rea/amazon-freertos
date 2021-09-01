@@ -1125,7 +1125,7 @@ TEST_GROUP_RUNNER( Full_TCP )
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_Connect_InvalidAddressLength );
         /* SECURE_SOCKETS_Socket_TCP DNE. */
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_SetSockOpt_RCVTIMEO );
-
+        RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_NonBlocking_Test );
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_SetSockOpt_InvalidParams );
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_Shutdown );
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_Close );
@@ -1148,7 +1148,6 @@ TEST_GROUP_RUNNER( Full_TCP )
     #if ( tcptestSECURE_SERVER == 1 )
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_Threadsafe_SameSocketDifferentTasks );
         RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_Threadsafe_DifferentSocketsDifferentTasks );
-        RUN_TEST_CASE( Full_TCP, AFQP_SECURE_SOCKETS_NonBlocking_Test );
     #endif /* if ( tcptestSECURE_SERVER == 1 ) */
 }
 
@@ -1484,7 +1483,7 @@ static void prvSOCKETS_NonBlocking_Test( Server_t xConn )
     TickType_t xStartTime;
     TickType_t xEndTime;
     TickType_t xTimeout = 0;
-    TickType_t xWaitTime = 20000;
+    TickType_t xWaitTime = 1000;
     uint8_t * pucTxBuffer = ( uint8_t * ) pcTxBuffer;
     uint8_t * pucRxBuffer = ( uint8_t * ) pcRxBuffer;
     size_t xMessageLength = 1200;
