@@ -44,19 +44,30 @@
 </configuration>
 <configuration inuse="true" name="r_sci_rx">
 <component display="r_sci_rx" id="r_sci_rx3.40" version="3.40">
+<gridItem id="CTS1#/RTS1#/SS1#" selectedIndex="0"/>
 <gridItem id="RXD1/SMISO1" selectedIndex="1"/>
 <gridItem id="TXD1/SMOSI1" selectedIndex="1"/>
 <gridItem id="SCI1" selectedIndex="1"/>
 <gridItem id="RXD2/SMISO2" selectedIndex="1"/>
 <gridItem id="TXD2/SMOSI2" selectedIndex="1"/>
+<gridItem id="SCK2" selectedIndex="0"/>
+<gridItem id="CTS2#/RTS2#/SS2#" selectedIndex="0"/>
 <gridItem id="SCI2" selectedIndex="1"/>
 <gridItem id="RXD7/SMISO7" selectedIndex="1"/>
 <gridItem id="TXD7/SMOSI7" selectedIndex="1"/>
+<gridItem id="CTS7#/RTS7#/SS7#" selectedIndex="0"/>
+<gridItem id="SCK7" selectedIndex="0"/>
 <gridItem id="SCI7" selectedIndex="1"/>
 <gridItem id="SCI_CFG_TEI_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH2_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH7_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH1_INCLUDED" selectedIndex="1"/>
+<gridItem id="SCI_CFG_CH1_TX_BUFSIZ" selectedIndex="1024"/>
+<gridItem id="SCI_CFG_CH2_TX_BUFSIZ" selectedIndex="1024"/>
+<gridItem id="SCI_CFG_CH7_TX_BUFSIZ" selectedIndex="1024"/>
+<gridItem id="SCI_CFG_CH1_RX_BUFSIZ" selectedIndex="1024"/>
+<gridItem id="SCI_CFG_CH2_RX_BUFSIZ" selectedIndex="1024"/>
+<gridItem id="SCI_CFG_CH7_RX_BUFSIZ" selectedIndex="1024"/>
 </component>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
@@ -105,6 +116,7 @@
 </configuration>
 <configuration inuse="true" name="FreeRTOS_Application">
 <component display="FreeRTOS_Application" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.application">
+<gridItem id="CONNECTION" selectedIndex="1"/>
 </component>
 <source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
@@ -192,10 +204,13 @@
 <Item current="comboBox1-5" error="false" id="uckdivider.comboBox"/>
 </tool>
 <tool id="Pins" version="1.0.1.0">
+<pinItem allocation="127" comments="" direction="None" id="CTS7#" isUsedBySoftware="false" locked="false" status="65280"/>
 <pinItem allocation="128" comments="" direction="None" id="RXD7" isUsedBySoftware="false" locked="false" status="0"/>
-<pinItem allocation="131" comments="" direction="None" id="TXD7" isUsedBySoftware="false" locked="false" status="0"/>
+<pinItem allocation="131" comments="" direction="None" id="TXD7" isUsedBySoftware="false" locked="false" status="65280"/>
 <pinItem allocation="45" comments="" direction="None" id="RXD2" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="44" comments="" direction="None" id="TXD2" isUsedBySoftware="false" locked="false" status="0"/>
+<pinItem allocation="29" comments="" direction="None" id="RXD1" isUsedBySoftware="false" locked="false" status="0"/>
+<pinItem allocation="31" comments="" direction="None" id="TXD1" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="62" comments="" direction="None" id="ET0_ETXD2" isUsedBySoftware="false" locked="false" status="0"/>

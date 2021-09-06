@@ -31,6 +31,7 @@
 *
 *****************************************************************************/
 #include "r_ether_rx_config.h"
+#include "FreeRTOSApplicationConfig.h"
 
 #ifndef FREERTOS_IP_CONFIG_H
 #define FREERTOS_IP_CONFIG_H

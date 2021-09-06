@@ -11,8 +11,4 @@
 #define ETHER           (1)
 #define WIFI         (0)
 
-#if (CONNECTION == 0)
-    #error "Connection type WIFI not supported"
-#endif
-
 #endif

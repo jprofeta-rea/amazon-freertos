@@ -6,13 +6,13 @@
 #define Used           (1)
 #define Unused         (0)
 
-#define CONNECTION            (ETHER)
+#define CONNECTION            (WIFI)
 
 #define ETHER           (1)
 #define WIFI         (0)
 
-#if (CONNECTION == 0)
-    #error "Connection type WIFI not supported"
+#if (CONNECTION == 1)
+#error "Connection type ETHER not supported"
 #endif
 
 #endif

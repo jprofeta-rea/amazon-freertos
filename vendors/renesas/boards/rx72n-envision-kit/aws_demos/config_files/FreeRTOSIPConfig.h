@@ -30,7 +30,11 @@
 * http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/TCP_IP_Configuration.html
 *
 *****************************************************************************/
+#if (CONNECTION == 1)
 #include "r_ether_rx_config.h"
+#endif
+
+#include "FreeRTOSApplicationConfig.h"
 
 #ifndef FREERTOS_IP_CONFIG_H
 #define FREERTOS_IP_CONFIG_H
