@@ -70,7 +70,7 @@
 #define configNUM_THREAD_LOCAL_STORAGE_POINTERS    3      /* FreeRTOS+FAT requires 2 pointers if a CWD is supported. */
 #define configRECORD_STACK_HIGH_ADDRESS            1
 #define configUSE_DAEMON_TASK_STARTUP_HOOK 1
-#define configCPU_CLOCK_HZ				(32768U)
+#define configCPU_CLOCK_HZ              (32000000U)
 #define configPERIPHERAL_CLOCK_HZ		(configCPU_CLOCK_HZ)
 
 #define configUSE_QUEUE_SETS			1
