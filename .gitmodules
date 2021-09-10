@@ -55,5 +55,4 @@
 	url = https://github.com/awslabs/aws-build-accumulator
 [submodule "freertos_kernel"]
 	path = freertos_kernel
-	url = https://github.com/renesas/FreeRTOS-Kernel
-	branch = development_v10.4.3
+	url = https://github.com/renesas/FreeRTOS-Kernel.git
