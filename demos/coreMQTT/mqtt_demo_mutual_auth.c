@@ -67,7 +67,11 @@
 #include "backoff_algorithm.h"
 
 /* Include PKCS11 helpers header. */
+#if (__CCRL__)
+#include "trng_helper.h"
+#else
 #include "pkcs11_helpers.h"
+#endif
 
 /* Transport interface implementation include header for TLS. */
 #include "transport_secure_sockets.h"
@@ -80,6 +84,8 @@
 
 /* Include header for root CA certificates. */
 #include "iot_default_root_certificates.h"
+
+#pragma section const const_mqttDemoAuth
 
 /*------------- Demo configurations -------------------------*/
 
@@ -667,8 +673,13 @@ static BaseType_t prvBackoffForRetry( BackoffAlgorithmContext_t * pxRetryParams 
      */
     uint32_t ulRandomNum = 0;
 
+#if (__CCRL__)
+    if( xTrngGenerateRandomNumber( ( uint8_t * ) &ulRandomNum,
+                                     sizeof( ulRandomNum ) ) == pdPASS )
+#else
     if( xPkcs11GenerateRandomNumber( ( uint8_t * ) &ulRandomNum,
                                      sizeof( ulRandomNum ) ) == pdPASS )
+#endif
     {
         /* Get back-off value (in milliseconds) for the next retry attempt. */
         xBackoffAlgStatus = BackoffAlgorithm_GetNextBackoff( pxRetryParams, ulRandomNum, &usNextRetryBackOff );
@@ -1182,3 +1193,4 @@ static MQTTStatus_t prvWaitForPacket( MQTTContext_t * pxMQTTContext,
 }
 
 /*-----------------------------------------------------------*/
+#pragma section

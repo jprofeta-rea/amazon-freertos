@@ -1,0 +1,35 @@
+aws_bufferpool_config.h *
+aws_demo_config.h *
+aws_ggd_config.h *
+aws_mqtt_config.h *
+aws_ota_agent_config.h *
+aws_secure_sockets_config.h *
+aws_shadow_config.h *
+aws_wifi_config.h *
+core_http_config.h *
+core_mqtt_config.h *
+core_pkcs11_config.h *
+defender_config.h *
+defender_demo_config.h *
+FreeRTOSConfig.h *
+FreeRTOSIPConfig.h *
+http_demo_mutual_auth_config.h *
+http_demo_s3_download_config.h *
+http_demo_s3_download_multithreaded_config.h *
+http_demo_s3_upload_config.h *
+iot_mqtt_agent_config.h *
+jobs_demo_config.h *
+mqtt_demo_connection_sharing_config.h *
+mqtt_demo_mutual_auth_config.h *
+mqtt_demo_plaintext_config.h *
+shadow_config.h *
+shadow_demo_config.h *
+trcConfig.h
+trcSnapshotConfig.h
+
+<not exists file>
+aws_iot_network_config.h
+iot_config.h
+mbedtls_user_config.h
+
+

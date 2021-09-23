@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<QE>
+    <Segment id="Project">
+        <Setting id="SrcGeneratedPath" value="src/smc_gen"/>
+    </Segment>
+    <Segment id="Pin">
+        <Setting id="P00" value="P00"/>
+        <Setting id="P03" value="RxD1"/>
+        <Setting id="P14" value="RxD2"/>
+        <Setting id="P02" value="TxD1"/>
+        <Setting id="P13" value="TxD2"/>
+        <Setting id="P144" value="TxD3"/>
+        <Setting id="P143" value="RxD3"/>
+        <Setting id="P124" value="XT2"/>
+        <Setting id="P123" value="XT1"/>
+        <Setting id="P142" value="P142"/>
+        <Setting id="P141" value="P141"/>
+        <Setting id="P40" value="TOOL0"/>
+    </Segment>
+    <Segment id="Device">
+        <Setting id="Series" value="RL78G2x"/>
+        <Setting id="Group" value="RL78G23"/>
+        <Setting id="Board" value="カスタムユーザボード"/>
+        <Setting id="PartNo" value="R7F100GSNxFB"/>
+        <Setting id="PinCount" value="128"/>
+    </Segment>
+    <Segment id="Clock">
+        <Setting id="FSXL" value="32.768"/>
+        <Setting id="EVDD" value="1.8"/>
+        <Setting id="FMAIN" value="32000.0"/>
+        <Setting id="FSXR" value="32.768"/>
+        <Setting id="VDD" value="2.4"/>
+        <Setting id="FIL" value="32.768"/>
+        <Setting id="FIHP" value="32000.0"/>
+        <Setting id="FCLK" value="32000.0"/>
+    </Segment>
+    <Segment id="Component">
+        <Setting id="r_bsp" value=""/>
+        <Setting id="Config_UART1" value="CG"/>
+        <Setting id="Config_UART2" value="CG"/>
+        <Setting id="Config_UART3" value="CG"/>
+        <Setting id="Config_PORT" value="CG"/>
+    </Segment>
+</QE>

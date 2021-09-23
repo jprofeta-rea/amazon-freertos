@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.configuration.2098382796">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.configuration.2098382796" moduleId="org.eclipse.cdt.core.settings" name="HardwareDebug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.renesas.cdt.managedbuild.renesas.core.RenesasCompilerAssemblerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.renesas.cdt.managedbuild.core.buildRunnerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="com.renesas.cdt.managedbuild.core.toolchainInfo">
+				<option id="toolchain.id" value="Renesas_CCRL"/>
+				<option id="toolchain.version" value="v1.09.00"/>
+				<option id="toolchain.enable" value="false"/>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="abs" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="Debug on hardware" id="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.configuration.2098382796" name="HardwareDebug" parent="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.configuration">
+					<folderInfo id="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.configuration.2098382796." name="/" resourcePath="">
+						<toolChain id="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.toolChain.443021912" name="Renesas CCRL Toolchain" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.hardwaredebug.toolChain">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.PE" id="com.renesas.cdt.managedbuild.renesas.ccrl.base.targetPlatform.564933150" isAbstract="false" name="targetPlatform" osList="win32" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/aws_demos}/HardwareDebug" id="com.renesas.cdt.managedbuild.renesas.ccrl.base.builder.47703939" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.builder"/>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.smsasm.177026746" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.smsasm">
+								<inputType id="com.renesas.cdt.managedbuild.renesas.ccrl.smsasm.inputType.624157780" name="SMS Assembler Input" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.smsasm.inputType"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.dsp.934553647" name="DSP Assembler" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.dsp">
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.dsp.option.noDebugInfo.725447330" name="デバッグ情報を出力する (-no_debug_info)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.dsp.option.noDebugInfo" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.common.1054582747" name="Common" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.common">
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.deviceCommand.348500129" name="Device Command" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.deviceCommand" useByScannerDiscovery="false" value="R7F100GSN" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.cpu.1832520027" name="CPUコアの種別 (-cpu)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.cpu" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.cpu.s3" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.deviceName.993711351" name="Device name" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.deviceName" useByScannerDiscovery="false" value="R7F100GSNxFB" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.deviceFamily.1645566203" name="Device Family" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.deviceFamily" useByScannerDiscovery="false" value="RL78 - G23" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.hasDsp.144413945" name="Has DSP" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.hasDsp" useByScannerDiscovery="false" value="false" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.hasSMSAsm.987679990" name="Has SMS Assembler" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.hasSMSAsm" useByScannerDiscovery="false" value="true" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.mirrorRegion.124422034" name="ミラー先領域のアドレス範囲 (-asmopt=-mirror_region)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.mirrorRegion" useByScannerDiscovery="false" value="F3000,F3EFF" valueType="string"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.compiler.1012508863" name="Compiler" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.compiler">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.I.268180265" name="インクルード・ファイルを検索するフォルダ (-I)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.I" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="${TCINSTALL}/inc"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/r_bsp"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/r_config"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/Config_PORT"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/Config_UART0"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/Config_UART1"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/Config_UART2"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen/Config_UART3"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors\renesas\boards\rl78g23-fpb\drivers\src\smc_gen\general"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../freertos_kernel/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../freertos_kernel/portable/Renesas/RL78G2x"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/aws_demos/config_files"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/amazon_freertos_common/compiler_support/ccrl"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/amazon_freertos_common"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/network_support/r_config"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/network_support/r_wifi_sx_ulpgn_ssl"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/network_support/r_wifi_sx_ulpgn_ssl/src"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/wrapper_modules/r_bsp/mcu/all"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/wrapper_modules/r_byteq"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/wrapper_modules/r_byteq/src"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/wrapper_modules/r_config"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/wrapper_modules/r_sci"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/wrapper_modules/r_sci/src"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/ports/sx_ulpgn_certification"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/middleware/trng"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rl78g23-fpb/drivers/middleware/trng/libsrc/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/network_manager"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/dev_mode_key_provisioning/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/pkcs11_helpers"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/http_demo_helpers"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/mqtt_demo_helpers"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/device_defender_for_aws"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/common/include/private"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/common/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/platform/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/platform/freertos/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/platform/include/platform"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/secure_sockets/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/wifi/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/freertos_plus_tcp/portable/Compiler/Renesas"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/tls/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/crypto/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/pkcs11/corePKCS11/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/utils/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/logging/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/defender/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreMQTT/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreMQTT/source/interface"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/backoff_algorithm/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/transport/secure_sockets"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/serializer/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/shadow/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/interface"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/dependency/3rdparty/http_parser"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/ota/src"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/ota/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/freertos_plus_cli/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreJSON/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/device_shadow_for_aws/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/device_defender_for_aws/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/jobs_for_aws/source/include"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/pkcs11"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls_config"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls/include/mbedtls"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls_utils"/>
+									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/jsmn"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.userBefore.407914749" name="追加するオプション（すべての指定オプションの前に追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.userBefore" useByScannerDiscovery="false" valueType="stringList"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.userAfter.290282571" name="追加するオプション（すべての指定オプションの後ろに追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.userAfter" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.characterSet.77233176" name="日本語/中国語のコメント、文字列の文字コード(-character_set)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.characterSet" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.characterSet.utf8" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.langFileC.881957641" name="Cソース・ファイルの言語規格 (-lang)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.langFileC" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.langFileC.c99" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.D.112026662" name="プリプロセッサ・マクロの定義 (-D)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.D" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MBEDTLS_CONFIG_FILE=&lt;aws_mbedtls_config.h&gt;"/>
+									<listOptionValue builtIn="false" value="CONFIG_MEDTLS_USE_AFR_MEMORY"/>
+									<listOptionValue builtIn="false" value="__RL"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.preInclude.1083010566" name="コンパイル単位の先頭にインクルードするファイル (-preinclude)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.preInclude" useByScannerDiscovery="false" valueType="stringList"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.goptimize.971741503" name="リンク時にモジュール間最適化の対象にする (-goptimize)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.goptimize" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.farRom.1051916786" name="メモリ・モデルで指定したROMデータに対するnear/far属性ををfarに設定する (-far_rom)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.farRom" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.optimization.951439424" name="最適化レベル (-O)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.optimization" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.optimization.Osize" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.largeVariable.1262721500" name="変数の最大サイズ (-large_variable)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.largeVariable" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.largeVariable.0x7fff" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.asmPath.1244151691" name="アセンブリ・ソース・ファイルを出力する (-asm_path)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.asmPath" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.passSource.1933798873" name="Cソース・プログラムをコメントして出力する (-pass_source)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.passSource" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.memoryModel.1512135847" name="メモリ・モデル (-memory_model)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.memoryModel" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.memoryModel.medium" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.prnPath.253220680" name="アセンブル・リスト・ファイルを出力する (-asmopt=-prn_path)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.compiler.option.prnPath" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<inputType id="Base.Compiler.ccrl.C.inputType.1633463753" name="Compiler InputType" superClass="Base.Compiler.ccrl.C.inputType"/>
+								<inputType id="Base.Compiler.ccrl.Cpp.inputType.31738845" name="Compiler Input CPP" superClass="Base.Compiler.ccrl.Cpp.inputType"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.assembler.573685821" name="Assembler" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.assembler">
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.g.277260812" name="デバッグ情報を出力する (-g)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.g" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.userBefore.1789138699" name="追加するオプション（すべての指定オプションの前に追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.userBefore" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.userAfter.1392893686" name="追加するオプション（すべての指定オプションの後ろに追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.userAfter" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.characterSet.1746894344" name="日本語/中国語のコメント、文字列の文字コード (-character_set)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.characterSet" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.assembler.option.characterSet.utf8" valueType="enumerated"/>
+								<inputType id="Base.Assembler.ccrl.inputType.5707127" name="Assembler InputType" superClass="Base.Assembler.ccrl.inputType"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.linker.591746800" name="Linker" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.linker">
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.debugMonitorValue.1638318125" name="メモリ領域 (-debug_monitor=&lt;start address&gt;-&lt;end address&gt;)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.debugMonitorValue" useByScannerDiscovery="false" value="BFE00-BFFFF" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userOptByteValue.33060429" name="ユーザ・オプション・バイト値 (-user_opt_byte=&lt;value&gt;)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userOptByteValue" useByScannerDiscovery="false" value="EFFFE8" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.ocdbgValue.1276188333" name="オンチップ・デバッグ制御値 (-ocdbg=&lt;value&gt;)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.ocdbgValue" useByScannerDiscovery="false" value="85" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.vectn.226666569" name="可変ベクタ・テーブルに指定するベクタ番号とアドレス (-vectn)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.vectn" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.nologo.728560625" name="コピーライトを表示しない (-logo/-nologo)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.nologo" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userBefore.427949030" name="追加するオプション（すべての指定オプションの前に追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userBefore" useByScannerDiscovery="false" valueType="stringList"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userAfter.1471118636" name="追加するオプション（すべての指定オプションの後ろに追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userAfter" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.debugMonitor.639720671" name="OCDモニタのメモリ領域を確保する (-debug_monitor)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.debugMonitor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.noneLinkageOrderList.898115704" name="なし(リンク順序のリスト)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.noneLinkageOrderList" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel/portable/Renesas/RL78G2x\portasm.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/r_bsp/board/generic_rl78_g23\stkinit.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/r_bsp/mcu/all\cstart.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\application_code\main.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/common/mqtt_demo_helpers\mqtt_demo_helpers.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/common/pkcs11_helpers\pkcs11_helpers.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/coreMQTT\mqtt_demo_connection_sharing.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/coreMQTT\mqtt_demo_mutual_auth.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/demo_runner\aws_demo.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/demo_runner\aws_demo_version.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/demo_runner\iot_demo_freertos.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/demo_runner\iot_demo_runner.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/network_manager\aws_iot_demo_network.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\demos/network_manager\aws_iot_network_manager.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\croutine.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\event_groups.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\list.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel/portable/Renesas/MemMang\heap_4.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel/portable/Renesas/RL78G2x\port.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\queue.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\stream_buffer.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\tasks.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\freertos_kernel\timers.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\aes.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\asn1parse.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\asn1write.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\base64.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\bignum.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\cipher.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\cipher_wrap.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ctr_drbg.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ecdh.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ecdsa.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ecp.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ecp_curves.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\entropy.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\gcm.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\md.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\md_wrap.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\oid.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\pem.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\pk.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\pk_wrap.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\pkparse.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\pkwrite.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\platform_util.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\rsa.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\rsa_internal.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\sha1.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\sha256.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ssl_ciphersuites.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ssl_cli.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\ssl_tls.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\threading.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\x509.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls/library\x509_crt.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls_utils\mbedtls_error.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/3rdparty/mbedtls_utils\mbedtls_utils.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/backoff_algorithm/source\backoff_algorithm.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/pkcs11/corePKCS11/source\core_pkcs11.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/pkcs11/corePKCS11/source\core_pki_utils.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/pkcs11/corePKCS11/source/portable/mbedtls\core_pkcs11_mbedtls.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/platform/freertos\iot_clock_freertos.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/platform/freertos\iot_metrics.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/platform/freertos\iot_network_freertos.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/platform/freertos\iot_threads_freertos.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/abstractions/transport/secure_sockets\transport_secure_sockets.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common\iot_device_metrics.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common\iot_init.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common\iot_static_memory_common.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common/taskpool\iot_taskpool.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common/taskpool\iot_taskpool_static_memory.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_agent.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_api.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_context_connection.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_managed_function_wrapper.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_mutex_wrapper.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_network.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_operation.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_publish_duplicates.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_serializer_deserializer_wrapper.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_static_memory.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_subscription.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_subscription_container.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/mqtt/src\iot_mqtt_validate.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/coreJSON/source\core_json.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/coreMQTT/source\core_mqtt.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/coreMQTT/source\core_mqtt_serializer.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/coreMQTT/source\core_mqtt_state.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/standard/crypto/src\iot_crypto.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/standard/tls/src\iot_tls.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/standard/utils/src\iot_system_init.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/logging\iot_logging.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\libraries/logging\iot_logging_task_dynamic_buffers.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/amazon_freertos_common\freertos_start.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/amazon_freertos_common/network_support/r_wifi_sx_ulpgn_ssl/src\r_wifi_sx_ulpgn_api.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/amazon_freertos_common/network_support/r_wifi_sx_ulpgn_ssl/src\r_wifi_sx_ulpgn_queue.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/amazon_freertos_common/network_support/r_wifi_sx_ulpgn_ssl/src\r_wifi_sx_ulpgn_recv_task.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/amazon_freertos_common\serial_term_uart.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/boards/rl78g23-fpb/ports/ota\aws_ota_pal.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/boards/rl78g23-fpb/ports/pkcs11\core_pkcs11_pal.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/boards/rl78g23-fpb/ports/secure_sockets\iot_secure_sockets.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/boards/rl78g23-fpb/ports/wifi\iot_wifi.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_PORT\Config_PORT.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_PORT\Config_PORT_user.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_UART1\Config_UART1.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_UART1\Config_UART1_user.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_UART2\Config_UART2.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_UART2\Config_UART2_user.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_UART3\Config_UART3.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/Config_UART3\Config_UART3_user.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/general\r_cg_sau_common.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/general\r_cg_systeminit.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/r_bsp/board/generic_rl78_g23\hdwinit.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/r_bsp/board/generic_rl78_g23\r_bsp_init.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/r_bsp/mcu/all\r_bsp_common.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/smc_gen/r_bsp/mcu/rl78_g23\mcu_clocks.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/wrapper_modules/r_bsp/mcu/all\r_bsp_common2.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/wrapper_modules/r_byteq/src\r_byteq.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/wrapper_modules/r_sci/src\r_sci_rl.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/wrapper_modules/r_sci/src/targets/rl78\r_sci_rl78.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\vendors/renesas/drivers/wrapper_modules/r_sci/src/targets/rl78\r_sci_rl78_data.obj&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Renesas\RL78\1_10_0\lib\rl78em4s99.lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Renesas\RL78\1_10_0\lib\rl78em4r.lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Renesas\RL78\1_10_0\lib\malloc_n.lib&quot;"/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userOptByte.1490547068" name="オプション・バイト領域のユーザ・オプション・バイトに値を設定する (-user_opt_byte)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.userOptByte" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.securityID.2079017360" name="セキュリティID値 (-security_id)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.securityID" useByScannerDiscovery="false" value="00000000000000000000" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.ocdbg.765644278" name="オプションバイト領域のオンチップ・デバッグ・オプション・バイトに値を設定する (-ocdbg)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.ocdbg" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.c99Library.1132596948" name="C99版ライブラリを使用する (-library)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.c99Library" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize.97352315" name="最適化方法 (-nooptimize/-optimize)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize.custom" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize.symbolDelete.1839576855" name="一度も参照のない変数/関数を削除する (-optimize=symbol_delete)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize.symbolDelete" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.show.symbol.334349625" name="シンボル情報を出力する (-show=symbol)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.show.symbol" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.show.totalSize.1877852937" name="セクションの合計サイズを出力する (-show=total_size)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.show.totalSize" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.show.vector.776500468" name="ベクタ情報を出力する (-show=vector)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.show.vector" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.vfInfo.493044061" name="配置最適化を行う (-vfinfo)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.vfInfo" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.vfInfo.noOutput" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.autoSectionLayout.24000980" name="デバイス・ファイルの情報からセクションを自動的に配置する (-auto_section_layout)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.autoSectionLayout" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.section.27307743" name="セクション (-start)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.section" useByScannerDiscovery="false" value=".data,.sdata,.RLIB,.text/0D8,.const,.constf,.textf,.SLIB/03000,.dataR,.bss/0F3F00,.sdataR,.sbss/0FFE20" valueType="string"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize.branch.970167866" name="プログラムの配置に基づいて、分岐命令サイズの最適化を行う (-optimize=branch)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.optimize.branch" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.stack.805856223" name="スタック使用量情報ファイルを出力する (-stack)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.linker.option.stack" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<inputType id="Base.Linker.ccrl.inputType.1185860183" name="Linker InputType" superClass="Base.Linker.ccrl.inputType"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.renesas.ccrl.base.converter.523784573" name="Converter" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.base.converter">
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.noLogo.211031521" name="コピーライトを表示しない (-logo/-nologo)" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.noLogo" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.userBefore.1432434704" name="追加するオプション（すべての指定オプションの前に追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.userBefore" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.userAfter.2023702592" name="追加するオプション（すべての指定オプションの後ろに追加）" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.userAfter" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.outputHexFile.1085401240" name="ロード・モジュール・コンバータを実行する" superClass="com.renesas.cdt.managedbuild.renesas.ccrl.converter.option.outputHexFile" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="application_code"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="config_files"/>
+						<entry excluding="common/pkcs11_helpers|common/http_demo_helpers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="demos"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freertos_kernel"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="generate"/>
+						<entry excluding="freertos_plus/standard/crypto/src|3rdparty/mbedtls_utils|3rdparty/mbedtls/library|freertos_plus/standard/tls/src|abstractions/pkcs11/corePKCS11|3rdparty/mbedtls/library/xtea.c|3rdparty/mbedtls/library/x509write_csr.c|3rdparty/mbedtls/library/x509write_crt.c|3rdparty/mbedtls/library/x509_csr.c|3rdparty/mbedtls/library/x509_crl.c|3rdparty/mbedtls/library/x509_create.c|3rdparty/mbedtls/library/version.c|3rdparty/mbedtls/library/version_features.c|3rdparty/mbedtls/library/timing.c|3rdparty/mbedtls/library/ssl_ticket.c|3rdparty/mbedtls/library/ssl_srv.c|3rdparty/mbedtls/library/ssl_cookie.c|3rdparty/mbedtls/library/ssl_cache.c|3rdparty/mbedtls/library/sha512.c|3rdparty/mbedtls/library/ripemd160.c|3rdparty/mbedtls/library/poly1305.c|3rdparty/mbedtls/library/platform.c|3rdparty/mbedtls/library/pkcs5.c|3rdparty/mbedtls/library/pkcs12.c|3rdparty/mbedtls/library/pkcs11.c|3rdparty/mbedtls/library/padlock.c|3rdparty/mbedtls/library/nist_kw.c|3rdparty/mbedtls/library/net_sockets.c|3rdparty/mbedtls/library/memory_buffer_alloc.c|3rdparty/mbedtls/library/md5.c|3rdparty/mbedtls/library/md4.c|3rdparty/mbedtls/library/md2.c|3rdparty/mbedtls/library/hmac_drbg.c|3rdparty/mbedtls/library/hkdf.c|3rdparty/mbedtls/library/havege.c|3rdparty/mbedtls/library/error.c|3rdparty/mbedtls/library/entropy_poll.c|3rdparty/mbedtls/library/ecjpake.c|3rdparty/mbedtls/library/dhm.c|3rdparty/mbedtls/library/des.c|3rdparty/mbedtls/library/debug.c|3rdparty/mbedtls/library/cmac.c|3rdparty/mbedtls/library/chachapoly.c|3rdparty/mbedtls/library/chacha20.c|3rdparty/mbedtls/library/certs.c|3rdparty/mbedtls/library/ccm.c|3rdparty/mbedtls/library/camellia.c|3rdparty/mbedtls/library/blowfish.c|3rdparty/mbedtls/library/aria.c|3rdparty/mbedtls/library/arc4.c|3rdparty/mbedtls/library/aesni.c|c_sdk/standard/https|jobs_for_aws|device_shadow_for_aws|device_defender_for_aws|freertos_plus/standard/freertos_plus_cli/source|3rdparty/mbedtls_config|3rdparty/jsmn|freertos_plus/aws|c_sdk/aws|3rdparty/tinycbor|c_sdk/standard/serializer|coreHTTP|freertos_plus/aws/ota" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="libraries"/>
+						<entry excluding="renesas/boards/rl78g23-fpb/ports/pkcs11|renesas/boards/rl78g23-fpb/ports/ota" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="vendors"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="com.renesas.cdt.managedbuild.core.boardInfo"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="aws_demos.com.renesas.cdt.managedbuild.renesas.ccrl.projectType.294710520" name="実行可能" projectType="com.renesas.cdt.managedbuild.renesas.ccrl.projectType"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="refreshScope"/>
+</cproject>

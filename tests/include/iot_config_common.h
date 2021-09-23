@@ -212,10 +212,12 @@ extern uint16_t getDeviceMetricsLength( void );
 
 /* For compatibility with the FreeRTOS test framework, UnityPrint and similar
  * must be redefined. */
+#if (0)
 extern int snprintf( char *,
                      size_t,
                      const char *,
                      ... );
+#endif
 #define UnityPrint( X )          configPRINTF( ( X ) )
 #define UnityPrintNumber( X )    { char number[ 12 ] = { 0 }; snprintf( number, 12, "%d", X ); configPRINTF( ( number ) ); }
 #undef UNITY_PRINT_EOL

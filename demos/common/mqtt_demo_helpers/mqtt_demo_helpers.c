@@ -38,6 +38,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#pragma section const const_mqttDemoHelper
+
 /* MQTT API header. */
 #include "core_mqtt.h"
 
@@ -48,7 +50,11 @@
 #include "backoff_algorithm.h"
 
 /* Include PKCS11 helpers header. */
+#if (__CCRL__)
+#include "trng_helper.h"
+#else
 #include "pkcs11_helpers.h"
+#endif
 
 /* Include header for client credentials. */
 #include "aws_clientcredential.h"
@@ -292,8 +298,13 @@ static BaseType_t prvBackoffForRetry( BackoffAlgorithmContext_t * pxRetryParams 
      */
     uint32_t ulRandomNum = 0;
 
-    if( xPkcs11GenerateRandomNumber( ( uint8_t * ) &ulRandomNum,
+#if (__CCRL__)
+    if( xTrngGenerateRandomNumber( ( uint8_t * ) &ulRandomNum,
                                      sizeof( ulRandomNum ) ) == pdPASS )
+#else
+	if( xPkcs11GenerateRandomNumber( ( uint8_t * ) &ulRandomNum,
+									 sizeof( ulRandomNum ) ) == pdPASS )
+#endif
     {
         /* Get back-off value (in milliseconds) for the next retry attempt. */
         xBackoffAlgStatus = BackoffAlgorithm_GetNextBackoff( pxRetryParams, ulRandomNum, &usNextRetryBackOff );
@@ -954,3 +965,4 @@ static uint32_t prvGetTimeMs( void )
 }
 
 /*-----------------------------------------------------------*/
+#pragma section

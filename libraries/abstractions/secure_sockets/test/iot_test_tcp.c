@@ -433,6 +433,13 @@ typedef struct
 
 #define dnstestNUM_UNIQUE_IP_ADDRESSES        ( 4 )
 
+#if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
+extern void prvSetCertificateProfile( void );
+extern void prvFakeSetCertificateProfile(void);
+extern void prvEraseAllCertificateFile(void);
+extern void prvWriteAllCertificateFile(void);
+#endif
+
 static void prvThreadSafeDifferentSocketsDifferentTasks( void * pvParameters );
 /****************** Unity Test Code *********************************/
 size_t xHeapB;
@@ -841,7 +848,7 @@ static BaseType_t prvConnectHelperWithRetry( volatile Socket_t * pxSocket,
 /*-----------------------------------------------------------*/
 
 static BaseType_t prvSendHelper( Socket_t xSocket,
-                                 uint8_t * pucTxBuffer,
+                                 uint8_t __far * pucTxBuffer,
                                  size_t xLength )
 {
     BaseType_t xNumBytesSentTotal;
@@ -2573,7 +2580,13 @@ static void prvTrustedServerCertificate( void )
 
     xSecureEchoServerAddress.usPort = SOCKETS_htons( tcptestECHO_PORT_TLS );
 
+#if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
+    prvEraseAllCertificateFile();
+#endif
     xResult = SOCKETS_Connect( xSocket, &xSecureEchoServerAddress, sizeof( xSecureEchoServerAddress ) );
+#if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
+    prvWriteAllCertificateFile();
+#endif
     TEST_ASSERT_LESS_THAN_INT32_MESSAGE( 0, xResult, "Connection permitted with untrusted server CA cert" );
 
     xResult = prvCloseHelper( xSocket, &xSocketOpen );
@@ -2624,7 +2637,13 @@ static void prvTriggerWrongRootCA( void )
     TEST_ASSERT_NOT_EQUAL_MESSAGE( 0, xAwsIotBrokerAddress.ulAddress, "DNS look up failed." );
     xAwsIotBrokerAddress.usPort = SOCKETS_htons( clientcredentialMQTT_BROKER_PORT );
 
+#if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
+    prvFakeSetCertificateProfile();
+#endif
     xResult = SOCKETS_Connect( xSocket, &xAwsIotBrokerAddress, sizeof( xAwsIotBrokerAddress ) );
+#if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
+    prvSetCertificateProfile();
+#endif
     TEST_ASSERT_LESS_THAN_INT32_MESSAGE( 0, xResult, "Connection permitted with untrusted server CA cert" );
 
     xResult = prvCloseHelper( xSocket, &xSocketOpen );
@@ -2639,6 +2658,7 @@ TEST( Full_TCP, AFQP_SECURE_SOCKETS_SockEventHandler )
 }
 
 /*-----------------------------------------------------------*/
+volatile char * pucDummy;
 
 /** @brief This test will create a task the will send data to an echo server.
  * The data coming back will be received in that task.
@@ -2659,7 +2679,8 @@ static void prvSOCKETS_Threadsafe_SameSocketDifferentTasks( Server_t xConn )
 
     if( TEST_PROTECT() )
     {
-        pcReceivedString = pvPortMalloc( ipconfigTCP_MSS * sizeof( char ) );
+        pucDummy = pvPortMalloc( ipconfigTCP_MSS * sizeof( char ) );
+        pcReceivedString = pucDummy; /* todo: rl78/g23  */
         configASSERT( pcReceivedString != NULL );
         xReceivedStringAllocated = pdTRUE;
 
@@ -2754,7 +2775,8 @@ static void prvSOCKETS_Threadsafe_SameSocketDifferentTasks( Server_t xConn )
     /* Free all dynamic memory. */
     if( xReceivedStringAllocated == pdTRUE )
     {
-        vPortFree( ( char * ) pcReceivedString );
+//        vPortFree( ( char * ) pcReceivedString );
+        vPortFree( ( char * ) pucDummy );
     }
 
     if( xSocketPassingQueueAllocated == pdTRUE )
@@ -2857,7 +2879,7 @@ static void prvEchoClientTxTask( void * pvParameters )
             }
 
             xReturned = SOCKETS_Send( xSocket,                                            /* The socket being sent to. */
-                                      ( void * ) &( cTransmittedString[ xTransmitted ] ), /* The data being sent. */
+                                      ( void __far * ) &( cTransmittedString[ xTransmitted ] ), /* The data being sent. */
                                       xLenToSend,                                         /* The length of the data being sent. */
                                       0 );                                                /* ulFlags. */
 
@@ -3027,7 +3049,7 @@ static void prvThreadSafeDifferentSocketsDifferentTasks( void * pvParameters )
 
             /* Send the string to the socket. */
             xTransmitted = SOCKETS_Send( xTaskSocket,                   /* The socket being sent to. */
-                                         ( void * ) cTransmittedString, /* The data being sent. */
+                                         ( void __far * ) cTransmittedString, /* The data being sent. */
                                          ipconfigTCP_MSS,               /* The length of the data being sent. */
                                          0 );                           /* No flags. */
 
@@ -3169,11 +3191,11 @@ static void prvTwoSecureConnections( void )
         TEST_ASSERT_EQUAL_INT32_MESSAGE( SOCKETS_ERROR_NONE, xResult, "Failed to connect to secure server" );
 
         /* Send message 1x to AWS Broker, 2x to Secure Echo Server, alternating. */
-        xResult = prvSendHelper( xSocketSecServer, ( uint8_t * ) cMessageSecServer, sizeof( cMessageSecServer ) );
+        xResult = prvSendHelper( xSocketSecServer, ( uint8_t __far * ) cMessageSecServer, sizeof( cMessageSecServer ) );
         TEST_ASSERT_EQUAL_UINT32_MESSAGE( pdPASS, xResult, "Send to secure server failed." );
-        xResult = prvSendHelper( xSocketAWS, ( uint8_t * ) cMessageAWS, sizeof( cMessageAWS ) );
+        xResult = prvSendHelper( xSocketAWS, ( uint8_t __far * ) cMessageAWS, sizeof( cMessageAWS ) );
         TEST_ASSERT_EQUAL_UINT32_MESSAGE( pdPASS, xResult, "Send to AWS failed." );
-        xResult = prvSendHelper( xSocketSecServer, ( uint8_t * ) cMessageSecServer, sizeof( cMessageSecServer ) );
+        xResult = prvSendHelper( xSocketSecServer, ( uint8_t __far * ) cMessageSecServer, sizeof( cMessageSecServer ) );
         TEST_ASSERT_EQUAL_UINT32_MESSAGE( pdPASS, xResult, "Send to secure server failed." );
 
         /* Receive from secure echo server 1x. */
@@ -3358,7 +3380,7 @@ TEST( Full_TCP, AFQP_SOCKETS_inet_addr_quick_HappyCase )
 TEST( Full_TCP, AFQP_SECURE_SOCKETS_SetSecureOptionsAfterConnect )
 {
     BaseType_t xResult = pdFAIL;
-    char * pcAlpns[] = { socketsAWS_IOT_ALPN_MQTT };
+    char __far * pcAlpns[] = { socketsAWS_IOT_ALPN_MQTT };
 
     tcptestPRINTF( ( "Starting %s.\r\n", __FUNCTION__ ) );
 

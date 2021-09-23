@@ -54,6 +54,10 @@
  * exponential backoff and jitter.*/
 #include "backoff_algorithm.h"
 
+#if (__CCRL__)
+#include "trng_helper.h"
+#endif
+
 /**************************************************/
 /******* DO NOT CHANGE the following order ********/
 /**************************************************/
@@ -239,7 +243,7 @@
  * @brief Time interval in seconds at which an MQTT PINGREQ need to be sent to
  * broker.
  */
-#define MQTT_KEEP_ALIVE_INTERVAL_SECONDS           ( 60U )
+#define MQTT_KEEP_ALIVE_INTERVAL_SECONDS           (60LU)
 
 /**
  * @brief The number of milliseconds to wait for AWS IoT Core Message Broker
@@ -444,7 +448,7 @@ static uint32_t globalEntryTime;
  *
  * @return Time in milliseconds.
  */
-static uint32_t getTimeMs();
+static uint32_t getTimeMs(void);
 
 /**
  * @brief Sends an MQTT CONNECT packet over the already connected TCP socket.
@@ -568,7 +572,7 @@ static int32_t failedRecv( NetworkContext_t * pNetworkContext,
  * @return The generated random number. This function ALWAYS succeeds
  * in generating a random number.
  */
-static uint32_t generateRandomNumber();
+static uint32_t generateRandomNumber(void);
 
 /**
  * @brief Connect to the MQTT broker with reconnection retries.
@@ -589,7 +593,7 @@ static bool connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContex
  * with the "clean session" flag set to 0 to create a persistent session
  * with the broker.
  */
-static void startPersistentSession();
+static void startPersistentSession(void);
 
 /**
  * @brief Helper function to resume connection in persistent session
@@ -597,11 +601,11 @@ static void startPersistentSession();
  * It resumes the session with the broker by establishing a new connection
  * with the "clean session" flag set to 0.
  */
-static void resumePersistentSession();
+static void resumePersistentSession(void);
 
 /*-----------------------------------------------------------*/
 
-static uint32_t getTimeMs()
+static uint32_t getTimeMs(void)
 {
     TickType_t tickCount = 0;
     uint32_t timeMs = 0UL;
@@ -974,10 +978,11 @@ static int32_t failedRecv( NetworkContext_t * pNetworkContext,
     return -1;
 }
 
-static uint32_t generateRandomNumber()
+static uint32_t generateRandomNumber(void)
 {
     UBaseType_t uxRandNum = 0;
 
+#if !(__CCRL__)
     CK_FUNCTION_LIST_PTR pFunctionList = NULL;
     CK_SESSION_HANDLE session = CK_INVALID_HANDLE;
 
@@ -1001,7 +1006,10 @@ static uint32_t generateRandomNumber()
 
     /* Close PKCS11 session. */
     TEST_ASSERT_EQUAL( CKR_OK, pFunctionList->C_CloseSession( session ) );
+#else
+    TEST_ASSERT_EQUAL(pdPASS, xTrngGenerateRandomNumber ((unsigned char* ) &uxRandNum, sizeof(uxRandNum)));
 
+#endif
     return uxRandNum;
 }
 
@@ -1073,7 +1081,7 @@ static bool connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContex
     return isSuccessful;
 }
 
-static void startPersistentSession()
+static void startPersistentSession(void)
 {
     /* Terminate TLS session and TCP network connection to discard the current MQTT session
      * that was created as a "clean session". */
@@ -1090,7 +1098,7 @@ static void startPersistentSession()
     TEST_ASSERT_FALSE( persistentSession );
 }
 
-static void resumePersistentSession()
+static void resumePersistentSession(void)
 {
     /* Create a new TLS+TCP network connection with the server. */
     TEST_ASSERT_TRUE( connectToServerWithBackoffRetries( &networkContext ) );
@@ -1106,7 +1114,7 @@ static void resumePersistentSession()
 /* ============================   UNITY FIXTURES ============================ */
 
 /* Called before each test method. */
-void testSetUp()
+void testSetUp(void)
 {
     /* Reset file-scoped global variables. */
     receivedSubAck = false;
@@ -1140,7 +1148,7 @@ void testSetUp()
 }
 
 /* Called after each test method. */
-void testTearDown()
+void testTearDown(void)
 {
     MQTTStatus_t mqttStatus;
     TransportSocketStatus_t transportStatus;
@@ -1234,7 +1242,7 @@ TEST_GROUP_RUNNER( coreMQTT_Integration )
  * The test subscribes to a topic, and then publishes to the same topic. The
  * broker is expected to route the publish message back to the test.
  */
-void Subscribe_Publish_With_Qos_0()
+void Subscribe_Publish_With_Qos_0(void)
 {
     /* Subscribe to a topic with Qos 0. */
     TEST_ASSERT_EQUAL( MQTTSuccess, subscribeToTopic(
@@ -1298,7 +1306,7 @@ TEST( coreMQTT_Integration, Subscribe_Publish_With_Qos_0 )
  * The test subscribes to a topic, and then publishes to the same topic. The
  * broker is expected to route the publish message back to the test.
  */
-void Subscribe_Publish_With_Qos_1()
+void Subscribe_Publish_With_Qos_1(void)
 {
     /* Subscribe to a topic with Qos 1. */
     TEST_ASSERT_EQUAL( MQTTSuccess, subscribeToTopic(
@@ -1433,7 +1441,7 @@ TEST( coreMQTT_Integration, Subscribe_Publish_With_Qos_2 )
  * @brief Verifies that the MQTT library supports the "Last Will and Testament" feature when
  * establishing a connection with a broker.
  */
-void Connect_LWT()
+void Connect_LWT(void)
 {
     NetworkContext_t secondNetworkContext = { 0 };
     bool sessionPresent;
@@ -1498,7 +1506,7 @@ TEST( coreMQTT_Integration, Connect_LWT )
  * @brief Verifies that the MQTT library sends a Ping Request packet if the connection is
  * idle for more than the keep-alive period.
  */
-void ProcessLoop_KeepAlive()
+void ProcessLoop_KeepAlive(void)
 {
     uint32_t connectPacketTime = context.lastPacketTime;
     uint32_t elapsedTime = 0;
@@ -1628,7 +1636,7 @@ TEST( coreMQTT_Integration, Restore_Session_Incoming_Duplicate_PubRel )
  * un-acknowledged in its first attempt.
  * Tests that the library is able to support resending the PUBLISH packet with the DUP flag.
  */
-void Resend_Unacked_Publish_QoS1()
+void Resend_Unacked_Publish_QoS1(void)
 {
     /* Start a persistent session with the broker. */
     startPersistentSession();
@@ -1781,7 +1789,7 @@ TEST( coreMQTT_Integration, Resend_Unacked_Publish_QoS2 )
  * Tests that the library responds with a PUBACK to the duplicate incoming QoS 1 PUBLISH
  * packet that was un-acknowledged in a previous connection of the same session.
  */
-void Restore_Session_Duplicate_Incoming_Publish_Qos1()
+void Restore_Session_Duplicate_Incoming_Publish_Qos1(void)
 {
     /* Start a persistent session with the broker. */
     startPersistentSession();

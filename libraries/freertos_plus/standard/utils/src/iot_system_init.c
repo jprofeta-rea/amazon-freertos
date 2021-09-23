@@ -40,7 +40,9 @@ BaseType_t SYSTEM_Init( void )
 {
     BaseType_t xResult = pdPASS;
 
+#if !(defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL__))
     CRYPTO_Init();
+#endif
 
     if( xResult == pdPASS )
     {

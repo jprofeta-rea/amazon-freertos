@@ -375,7 +375,7 @@ static BaseType_t prvRoundTripTest( void )
     BaseType_t xNumBytesRecv = 0;
     BaseType_t xSocketResult;
     TickType_t xTimeOnEnteringShutdown;
-    char * pcRoundTripTestString = testwifiROUND_TRIP_TEST_STRING;
+    char __far * pcRoundTripTestString = testwifiROUND_TRIP_TEST_STRING;
     size_t xRoundTripTestStringLength = sizeof( testwifiROUND_TRIP_TEST_STRING );
     char cRecvBuffer[ testwifiROUND_TRIP_TEST_STRING_MAX_LENGTH + 1 ];
     BaseType_t xResult = pdPASS;
