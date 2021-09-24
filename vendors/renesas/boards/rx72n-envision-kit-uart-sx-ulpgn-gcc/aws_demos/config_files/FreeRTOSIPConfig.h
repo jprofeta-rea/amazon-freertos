@@ -31,8 +31,6 @@
 *
 *****************************************************************************/
 
-#include "FreeRTOSApplicationConfig.h"
-
 #ifndef FREERTOS_IP_CONFIG_H
 #define FREERTOS_IP_CONFIG_H
 

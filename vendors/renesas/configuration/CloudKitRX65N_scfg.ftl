@@ -78,14 +78,15 @@
 <gridItem id="RXD8/SMISO8/SSCL8" selectedIndex="0"/>
 <gridItem id="TXD8/SMOSI8/SSDA8" selectedIndex="0"/>
 <gridItem id="SCI8" selectedIndex="0"/>
+<gridItem id="SCI_CFG_TEI_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH0_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH1_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH5_INCLUDED" selectedIndex="1"/>
 <gridItem id="SCI_CFG_CH8_INCLUDED" selectedIndex="0"/>
 <gridItem id="SCI_CFG_CH0_TX_BUFSIZ" selectedIndex="2180"/>
 <gridItem id="SCI_CFG_CH1_TX_BUFSIZ" selectedIndex="2180"/>
+<gridItem id="SCI_CFG_CH0_RX_BUFSIZ" selectedIndex="4096"/>
 <gridItem id="SCI_CFG_CH1_RX_BUFSIZ" selectedIndex="4096"/>
-<gridItem id="SCI_CFG_CH2_RX_BUFSIZ" selectedIndex="4096"/>
 </component>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
@@ -136,16 +137,20 @@
 <source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
 </tool>
-    <clock>
-        <item id="hococlockenable" value="check"/>
-        <item id="hocofrequency" value="frq20"/>
-        <item id="hocooscenable" value="check"/>
-        <item id="pllswitcher" value="pllhoco"/>
-        <item id="plldivider" value="div1-1"/>
-        <item id="pllmul" value="mul10-5"/>
-    </clock>
+    <tool id="Clock">
+        <option enabled="true" id="mainclockenable" selection="uncheck"/>
+        <option enabled="true" id="hococlockenable" selection="check"/>
+        <option enabled="true" id="hocofrequency" selection="frq20"/>
+        <option enabled="true" id="pllswitcher" selection="pllhoco">
+            <item enabled="true" id="pllhoco" input="" value="20"/>
+        </option>
+        <option enabled="true" id="pllmul" selection="mul12-1"/>
+        <option enabled="true" id="uckdivider" selection="comboBox1-5"/>
+        <option enabled="true" id="uckenable" selection="check"/>
+    </tool>
 <tool id="Pins" version="1.0.1.0">
 <pinItem allocation="11" comments="" direction="None" id="XTAL" isUsedBySoftware="true" locked="false" status="0"/>
+<pinItem allocation="25" comments="" direction="None" id="CTS0#" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="28" comments="" direction="None" id="TXD0" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="27" comments="" direction="None" id="RXD0" isUsedBySoftware="false" locked="false" status="0"/>
 <pinItem allocation="66" comments="" direction="None" id="TXD5" isUsedBySoftware="false" locked="false" status="0"/>

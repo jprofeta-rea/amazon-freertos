@@ -23,7 +23,7 @@
 <gridItem id="BSP_CFG_ISTACK_BYTES" selectedIndex="0x1000"/>
 <gridItem id="BSP_CFG_HEAP_BYTES" selectedIndex="0x1000"/>
 <gridItem id="BSP_CFG_CODE_FLASH_BANK_MODE" selectedIndex="0"/>
-<gridItem id="BSP_CFG_SWINT_UNIT2_ENABLE" selectedIndex="0"/>
+<gridItem id="BSP_CFG_SWINT_UNIT2_ENABLE" selectedIndex="1"/>
 <gridItem id="BSP_CFG_ROM_CACHE_ENABLE" selectedIndex="1"/>
 </component>
 <source id="com.renesas.smc.tools.swcomponent.fit.source"/>
@@ -44,30 +44,13 @@
 </configuration>
 <configuration inuse="true" name="r_sci_rx">
 <component display="r_sci_rx" id="r_sci_rx3.40" version="3.40">
-<gridItem id="CTS1#/RTS1#/SS1#" selectedIndex="0"/>
-<gridItem id="RXD1/SMISO1" selectedIndex="1"/>
-<gridItem id="TXD1/SMOSI1" selectedIndex="1"/>
-<gridItem id="SCI1" selectedIndex="1"/>
+<gridItem id="SCK2" selectedIndex="0"/>
 <gridItem id="RXD2/SMISO2" selectedIndex="1"/>
 <gridItem id="TXD2/SMOSI2" selectedIndex="1"/>
-<gridItem id="SCK2" selectedIndex="0"/>
 <gridItem id="CTS2#/RTS2#/SS2#" selectedIndex="0"/>
 <gridItem id="SCI2" selectedIndex="1"/>
-<gridItem id="RXD7/SMISO7" selectedIndex="1"/>
-<gridItem id="TXD7/SMOSI7" selectedIndex="1"/>
-<gridItem id="CTS7#/RTS7#/SS7#" selectedIndex="0"/>
-<gridItem id="SCK7" selectedIndex="0"/>
-<gridItem id="SCI7" selectedIndex="1"/>
-<gridItem id="SCI_CFG_TEI_INCLUDED" selectedIndex="1"/>
+<gridItem id="SCI_CFG_CH1_INCLUDED" selectedIndex="0"/>
 <gridItem id="SCI_CFG_CH2_INCLUDED" selectedIndex="1"/>
-<gridItem id="SCI_CFG_CH7_INCLUDED" selectedIndex="1"/>
-<gridItem id="SCI_CFG_CH1_INCLUDED" selectedIndex="1"/>
-<gridItem id="SCI_CFG_CH1_TX_BUFSIZ" selectedIndex="1024"/>
-<gridItem id="SCI_CFG_CH2_TX_BUFSIZ" selectedIndex="1024"/>
-<gridItem id="SCI_CFG_CH7_TX_BUFSIZ" selectedIndex="1024"/>
-<gridItem id="SCI_CFG_CH1_RX_BUFSIZ" selectedIndex="1024"/>
-<gridItem id="SCI_CFG_CH2_RX_BUFSIZ" selectedIndex="1024"/>
-<gridItem id="SCI_CFG_CH7_RX_BUFSIZ" selectedIndex="1024"/>
 </component>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
@@ -101,16 +84,14 @@
 <gridItem id="CLKOUT25M" selectedIndex="1"/>
 <gridItem id="ETHERC0_MII" selectedIndex="1"/>
 <gridItem id="ETHER_CFG_CH0_PHY_ACCESS" selectedIndex="0"/>
-<gridItem id="ETHER_CFG_CH1_PHY_ACCESS" selectedIndex="0"/>
+<gridItem id="ETHER_CFG_CH1_PHY_ACCESS" selectedIndex="1"/>
 <gridItem id="ETHER_CFG_USE_LINKSTA" selectedIndex="0"/>
 <gridItem id="ETHER_CFG_CH0_PHY_ADDRESS" selectedIndex="0"/>
 <gridItem id="ETHER_CFG_CH1_PHY_ADDRESS" selectedIndex="1"/>
 <gridItem id="ETHER_CFG_EMAC_RX_DESCRIPTORS" selectedIndex="4"/>
 <gridItem id="ETHER_CFG_EMAC_TX_DESCRIPTORS" selectedIndex="4"/>
 <gridItem id="ETHER_CFG_BUFSIZE" selectedIndex="1536"/>
-<gridItem id="ETHER_CFG_AL1_INT_PRIORTY" selectedIndex="13"/>
-<gridItem id="ETHER_CFG_CH1_PHY_ACCESS" selectedIndex="1"/>
-<gridItem id="ETHER_CFG_USE_PHY_KSZ8041NL" selectedIndex="1"/>
+<gridItem id="ETHER_CFG_AL1_INT_PRIORTY" selectedIndex="1"/>
 </component>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
@@ -158,50 +139,99 @@
 </configuration>
 </tool>
 <tool id="Clock">
-<Item current="16 MHz" id="mainclock.OutputValue"/>
-<Item current="16" error="false" id="mainclock.frequencyTxt"/>
-<Item current="16 MHz" id="pllSourceSelect.InputValue"/>
-<Item current="16 MHz" id="pllSourceSelect.OutputValue"/>
-<Item current="16 MHz" id="pll.InputValue"/>
-<Item current="mul15-1" error="false" id="pll.multiplyBox"/>
-<Item current="16.0 MHz" error="false" id="pll.MiddleValue"/>
-<Item current="16 MHz" id="ppll.InputValue"/>
-<Item current="mul12_5-1" error="false" id="ppll.multiplyBox"/>
-<Item current="div1-1" error="false" id="ppll.dividerBox"/>
-<Item current="16.0 MHz" error="false" id="ppll.MiddleValue"/>
-<Item current="16 MHz" id="ckoselector.InputValue"/>
-<Item current="16 MHz" id="ckoselector.OutputValue"/>
-<Item current="16 MHz" id="ckodivider.InputValue"/>
-<Item current="16.0 MHz" id="ckodivider.OutputValue"/>
-<Item current="16 MHz" error="false" id="ckodivider.PreOutput"/>
-<Item current="120.0 MHz" id="bck.InputValue"/>
-<Item current="120.0 MHz" id="bck.OutputValue"/>
-<Item current="120.0" id="bck.frequencyTxt"/>
-<Item current="120.0" id="bck.CurrentValue"/>
-<Item current="120.0 MHz" id="sdclk.InputValue"/>
-<Item current="true" id="sdclk.SelectBoxDisabled"/>
-<Item current="16.0 MHz" id="clkout.InputValue"/>
-<Item current="16.0" id="clkout.CurrentValue"/>
-<Item current="16 MHz" id="cacmclk.InputValue"/>
-<Item current="16 MHz" id="cacmclk.OutputValue"/>
-<Item current="16" id="cacmclk.frequencyTxt"/>
-<Item current="16" id="cacmclk.CurrentValue"/>
-<Item current="true" id="bckdivider.isSelected"/>
-<Item current="240.0 MHz" id="bckdivider.InputValue"/>
-<Item current="120.0 MHz" id="bckdivider.OutputValue"/>
-<Item current="sckselector.radiobutton.swtpll" id="bckdivider.Condition"/>
-<Item current="comboBox1-2" error="false" id="bckdivider.comboBox"/>
-<Item current="240.0 MHz" error="false" id="bckdivider.PreOutput"/>
-<Item current="iclkdivider" error="false" id="bckdivider.PreOutputController"/>
-<Item current="false" id="bckselector.selectBox"/>
-<Item current="120.0 MHz" id="bckselector.InputValue"/>
-<Item current="" id="bckselector.OutputValue"/>
-<Item current="comboBox1-2" error="false" id="bckselector.comboBox"/>
-<Item current="true" id="uckdivider.selectBox"/>
-<Item current="240.0 MHz" id="uckdivider.InputValue"/>
-<Item current="48.0 MHz" id="uckdivider.OutputValue"/>
-<Item current="sckselector.radiobutton.swtpll" id="uckdivider.Condition"/>
-<Item current="comboBox1-5" error="false" id="uckdivider.comboBox"/>
+	<option enabled="true" id="mainfrequency" selection="textinputitem">
+		<item enabled="true" id="textinputitem" input="16" value="16"/>
+	</option>
+	<option enabled="true" id="pllswitcher" selection="pllmain">
+		<item enabled="true" id="pllmain" input="" value="16"/>
+	</option>
+	<option enabled="true" id="plldivider" selection="div1-1">
+		<item enabled="false" id="div1-3"/>
+	</option>
+	<option enabled="true" id="pllmul" selection="mul15-1">
+		<item enabled="true" id="mul10-1"/>
+		<item enabled="true" id="mul10_5-1"/>
+		<item enabled="true" id="mul11-1"/>
+		<item enabled="true" id="mul11_5-1"/>
+		<item enabled="true" id="mul12-1"/>
+		<item enabled="true" id="mul12_5-1"/>
+		<item enabled="true" id="mul13-1"/>
+		<item enabled="true" id="mul13_5-1"/>
+		<item enabled="true" id="mul14-1"/>
+		<item enabled="true" id="mul14_5-1"/>
+		<item enabled="true" id="mul15-1"/>
+	</option>	
+	<option enabled="true" id="pplldivider" selection="div1-1">
+		<item enabled="false" id="div1-3"/>
+	</option>		
+	<option enabled="true" id="ppllmul" selection="mul12_5-1">
+		<item enabled="true" id="mul10-1"/>
+		<item enabled="true" id="mul10_5-1"/>
+		<item enabled="true" id="mul11-1"/>
+		<item enabled="true" id="mul11_5-1"/>
+		<item enabled="true" id="mul12-1"/>
+		<item enabled="true" id="mul12_5-1"/>
+		<item enabled="true" id="mul13-1"/>
+		<item enabled="true" id="mul13_5-1"/>
+		<item enabled="true" id="mul14-1"/>
+		<item enabled="true" id="mul14_5-1"/>
+		<item enabled="false" id="mul15_5-1"/>
+		<item enabled="false" id="mul16-1"/>
+		<item enabled="false" id="mul16_5-1"/>
+		<item enabled="false" id="mul17-1"/>
+		<item enabled="false" id="mul17_5-1"/>
+		<item enabled="false" id="mul18-1"/>
+		<item enabled="false" id="mul18_5-1"/>
+		<item enabled="false" id="mul19-1"/>
+		<item enabled="false" id="mul19_5-1"/>
+		<item enabled="false" id="mul20-1"/>
+		<item enabled="false" id="mul20_5-1"/>
+		<item enabled="false" id="mul21-1"/>
+		<item enabled="false" id="mul21_5-1"/>
+		<item enabled="false" id="mul22-1"/>
+		<item enabled="false" id="mul22_5-1"/>
+		<item enabled="false" id="mul23-1"/>
+		<item enabled="false" id="mul23_5-1"/>
+		<item enabled="false" id="mul24-1"/>
+		<item enabled="false" id="mul24_5-1"/>
+		<item enabled="false" id="mul25-1"/>
+		<item enabled="false" id="mul25_5-1"/>
+		<item enabled="false" id="mul26-1"/>
+		<item enabled="false" id="mul26_5-1"/>
+		<item enabled="false" id="mul27-1"/>
+		<item enabled="false" id="mul27_5-1"/>
+		<item enabled="false" id="mul28-1"/>
+		<item enabled="false" id="mul28_5-1"/>
+		<item enabled="false" id="mul29-1"/>
+		<item enabled="false" id="mul29_5-1"/>
+		<item enabled="false" id="mul30-1"/>
+	</option>
+	<option enabled="true" id="sckswitcher" selection="pll">
+		<item enabled="true" id="main" input="" value="16"/>
+	</option>
+	<option enabled="true" id="ckoswitcher" selection="ckomain">
+		<item enabled="true" id="ckomain" input="" value="16"/>
+	</option>
+	<option enabled="true" id="bckdivider" selection="comboBox1-2"></option>
+	<option enabled="false" id="bckselector" selection="comboBox1-2">
+		<item enabled="false" id="comboBox1-1"/>
+	</option>
+	<option enabled="true" id="bck" selection="textoutputitem">
+		<item enabled="true" id="textoutputitem" input="" value="120.0"/>
+	</option>
+	<option enabled="false" id="bckpin" selection="textoutputitem">
+		<item enabled="true" id="textoutputitem" input="" value="60.0"/>
+	</option>
+	<option enabled="false" id="sdclkenable" selection="uncheck"></option>
+	<option enabled="false" id="sdclk" selection="textoutputitem">
+		<item enabled="true" id="textoutputitem" input="" value="120.0"/>
+	</option>
+	<option enabled="false" id="clkout" selection="textoutputitem">
+		<item enabled="true" id="textoutputitem" input="" value="16"/>
+	</option>
+	<option enabled="true" id="cacmclk" selection="textoutputitem">
+		<item enabled="true" id="textoutputitem" input="" value="16"/>
+	</option>
 </tool>
 <tool id="Pins" version="1.0.1.0">
 <pinItem allocation="127" comments="" direction="None" id="CTS7#" isUsedBySoftware="false" locked="false" status="65280"/>

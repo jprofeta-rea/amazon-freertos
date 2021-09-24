@@ -20,7 +20,7 @@
     <board>ENVISIONRX72N</board>
     <board>CloudKitRX65N</board>
     <board>RSKRX65N-2MB</board>
-    <board>RSKRX671-2MB</board>
+    <board>RSKRX671</board>
     <family>RX</family>
     <series>RX600</series>
     <series>RX700</series>
@@ -33,7 +33,7 @@
     <board>ENVISIONRX72N</board>
     <board>CloudKitRX65N</board>
     <board>RSKRX65N-2MB</board>
-    <board>RSKRX671-2MB</board>
+    <board>RSKRX671</board>
     <family>RX</family>
     <series>RX600</series>
     <series>RX700</series>
@@ -124,11 +124,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0xFFFFFF80</address>
+          <address>0xFFFBFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0xFFFFFFFC</address>
+          <address>0xFFFBFFFC</address>
         </section>
       </sections>
     </boardsupport>
@@ -149,7 +149,7 @@
         </section>
         <section>
           <name>C_PKCS11_STORAGE*</name>
-          <address>0x0100000</address>
+          <address>0x0100800</address>
         </section>
         <section>
           <name>B_ETHERNET_BUFFERS_1</name>
@@ -173,11 +173,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFFFF80</address>
+          <address>0x0FFFBFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFFFFFC</address>
+          <address>0x0FFFBFFFC</address>
         </section>
       </sections>
     </boardsupport>
@@ -221,11 +221,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFFFF80</address>
+          <address>0x0FFFBFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFFFFFC</address>
+          <address>0x0FFFBFFFC</address>
         </section>
       </sections>
     <sections>
@@ -272,11 +272,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFFFF80</address>
+          <address>0x0FFFBFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFFFFFC</address>
+          <address>0x0FFFBFFFC</address>
         </section>
       </sections>
     <sections>
@@ -326,11 +326,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFFFF80</address>
+          <address>0x0FFFBFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFFFFFC</address>
+          <address>0x0FFFBFFFC</address>
         </section>
     </sections>
     <preinc>
@@ -518,7 +518,7 @@
     <boardsupport>
       <incdir>
         <board>CloudKitRX65N</board>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <path>${AFR_HOME}/libraries/abstractions/wifi/include</path>
         <path>${ProjDirPath}/application_code/renesas_code/smc_gen/r_wifi_sx_ulpgn/src</path>
         <path>${ProjDirPath}/application_code/renesas_code/smc_gen/r_wifi_sx_ulpgn</path>
@@ -591,7 +591,7 @@
       <path>${AFR_HOME}/freertos_kernel/include</path>
       <path>${AFR_HOME}/vendors/renesas/amazon_freertos_common</path>
       <path>${ProjDirPath}/config_files</path>
-      <path>${AFR_HOME}/demos/include</path>
+      <path>${ProjDirPath}/application_code/demos/include</path>
       <path>${AFR_HOME}/demos/network_manager</path>
       <path>${AFR_HOME}/demos/common/pkcs11_helpers</path>
       <path>${AFR_HOME}/demos/common/http_demo_helpers</path>
@@ -790,7 +790,7 @@
     </boardsupport>
     <boardsupport>
     <impdir>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <toolchain>RXC</toolchain>
         <file>vendors/renesas/boards/rx671-rsk/aws_demos/application_code/main.c</file>
         <path>application_code</path>
@@ -798,7 +798,7 @@
     </boardsupport>
     <boardsupport>
     <impdir>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <toolchain>GNURX</toolchain>
         <file>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/main.c</file>
         <path>application_code</path>
@@ -877,7 +877,7 @@
     </boardsupport>
     <boardsupport>
       <impdir>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <toolchain>RXC</toolchain>
         <file>vendors/renesas/boards/rx671-rsk/aws_demos/application_code/renesas_code/main_task.c</file>
         <path>application_code/renesas_code</path>
@@ -885,7 +885,7 @@
     </boardsupport>
     <boardsupport>
       <impdir>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <toolchain>GNURX</toolchain>
         <file>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/main_task.c</file>
         <path>application_code/renesas_code</path>
@@ -950,7 +950,7 @@
     <boardsupport>
       <impdir>
         <board>CloudKitRX65N</board>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <file>demos/demo_runner/aws_demo_version.c</file>
         <file>demos/demo_runner/aws_demo.c</file>
         <file>demos/demo_runner/iot_demo_freertos.c</file>
@@ -1002,7 +1002,7 @@
       <group>RX72N</group>
           <folder>demos/device_defender_for_aws/metrics_collector/freertos_plus_tcp</folder>
           <path>application_code/demos/device_defender_for_aws/metrics_collector/freertos_plus_tcp</path>
-	  </impdir>
+      </impdir>
     <boardsupport>
       <impdir>
         <board>RSKRX65N</board>
@@ -2076,26 +2076,6 @@
     <boardsupport>
       <impdir>
         <toolchain>GNURX</toolchain>
-        <board>ENVISIONRX72N</board>
-        <series>RX700</series>
-        <group>RX72N</group>
-        <file>vendors/renesas/boards/rx72n-envision-kit-uart-sx-ulpgn-gcc/aws_demos/src/smc_gen/general/r_cg_port.h</file>
-        <path>application_code/renesas_code/smc_gen/general</path>
-      </impdir>
-    </boardsupport>
-    <boardsupport>
-      <impdir>
-        <toolchain>RXC</toolchain>
-        <board>ENVISIONRX72N</board>
-        <series>RX700</series>
-        <group>RX72N</group>
-        <file>vendors/renesas/boards/rx72n-envision-kit-uart-sx-ulpgn/aws_demos/src/smc_gen/general/r_cg_port.h</file>
-        <path>application_code/renesas_code/smc_gen/general</path>
-      </impdir>
-    </boardsupport>
-    <boardsupport>
-      <impdir>
-        <toolchain>GNURX</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
         <series>RX600</series>
@@ -2719,7 +2699,7 @@
     <boardsupport>
       <linkdir>
         <board>RSKRX65N-2MB</board>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <board>ENVISIONRX72N</board>
         <board>CloudKitRX65N</board>
         <series>RX600</series>
@@ -2834,7 +2814,7 @@
       <linkdir>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <board>ENVISIONRX72N</board>
         <series>RX600</series>
         <series>RX700</series>
@@ -2849,7 +2829,7 @@
       <linkdir>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
-        <board>RSKRX671-2MB</board>
+        <board>RSKRX671</board>
         <board>ENVISIONRX72N</board>
         <series>RX600</series>
         <series>RX700</series>
@@ -3226,14 +3206,14 @@
       <series>RX600</series>
       <group>RX65N</group>
       <file>vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11/core_pkcs11_pal.c</file>
-      <path>vendors/renesas/boards/rx65n-rsk/ports/pkcs11</path>
+      <path>vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11</path>
     </linkdir>
     <linkdir>
       <toolchain>GNURX</toolchain>
       <series>RX600</series>
       <group>RX671</group>
       <file>vendors/renesas/boards/rx671-rsk-gcc/ports/pkcs11/core_pkcs11_pal.c</file>
-      <path>vendors/renesas/boards/rx671-rsk/ports/pkcs11</path>
+      <path>vendors/renesas/boards/rx671-rsk-gcc/ports/pkcs11</path>
     </linkdir>
     <boardsupport>
       <linkdir>
@@ -3243,7 +3223,7 @@
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11/core_pkcs11_pal.c</file>
-        <path>vendors/renesas/boards/rx65n-rsk/ports/pkcs11</path>
+        <path>vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11</path>
       </linkdir>
     </boardsupport>
     <boardsupport>
@@ -3253,7 +3233,7 @@
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn-gcc/ports/pkcs11/core_pkcs11_pal.c</file>
-        <path>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/pkcs11</path>
+        <path>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn-gcc/ports/pkcs11</path>
       </linkdir>
     </boardsupport>
     <linkdir>
@@ -3298,14 +3278,14 @@
       <series>RX600</series>
       <group>RX65N</group>
       <file>vendors/renesas/boards/rx65n-rsk-gcc/ports/ota/aws_ota_pal.c</file>
-      <path>vendors/renesas/boards/rx65n-rsk/ports/ota</path>
+      <path>vendors/renesas/boards/rx65n-rsk-gcc/ports/ota</path>
     </linkdir>
     <linkdir>
       <toolchain>GNURX</toolchain>
       <series>RX600</series>
       <group>RX671</group>
       <file>vendors/renesas/boards/rx671-rsk-gcc/ports/ota/aws_ota_pal.c</file>
-      <path>vendors/renesas/boards/rx671-rsk/ports/ota</path>
+      <path>vendors/renesas/boards/rx671-rsk-gcc/ports/ota</path>
     </linkdir>
     <boardsupport>
       <linkdir>
@@ -3315,7 +3295,7 @@
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-rsk-gcc/ports/ota/aws_ota_pal.c</file>
-        <path>vendors/renesas/boards/rx65n-rsk/ports/ota</path>
+        <path>vendors/renesas/boards/rx65n-rsk-gcc/ports/ota</path>
       </linkdir>
     </boardsupport>
     <boardsupport>
@@ -3325,7 +3305,7 @@
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn-gcc/ports/ota/aws_ota_pal.c</file>
-        <path>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/ota</path>
+        <path>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn-gcc/ports/ota</path>
       </linkdir>
     </boardsupport>
     <linkdir>
@@ -3442,7 +3422,7 @@
       <series>RX700</series>
       <group>RX72N</group>
       <file>vendors/renesas/boards/rx72n-envision-kit-gcc/ports/pkcs11/core_pkcs11_pal.c</file>
-      <path>vendors/renesas/boards/rx72n-envision-kit/ports/pkcs11</path>
+      <path>vendors/renesas/boards/rx72n-envision-kit-gcc/ports/pkcs11</path>
     </linkdir>
     <linkdir>
       <toolchain>RXC</toolchain>
@@ -3456,7 +3436,7 @@
       <series>RX700</series>
       <group>RX72N</group>
       <file>vendors/renesas/boards/rx72n-envision-kit-gcc/ports/ota/aws_ota_pal.c</file>
-      <path>vendors/renesas/boards/rx72n-envision-kit/ports/ota</path>
+      <path>vendors/renesas/boards/rx72n-envision-kit-gcc/ports/ota</path>
     </linkdir>
     <linkdir>
       <toolchain>RXC</toolchain>
@@ -3517,6 +3497,12 @@
     </linkdir>
     <!-- for default project setting -->
     <option>
+      <toolchain>RXC</toolchain>
+      <toolid>com.renesas.cdt.managedbuild.renesas.ccrx.base.converter</toolid>
+      <optionid>com.renesas.cdt.managedbuild.renesas.ccrx.converter.option.separated.form.motorolaFile</optionid>
+      <value>true</value>
+    </option>
+    <option>
       <toolchain>GNURX</toolchain>
       <optionid>com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel</optionid>
       <value>com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel.speedCodeSize</value>
@@ -3563,18 +3549,41 @@
       </scfgtemplate>
     </boardsupport>
     <boardsupport>
-      <scfgtemplate>
+      <scfgfilecopy>
+        <toolchain>RXC</toolchain>
         <board>ENVISIONRX72N</board>
         <series>RX700</series>
         <group>RX72N</group>
-        <path>vendors/renesas/configuration/EnvisionRX72N_scfg.ftl</path>
-      </scfgtemplate>
+        <file>vendors/renesas/configuration/scfg_rx72n_ek_ccrx</file>
+      </scfgfilecopy>
     </boardsupport>
-    <scfgtemplate>
-      <series>RX600</series>
-      <group>RX671</group>
-      <path>vendors/renesas/configuration/RSKRX671_scfg.ftl</path>
-    </scfgtemplate>
+    <boardsupport>
+      <scfgfilecopy>
+        <toolchain>GNURX</toolchain>
+        <board>ENVISIONRX72N</board>
+        <series>RX700</series>
+        <group>RX72N</group>
+        <file>vendors/renesas/configuration/scfg_rx72n_ek_gcc</file>
+      </scfgfilecopy>
+    </boardsupport>
+    <boardsupport>
+      <scfgfilecopy>
+        <toolchain>RXC</toolchain>
+        <board>RSKRX671</board>
+        <series>RX600</series>
+        <group>RX671</group>
+        <file>vendors/renesas/configuration/scfg_rx671_ccrx</file>
+      </scfgfilecopy>
+    </boardsupport>
+    <boardsupport>
+      <scfgfilecopy>
+        <toolchain>GNURX</toolchain>
+        <board>RSKRX671</board>
+        <series>RX600</series>
+        <group>RX671</group>
+        <file>vendors/renesas/configuration/scfg_rx671_gcc</file>
+      </scfgfilecopy>
+    </boardsupport>
     <scfgtemplate>
       <board>Default</board>
       <series>RX600</series>
