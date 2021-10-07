@@ -124,11 +124,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0xFFFBFF80</address>
+          <address>0xFFFFFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0xFFFBFFFC</address>
+          <address>0xFFFFFFFC</address>
         </section>
       </sections>
     </boardsupport>
@@ -144,12 +144,20 @@
           <name>R_1</name>
           <name>R_2</name>
           <name>R</name>
-          <name>RPFRAM2*</name>
+          <name>RPFRAM2</name>
           <address>0x00000004</address>
+        </section>
+        <section>
+          <name>C_BOOTLOADER_KEY_STORAGE*</name>
+          <address>0x0100000</address>
         </section>
         <section>
           <name>C_PKCS11_STORAGE*</name>
           <address>0x0100800</address>
+        </section>
+        <section>
+          <name>C_SYSTEM_CONFIG*</name>
+          <address>0x0104800</address>
         </section>
         <section>
           <name>B_ETHERNET_BUFFERS_1</name>
@@ -173,11 +181,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFBFF80</address>
+          <address>0x0FFFFFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFBFFFC</address>
+          <address>0x0FFFFFFFC</address>
         </section>
       </sections>
     </boardsupport>
@@ -221,11 +229,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFBFF80</address>
+          <address>0x0FFFFFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFBFFFC</address>
+          <address>0x0FFFFFFFC</address>
         </section>
       </sections>
     <sections>
@@ -272,11 +280,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFBFF80</address>
+          <address>0x0FFFFFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFBFFFC</address>
+          <address>0x0FFFFFFFC</address>
         </section>
       </sections>
     <sections>
@@ -326,11 +334,11 @@
         </section>
         <section>
           <name>EXCEPTVECT</name>
-          <address>0x0FFFBFF80</address>
+          <address>0x0FFFFFF80</address>
         </section>
         <section>
           <name>RESETVECT</name>
-          <address>0x0FFFBFFFC</address>
+          <address>0x0FFFFFFFC</address>
         </section>
     </sections>
     <preinc>
@@ -495,7 +503,6 @@
     </incdir>
     <boardsupport>
       <incdir>
-        <toolchain>GNURX</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
         <series>RX600</series>
@@ -844,6 +851,14 @@
       <file>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/main_task.c</file>
       <path>application_code/renesas_code</path>
     </impdir>
+    </boardsupport>
+    <boardsupport>
+      <impdir>
+        <board>RSKRX65N-2MB</board>
+        <toolchain>RXC</toolchain>
+        <file>vendors/renesas/boards/rx65n-rsk/aws_demos/application_code/renesas_code/main_task.c</file>
+        <path>application_code/renesas_code</path>
+      </impdir>
     </boardsupport>
     <boardsupport>
       <impdir>
@@ -1909,6 +1924,17 @@
     </impdir>
     <boardsupport>
       <impdir>
+        <toolchain>RXC</toolchain>
+        <board>RSKRX65N</board>
+        <board>RSKRX65N-2MB</board>
+        <series>RX600</series>
+        <group>RX65N</group>
+        <file>vendors/renesas/rx_driver_package/v125/r_tsip_rx/lib/ccrx/r_tsip_rx65n_little.lib</file>
+        <path>application_code/renesas_code/smc_gen/r_tsip_rx/lib/ccrx</path>
+      </impdir>
+    </boardsupport>
+    <boardsupport>
+      <impdir>
         <toolchain>GNURX</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
@@ -1920,7 +1946,6 @@
     </boardsupport>
     <boardsupport>
       <impdir>
-        <toolchain>GNURX</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
         <series>RX600</series>
@@ -3217,9 +3242,9 @@
     </linkdir>
     <boardsupport>
       <linkdir>
+        <toolchain>GNURX</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
-        <toolchain>GNURX</toolchain>
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11/core_pkcs11_pal.c</file>
@@ -3253,9 +3278,9 @@
     </linkdir>
     <boardsupport>
       <linkdir>
+        <toolchain>RXC</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
-        <toolchain>RXC</toolchain>
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-rsk/ports/pkcs11/core_pkcs11_pal.c</file>
@@ -3289,9 +3314,9 @@
     </linkdir>
     <boardsupport>
       <linkdir>
+        <toolchain>GNURX</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
-        <toolchain>GNURX</toolchain>
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-rsk-gcc/ports/ota/aws_ota_pal.c</file>
@@ -3325,9 +3350,9 @@
     </linkdir>
     <boardsupport>
       <linkdir>
+        <toolchain>RXC</toolchain>
         <board>RSKRX65N</board>
         <board>RSKRX65N-2MB</board>
-        <toolchain>RXC</toolchain>
         <series>RX600</series>
         <group>RX65N</group>
         <file>vendors/renesas/boards/rx65n-rsk/ports/ota/aws_ota_pal.c</file>

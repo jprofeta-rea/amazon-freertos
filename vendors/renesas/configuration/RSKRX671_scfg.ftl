@@ -102,6 +102,7 @@
 <configuration inuse="true" name="FreeRTOS_Application">
 <component display="FreeRTOS_Application" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.application">
 <gridItem id="CONNECTION" selectedIndex="0"/>
+<gridItem id="OTA" selectedIndex="0"/>
 </component>
 <source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>

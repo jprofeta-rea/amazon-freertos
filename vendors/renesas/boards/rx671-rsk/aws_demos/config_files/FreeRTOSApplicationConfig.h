@@ -1,7 +1,7 @@
 #ifndef FREERTOS_APPLICATION_CONFIG_H
 #define FREERTOS_APPLICATION_CONFIG_H
 
-#define OTA            (Used)
+#define OTA            (Unused)
 
 #define Used           (1)
 #define Unused         (0)

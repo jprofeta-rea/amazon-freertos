@@ -1617,6 +1617,7 @@
          <group>RX72N</group>
          <paths>
             <path>application_code/demos/device_shadow_for_aws</path>
+            <path>demos/device_shadow_for_aws</path>
             <path>config_files/aws_shadow_config.h</path>
             <path>config_files/shadow_config.h</path>
             <path>config_files/shadow_demo_config.h</path>
@@ -1632,6 +1633,7 @@
          <group>RX72N</group>
          <paths>
             <path>application_code/demos/greengrass_connectivity</path>
+            <path>demos/greengrass_connectivity</path>
             <path>config_files/aws_ggd_config.h</path>
             <path>libraries/freertos_plus/aws/greengrass</path>
          </paths>

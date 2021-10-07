@@ -17,7 +17,7 @@
 WIFI: Connection type is WIFI.
 ETHER: Connection type is ETHERNET.</description>
       </property>
-      <property id="OTA" display="OTA" default="Used" type="combobox">
+      <property id="OTA" display="OTA" default="Unused" type="combobox">
         <option id="OTA.0" display="Unused" value="Unused"/>
         <option id="OTA.1" display="Used" value="Used"/>
         <description>MQTT or OTA demo is used.

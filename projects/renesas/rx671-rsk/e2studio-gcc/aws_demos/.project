@@ -6,6 +6,11 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
+			<name>com.renesas.smc.ui.pgsupport.SCContentBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
 			<arguments>
@@ -35,22 +40,11 @@
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/main.c</locationURI>
 		</link>
-        <link>
-			<name>application_code/renesas_code/main_task.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/main_task.c</locationURI>
-		</link>
-        <link>
-			<name>application_code/renesas_code/utility/r_simple_filesystem_on_dataflash.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/utility/r_simple_filesystem_on_dataflash.c</locationURI>
-		</link>
 		<link>
-			<name>application_code/renesas_code/utility/r_simple_filesystem_on_dataflash_if.h</name>
+			<name>config_files/FreeRTOSApplicationConfig.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/utility/r_simple_filesystem_on_dataflash_if.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/config_files/FreeRTOSApplicationConfig.h</locationURI>
 		</link>
-
 		<link>
 			<name>config_files/FreeRTOSConfig.h</name>
 			<type>1</type>
@@ -225,6 +219,11 @@
 			<name>freertos_kernel/timers.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/timers.c</locationURI>
+		</link>
+		<link>
+			<name>application_code/renesas_code/main_task.c</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/main_task.c</locationURI>
 		</link>
 		<link>
 			<name>demos/coreHTTP/http_demo_mutual_auth.c</name>
@@ -465,6 +464,16 @@
 			<name>libraries/logging/iot_logging_task_dynamic_buffers.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/logging/iot_logging_task_dynamic_buffers.c</locationURI>
+		</link>
+		<link>
+			<name>application_code/renesas_code/utility/r_simple_filesystem_on_dataflash.c</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/utility/r_simple_filesystem_on_dataflash.c</locationURI>
+		</link>
+		<link>
+			<name>application_code/renesas_code/utility/r_simple_filesystem_on_dataflash_if.h</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/application_code/renesas_code/utility/r_simple_filesystem_on_dataflash_if.h</locationURI>
 		</link>
 		<link>
 			<name>demos/common/http_demo_helpers/http_demo_utils.c</name>
@@ -2652,11 +2661,6 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_wifi_sx_ulpgn_config.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671/aws_demos/src/smc_gen/r_config/r_wifi_sx_ulpgn_config.h</locationURI>
-		</link>
-		<link>
 			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</locationURI>
@@ -2717,11 +2721,6 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_byteq_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</locationURI>
-		</link>
-		<link>
 			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</locationURI>
@@ -2737,6 +2736,11 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</locationURI>
 		</link>
 		<link>
+			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_wifi_sx_ulpgn_config.h</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_config/r_wifi_sx_ulpgn_config.h</locationURI>
+		</link>
+		<link>
 			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.c</locationURI>
@@ -2745,16 +2749,6 @@
 			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.h</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/boards/rx671-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</name>
@@ -2839,7 +2833,7 @@
 			<type>10</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-true-r_sci_rx|r_bsp|r_byteq|r_ether_rx|r_flash_rx|r_s12ad_rx|r_sci_rx </arguments>
+				<arguments>1.0-name-matches-false-true-r_sci_rx|r_bsp|r_byteq|r_ether_rx|r_flash_rx|r_s12ad_rx|r_sci_rx|r_wifi_sx_ulpgn</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>

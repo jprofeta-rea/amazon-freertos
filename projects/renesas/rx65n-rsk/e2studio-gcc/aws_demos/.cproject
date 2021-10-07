@@ -48,6 +48,7 @@
 							<tool id="com.renesas.cdt.managedbuild.gcc.rx.tool.compiler.1685453559" name="Compiler" superClass="com.renesas.cdt.managedbuild.gcc.rx.tool.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.gcc.core.option.compiler.includes.includeFileDir.959214223" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.gcc.core.option.compiler.includes.includeFileDir" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${TCINSTALL}/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_bsp&quot;"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../freertos_kernel/include"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/amazon_freertos_common"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/amazon_freertos_common/compiler_support/gnuc"/>
@@ -70,9 +71,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/rx_driver_package/v125/r_s12ad_rx"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/rx_driver_package/v125/r_s12ad_rx/src"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/rx_driver_package/v125/r_s12ad_rx/src/targets/rx65n"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../freertos_kernel/portable/GCC/RX600v2"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/application_code/renesas_code"/>
@@ -125,6 +123,23 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls_utils"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/tinycbor/src"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/jsmn"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_byteq&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_byteq/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_ether_rx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_flash_rx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_flash_rx/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_flash_rx/src/flash_type_1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_flash_rx/src/flash_type_3&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_flash_rx/src/flash_type_4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_flash_rx/src/targets&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_s12ad_rx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_s12ad_rx/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_sci_rx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_sci_rx/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_tsip_rx&quot;"/>
 								</option>
 								<option id="com.renesas.cdt.managedbuild.gcc.core.option.compiler.source.std.610215419" name="Language standard" superClass="com.renesas.cdt.managedbuild.gcc.core.option.compiler.source.std" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.core.option.compiler.common.gnu99" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.gcc.core.option.compiler.includes.macroDefines.1847258439" name="Macro Defines (-D)" superClass="com.renesas.cdt.managedbuild.gcc.core.option.compiler.includes.macroDefines" useByScannerDiscovery="false" valueType="definedSymbols">

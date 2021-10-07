@@ -1158,7 +1158,7 @@
         <configuration enable="true" exclude="false" id="ba9eb7bd-ee14-464a-bde2-a9b0d396f218" inuse="true" name="FreeRTOS_Application">
             <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure FreeRTOS Application" detailDescription="" display="FreeRTOS_Application" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.application" version="1.0.102">
                 <gridItem id="CONNECTION" selectedIndex="1"/>
-                <gridItem id="OTA" selectedIndex="1"/>
+                <gridItem id="OTA" selectedIndex="0"/>
             </component>
             <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
         </configuration>
