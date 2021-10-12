@@ -2,9 +2,6 @@
 	path = libraries/3rdparty/unity
 	url = https://github.com/ThrowTheSwitch/Unity.git
 	branch = v2.4.3
-[submodule "freertos_kernel"]
-	path = freertos_kernel
-	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
 [submodule "pkcs11"]
 	path = libraries/3rdparty/pkcs11
 	url = https://github.com/amazon-freertos/pkcs11.git
@@ -56,3 +53,7 @@
 [submodule "tools/litani"]
 	path = tools/litani
 	url = https://github.com/awslabs/aws-build-accumulator
+[submodule "freertos_kernel"]
+	path = freertos_kernel
+	url = https://github.com/renesas/FreeRTOS-Kernel
+	branch = rl78-development-V10.4.3
