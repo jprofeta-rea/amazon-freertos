@@ -16,19 +16,12 @@
 	path = vendors/espressif/esp-idf
 	url = https://github.com/espressif/esp-afr-sdk.git
 	branch = release/v3.3
-[submodule "mbedtls"]
-	path = libraries/3rdparty/mbedtls
-	url = https://github.com/ARMmbed/mbedtls.git
-	branch = mbedtls-2.16.8
 [submodule "libraries/abstractions/pkcs11/psa"]
 	path = libraries/abstractions/pkcs11/psa
 	url = https://github.com/Linaro/freertos-pkcs11-psa.git
 [submodule "libraries/coreJSON"]
 	path = libraries/coreJSON
 	url = https://github.com/FreeRTOS/coreJSON.git
-[submodule "libraries/freertos_plus/standard/freertos_plus_tcp"]
-	path = libraries/freertos_plus/standard/freertos_plus_tcp
-	url = https://github.com/FreeRTOS/FreeRTOS-Plus-TCP/
 [submodule "libraries/device_shadow_for_aws"]
 	path = libraries/device_shadow_for_aws
 	url = https://github.com/aws/device-shadow-for-aws-iot-embedded-sdk.git
@@ -58,4 +51,12 @@
 [submodule "libraries/abstractions/pkcs11/corePKCS11"]
 	path = libraries/abstractions/pkcs11/corePKCS11
 	url = https://github.com/renesas/corePKCS11
+	branch = rl78-development-V10.4.3
+[submodule "libraries/3rdparty/mbedtls"]
+	path = libraries/3rdparty/mbedtls
+	url = https://github.com/renesas/mbedtls
+	branch = rl78-development-V10.4.3
+[submodule "libraries/freertos_plus/standard/freertos_plus_tcp"]
+	path = libraries/freertos_plus/standard/freertos_plus_tcp
+	url = https://github.com/renesas/FreeRTOS-Plus-TCP
 	branch = rl78-development-V10.4.3
