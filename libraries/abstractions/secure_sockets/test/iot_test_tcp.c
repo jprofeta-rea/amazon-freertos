@@ -2581,11 +2581,11 @@ static void prvTrustedServerCertificate( void )
     xSecureEchoServerAddress.usPort = SOCKETS_htons( tcptestECHO_PORT_TLS );
 
 #if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
-    prvEraseAllCertificateFile();
+    prvFakeSetCertificateProfile();
 #endif
     xResult = SOCKETS_Connect( xSocket, &xSecureEchoServerAddress, sizeof( xSecureEchoServerAddress ) );
 #if defined(__CCRL__) || defined(__ICCRL78__) || defined(__RL)
-    prvWriteAllCertificateFile();
+    prvSetCertificateProfile();
 #endif
     TEST_ASSERT_LESS_THAN_INT32_MESSAGE( 0, xResult, "Connection permitted with untrusted server CA cert" );
 
