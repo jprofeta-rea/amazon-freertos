@@ -1057,7 +1057,7 @@
 		<link>
 			<name>libraries/coreJSON/source/core_json.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-AWS_IOT_MCU_ROOT/202012.00/amazon-freertos/libraries/coreJSON/source/core_json.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/coreJSON/source/core_json.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/coreJSON/source/include</name>
@@ -1952,7 +1952,7 @@
 		<link>
 			<name>libraries/coreJSON/source/include/core_json.h</name>
 			<type>1</type>
-			<locationURI>PARENT-2-AWS_IOT_MCU_ROOT/202012.00/amazon-freertos/libraries/coreJSON/source/include/core_json.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/coreJSON/source/include/core_json.h</locationURI>
 		</link>
 		<link>
 			<name>libraries/coreMQTT/source/include/core_mqtt.h</name>
