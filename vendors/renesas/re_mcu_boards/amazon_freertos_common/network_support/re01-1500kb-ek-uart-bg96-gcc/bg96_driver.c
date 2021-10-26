@@ -845,7 +845,7 @@ static int32_t SetupBaudrate(int32_t Change_Baudrate)
 	  case 0:
 		  /*Error, exit loop*/
 		  ret = -1;
-		  break;
+		  return ret;
 	  case 1:
 		  /*Baudrate is changed, exit loop*/
 		  return ret;
@@ -914,14 +914,16 @@ static int32_t SetupBaudrate(int32_t Change_Baudrate)
 			  }
 			  else
 			  {
-				  /*Response from BG96 Dragino is failed. Try 3 times to get send and get respone*/
+				  /*Response from BG96 Dragino is failed. Try 3 times to get send and get response*/
 				  tries ++;
 				  state = 2;
+				  bg96_serial_close();
 				  if (tries > 3)
 				  {
 					 /*Set state to 0 -> error*/
 					  state = 0;
 				  }
+
 			  }
 		  }
 		  else
