@@ -1103,7 +1103,7 @@ IotMqttError_t IotMqtt_Connect( const IotMqttNetworkInfo_t * pNetworkInfo,
     if( connContextMutexStatus == false )
     {
         IotLogError( "Failed to lock connContextMutex." );
-        printf( "MUTEX FAILURE\n" );
+        printf( "\x1b[4m\x1b[33mMUTEX FAILURE\x1b[0m\n" );
         IOT_SET_AND_GOTO_CLEANUP( IOT_MQTT_TIMEOUT );
     }
 
@@ -1285,7 +1285,7 @@ IotMqttError_t IotMqtt_Connect( const IotMqttNetworkInfo_t * pNetworkInfo,
                                timeoutMs );
         if (status != IOT_MQTT_SUCCESS)
         {
-            printf( "CONNECT TIMEOUT" );
+            printf( "\x1b[4m\x1b[33mCONNECT TIMEOUT\x1b[0m\n" );
         }
         else
         {
